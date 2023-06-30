@@ -1,0 +1,15 @@
+---
+import Layout from '../../layouts/Layout.astro'
+
+const allArticles = await Astro.glob('./*.md')
+---
+
+<Layout title='Articles'>
+  {
+    allArticles.map((article) => (
+      <li>
+        <a href={article.url}>{article.frontmatter.title}</a>
+      </li>
+    ))
+  }
+</Layout>
