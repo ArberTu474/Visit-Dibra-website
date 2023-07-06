@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;700;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  @apply font-inter text-gray-800;
+}
 
 .button {
   @apply px-6 py-2 rounded-md font-bold text-slate-100 bg-slate-700 hover:bg-opacity-80 transition-colors duration-300;
