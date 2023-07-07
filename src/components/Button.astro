@@ -1,0 +1,59 @@
+---
+// Props
+export interface Props {
+  href: string
+  btnColor?: color
+  rounded?: boolean
+  className?: string
+  icon?: string
+}
+
+const { href, className, btnColor, rounded, icon } = Astro.props
+
+type color = 'green' | 'orange' | 'red' | 'purple' | 'blue' | 'dark-blue'
+
+let colorClass = ''
+
+switch (btnColor) {
+  case 'green':
+    colorClass = 'bg-lime-500'
+    break
+  case 'orange':
+    colorClass = 'bg-orange-500'
+    break
+  case 'blue':
+    colorClass = 'bg-sky-500'
+    break
+  case 'red':
+    colorClass = 'bg-red-600'
+    break
+  case 'purple':
+    colorClass = 'bg-violet-600'
+    break
+  case 'dark-blue':
+    colorClass = 'bg-indigo-800'
+    break
+
+  default:
+    colorClass = 'bg-gray-400'
+    break
+}
+---
+
+<button
+  class={`block text-lg font-bold text-gray-100 ${colorClass} hover:opacity-90 transition-colors duration-300 ${className} ${
+    rounded ? 'rounded-full' : 'rounded-xl'
+  }`}
+>
+  <a class='flex gap-4 items-center px-10 py-3' href={href}>
+    {
+      icon && (
+        <span class='material-symbols-rounded text-gray-100 text-[30px]'>
+          {icon}
+        </span>
+      )
+    }
+
+    <slot />
+  </a>
+</button>
