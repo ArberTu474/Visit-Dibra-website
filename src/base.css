@@ -1,12 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;700;900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+.material-symbols-rounded {
+  font-variation-settings: 'FILL' 0, 'wght' 900, 'GRAD' 200, 'opsz' 48;
+}
+
 * {
+  -webkit-tap-highlight-color: transparent;
   @apply font-inter text-gray-800;
+}
+
+/* Change the color of the selection */
+::-moz-selection {
+  /* Code for Firefox */
+  background: rgba(153, 153, 153, 0.361);
+}
+
+::selection {
+  background: rgba(153, 153, 153, 0.361);
 }
 
 .button {
@@ -18,5 +32,5 @@
 }
 
 .navbar-item {
-  @apply hover:bg-slate-200/80 rounded-md px-4 py-2 transition-colors duration-300;
+  @apply hover:underline rounded-md py-2 transition-colors duration-300;
 }

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0,0,256,256"
+   width="48px"
+   height="48px"
+   fill-rule="nonzero"
+   version="1.1"
+   id="svg11"
+   sodipodi:docname="instagram.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs15" />
+  <sodipodi:namedview
+     id="namedview13"
+     pagecolor="#ffffff"
+     bordercolor="#cccccc"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="16.833333"
+     inkscape:cx="24.029703"
+     inkscape:cy="24"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg11" />
+  <g
+     fill-opacity="0"
+     fill="#dddddd"
+     fill-rule="nonzero"
+     stroke="none"
+     stroke-width="1"
+     stroke-linecap="butt"
+     stroke-linejoin="miter"
+     stroke-miterlimit="10"
+     stroke-dasharray=""
+     stroke-dashoffset="0"
+     font-family="none"
+     font-weight="none"
+     font-size="none"
+     text-anchor="none"
+     style="mix-blend-mode: normal"
+     id="g3">
+    <path
+       d="M0,256v-256h256v256z"
+       id="bgRectangle" />
+  </g>
+  <g
+     fill="#000000"
+     fill-rule="nonzero"
+     stroke="none"
+     stroke-width="1"
+     stroke-linecap="butt"
+     stroke-linejoin="miter"
+     stroke-miterlimit="10"
+     stroke-dasharray="none"
+     stroke-dashoffset="0"
+     font-family="none"
+     font-weight="none"
+     font-size="none"
+     text-anchor="none"
+     style="mix-blend-mode:normal"
+     id="g9"
+     transform="matrix(1.0620204,0,0,1.0620204,-7.9386139,-7.9386139)">
+    <g
+       transform="scale(4)"
+       id="g7">
+      <path
+         d="M 31.82031,12 C 13.43931,12 12,13.43931 12,31.82031 v 0.35938 C 12,50.56069 13.43931,52 31.82031,52 h 0.35938 C 50.56069,52 52,50.56069 52,32.17969 V 32 C 52,13.452 50.548,12 32,12 Z M 28,16 h 8 c 11.129,0 12,0.871 12,12 v 8 C 48,47.129 47.129,48 36,48 H 28 C 16.871,48 16,47.129 16,36 V 28 C 16,16.871 16.871,16 28,16 Z m 13.99414,4 C 40.88914,20.003 39.997,20.90086 40,22.00586 40.003,23.11086 40.90086,24.003 42.00586,24 43.11086,23.997 44.003,23.09914 44,21.99414 43.997,20.88914 43.09914,19.997 41.99414,20 Z M 31.97656,22 C 26.45456,22.013 21.987,26.50144 22,32.02344 22.013,37.54544 26.50144,42.013 32.02344,42 37.54544,41.987 42.013,37.49856 42,31.97656 41.987,26.45456 37.49856,21.987 31.97656,22 Z m 0.0098,4 C 35.29933,25.992 37.992,28.67333 38,31.98633 38.007,35.29933 35.32667,37.992 32.01367,38 28.70067,38.008 26.008,35.32767 26,32.01367 25.992,28.70067 28.67333,26.008 31.98633,26 Z"
+         id="path5" />
+    </g>
+  </g>
+</svg>

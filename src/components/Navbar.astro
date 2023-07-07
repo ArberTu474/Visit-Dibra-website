@@ -2,13 +2,54 @@
 ---
 
 <nav
-  class='bg-white/40 sticky w-full top-0 left-0 z-10 backdrop-blur-md border-b border-slate-900/10'
+  class='bg-white/10 fixed w-full top-0 left-0 z-10 backdrop-blur-md border-gray-300/30 border-b py-6'
 >
-  <div class='container mx-auto max-w-6xl'>
-    <ul class='flex gap-2 justify-start align-middle text-lg font-semibold p-6'>
+  <div
+    class='container mx-auto px-6 max-w-7xl flex justify-between items-center'
+  >
+    <a href='/'>
+      <p class='text-xl md:text-2xl xl:text-4xl font-bold'>Vistit Diber</p>
+    </a>
+
+    <span
+      id='menu'
+      class='material-symbols-rounded text-[30px] cursor-pointer sm:hidden'
+      >menu
+    </span>
+
+    <ul
+      class='hidden sm:flex gap-8 justify-start align-middle text-base xl:text- font-semibold'
+    >
       <li><a href='/' class='navbar-item'>Home</a></li>
       <li><a href='/articles' class='navbar-item'>Articles</a></li>
       <li><a href='/contact' class='navbar-item'>Contact</a></li>
     </ul>
   </div>
+
+  <!-- Mobile view navigation links -->
+  <ul
+    id='navList'
+    class='px-6 mt-6 text-lg hidden flex-col font-semibold sm:hidden'
+  >
+    <li><a href='/' class='navbar-item inline-block float-right'>Home</a></li>
+    <li>
+      <a href='/articles' class='navbar-item inline-block float-right'
+        >Articles</a
+      >
+    </li>
+    <li>
+      <a href='/contact' class='navbar-item inline-block float-right'>Contact</a
+      >
+    </li>
+  </ul>
 </nav>
+
+<script>
+  const menu = document.querySelector('#menu')
+  const navList = document.querySelector('#navList')
+
+  menu.addEventListener('click', () => {
+    navList.classList.toggle('hidden')
+    navList.classList.toggle('flex')
+  })
+</script>
