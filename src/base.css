@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --ideal-height: max(100vh, 800px);
+}
+
 .material-symbols-rounded {
   font-variation-settings: 'FILL' 0, 'wght' 900, 'GRAD' 200, 'opsz' 48;
 }
