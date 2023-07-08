@@ -1,0 +1,30 @@
+---
+import Layout404 from '../layouts/Layout404.astro'
+
+import Button from '../components/Button.astro'
+---
+
+<Layout404 title='Page not found!'>
+  <div
+    class='h-full flex flex-col lg:flex-row-reverse lg:items-end lg:justify-end justify-between gap-6'
+  >
+    <div class='h-full px-6 lg:flex lg:flex-col lg:justify-center lg:gap-2'>
+      <h1 class='sm:mt-6 text-4xl lg:text-6xl font-bold text-green-900 mb-2'>
+        Oops!
+      </h1>
+      <p class='text-xl lg:text-3xl text-gray-500 mb-7'>
+        It seems that you have<br /> wondered a bit out of the trail
+      </p>
+      <div>
+        <Button href='/' icon='arrow_left_alt' btnColor='green'>Go Back</Button>
+      </div>
+    </div>
+    <div class=''>
+      <img
+        class='object-cover sm:h-max sm:w-[70vw] md:w-[60vw] lg:w-[50vw] xl:w-[43vw] h-[50vh] ml-auto'
+        src='/404_image.svg'
+        alt=''
+      />
+    </div>
+  </div>
+</Layout404>
