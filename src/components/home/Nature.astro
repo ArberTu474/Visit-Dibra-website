@@ -1,0 +1,97 @@
+---
+// Components
+import { Image } from '@astrojs/image/components'
+import SectionContent from '../SectionContent.astro'
+---
+
+<!-- <div class='-mx-6 sm:mx-0 sm:overflow-visible h-[400px]'>
+  <div
+    class='grid grid-cols-3 grid-rows-2 gap-4 place-items-center max-w-[500px] mb-20'
+  >
+    <Image
+      alt='mountain'
+      src='/images/nature_1.jpg'
+      width={500}
+      height={500}
+      format='avif'
+      class='rounded-xl scale-95 scale-x-125 -rotate-[11deg] -translate-x-5 -translate-y-3'
+    />
+    <Image
+      alt='mountain'
+      src='/images/nature_2.jpg'
+      width={750}
+      height={390}
+      format='avif'
+      fit='cover'
+      class='rounded-xl col-span-2 object-cover rotate-12 translate-x-6 -translate-y-7'
+    />
+    <Image
+      alt='mountain'
+      src='/images/nature_3.jpg'
+      width={500}
+      height={500}
+      format='avif'
+      class='rounded-xl -rotate-[17deg] scale-110 scale-x-125 -translate-x-7 translate-y-6'
+    />
+    <Image
+      alt='mountain'
+      src='/images/nature_4.jpg'
+      width={500}
+      height={500}
+      format='avif'
+      class='rounded-xl rotate-6 scale-[1.2] translate-x-5 translate-y-7'
+    />
+    <Image
+      alt='mountain'
+      src='/images/nature_5.jpg'
+      width={500}
+      height={500}
+      format='avif'
+      class='rounded-xl scale-[0.8] -rotate-12 translate-x-9'
+    />
+  </div>
+  <div class=''>
+    <h2>Natural Beauties</h2>
+    <h1>Dibra Natural Formations</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur. Suspendisse sed nisi aenean nisl
+      faucibus eget et sit nisl. Mollis ac aliquam neque pretium orci. Risus sed
+      quis adipiscing amet mattis et a tincidunt eu. Vulputate sapien aliquam
+      lectus facilisis vitae hac ultrices
+    </p>
+    <Button href=''>Learn more</Button>
+  </div>
+</div> -->
+<div class='relative'>
+  <div
+    class='page-container flex flex-col lg:flex-row-reverse lg:items-center lg:gap-5 overflow-hidden'
+  >
+    <div>
+      <Image
+        class='object-contain scale-[1.4] md:scale-[1.1] lg:scale-[1.2]'
+        src='/images/nature_image.png'
+        alt='image'
+        width={1194}
+        height={867}
+        format='avif'
+      />
+    </div>
+    <SectionContent
+      icon_src='/icons/nature_icon.svg'
+      title='Natural Beauties'
+      section_color='green'
+    >
+      Lorem ipsum dolor sit amet consectetur. Suspendisse sed nisi aenean nisl
+      faucibus eget et sit nisl. Mollis ac aliquam neque pretium orci. Risus sed
+      quis adipiscing amet mattis et a tincidunt eu. Vulputate sapien aliquam
+      lectus facilisis vitae hac ultrices
+    </SectionContent>
+  </div>
+  <Image
+    class='hidden md:block absolute bottom-0 left-0 -z-10'
+    src='/icons/nature_icon_bg.svg'
+    alt='icon'
+    width={716 / 1.1}
+    height={913 / 1.1}
+  />
+</div>
