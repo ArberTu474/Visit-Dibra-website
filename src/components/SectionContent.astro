@@ -11,6 +11,7 @@ export interface Props {
   btn_text?: string
   className?: string
   text_position?: possition
+  has_button?: boolean
 }
 type possition = 'left' | 'center' | 'right'
 type color = 'green' | 'orange' | 'red' | 'purple' | 'blue' | 'dark-blue'
@@ -21,6 +22,7 @@ const {
   btn_text = 'Learn more >',
   text_position = 'left',
   className,
+  has_button = false,
 } = Astro.props
 
 let content_possition = ''
@@ -78,13 +80,21 @@ switch (section_color) {
     format='svg'
   />
   <h2 class={`text-xl lg:text-2xl font-bold ${colorClass} my-3`}>{title}</h2>
-  <h1 class='text-4xl lg:text-6xl font-bold'>Dibra Natural Formations</h1>
+  <h1 class={`text-4xl lg:text-6xl font-bold ${p_possition}`}>
+    Dibra Natural Formations
+  </h1>
   <p
     class={`text-base lg:text-lg text-gray-500 my-5 lg:max-w-5xl ${p_possition}`}
   >
     <slot />
   </p>
   <div>
-    <Button href='' btnColor={section_color} rounded>{btn_text}</Button>
+    {
+      has_button && (
+        <Button href='' btnColor={section_color} rounded>
+          {btn_text}
+        </Button>
+      )
+    }
   </div>
 </div>
