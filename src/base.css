@@ -6,6 +6,7 @@
 
 :root {
   --ideal-height: max(100vh, 800px);
+  --ideal-width: max(90wh, 600px);
 }
 
 .material-symbols-rounded {
@@ -25,6 +26,10 @@
 
 ::selection {
   background: rgba(153, 153, 153, 0.361);
+}
+
+.page-container {
+  @apply container mx-auto px-6 py-32 max-w-7xl;
 }
 
 .button {

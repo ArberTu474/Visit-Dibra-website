@@ -1,0 +1,90 @@
+---
+// Components
+import { Image } from '@astrojs/image/components'
+import Button from './Button.astro'
+
+// Props
+export interface Props {
+  title: string
+  icon_src: string
+  section_color: color
+  btn_text?: string
+  className?: string
+  text_position?: possition
+}
+type possition = 'left' | 'center' | 'right'
+type color = 'green' | 'orange' | 'red' | 'purple' | 'blue' | 'dark-blue'
+const {
+  title,
+  icon_src,
+  section_color,
+  btn_text = 'Learn more >',
+  text_position = 'left',
+  className,
+} = Astro.props
+
+let content_possition = ''
+let p_possition = ''
+
+switch (text_position) {
+  case 'right':
+    content_possition = 'items-end'
+    p_possition = 'text-right'
+    break
+  case 'left':
+    content_possition = 'items-start'
+    p_possition = 'text-left'
+    break
+  case 'center':
+    content_possition = 'items-center'
+    p_possition = 'text-center'
+    break
+}
+
+let colorClass = ''
+
+switch (section_color) {
+  case 'green':
+    colorClass = 'text-lime-500'
+    break
+  case 'orange':
+    colorClass = 'text-orange-500'
+    break
+  case 'blue':
+    colorClass = 'text-sky-500'
+    break
+  case 'red':
+    colorClass = 'text-red-600'
+    break
+  case 'purple':
+    colorClass = 'text-violet-600'
+    break
+  case 'dark-blue':
+    colorClass = 'text-indigo-800'
+    break
+
+  default:
+    colorClass = 'text-gray-400'
+    break
+}
+---
+
+<div class={`flex flex-col mt-20 ${content_possition} ${className} `}>
+  <Image
+    src={icon_src}
+    width={89 / 2}
+    height={71 / 2}
+    alt='icon'
+    format='svg'
+  />
+  <h2 class={`text-xl lg:text-2xl font-bold ${colorClass} my-3`}>{title}</h2>
+  <h1 class='text-4xl lg:text-6xl font-bold'>Dibra Natural Formations</h1>
+  <p
+    class={`text-base lg:text-lg text-gray-500 my-5 lg:max-w-5xl ${p_possition}`}
+  >
+    <slot />
+  </p>
+  <div>
+    <Button href='' btnColor={section_color} rounded>{btn_text}</Button>
+  </div>
+</div>
