@@ -80,6 +80,7 @@ import SectionContent from '../SectionContent.astro'
       icon_src='/icons/nature_icon.svg'
       title='Natural Beauties'
       section_color='green'
+      has_button={true}
     >
       Lorem ipsum dolor sit amet consectetur. Suspendisse sed nisi aenean nisl
       faucibus eget et sit nisl. Mollis ac aliquam neque pretium orci. Risus sed
@@ -87,8 +88,10 @@ import SectionContent from '../SectionContent.astro'
       lectus facilisis vitae hac ultrices
     </SectionContent>
   </div>
+
+  <!-- Background Icon -->
   <Image
-    class='hidden md:block absolute bottom-0 left-0 -z-10'
+    class='bg-icons'
     src='/icons/nature_icon_bg.svg'
     alt='icon'
     width={716 / 1.1}

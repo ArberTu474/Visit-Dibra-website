@@ -5,12 +5,13 @@ const allArticles = await Astro.glob('./*.md')
 ---
 
 <Layout title='Articles'>
-  {
-    allArticles.map((article) => (
-      <li>
-        <a href={article.url}>{article.frontmatter.title}</a>
-      </li>
-    ))
-  }
-  
+  <div class='page-container mt-10'>
+    {
+      allArticles.map((article) => (
+        <li>
+          <a href={article.url}>{article.frontmatter.title}</a>
+        </li>
+      ))
+    }
+  </div>
 </Layout>

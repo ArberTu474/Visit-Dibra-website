@@ -5,11 +5,13 @@ import Layout from '../layouts/Layout.astro'
 // Components
 import Hero from '../components/home/Hero.astro'
 import Nature from '../components/home/Nature.astro'
+import Foods from '../components/home/Foods.astro'
 ---
 
 <Hero />
 <Layout title='Welcome Dibra'>
-  <div class='flex flex-col gap-5 lg:gap-56'>
+  <div class='flex flex-col lg:gap-40 mt-24'>
     <Nature />
+    <Foods />
   </div>
 </Layout>

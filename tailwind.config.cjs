@@ -6,7 +6,11 @@ module.exports = {
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
       },
+      screens: {
+        xs: '550px',
+      },
     },
   },
+
   plugins: [require('@tailwindcss/typography')],
 }
