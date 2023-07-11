@@ -51,3 +51,15 @@ html {
 .navbar-item {
   @apply hover:underline rounded-md py-2 transition-colors duration-300;
 }
+
+/* Svg mpa */
+.component .tooltip {
+  visibility: hidden;
+}
+.component:hover .tooltip {
+  visibility: visible;
+}
+
+.popover {
+  @apply text-gray-100 text-[4px] font-bold bg-gray-800 px-1  py-[2px] rounded-sm inline;
+}
