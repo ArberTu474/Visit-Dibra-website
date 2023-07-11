@@ -1,0 +1,45 @@
+---
+// Components
+import { Image } from '@astrojs/image/components'
+import SectionContent from '../SectionContent.astro'
+import Card from '../Card.astro'
+import Button from '../Button.astro'
+import { LocationsMap } from './LocationsMap'
+
+// Articles
+const allArticles = await Astro.glob('../../pages/locations/*.md')
+
+// const { locationId = 'lura' } = Astro.props
+---
+
+<div class='relative'>
+  <SectionContent
+    icon_src='/icons/locations_icon.svg'
+    section_color='blue'
+    title='Places you don’t want to Miss'
+    subtitle='Interesting Locations'
+    className='page-container pb-0'
+  >
+    Lorem ipsum dolor sit amet consectetur. Suspendisse sed nisi aenean nisl
+    faucibus eget et sit nisl. Mollis ac aliquam neque pretium orci. Risus sed
+    quis adipiscing amet mattis et a tincidunt eu. Vulputate sapien aliquam
+    lectus facilisis vitae hac ultrices
+  </SectionContent>
+  <div class='page-container pb-0'>
+    <di>
+      <LocationsMap client:visible articles={allArticles} />
+    </di>
+  </div>
+
+  <Button className='mx-auto mb-20 mt-6' btnColor='blue' href='/' rounded>
+    Learn More
+  </Button>
+  <Image
+    class='hidden md:block absolute bottom-0 right-0 -z-10'
+    src='/icons/locations_icon_bg.svg'
+    alt='icon'
+    width={935 / 1.2}
+    height={1493 / 1.2}
+    format='svg'
+  />
+</div>
