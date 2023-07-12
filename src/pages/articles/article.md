@@ -7,6 +7,6 @@ title: 'Peshkopi'
 
 This is my page, written in **Markdown.**
 
-## qedra 
+- hello and goobyde
 
 dhhdv jsjkbsk jsjs
