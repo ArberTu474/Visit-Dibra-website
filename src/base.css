@@ -17,6 +17,7 @@
   -webkit-tap-highlight-color: transparent;
   @apply font-inter text-gray-800;
 }
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
@@ -38,14 +39,6 @@ html {
 
 .bg-icons {
   @apply hidden md:block absolute bottom-0 left-0 -z-10;
-}
-
-.button {
-  @apply px-6 py-2 rounded-md font-bold text-slate-100 bg-slate-700 hover:bg-opacity-80 transition-colors duration-300;
-}
-
-.button-secondary {
-  @apply px-6 py-2 rounded-md font-bold text-slate-700 bg-slate-200 hover:bg-opacity-80 transition-colors duration-300;
 }
 
 .navbar-item {
