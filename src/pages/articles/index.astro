@@ -5,10 +5,10 @@ const allArticles = await Astro.glob('./*.md')
 ---
 
 <Layout title='Articles'>
-  <div class='page-container mt-10'>
+  <div class='mx-auto px-6 py-20 min-w-[896px] mt-10'>
     {
       allArticles.map((article) => (
-        <li>
+        <li class='w-full'>
           <a href={article.url}>{article.frontmatter.title}</a>
         </li>
       ))
