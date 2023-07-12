@@ -1,63 +1,12 @@
 ---
 layout: '../../layouts/ArticleLayout.astro'
-title: 'My Town'
+title: 'Peshkopi'
 ---
 
 # Title
 
 This is my page, written in **Markdown.**
 
-- hello
+## qedra 
 
-| Syntax    | Description |
-| --------- | ----------- |
-| Header    | Title       |
-| Paragraph | Text        |
-
-```
-code jsksk
-ssjjs
-sjbsjbs
-g
-g
-g
-gg
-g
-g
-g
-g
-
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-g
-```
+dhhdv jsjkbsk jsjs
