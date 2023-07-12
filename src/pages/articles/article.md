@@ -7,7 +7,7 @@ title: 'My Town'
 
 This is my page, written in **Markdown.**
 
-- hello
+- hello and goobyde
 
 | Syntax    | Description |
 | --------- | ----------- |
