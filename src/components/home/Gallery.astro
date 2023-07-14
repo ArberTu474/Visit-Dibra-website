@@ -1,0 +1,108 @@
+---
+//Components
+import GalleryImage from '../GalleryImage.astro'
+import SectionContent from '../SectionContent.astro'
+import { Image } from '@astrojs/image/components'
+
+const allImages = await Astro.glob('../../pages/gallery/*.md')
+// allImages.forEach((e) => e.frontmatter.images.map((b) => console.log(b.url)))
+---
+
+<div class='relative'>
+  <div class='page-container'>
+    <SectionContent
+      title='Take a Glimpse of What Dibra Has to Offer'
+      subtitle='Gallery'
+      icon_src='/icons/gallery_icon.svg'
+      section_color='purple'
+      text_position='center'
+    >
+      Lorem ipsum dolor sit amet consectetur. Suspendisse sed nisi aenean nisl
+      faucibus eget et sit nisl. Mollis ac aliquam neque pretium orci. Risus sed
+      quis adipiscing amet mattis et a tincidunt eu. Vulputate sapien aliquam
+      lectus facilisis vitae hac ultrices
+    </SectionContent>
+
+    <!-- Gallery images -->
+    <div class='relative'>
+      <div
+        id='gallery'
+        class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-h-[30rem] overflow-hidden'
+      >
+        <div class='space-y-6'>
+          {
+            allImages.map((e) =>
+              e.frontmatter.col1.map((b) => (
+                <GalleryImage
+                  height_class='h-[270px]'
+                  src={b.url}
+                  alt={b.alt}
+                  description={b.description}
+                />
+              ))
+            )
+          }
+        </div>
+        <div class='space-y-6'>
+          {
+            allImages.map((e) =>
+              e.frontmatter.col2.map((b) => (
+                <GalleryImage
+                  height_class='h-[220px]'
+                  src={b.url}
+                  alt={b.alt}
+                  description={b.description}
+                />
+              ))
+            )
+          }
+        </div>
+        <div class='space-y-6 hidden lg:block'>
+          {
+            allImages.map((e) =>
+              e.frontmatter.col3.map((b) => (
+                <GalleryImage
+                  height_class='h-[300px]'
+                  src={b.url}
+                  alt={b.alt}
+                  description={b.description}
+                />
+              ))
+            )
+          }
+        </div>
+      </div>
+      <div
+        class='absolute -bottom-6 h-64 w-full bg-gradient-to-t from-gray-100 from-30% to-gray-100/0 to-90% flex items-end'
+      >
+        <button
+          id='expand_button'
+          class='bg-violet-600 text-gray-100 font-bold text-lg rounded-full px-10 py-3 mx-auto mb-10'
+          >Show More</button
+        >
+      </div>
+    </div>
+
+    <Image
+      class='hidden md:block absolute top-0 right-0 -z-10'
+      src='/icons/gallery_icon_bg.svg'
+      width={824 / 1.3}
+      height={886 / 1.3}
+      alt='bg_icon'
+    />
+  </div>
+</div>
+
+<script>
+  const expand_button = document.querySelector('#expand_button')
+  const gallery = document.querySelector('#gallery')
+
+  expand_button.addEventListener('click', (e) => {
+    gallery.classList.toggle('max-h-max')
+    if (expand_button.textContent === 'Show More') {
+      expand_button.textContent = 'Show Less'
+    } else {
+      expand_button.textContent = 'Show More'
+    }
+  })
+</script>
