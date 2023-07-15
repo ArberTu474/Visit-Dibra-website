@@ -1,0 +1,42 @@
+---
+// Components
+import { Image } from '@astrojs/image/components'
+import SectionContent from '../SectionContent.astro'
+import FAQCard from '../FAQCard.astro'
+
+// Data
+const allQuestions = await Astro.glob('../../data/faq/*.md')
+---
+
+<div class='relative'>
+  <div class='page-container'>
+    <SectionContent
+      title='Frequently Asked Questions'
+      subtitle='Support'
+      icon_src='/icons/faq_icon.svg'
+      section_color={'gray'}
+    >
+      Lorem ipsum dolor sit amet consectetur. Suspendisse sed nisi aenean nisl
+      faucibus eget et sit nisl. Mollis ac aliquam neque pretium orci.
+    </SectionContent>
+
+    <!-- Questions -->
+    <div class='grid grid-cols-1 md:grid-cols-2 items-start gap-6 mt-12'>
+      {
+        allQuestions.map((question) =>
+          question.frontmatter.faq.map((e) => (
+            <FAQCard question={e.question} answer={e.answer} />
+          ))
+        )
+      }
+    </div>
+  </div>
+  <Image
+    class='hidden md:block absolute -bottom-20 right-0 -z-10'
+    src='/icons/faq_icon_bg.svg'
+    width={822 / 1.3}
+    height={1172 / 1.3}
+    alt='background icon'
+    format='svg'
+  />
+</div>

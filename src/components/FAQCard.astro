@@ -1,0 +1,43 @@
+---
+// Props
+export interface Props {
+  question: string
+  answer: string
+}
+
+const { question, answer } = Astro.props
+
+// Components
+import Card from './Card.astro'
+---
+
+<Card>
+  <div id='question' class='flex justify-between items-center cursor-pointer'>
+    <h1 class='text-xl font-bold'>{question}</h1>
+    <img id='arrow' class='fill-red-400' src='/icons/down_arrow.svg' alt='' />
+  </div>
+  <div id='answer' class='hidden'>
+    <div class='h-[2px] w-full bg-gray-400/40 my-3 rounded-full'></div>
+    <p class='text-base text-gray-500'>
+      {answer}
+    </p>
+  </div>
+</Card>
+
+<script>
+  const questions = document.querySelectorAll('#question')
+
+  let i
+
+  for (i = 0; i < questions.length; i++) {
+    questions[i].addEventListener('click', function () {
+      this.children[1].classList.toggle('rotate-180')
+      var content = this.nextElementSibling
+      if (content.style.display === 'block') {
+        content.style.display = 'none'
+      } else {
+        content.style.display = 'block'
+      }
+    })
+  }
+</script>

@@ -18,7 +18,14 @@ const {
   externalLink = false,
 } = Astro.props
 
-type color = 'green' | 'orange' | 'red' | 'purple' | 'blue' | 'dark-blue'
+type color =
+  | 'green'
+  | 'orange'
+  | 'red'
+  | 'purple'
+  | 'blue'
+  | 'dark-blue'
+  | 'gray'
 
 let colorClass = ''
 
@@ -40,6 +47,9 @@ switch (btnColor) {
     break
   case 'dark-blue':
     colorClass = 'bg-indigo-900'
+    break
+  case 'gray':
+    colorClass = 'bg-gray-500'
     break
 
   default:
