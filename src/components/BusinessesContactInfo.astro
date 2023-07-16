@@ -33,13 +33,23 @@ while (stars_arry.length < maxStars) {
     class='text-xl flex justify-between items-center gap-3 text-gray-600 px-5 py-3 rounded-full'
     href={href}
     ><div class='text-base text-gray-600 flex gap-3 justify-start items-center'>
-      <img class='h-7' src={`/icons/booking/${type}.svg`} alt='' />
+      <img
+        width='28px'
+        height='28px'
+        src={`/icons/booking/${type}.svg`}
+        alt=''
+      />
       {name}
     </div>
     <div class='flex gap-1 justify-center items-center'>
       {
         stars_arry.map((star) => (
-          <img class='h-4' src={`/icons/booking/${star}.svg`} alt='' />
+          <img
+            width='16px'
+            height='16px'
+            src={`/icons/booking/${star}.svg`}
+            alt=''
+          />
         ))
       }
     </div>

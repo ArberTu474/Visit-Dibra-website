@@ -14,7 +14,14 @@ import Card from './Card.astro'
 <Card>
   <div id='question' class='flex justify-between items-center cursor-pointer'>
     <h1 class='text-xl font-bold'>{question}</h1>
-    <img id='arrow' class='fill-red-400' src='/icons/down_arrow.svg' alt='' />
+    <img
+      width='32px'
+      height='32px'
+      id='arrow'
+      class='fill-red-400'
+      src='/icons/down_arrow.svg'
+      alt=''
+    />
   </div>
   <div id='answer' class='hidden'>
     <div class='h-[2px] w-full bg-gray-400/40 my-3 rounded-full'></div>
