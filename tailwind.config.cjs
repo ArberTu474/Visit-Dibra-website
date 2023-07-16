@@ -2,10 +2,10 @@
 module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
+    fontFamily: {
+      sans: ['inter', 'system-ui'],
+    },
     extend: {
-      fontFamily: {
-        inter: ['Inter', 'sans-serif'],
-      },
       screens: {
         xs: '550px',
       },

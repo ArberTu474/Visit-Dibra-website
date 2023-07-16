@@ -1,8 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap'); */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  * {
+    @apply text-gray-800;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
 
 :root {
   --ideal-height: max(100vh, 800px);
@@ -11,16 +23,6 @@
 
 .material-symbols-rounded {
   font-variation-settings: 'FILL' 0, 'wght' 900, 'GRAD' 200, 'opsz' 48;
-}
-
-* {
-  -webkit-tap-highlight-color: transparent;
-  @apply font-inter text-gray-800;
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 100px;
 }
 
 /* Change the color of the selection */
