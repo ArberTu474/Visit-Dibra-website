@@ -34,9 +34,9 @@ const { title } = Astro.props
     <title>{title}</title>
   </head>
 
-  <Navbar />
   <body class='h-full w-full bg-gray-100 flex flex-col'>
+    <Navbar />
     <slot />
+    <Footer />
   </body>
-  <Footer />
 </html>
