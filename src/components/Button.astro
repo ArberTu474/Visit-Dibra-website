@@ -5,7 +5,7 @@ export interface Props {
   btnColor?: color
   rounded?: boolean
   className?: string
-  icon?: string
+  icon_src?: string
   externalLink?: boolean
 }
 
@@ -14,7 +14,7 @@ const {
   className,
   btnColor,
   rounded,
-  icon,
+  icon_src,
   externalLink = false,
 } = Astro.props
 
@@ -65,14 +65,12 @@ switch (btnColor) {
 >
   <a
     target={externalLink ? '_blank' : ''}
-    class='flex gap-4 justify-center items-center px-10 py-3'
+    class='flex gap-2 justify-center items-center px-10 py-3'
     href={href}
   >
     {
-      icon && (
-        <span class='material-symbols-rounded text-gray-100 text-[30px]'>
-          {icon}
-        </span>
+      icon_src && (
+        <img class='-ml-4' height='32px' width='32px' src={icon_src} alt='' />
       )
     }
 
