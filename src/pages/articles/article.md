@@ -1,6 +1,7 @@
 ---
 layout: '../../layouts/ArticleLayout.astro'
 title: 'Peshkopi'
+tags: ['culture', 'trail']
 ---
 
 # Title

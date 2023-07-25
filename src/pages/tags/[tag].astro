@@ -1,0 +1,36 @@
+---
+import Layout from '../../layouts/Layout.astro'
+
+export async function getStaticPaths() {
+  const allArticles = await Astro.glob('../articles/*.md')
+
+  return [
+    { params: { tag: 'location' }, props: { articles: allArticles } },
+    { params: { tag: 'food' }, props: { articles: allArticles } },
+    { params: { tag: 'culture' }, props: { articles: allArticles } },
+    { params: { tag: 'trail' }, props: { articles: allArticles } },
+  ]
+}
+
+const { tag } = Astro.params
+const { articles } = Astro.props
+
+const filteredArticles = articles.filter((article) =>
+  article.frontmatter.tags?.includes(tag)
+)
+---
+
+<Layout title='hello'>
+  <div class='page-container'>
+    <p>Posts tagged with {tag}</p>
+    <ul>
+      {
+        filteredArticles.map((article) => (
+          <li>
+            <a href={article.url}>{article.frontmatter.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Layout>
