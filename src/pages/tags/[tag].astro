@@ -1,4 +1,5 @@
 ---
+import ArticleCard from '../../components/home/ArticleCard.astro'
 import Layout from '../../layouts/Layout.astro'
 
 export async function getStaticPaths() {
@@ -20,17 +21,24 @@ const filteredArticles = articles.filter((article) =>
 )
 ---
 
-<Layout title='hello'>
-  <div class='page-container'>
-    <p>Posts tagged with {tag}</p>
-    <ul>
+<Layout title={`Posts tagged with ${tag}`}>
+  <div class='pt-32 page-container'>
+    <h1 class='text-3xl md:text-4xl font-bold my-6'>
+      Articles tagged with <span class='italic text-lime-600'>{tag}</span>
+    </h1>
+    <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
       {
         filteredArticles.map((article) => (
-          <li>
-            <a href={article.url}>{article.frontmatter.title}</a>
-          </li>
+          <ArticleCard
+            url={article.url}
+            title={article.frontmatter.title}
+            description={article.frontmatter.description}
+            img_scr={article.frontmatter.img_src}
+            img_alt={article.frontmatter.img_alt}
+            tags={article.frontmatter.tags}
+          />
         ))
       }
-    </ul>
+    </div>
   </div>
 </Layout>

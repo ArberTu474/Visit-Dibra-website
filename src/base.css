@@ -44,7 +44,7 @@ html {
 }
 
 .navbar-item {
-  @apply hover:underline rounded-md py-2 transition-colors duration-300;
+  @apply hover:underline rounded-md py-2;
 }
 
 /* Svg mpa */
