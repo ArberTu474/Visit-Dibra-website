@@ -1,0 +1,50 @@
+---
+// Components
+import Card from '../Card.astro'
+import { Image } from '@astrojs/image/components'
+
+// Props
+export interface Props {
+  title: string
+  description: string
+  img_scr: string
+  img_alt: string
+  url: string
+  tags?: Array<string>
+  className?: string
+}
+
+const { className, title, description, img_scr, img_alt, url, tags } =
+  Astro.props
+---
+
+<Card hasPadding={false}>
+  <a href={url}>
+    <Image
+      class='object-cover w-full h-56'
+      src={img_scr}
+      width={500}
+      height={300}
+      format='avif'
+      alt={img_alt}
+    />
+    <div class='p-6'>
+      <h2 class='text-xl font-bold mb-1'>{title}</h2>
+      <p class='text-base text-gray-500'>
+        {description.slice(0, 100) + '...'}
+      </p>
+      <div class='pt-2 space-x-2 space-y-2 spcae'>
+        {
+          tags.map((tag, i) => (
+            <a
+              href={`/tags/${tag}`}
+              class='inline-block px-4 py-1 bg-gray-400/20 hover:bg-gray-400/30 text-gray-600 rounded-full'
+            >
+              {tag}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </a>
+</Card>
