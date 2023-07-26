@@ -12,9 +12,10 @@ export interface Props {
   btn_text?: string
   className?: string
   text_position?: possition
-  has_button?: boolean
 }
+
 type possition = 'left' | 'center' | 'right'
+
 type color =
   | 'green'
   | 'orange'
@@ -23,6 +24,7 @@ type color =
   | 'blue'
   | 'dark-blue'
   | 'gray'
+
 const {
   title,
   subtitle,
@@ -31,7 +33,6 @@ const {
   btn_text = 'Learn more >',
   text_position = 'left',
   className,
-  has_button = false,
 } = Astro.props
 
 let content_possition = ''
@@ -102,13 +103,4 @@ switch (section_color) {
   >
     <slot />
   </p>
-  <div>
-    {
-      has_button && (
-        <Button href='' btnColor={section_color} rounded>
-          {btn_text}
-        </Button>
-      )
-    }
-  </div>
 </div>

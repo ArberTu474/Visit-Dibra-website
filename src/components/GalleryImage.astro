@@ -12,8 +12,11 @@ export interface Props {
 
 const { height_class, description, alt, src } = Astro.props
 ---
+
 <!-- widht and height below set resolution of the rendered images -->
-<div class={`${height_class} relative group transition-transform duration-300`}>
+<div
+  class={`${height_class} bg-gray-300 rounded-lg relative group transition-transform duration-300`}
+>
   <Image
     class='object-cover rounded-lg w-full h-full'
     width={900}
