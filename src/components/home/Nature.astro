@@ -2,8 +2,8 @@
 // Components
 import { Image } from '@astrojs/image/components'
 import SectionContent from '../SectionContent.astro'
+import Button from '../Button.astro'
 ---
-
 
 <div class='relative'>
   <div
@@ -24,12 +24,14 @@ import SectionContent from '../SectionContent.astro'
       title='Natural Beauties'
       subtitle='Natural Beauties'
       section_color='green'
-      has_button={true}
     >
       Lorem ipsum dolor sit amet consectetur. Suspendisse sed nisi aenean nisl
       faucibus eget et sit nisl. Mollis ac aliquam neque pretium orci. Risus sed
       quis adipiscing amet mattis et a tincidunt eu. Vulputate sapien aliquam
       lectus facilisis vitae hac ultrices
+      <Button className='mt-6' href='' btnColor='green' rounded>
+        Learn More
+      </Button>
     </SectionContent>
   </div>
 
