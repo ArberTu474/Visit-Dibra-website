@@ -3,14 +3,14 @@ contact:
   [
     {
       type: 'whatsapp',
-      contactInfo: '+355 067 xxx xxxx',
-      url: '//api.whatsapp.com/send?phone=3550671234567&text=Welcome to Dibra',
+      contactInfo: '+355 067 384 0009',
+      url: '//api.whatsapp.com/send?phone=3550673840009&text=Welcome to Dibra',
     },
-    { type: 'phone', contactInfo: '+355 067 xxx xxxx', url: 'tel:0671234567' },
+    { type: 'phone', contactInfo: '+355 067 384 0009', url: 'tel:0673840009' },
     {
       type: 'email',
-      contactInfo: 'support@visitdiber.com',
-      url: 'mailto: support@visitdiber.com',
+      contactInfo: 'info@visitdiber.com',
+      url: 'mailto: info@visitdiber.com',
     },
   ]
 
