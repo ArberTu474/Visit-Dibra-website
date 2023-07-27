@@ -2,7 +2,7 @@
 layout: '../../layouts/ArticleLayout.astro'
 title: 'Rabdisht'
 description: 'Lorem ipsum dolor sit amet consectetur. Suspendisse sed nisi aenean nisl faucibus eget et sit nisl. Mollis ac aliquam neque pretium orci. Risus'
-img_url: '/locations/rabdisht.jpg'
+img_src: '/locations/rabdisht.jpg'
 id: 'rabdisht'
 ---
 

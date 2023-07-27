@@ -6,11 +6,12 @@ description:
   faucibus eget et sit nisl. Mollis ac aliquam neque pretium orci. Risus'
 image:
   {
-    url: '/activities/hiking.jpeg',
-    alt: 'hiking image',
     width: 1000,
     height: 667,
   }
+
+img_src: '/activities/hiking.jpeg'
+img_alt: 'hiking image'
 type: 'index_page'
 ---
 

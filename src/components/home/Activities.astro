@@ -34,48 +34,46 @@ const number_of_activities_shown = 3
             (activityType) => activityType.frontmatter.type === 'index_page'
           )
           .map((activityType) => (
-            <>
-              <ActivityCard
-                activity_url={activityType.url}
-                activity_name={activityType.url.split('/activities/').pop()}
-                description={activityType.frontmatter.description}
-              >
-                <div class='h-52 overflow-hidden rounded-lg mb-6'>
-                  <Image
-                    class='object-cover w-full h-full'
-                    src={activityType.frontmatter.image.url}
-                    width={activityType.frontmatter.image.width}
-                    height={activityType.frontmatter.image.height}
-                    alt={activityType.frontmatter.image.alt}
-                  />
-                </div>
-                <h2 class='text-xl font-bold'>Explore more:</h2>
+            <ActivityCard
+              activity_url={activityType.url}
+              activity_name={activityType.url.split('/activities/').pop()}
+              description={activityType.frontmatter.description}
+            >
+              <div class='h-52 overflow-hidden rounded-lg mb-6'>
+                <Image
+                  class='object-cover w-full h-full'
+                  src={activityType.frontmatter.img_src}
+                  width={activityType.frontmatter.image.width}
+                  height={activityType.frontmatter.image.height}
+                  alt={activityType.frontmatter.img_alt}
+                />
+              </div>
+              <h2 class='text-xl font-bold'>Explore more:</h2>
 
-                {/* activities list */}
-                {allActivites
-                  .filter(
-                    (article) =>
-                      article.frontmatter.type ===
-                      activityType.url.split('/activities/').pop()
-                  )
-                  .slice(0, number_of_activities_shown)
-                  .map((article) => (
-                    <div class=' bg-gray-300/50 rounded-full hover:bg-gray-300 transition-colors duration-200'>
-                      <a
-                        class='flex justify-between items-center text-gray-600 px-5 py-2 rounded-full'
-                        href={article.url}
-                      >
-                        {article.frontmatter.title}
-                        {article.frontmatter.new && (
-                          <div class='bg-red-600 rounded-md text-white text-xs font-bold px-2 py-1'>
-                            NEW
-                          </div>
-                        )}
-                      </a>
-                    </div>
-                  ))}
-              </ActivityCard>
-            </>
+              {/* activities list */}
+              {allActivites
+                .filter(
+                  (article) =>
+                    article.frontmatter.type ===
+                    activityType.url.split('/activities/').pop()
+                )
+                .slice(0, number_of_activities_shown)
+                .map((article) => (
+                  <div class=' bg-gray-300/50 rounded-full hover:bg-gray-300 transition-colors duration-200'>
+                    <a
+                      class='flex justify-between items-center text-gray-600 px-5 py-2 rounded-full'
+                      href={article.url}
+                    >
+                      {article.frontmatter.title}
+                      {article.frontmatter.new && (
+                        <div class='bg-red-600 rounded-md text-white text-xs font-bold px-2 py-1'>
+                          NEW
+                        </div>
+                      )}
+                    </a>
+                  </div>
+                ))}
+            </ActivityCard>
           ))
       }
     </div>

@@ -6,11 +6,12 @@ description:
   faucibus eget et sit nisl. Mollis ac aliquam neque pretium orci. Risus'
 image:
   {
-    url: '/activities/rafting.jpg',
-    alt: 'rafting image',
     width: 555,
     height: 344,
   }
+
+img_src: '/activities/rafting.jpg'
+img_alt: 'rafting image'
 type: 'index_page'
 ---
 

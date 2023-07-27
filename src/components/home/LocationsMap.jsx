@@ -183,7 +183,7 @@ export const LocationsMap = ({ articles }) => {
                 <div className='bg-gray-300'>
                   <img
                     className='w-full h-[200px] md:h-[300px] object-cover z-20'
-                    src={article.frontmatter.img_url}
+                    src={article.frontmatter.img_src}
                     alt={article.frontmatter.title + ' picture'}
                   />
                 </div>

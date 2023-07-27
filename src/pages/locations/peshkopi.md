@@ -2,7 +2,7 @@
 layout: '../../layouts/ArticleLayout.astro'
 title: 'Peshkopi'
 description: 'Lorem ipsum dolor sit amet consectetur. Suspendisse sed nisi aenean nisl faucibus eget et sit nisl. Mollis ac aliquam neque pretium orci. Risus'
-img_url: '/locations/peshkopi.jpg'
+img_src: '/locations/peshkopi.jpg'
 id: 'peshkopi'
 ---
 
