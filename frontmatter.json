@@ -3,7 +3,7 @@
   "frontMatter.taxonomy.contentTypes": [
     {
       "name": "Main Article",
-      // "filePrefix": "custom-prefix",
+      "filePrefix": "",
       "pageBundle": false,
       "previewPath": null,
       "fields": [
@@ -109,6 +109,10 @@
       "path": "[[workspace]]/src/pages/locations"
     }
   ],
-  "frontMatter.taxonomy.tags": ["culture", "food", "location", "trail"]
-  // "frontMatter.taxonomy.categories": []
+  "frontMatter.taxonomy.tags": [
+    "culture",
+    "food",
+    "location",
+    "trail"
+  ]
 }
