@@ -4,6 +4,9 @@ import Layout from '../../layouts/Layout.astro'
 // Components
 import ArticleCard from '../../components/home/ArticleCard.astro'
 
+// Functions
+import { formatDate } from '../../functions/utils.js'
+
 const allArticles = await Astro.glob('./*.md')
 const nonDraftPosts = allArticles.filter((post) => !post.frontmatter.draft)
 ---
@@ -20,7 +23,7 @@ const nonDraftPosts = allArticles.filter((post) => !post.frontmatter.draft)
             img_scr={article.frontmatter.img_src}
             img_alt={article.frontmatter.img_alt}
             tags={article.frontmatter.tags}
-            date={article.frontmatter.date}
+            date={formatDate(article.frontmatter.date)}
           />
         ))
       }

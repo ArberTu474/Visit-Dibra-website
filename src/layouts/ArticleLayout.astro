@@ -5,6 +5,9 @@ import Layout from './Layout.astro'
 // Componets
 import { Image } from '@astrojs/image/components'
 
+// Function
+import { formatDate } from '../functions/utils.js'
+
 const { frontmatter } = Astro.props
 const { title, summary, img_src, img_alt, date, tags } = frontmatter
 ---
@@ -32,7 +35,9 @@ const { title, summary, img_src, img_alt, date, tags } = frontmatter
                 height='28px'
                 width='28px'
               />
-              <p class='text-base text-gray-500 m-0'>{`Date: ${date}`}</p>
+              <p class='text-base text-gray-500 m-0'>{`Date: ${formatDate(
+                date
+              )}`}</p>
             </div>
           )
         }
