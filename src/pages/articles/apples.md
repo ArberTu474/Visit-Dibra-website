@@ -6,6 +6,7 @@ img_src: '/foods/apples.jpg'
 img_alt: 'apples'
 date: '05/06/2023'
 summary: ['Dibra Apples', 'Conclusion', 'Different types of apples in Dibra']
+tags: ['culture', 'trail', 'food']
 ---
 
 # Dibra Apples

@@ -35,11 +35,11 @@ const number_of_cards_shown = 4
                 <Image
                   class='object-cover rounded-lg bg-gray-400 h-fit overflow-hidden'
                   src={
-                    article.frontmatter.img_url
-                      ? article.frontmatter.img_url
+                    article.frontmatter.img_src
+                      ? article.frontmatter.img_src
                       : '/'
                   }
-                  alt={article.frontmatter.title}
+                  alt={article.frontmatter.img_alt}
                   width={500}
                   aspectRatio='4:3'
                   format='avif'

@@ -19,6 +19,7 @@ const allArticles = await Astro.glob('./*.md')
             img_scr={article.frontmatter.img_src}
             img_alt={article.frontmatter.img_alt}
             tags={article.frontmatter.tags}
+            date={article.frontmatter.date}
           />
         ))
       }
