@@ -4,7 +4,7 @@ import GalleryImage from '../GalleryImage.astro'
 import SectionContent from '../SectionContent.astro'
 import { Image } from '@astrojs/image/components'
 
-const allImages = await Astro.glob('../../pages/gallery/*.md')
+const allImages = await Astro.glob('../../data/gallery/*.md')
 ---
 
 <div class='relative'>
