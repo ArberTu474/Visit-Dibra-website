@@ -1,0 +1,114 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "Main Article",
+      // "filePrefix": "custom-prefix",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "title": "Article Layout",
+          "name": "layout",
+          "type": "string",
+          "default": "../../layouts/ArticleLayout.astro"
+        },
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Article preview (Not for the website)",
+          "name": "preview",
+          "type": "image"
+        },
+        {
+          "title": "Image Source (Website Image)",
+          "name": "img_src",
+          "type": "image"
+        },
+        {
+          "title": "Image Alt",
+          "name": "img_alt",
+          "type": "string"
+        },
+        {
+          "title": "Is in draft",
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "title": "Summary",
+          "name": "summary",
+          "type": "list"
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "type",
+          "name": "type",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "frontMatter.framework.id": "astro",
+  "frontMatter.content.publicFolder": "public",
+  "frontMatter.preview.host": "http://localhost:3000",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "Articles (Main)",
+      "path": "[[workspace]]/src/pages/articles"
+    },
+    {
+      "title": "[Data] Booking",
+      "path": "[[workspace]]/src/data/booking"
+    },
+    {
+      "title": "[Data] FAQ",
+      "path": "[[workspace]]/src/data/faq"
+    },
+    {
+      "title": "[Data] Gallery Images",
+      "path": "[[workspace]]/src/data/gallery"
+    },
+    {
+      "title": "[Activities] Hiking",
+      "path": "[[workspace]]/src/pages/activities/hiking"
+    },
+    {
+      "title": "[Activities] Rafting",
+      "path": "[[workspace]]/src/pages/activities/rafting"
+    },
+    {
+      "title": "[Activities] Swimming",
+      "path": "[[workspace]]/src/pages/activities/swimming"
+    },
+    {
+      "title": "[List] Foods",
+      "path": "[[workspace]]/src/pages/foods"
+    },
+    {
+      "title": "[List] Locations",
+      "path": "[[workspace]]/src/pages/locations"
+    }
+  ],
+  "frontMatter.taxonomy.tags": ["culture", "food", "location", "trail"]
+  // "frontMatter.taxonomy.categories": []
+}
