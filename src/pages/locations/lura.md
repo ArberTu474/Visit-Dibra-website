@@ -2,7 +2,7 @@
 layout: '../../layouts/ArticleLayout.astro'
 title: 'Lura'
 description: 'Lorem ipsum dolor sit amet consectetur. Suspendisse sed nisi aenean nisl faucibus eget et sit nisl. Mollis ac aliquam neque pretium orci. Risus'
-img_url: '/locations/lura.jpg'
+img_src: '/locations/lura.jpg'
 id: 'lura'
 ---
 

@@ -6,9 +6,14 @@ description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Cupiditate
 img_src: '/images/nature_2.jpg'
 img_alt: 'mountain'
 tags: ['culture', 'trail', 'food']
+summary: ['Dibra Apples', 'Conclusion', 'Different types of apples in Dibra']
+date: '04/11/2023'
 ---
 
 # Rabdisht
 
+This is my page, written in **Markdown.**
 
-hello 
+- hello and goobyde
+
+dhhdv jsjkbsk jsjs
