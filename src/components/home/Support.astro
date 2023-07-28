@@ -16,14 +16,12 @@ const allQuestions = await Astro.glob('../../data/faq/*.md')
       icon_src='/icons/faq_icon.svg'
       section_color={'gray'}
     >
-      Planning your trip to Diber but not sure where to start? 
-      Take a look at our Frequently Asked Questions section below.
+      Planning your trip to Diber but not sure where to start? Take a look at
+      our Frequently Asked Questions section below.
     </SectionContent>
 
     <!-- Questions -->
-    <div
-      class='grid grid-cols-1 md:grid-cols-2 grid-rows-2 items-start gap-6 mt-12'
-    >
+    <div class='grid grid-cols-1 md:grid-cols-2 items-start gap-6 mt-12'>
       {
         allQuestions.map((question) =>
           question.frontmatter.faq.map((e) => (
@@ -31,58 +29,56 @@ const allQuestions = await Astro.glob('../../data/faq/*.md')
           ))
         )
       }
-      <!-- Contact form -->
-      <div class='col-span-1 md:col-span-2 mt-14'>
-        <h2 id='contact' class='text-4xl font-bold'>Contact</h2>
-        <p
-          class='text-base lg:text-lg text-gray-500 my-5 lg:max-w-5xl text-left'
-        >
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-          est, in nesciunt fugiat perspiciatis aperiam minima voluptatem nobis
-          explicabo doloremque enim reiciendis dignissimos sunt, nemo animi cum
-          vel illum et.
-        </p>
-        <form
-          name='Contact'
-          dat-netlify='true'
-          data-netlify-honeypot='bot-field'
-          action='/success/'
-        >
-          <!-- Bot filed used to prevent spam -->
-          <input class='hidden' name='bot-field' />
+    </div>
+    <!-- Contact form -->
+    <div class='mt-14'>
+      <h2 id='contact' class='text-4xl font-bold'>Contact</h2>
+      <p class='text-base lg:text-lg text-gray-500 my-5 lg:max-w-5xl text-left'>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam est,
+        in nesciunt fugiat perspiciatis aperiam minima voluptatem nobis
+        explicabo doloremque enim reiciendis dignissimos sunt, nemo animi cum
+        vel illum et.
+      </p>
+      <form
+        name='Contact'
+        dat-netlify='true'
+        data-netlify-honeypot='bot-field'
+        action='/success/'
+      >
+        <!-- Bot filed used to prevent spam -->
+        <input class='hidden' name='bot-field' />
 
-          <div class='flex flex-col md:flex-row gap-6 max-w-7xl mt-12'>
-            <div class='flex flex-col gap-6 w-full'>
-              <input
-                class='input-item'
-                type='text'
-                name='name'
-                placeholder='Name'
-              />
+        <div class='flex flex-col md:flex-row gap-6 max-w-7xl mt-12'>
+          <div class='flex flex-col gap-6 w-full'>
+            <input
+              class='input-item'
+              type='text'
+              name='name'
+              placeholder='Name'
+            />
 
-              <input
-                class='input-item'
-                type='email'
-                name='email'
-                placeholder='Email'
-              />
-            </div>
-
-            <div class='flex flex-col gap-6 w-full'>
-              <textarea
-                class='input-item min-h-[148px] max-h-64'
-                name='message'
-                placeholder='Message'></textarea>
-
-              <button
-                class='w-full bg-gray-300 hover:opacity-80 transition-opacity duration-200 p-3 rounded-lg font-bold text-lg'
-                type='submit'
-                >Send
-              </button>
-            </div>
+            <input
+              class='input-item'
+              type='email'
+              name='email'
+              placeholder='Email'
+            />
           </div>
-        </form>
-      </div>
+
+          <div class='flex flex-col gap-6 w-full'>
+            <textarea
+              class='input-item min-h-[148px] max-h-64'
+              name='message'
+              placeholder='Message'></textarea>
+
+            <button
+              class='w-full bg-gray-300 hover:opacity-80 transition-opacity duration-200 p-3 rounded-lg font-bold text-lg'
+              type='submit'
+              >Send
+            </button>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
 
