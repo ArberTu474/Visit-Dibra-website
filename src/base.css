@@ -47,6 +47,10 @@ html {
   @apply hover:underline rounded-md py-2;
 }
 
+.input-item {
+  @apply w-full text-lg p-4 bg-white/50 backdrop-blur-md rounded-xl text-gray-500 border-gray-300/30 border;
+}
+
 /* Svg mpa */
 .component .tooltip {
   visibility: hidden;
