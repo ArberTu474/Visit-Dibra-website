@@ -40,9 +40,10 @@ const allQuestions = await Astro.glob('../../data/faq/*.md')
         vel illum et.
       </p>
       <form
-        name='Contact'
-        dat-netlify='true'
-        data-netlify-honeypot='bot-field'
+        name='contact'
+        method='POST'
+        netlify-honeypot='bot-field'
+        data-netlify='true'
         action='/success/'
       >
         <!-- Bot filed used to prevent spam -->
