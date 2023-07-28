@@ -4,7 +4,7 @@ contact:
     {
       type: 'whatsapp',
       contactInfo: '+355 067 384 0009',
-      url: '//api.whatsapp.com/send?phone=3550673840009&text=Welcome to Dibra',
+      url: '//api.whatsapp.com/send?phone=3550673840009&text=Welcome to Diber',
     },
     { type: 'phone', contactInfo: '+355 067 384 0009', url: 'tel:0673840009' },
     {
