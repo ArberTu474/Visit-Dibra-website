@@ -1,23 +1,23 @@
 ---
 layout: '../../layouts/ArticleLayout.astro'
 title: 'Gallery'
-description: 'Explore the natural beauty of Diber, where each photo tells a story.'
+description: 'Sneak a peak of the fun and natural beauty of Diber, where each photo tells a story.'
 col1:
   [
     {
       url: '/gallery/gallery_img_1.avif',
       alt: 'nature image',
-      description: 'Mountain',
+      description: 'Korabi Mountain Valley',
     },
     {
       url: '/gallery/gallery_img_2.avif',
       alt: 'nature image',
-      description: 'Mountain',
+      description: 'Hiking groups on Korabi Mountain',
     },
     {
       url: '/gallery/gallery_img_3.avif',
       alt: 'nature image',
-      description: 'Mountain',
+      description: 'Exploring with kids',
     },
     {
       url: '/gallery/gallery_img_4.avif',
@@ -40,17 +40,17 @@ col2:
     {
       url: '/gallery/gallery_img_6.avif',
       alt: 'nature image',
-      description: 'Mountain',
+      description: 'Traditional dance in Peshkopi',
     },
     {
       url: '/gallery/gallery_img_7.avif',
       alt: 'nature image',
-      description: 'Mountain',
+      description: 'Grama Lake',
     },
     {
       url: '/gallery/gallery_img_8.avif',
       alt: 'nature image',
-      description: 'Mountain',
+      description: 'The stone village of Rabdisht',
     },
     {
       url: '/gallery/gallery_img_3.avif',
@@ -68,22 +68,27 @@ col3:
     {
       url: '/gallery/gallery_img_9.avif',
       alt: 'nature image',
-      description: 'Mountain',
+      description: 'Rafting on the Drin River',
     },
     {
       url: '/gallery/gallery_img_10.avif',
       alt: 'nature image',
-      description: 'Mountain',
+      description: 'Bridge over the Drin River',
     },
     {
       url: '/gallery/gallery_img_11.avif',
+      alt: 'nature image',
+      description: 'Waterfall',
+    },
+    {
+      url: '/gallery/gallery_img_12.avif',
       alt: 'nature image',
       description: 'Mountain',
     },
     {
       url: '/gallery/gallery_img_12.avif',
       alt: 'nature image',
-      description: 'Mountain',
+      description: 'Mount Bugjunec',
     },
   ]
 ---
