@@ -32,19 +32,22 @@ const allQuestions = await Astro.glob('../../data/faq/*.md')
       <!-- Contact form -->
       <div>
         <h2 class='text-4xl font-bold'>Contact</h2>
-        <form name='contact' netlify>
+        <form
+          name='Contact'
+          dat-netlify='true'
+          data-netlify-honeypot='bot-field'
+          action='/success/'
+        >
+          <!-- Bot filed used to prevent spam -->
+          <input class='hidden' name='bot-field' />
           <p>
-            <label><input type='text' name='name' placeholder='Name' /></label>
+            <input type='text' name='name' placeholder='Name' />
           </p>
           <p>
-            <label
-              ><input type='email' name='email' placeholder='Email' /></label
-            >
+            <input type='email' name='email' placeholder='Email' />
           </p>
           <p>
-            <label
-              ><textarea name='message' placeholder='Message'></textarea></label
-            >
+            <textarea name='message' placeholder='Message'></textarea>
           </p>
           <p>
             <button class='bg-gray-300 p-3 rounded-lg' type='submit'
