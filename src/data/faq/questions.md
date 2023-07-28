@@ -5,5 +5,5 @@ faq: [{ question: 'Where is the Diber Tourist Information Center located?', answ
         { question: 'What is the local currency, and where can I exchange money?', answer: '
         The local currency is Albanian Lek. Euros and dollars are readily exchangeable at many locations across Diber. This availability of currency exchange services makes it easy for travelers to convert their foreign currencies to Lek and use it for their transactions during their stay in Diber.' }, 
         { question: 'Are there any guided tours or activities available in the area?', answer: '
-        Yes! To find the perfect guide for your Diber adventure.' }]
+        Yes! To find the perfect guide for your Diber adventure  do not hesitate to inquire at the Diber Tourist Information Center or access the guide directory we have available. Hiring a knowledgeable local guide will undoubtedly enhance your travel experience and help you create lasting memories in Diber. Guides in Diber offer guided tours to popular attractions, historical sites, and authentic experiences, enriching your travel experience in Diber.' }]
 ---
