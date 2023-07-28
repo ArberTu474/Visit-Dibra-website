@@ -10,9 +10,10 @@ import '../base.css'
 export interface Props {
   title: string
   description?: string
+  keywords?: Array<string>
 }
 
-const { title, description = 'Welcome to Diber' } = Astro.props
+const { title, description = 'Welcome to Diber', keywords } = Astro.props
 ---
 
 <!DOCTYPE html>
@@ -20,6 +21,7 @@ const { title, description = 'Welcome to Diber' } = Astro.props
   <head>
     <meta charset='UTF-8' />
     <meta name='description' content={description} />
+    <meta name='keywords' content={keywords.toString()} />
     <meta name='viewport' content='width=device-width, initial-scale=1' />
     <link rel='icon' href='/favicon.svg' />
     <meta name='generator' content={Astro.generator} />
@@ -32,6 +34,7 @@ const { title, description = 'Welcome to Diber' } = Astro.props
 
   <body class='h-full w-full bg-gray-100 flex flex-col'>
     <Navbar />
+    {keywords}
     <slot />
     <Footer />
   </body>
