@@ -29,6 +29,11 @@ col1:
       alt: 'nature image',
       description: 'Mountain',
     },
+    {
+      url: '/gallery/gallery_img_4.avif',
+      alt: 'nature image',
+      description: 'Mountain',
+    },
   ]
 col2:
   [
