@@ -1,14 +1,42 @@
 ---
+// Components
 import Button from '../components/Button.astro'
 import Card from '../components/Card.astro'
+
+// Styles
+import '../base.css'
 ---
 
-<main class='h-screen w-screen flex justify-center items-center flex-col'>
-  <Card>
-    <div class='min-w-[380px]'>
-      <h1 class='text-3xl font-bold text-gray-700'>Thank You!</h1>
-      <p class='my-3 text-lg'>Your form submission has been received.</p>
-      <Button href='/'>Go Back</Button>
-    </div>
-  </Card>
-</main>
+<html class='h-full' lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <link rel='icon' href='/favicon.svg' />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap'
+      rel='stylesheet'
+    />
+    <title>Success</title>
+  </head>
+
+  <body class='h-full'>
+    <main class='h-full w-screen flex justify-center items-center flex-col'>
+      <Card className='mx-10'>
+        <div class='max-w-[380px]'>
+          <h1 class='text-2xl font-bold text-gray-700'>Thank You!</h1>
+          <p class='my-3 text-base'>Your form submission has been received.</p>
+          <Button href='/' className='flex items-center'>
+            <img
+              class='rotate-90 -ml-2 mr-2'
+              src='/icons/download_icon.svg'
+              alt=''
+              height='24px'
+              width='24px'
+            />
+            Go Back
+          </Button>
+        </div>
+      </Card>
+    </main>
+  </body>
+</html>
