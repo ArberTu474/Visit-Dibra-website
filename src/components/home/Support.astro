@@ -29,8 +29,33 @@ const allQuestions = await Astro.glob('../../data/faq/*.md')
           ))
         )
       }
+      <!-- Contact form -->
+      <div>
+        <h2 class='text-4xl font-bold'>Contact</h2>
+        <form name='contact' netlify>
+          <p>
+            <label><input type='text' name='name' placeholder='Name' /></label>
+          </p>
+          <p>
+            <label
+              ><input type='email' name='email' placeholder='Email' /></label
+            >
+          </p>
+          <p>
+            <label
+              ><textarea name='message' placeholder='Message'></textarea></label
+            >
+          </p>
+          <p>
+            <button class='bg-gray-300 p-3 rounded-lg' type='submit'
+              >Send</button
+            >
+          </p>
+        </form>
+      </div>
     </div>
   </div>
+
   <Image
     class='hidden md:block absolute -bottom-20 right-0 -z-10'
     src='/icons/faq_icon_bg.svg'
