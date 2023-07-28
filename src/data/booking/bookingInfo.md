@@ -16,8 +16,8 @@ contact:
 
 businesses:
   [
-    { type: 'hotel', name: 'Korabi hotel 1', url: '/', stars: 4 },
-    { type: 'hotel', name: 'Korabi hotel 2', url: '/', stars: 5 },
-    { type: 'hotel', name: 'Korabi hotel 3', url: '/', stars: 3 },
+    { type: 'hotel', name: 'Hotel Korabi', url: '/', stars: 4 },
+    { type: 'hotel', name: 'Hotel Veri', url: '/', stars: 5 },
+    { type: 'hotel', name: 'Guest House Sabriu', url: '/', stars: 3 },
   ]
 ---
