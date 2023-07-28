@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/ArticleLayout.astro'
 title: 'Gallery'
-description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quasi molestiae laudantium repellendus temporibus id'
+description: 'Explore the natural beauty of Diber, where each photo tells a story.'
 col1:
   [
     {
@@ -16,6 +16,11 @@ col1:
     },
     {
       url: '/gallery/gallery_img_3.avif',
+      alt: 'nature image',
+      description: 'Mountain',
+    },
+    {
+      url: '/gallery/gallery_img_4.avif',
       alt: 'nature image',
       description: 'Mountain',
     },
@@ -44,6 +49,11 @@ col2:
     },
     {
       url: '/gallery/gallery_img_8.avif',
+      alt: 'nature image',
+      description: 'Mountain',
+    },
+    {
+      url: '/gallery/gallery_img_3.avif',
       alt: 'nature image',
       description: 'Mountain',
     },
