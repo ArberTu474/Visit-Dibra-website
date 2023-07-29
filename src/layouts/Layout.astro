@@ -16,7 +16,7 @@ export interface Props {
   image?: string
 }
 
-type pageType = 'website' | 'article'
+type pageType = 'website' | 'article' | 'object'
 
 const {
   title,
@@ -40,6 +40,8 @@ const {
     <meta property='og:og:description' content={description} />
     <meta property='og:type' content={page_type} />
     <meta property='og:url' content={url} />
+    <meta property='og:image:height' content='600' />
+    <meta property='og:image:width' content='1200' />
     <meta property='og:image' content={image} />
     <link rel='icon' href='/favicon.svg' />
     <link
