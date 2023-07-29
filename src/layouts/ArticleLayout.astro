@@ -8,12 +8,18 @@ import { Image } from '@astrojs/image/components'
 // Function
 import { formatDate } from '../functions/utils.js'
 
-const { frontmatter } = Astro.props
+const { frontmatter, url } = Astro.props
 const { title, description, summary, img_src, img_alt, date, tags } =
   frontmatter
 ---
 
-<Layout title={title} description={description}>
+<Layout
+  title={title}
+  description={description}
+  page_type='article'
+  url={url}
+  image={img_src}
+>
   <div class='pt-8'>
     <article
       class='page-container max-w-7xl prose prose-p:text-justify prose-sky md:prose-h1:mt-8 prose-img:m-0 grid grid-cols-1 md:grid-cols-3 gap-y-12 md:gap-x-12'
