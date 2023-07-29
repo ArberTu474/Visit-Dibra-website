@@ -7,8 +7,8 @@ import ArticleCard from '../../components/home/ArticleCard.astro'
 // Functions
 import { formatDate } from '../../functions/utils.js'
 
+// Data
 const allArticle = await Astro.glob('./*.md')
-
 const allArticles = (await Astro.glob('../**/*.md')).filter(
   (p) => p.url.startsWith('/articles') || p.url.startsWith('/foods')
 )

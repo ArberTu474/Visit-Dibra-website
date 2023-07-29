@@ -11,9 +11,20 @@ export interface Props {
   title: string
   description?: string
   keywords?: string
+  page_type?: pageType
+  url?: string
+  image?: string
 }
 
-const { title, description = 'Welcome to Diber' } = Astro.props
+type pageType = 'website' | 'article'
+
+const {
+  title,
+  description = 'Welcome to Diber',
+  page_type,
+  url,
+  image,
+} = Astro.props
 ---
 
 <!DOCTYPE html>
@@ -21,10 +32,16 @@ const { title, description = 'Welcome to Diber' } = Astro.props
   <head>
     <meta charset='UTF-8' />
     <meta name='description' content={description} />
-    <!-- <meta name='keywords' content={keywords} /> -->
     <meta name='viewport' content='width=device-width, initial-scale=1' />
-    <link rel='icon' href='/favicon.svg' />
     <meta name='generator' content={Astro.generator} />
+
+    <!-- Open Graph protocol -->
+    <meta property='og:title' content={title} />
+    <meta property='og:og:description' content={description} />
+    <meta property='og:type' content={page_type} />
+    <meta property='og:url' content={url} />
+    <meta property='og:image' content={image} />
+    <link rel='icon' href='/favicon.svg' />
     <link
       href='https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap'
       rel='stylesheet'
