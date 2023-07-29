@@ -9,7 +9,6 @@ import { Image } from '@astrojs/image/components'
 import { formatDate } from '../functions/utils.js'
 
 const { frontmatter } = Astro.props
-const url = Astro.url.href
 const { title, description, summary, img_src, img_alt, date, tags } =
   frontmatter
 ---
@@ -17,8 +16,7 @@ const { title, description, summary, img_src, img_alt, date, tags } =
 <Layout
   title={title}
   description={description}
-  page_type='article'
-  page_url={url}
+  page_type='object'
   image={`https://visitdibra.netlify.app/${img_src}`}
 >
   <div class='pt-8'>
