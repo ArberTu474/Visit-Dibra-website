@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "devhost": "astro dev --host",
-    "start": "astro dev",
+    "seo": "npx unlighthouse --site visitdibra.netlify.app",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
