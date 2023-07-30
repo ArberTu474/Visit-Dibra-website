@@ -32,7 +32,7 @@ maps:
       height: 800,
       time: 0.5,
       file_src: '/maps/maps/map_1.pdf',
-      map_color: 'green',
+      map_color: 'dark-blue',
     },
     {
       title: 'Other Mountain 2',
@@ -43,7 +43,7 @@ maps:
       height: 800,
       time: 0.5,
       file_src: '/maps/maps/map_1.pdf',
-      map_color: 'green',
+      map_color: 'orange',
     },
   ]
 ---
