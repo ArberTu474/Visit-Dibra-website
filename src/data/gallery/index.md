@@ -60,7 +60,7 @@ col2:
     {
       url: '/gallery/honey.avif',
       alt: 'nature image',
-      description: 'Honey',
+      description: 'Local honey',
     },
     {
       url: '/gallery/geranium.avif',
@@ -88,12 +88,12 @@ col3:
     {
       url: '/gallery/gallery_img_12.avif',
       alt: 'nature image',
-      description: 'Mountain',
+      description: 'Mountain Begjunec in Peshkopi',
     },
     {
-      url: '/gallery/gallery_img_12.avif',
+      url: '/gallery/field.avif',
       alt: 'nature image',
-      description: 'Mount Bugjunec',
+      description: 'Field of wild poppy flowers in spring',
     },
   ]
 ---
