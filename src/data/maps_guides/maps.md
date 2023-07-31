@@ -43,7 +43,7 @@ maps:
       height: 800,
       time: 0.5,
       file_src: '/maps/maps/map_1.pdf',
-      map_color: 'orange',
+      map_color: 'blue',
     },
     {
       title: 'Grama Pasture',
@@ -54,7 +54,7 @@ maps:
       height: 800,
       time: 0.5,
       file_src: '/maps/maps/map_1.pdf',
-      map_color: 'orange',
+      map_color: 'green',
     },
     {
       title: 'Kerçin-Velivar Mountains',
@@ -65,7 +65,7 @@ maps:
       height: 800,
       time: 0.5,
       file_src: '/maps/maps/map_1.pdf',
-      map_color: 'orange',
+      map_color: 'dark-blue',
     },
     {
       title: 'Seta-Lura Lakes',
@@ -76,7 +76,7 @@ maps:
       height: 800,
       time: 0.5,
       file_src: '/maps/maps/map_1.pdf',
-      map_color: 'orange',
+      map_color: 'blue',
     },
   ]
 ---
