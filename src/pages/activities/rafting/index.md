@@ -10,7 +10,7 @@ image:
     height: 344,
   }
 
-img_src: '/activities/rafting2.jpg'
+img_src: '/activities/rafting.jpg'
 img_alt: 'rafting image'
 type: 'index_page'
 ---
