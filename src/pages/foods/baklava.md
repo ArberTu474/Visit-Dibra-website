@@ -1,8 +1,8 @@
 ---
 layout: '../../layouts/ArticleLayout.astro'
 title: 'Baklava'
-description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quasi molestiae laudantium repellendus temporibus id'
+description: 'A traditional Balkan desert with Turkish origins, Baklava in Diber offers a slight twist.'
 img_src: '/foods/baklava.jpg'
 img_alt: 'baklava'
-summary: ['Dibra Apples', 'Conclusion', 'Different types of apples in Dibra']
+summary: ['History of Baklava', 'Baklava in Diber', 'Where to find Baklava in Diber']
 ---
