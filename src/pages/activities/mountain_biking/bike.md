@@ -1,9 +1,9 @@
 ---
 layout: '../../../layouts/ArticleLayout.astro'
-title: 'Swimming aside Drini '
-type: 'swimming'
+title: 'Cross-Border Mountain Biking '
+type: 'biking'
 img_src: '/activities/swimming.jpg'
-img_alt: 'swim'
+img_alt: 'mountain biking'
 ---
 
 # hello swim
