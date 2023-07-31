@@ -12,7 +12,7 @@ summary:
   - Harvest Festival
   - Conclusion
 tags:
-  - locations
+  - location
 type: Main Article
 preview: /locations/peshkopi.jpg
 author: Lorem ipsum
