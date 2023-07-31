@@ -77,6 +77,11 @@ col2:
       alt: 'nature image',
       description: 'Local guide',
     },
+    {
+      url: '/gallery/biker.avif',
+      alt: 'nature image',
+      description: 'Mountain biker in Mavrovo',
+    },
   ]
 col3:
   [
