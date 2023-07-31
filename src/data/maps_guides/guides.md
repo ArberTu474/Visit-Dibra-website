@@ -4,7 +4,7 @@ maps:
     {
       title: 'Visit Diber Travel Guide - English',
       description: "Korabi Mountain is Albania's highest standing at 2,764m tall. Most routes to the top start from Radomire Village.",
-      img_src: '/images/nature_1.jpg',
+      img_src: '/images/english_card.jpg',
       img_alt: 'English',
       file_src: '/maps/guides/visit_diber_english.pdf',
     },
