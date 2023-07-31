@@ -41,7 +41,7 @@ maps:
       img_alt: 'Korabi mountain',
       distance: 10,
       height: 800,
-      time: 0.5,
+      time: 4,
       file_src: '/maps/maps/healing_valley.pdf',
       map_color: 'blue',
     },
