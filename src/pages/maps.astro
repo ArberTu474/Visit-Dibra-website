@@ -3,11 +3,12 @@
 import Layout from '../layouts/Layout.astro'
 
 // Components
-import { Image } from '@astrojs/image/components'
-import Card from '../components/Card.astro'
+
 import MapsCard from '../components/MapsCard.astro'
+import GuidesCard from '../components/GuidesCard.astro'
 
 const allMaps = await Astro.glob('../data/maps_guides/maps.md')
+const allGuides = await Astro.glob('../data/maps_guides/guides.md')
 ---
 
 <Layout title='VisitDibra | Maps'>
@@ -15,39 +16,77 @@ const allMaps = await Astro.glob('../data/maps_guides/maps.md')
     <div class='page-container'>
       <h1 class='text-4xl font-bold mt-6'>Maps & Guides</h1>
       <p class='text-base text-gray-500 my-6 max-w-3xl'>
-        Downloadable maps and tourist guides are available for each of your 
-        adventures in Diber. The guides are available in English, Italian, German, and Czech
-        languages, providing comprehensive information to enhance your travel 
-        experience in the Diber region.
+        Downloadable maps and tourist guides are available for each of your
+        adventures in Diber. The guides are available in English, Italian,
+        German, and Czech languages, providing comprehensive information to
+        enhance your travel experience in the Diber region.
       </p>
 
-      <div class='mt-12'>
-        <div class='flex justify-center gap-2 flex-col my-6'>
-          <div class='flex items-center gap-2'>
-            <img src='/icons/maps_icon.svg' alt='' height='42px' width='42px' />
-            <h2 class='text-2xl font-bold'>Maps</h2>
+      <div class='flex flex-col gap-12'>
+        <!-- Maps Section -->
+        <div class='mt-12'>
+          <div class='flex justify-center gap-2 flex-col my-6'>
+            <div class='flex items-center gap-2'>
+              <img
+                src='/icons/maps_icon.svg'
+                alt=''
+                height='42px'
+                width='42px'
+              />
+              <h2 class='text-2xl font-bold'>Maps</h2>
+            </div>
+            <div class='h-[2px] bg-slate-400/30 max-w-3xl rounded-full'></div>
           </div>
-          <div class='h-[2px] bg-slate-400/30 max-w-3xl rounded-full'></div>
+          <div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {
+              allMaps.map((mapInfo) =>
+                mapInfo.frontmatter.maps.map((map) => (
+                  <MapsCard
+                    title={map.title}
+                    description={map.description}
+                    img_src={map.img_src}
+                    img_alt={map.img_alt}
+                    distance={map.distance}
+                    height={map.height}
+                    time={map.time}
+                    file_src={map.file_src}
+                    map_color={map.map_color}
+                  />
+                ))
+              )
+            }
+          </div>
         </div>
-        <div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
-          {
-            allMaps.map((mapInfo) =>
-              mapInfo.frontmatter.maps.map((map) => (
-                <MapsCard
-                  title={map.title}
-                  description={map.description}
-                  img_src={map.img_src}
-                  img_alt={map.img_alt}
-                  distance={map.distance}
-                  height={map.height}
-                  time={map.time}
-                  file_src={map.file_src}
-                  map_color={map.map_color}
-                  
-                />
-              ))
-            )
-          }
+
+        <!-- Guides  -->
+        <div class='mt-12'>
+          <div class='flex justify-center gap-2 flex-col my-6'>
+            <div class='flex items-center gap-2'>
+              <img
+                src='/icons/guides_icon.svg'
+                alt=''
+                height='42px'
+                width='42px'
+              />
+              <h2 class='text-2xl font-bold'>Guides</h2>
+            </div>
+            <div class='h-[2px] bg-slate-400/30 max-w-3xl rounded-full'></div>
+          </div>
+          <div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {
+              allGuides.map((guideInfo) =>
+                guideInfo.frontmatter.maps.map((guide) => (
+                  <GuidesCard
+                    title={guide.title}
+                    description={guide.description}
+                    img_src={guide.img_src}
+                    img_alt={guide.img_alt}
+                    file_src={guide.file_src}
+                  />
+                ))
+              )
+            }
+          </div>
         </div>
       </div>
     </div>
