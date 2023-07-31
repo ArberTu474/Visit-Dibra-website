@@ -25,14 +25,14 @@ col1:
       description: 'Mountain',
     },
     {
-      url: '/gallery/gallery_img_4.avif',
+      url: '/gallery/radomire.avif',
       alt: 'nature image',
-      description: 'Mountain',
+      description: 'Radomire Village',
     },
     {
-      url: '/gallery/gallery_img_4.avif',
+      url: '/gallery/trails.avif',
       alt: 'nature image',
-      description: 'Mountain',
+      description: 'Hikers on the trail in Diber',
     },
   ]
 col2:
