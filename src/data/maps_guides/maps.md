@@ -69,12 +69,13 @@ maps:
     },
     {
       title: 'Seta-Lura Lakes',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum laboriosam repellat illo?',
+      description: 'The 17 glacial lakes, 7 in Lura National Park and 10 in Kacni, are part of the Seta-Lura Lakes network.
+      The park is also home to the Balkan pine, a protected species native only to the Western Balkans',
       img_src: '/images/nature_2.jpg',
       img_alt: 'Korabi mountain',
-      distance: 10,
-      height: 800,
-      time: 0.5,
+      distance: 21.5,
+      height: 1400,
+      time: 6,
       file_src: '/maps/maps/map_1.pdf',
       map_color: 'blue',
     },
