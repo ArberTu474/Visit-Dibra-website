@@ -9,7 +9,7 @@ maps:
       distance: 30,
       height: 1500,
       time: 6,
-      file_src: '/maps/maps/map_1.pdf',
+      file_src: '/maps/maps/korabi.pdf',
       map_color: 'blue',
     },
     {
@@ -31,7 +31,7 @@ maps:
       distance: 1.2,
       height: 800,
       time: 0.5,
-      file_src: '/maps/maps/map_1.pdf',
+      file_src: '/maps/maps/black_lake.pdf',
       map_color: 'dark-blue',
     },
     {
@@ -42,7 +42,7 @@ maps:
       distance: 10,
       height: 800,
       time: 0.5,
-      file_src: '/maps/maps/map_1.pdf',
+      file_src: '/maps/maps/healing_valley.pdf',
       map_color: 'blue',
     },
     {
@@ -53,7 +53,7 @@ maps:
       distance: 8.3,
       height: 900,
       time: 4,
-      file_src: '/maps/maps/map_1.pdf',
+      file_src: '/maps/maps/grama_pasture.pdf',
       map_color: 'green',
     },
     {
@@ -64,7 +64,7 @@ maps:
       distance: 15.7,
       height: 2375,
       time: 7,
-      file_src: '/maps/maps/map_1.pdf',
+      file_src: '/maps/maps/kercin_velivar_mountains.pdf',
       map_color: 'dark-blue',
     },
     {
@@ -76,7 +76,7 @@ maps:
       distance: 21.5,
       height: 1400,
       time: 6,
-      file_src: '/maps/maps/map_1.pdf',
+      file_src: '/maps/maps/seta_lura_lakes.pdf',
       map_color: 'blue',
     },
   ]
