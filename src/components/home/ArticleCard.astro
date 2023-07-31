@@ -43,10 +43,10 @@ const {
       alt={img_alt}
     />
     <div class='p-6'>
-      <div class='flex gap-6 items-center'>
+      <div class='flex gap-6 items-center mb-3'>
         {
           author && (
-            <div class='flex gap-2 items-center opacity-80 mb-3'>
+            <div class='flex gap-2 items-center opacity-80'>
               <img
                 src='/icons/author_icon.svg'
                 alt=''
@@ -54,13 +54,12 @@ const {
                 width='30px'
               />
               <p class='text-base text-gray-500'>{author}</p>
-              
             </div>
           )
         }
         {
           date && (
-            <div class='flex gap-2 items-center opacity-80 mb-3'>
+            <div class='flex gap-2 items-center opacity-80'>
               <img
                 src='/icons/date_icon.svg'
                 alt=''
@@ -76,7 +75,7 @@ const {
       <p class='text-base text-gray-500'>
         {description.slice(0, 100) + '...'}
       </p>
-      <div class='mt-2'>
+      <div class='mt-4'>
         {
           tags &&
             tags.map((tag) => (

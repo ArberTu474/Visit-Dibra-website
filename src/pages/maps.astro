@@ -23,7 +23,7 @@ const allGuides = await Astro.glob('../data/maps_guides/guides.md')
 
       <div class='flex flex-col gap-12'>
         <!-- Maps Section -->
-        <div class='mt-12'>
+        <div class='mt-0'>
           <div class='flex justify-center gap-2 flex-col my-6'>
             <div class='flex items-center gap-2'>
               <img
@@ -51,7 +51,7 @@ const allGuides = await Astro.glob('../data/maps_guides/guides.md')
                     file_src={map.file_src}
                     map_color={map.map_color}
                   />
-                ))
+                )),
               )
             }
           </div>
@@ -82,7 +82,7 @@ const allGuides = await Astro.glob('../data/maps_guides/guides.md')
                     img_alt={guide.img_alt}
                     file_src={guide.file_src}
                   />
-                ))
+                )),
               )
             }
           </div>
