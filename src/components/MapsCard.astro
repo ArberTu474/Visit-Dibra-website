@@ -13,21 +13,13 @@ export interface Props {
   height: number
   time: number
   file_src: string
-  map_color: color
   activity: activities
+  difficulty: difficult
 }
 
 type activities = 'biking' | 'hiking'
 
-type color =
-  | 'green'
-  | 'orange'
-  | 'yellow'
-  | 'red'
-  | 'purple'
-  | 'blue'
-  | 'dark-blue'
-  | 'gray'
+type difficult = 'easy' | 'medium' | 'hard'
 
 const {
   title,
@@ -38,60 +30,27 @@ const {
   height,
   time,
   file_src,
-  map_color,
   activity,
+  difficulty,
 } = Astro.props
 
 let colorClass = ''
 let btnColor = ''
 
-switch (map_color) {
-  case 'green':
+switch (difficulty) {
+  case 'easy':
     colorClass = 'border-lime-500'
     btnColor = 'bg-lime-500'
 
     break
-  case 'orange':
+  case 'medium':
     colorClass = 'border-orange-500'
     btnColor = 'bg-orange-500'
 
     break
-  case 'blue':
-    colorClass = 'border-sky-500'
-    btnColor = 'bg-sky-500'
-
-    break
-  case 'red':
+  case 'hard':
     colorClass = 'border-red-500'
     btnColor = 'bg-red-500'
-
-    break
-  case 'yellow':
-    colorClass = 'border-yellow-500'
-    btnColor = 'bg-yellow-500'
-
-    break
-  case 'purple':
-    colorClass = 'border-violet-600'
-    btnColor = 'bg-violet-600'
-
-    break
-  case 'dark-blue':
-    colorClass = 'border-indigo-900'
-    btnColor = 'bg-indigo-900'
-
-    break
-  case 'gray':
-    colorClass = 'border-gray-500'
-    btnColor = 'bg-gray-500'
-
-    break
-
-  default:
-    colorClass = 'border-gray-400'
-    btnColor = 'bg-gray-400'
-
-    break
 }
 ---
 

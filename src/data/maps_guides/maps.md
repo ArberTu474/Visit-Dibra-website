@@ -10,7 +10,7 @@ maps:
       height: 1500,
       time: 6,
       file_src: '/maps/maps/korabi.pdf',
-      map_color: 'blue',
+      difficulty: 'hard',
       activity: 'hiking'
     },
     {
@@ -22,7 +22,7 @@ maps:
       height: 800,
       time: 1.5,
       file_src: '/maps/maps/map_1.pdf',
-      map_color: 'green',
+      difficulty: 'easy',
       activity: 'hiking'
     },
     {
@@ -34,7 +34,7 @@ maps:
       height: 800,
       time: 0.5,
       file_src: '/maps/maps/black_lake.pdf',
-      map_color: 'dark-blue',
+      difficulty: 'medium',
       activity: 'hiking'
     },
     {
@@ -46,7 +46,7 @@ maps:
       height: 800,
       time: 4,
       file_src: '/maps/maps/healing_valley.pdf',
-      map_color: 'blue',
+      difficulty: 'easy',
       activity: 'hiking'
     },
     {
@@ -58,7 +58,7 @@ maps:
       height: 900,
       time: 4,
       file_src: '/maps/maps/grama_pasture.pdf',
-      map_color: 'green',
+      difficulty: 'hard',
       activity: 'hiking'
     },
     {
@@ -70,7 +70,7 @@ maps:
       height: 2375,
       time: 7,
       file_src: '/maps/maps/kercin_velivar_mountains.pdf',
-      map_color: 'dark-blue',
+      difficulty: 'hard',
       activity: 'hiking'
     },
     {
@@ -83,7 +83,7 @@ maps:
       height: 1400,
       time: 6,
       file_src: '/maps/maps/seta_lura_lakes.pdf',
-      map_color: 'blue',
+      difficulty: 'medium',
       activity: 'hiking'
     },
     {
@@ -97,7 +97,7 @@ maps:
       height: 1400,
       time: 6,
       file_src: '/maps/maps/mavrovo_biking.pdf',
-      map_color: 'orange',
+      difficulty: 'hard',
       activity: 'biking'
     },
   ]
