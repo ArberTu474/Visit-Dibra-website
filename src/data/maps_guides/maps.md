@@ -80,7 +80,7 @@ maps:
       map_color: 'blue',
     },
     {
-      title: 'Mavrova-Rostuse & Diber Mountain Mountain Biking',
+      title: 'Mavrova-Rostuse & Diber Mountain Biking',
       description: 'Discover a network of thrilling mountain biking trails and scenic hiking routes in the 
       the cross-border mountain biking region between North Macedonia and Albania with our tourist map! Each 
       trail is accompanied by detailed descriptions and convenient QR codes for easy access to additional information.',

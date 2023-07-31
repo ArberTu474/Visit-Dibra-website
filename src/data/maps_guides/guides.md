@@ -13,7 +13,7 @@ maps:
     {
       title: 'Vizitoni Diber Travel Guide - Shqip',
       description: "Guida zyrtare turistike e Dibrës në shqip. Kjo broshurë është përgatitur nga Nevila Manga dhe stafi i Qendrës së Turizmit Dibër.",
-      img_src: '/images/nature_1.jpg',
+      img_src: '/images/shqip_card.jpg',
       img_alt: 'Albanian',
       file_src: '/maps/guides/black_lake.pdf',
     },
