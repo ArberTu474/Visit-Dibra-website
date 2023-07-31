@@ -1,8 +1,8 @@
 ---
 layout: '../../../layouts/ArticleLayout.astro'
-title: 'Rafting in Drini River'
+title: 'Rafting on the Drin River'
 type: 'rafting'
-img_src: '/activities/rafting.jpg'
+img_src: '/activities/rafting2.jpg'
 img_alt: 'rafting'
 ---
 
