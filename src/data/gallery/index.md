@@ -34,6 +34,11 @@ col1:
       alt: 'nature image',
       description: 'On the trails in Diber',
     },
+    {
+      url: '/gallery/vladimir.avif',
+      alt: 'nature image',
+      description: 'Local guide',
+    },
   ]
 col2:
   [
@@ -67,6 +72,11 @@ col2:
       alt: 'nature image',
       description: 'Wild mountain geranium',
     },
+    {
+      url: '/gallery/horses.avif',
+      alt: 'nature image',
+      description: 'Farm horses in Radomire',
+    },
   ]
 col3:
   [
@@ -94,6 +104,11 @@ col3:
       url: '/gallery/field.avif',
       alt: 'nature image',
       description: 'Field of wild poppy flowers in spring',
+    },
+    {
+      url: '/gallery/river_canyon.avif',
+      alt: 'nature image',
+      description: 'Canyon on the Drin River',
     },
   ]
 ---
