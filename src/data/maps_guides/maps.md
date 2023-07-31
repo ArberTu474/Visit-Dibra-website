@@ -11,6 +11,7 @@ maps:
       time: 6,
       file_src: '/maps/maps/korabi.pdf',
       map_color: 'blue',
+      activity: 'hiking'
     },
     {
       title: 'Begjunec Park',
@@ -22,6 +23,7 @@ maps:
       time: 1.5,
       file_src: '/maps/maps/map_1.pdf',
       map_color: 'green',
+      activity: 'hiking'
     },
     {
       title: 'Black Lake',
@@ -33,6 +35,7 @@ maps:
       time: 0.5,
       file_src: '/maps/maps/black_lake.pdf',
       map_color: 'dark-blue',
+      activity: 'hiking'
     },
     {
       title: 'Healing Valley',
@@ -44,6 +47,7 @@ maps:
       time: 4,
       file_src: '/maps/maps/healing_valley.pdf',
       map_color: 'blue',
+      activity: 'hiking'
     },
     {
       title: 'Grama Pasture',
@@ -55,6 +59,7 @@ maps:
       time: 4,
       file_src: '/maps/maps/grama_pasture.pdf',
       map_color: 'green',
+      activity: 'hiking'
     },
     {
       title: 'Kerçin-Velivar Mountains',
@@ -66,6 +71,7 @@ maps:
       time: 7,
       file_src: '/maps/maps/kercin_velivar_mountains.pdf',
       map_color: 'dark-blue',
+      activity: 'hiking'
     },
     {
       title: 'Seta-Lura Lakes',
@@ -78,6 +84,7 @@ maps:
       time: 6,
       file_src: '/maps/maps/seta_lura_lakes.pdf',
       map_color: 'blue',
+      activity: 'hiking'
     },
     {
       title: 'Mavrova-Rostuse & Diber Mountain Biking',
@@ -91,6 +98,7 @@ maps:
       time: 6,
       file_src: '/maps/maps/mavrovo_biking.pdf',
       map_color: 'orange',
+      activity: 'biking'
     },
   ]
 ---
