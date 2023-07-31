@@ -18,7 +18,7 @@ const allGuides = await Astro.glob('../data/maps_guides/guides.md')
       <p class='text-base text-gray-500 my-6 max-w-3xl'>
         Downloadable maps and tourist guides are available for each of your
         adventures in Diber. Officials guides are available in English, Italian,
-        German, Spanish, Macedonia, Montenegrin and Czech languages, providing 
+        German, Spanish, Macedonia, Montenegrin and Czech languages, providing
         comprehensive information to enjoy your experience in Diber.
       </p>
 
@@ -51,6 +51,7 @@ const allGuides = await Astro.glob('../data/maps_guides/guides.md')
                     time={map.time}
                     file_src={map.file_src}
                     map_color={map.map_color}
+                    activity={map.activity}
                   />
                 )),
               )
