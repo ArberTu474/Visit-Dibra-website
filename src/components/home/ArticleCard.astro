@@ -11,12 +11,22 @@ export interface Props {
   img_alt: string
   url: string
   date: string
+  author: string
   tags?: Array<string>
   className?: string
 }
 
-const { className, title, description, img_scr, img_alt, url, tags, date } =
-  Astro.props
+const {
+  className,
+  title,
+  description,
+  img_scr,
+  img_alt,
+  url,
+  tags,
+  date,
+  author,
+} = Astro.props
 ---
 
 <Card hasPadding={false}>
@@ -30,9 +40,33 @@ const { className, title, description, img_scr, img_alt, url, tags, date } =
       alt={img_alt}
     />
     <div class='p-6'>
-      <div class='flex gap-2 items-center opacity-80 mb-3'>
-        <img src='/icons/date_icon.svg' alt='' height='28px' width='28px' />
-        <p class='text-base text-gray-500'>{date}</p>
+      <div class='flex gap-6 items-center'>
+        {
+          author && (
+            <div class='flex gap-2 items-center opacity-80 mb-3'>
+              <img
+                src='/icons/author_icon.svg'
+                alt=''
+                height='30px'
+                width='30px'
+              />
+              <p class='text-base text-gray-500'>{author}</p>
+            </div>
+          )
+        }
+        {
+          date && (
+            <div class='flex gap-2 items-center opacity-80 mb-3'>
+              <img
+                src='/icons/date_icon.svg'
+                alt=''
+                height='28px'
+                width='28px'
+              />
+              <p class='text-base text-gray-500'>{date}</p>
+            </div>
+          )
+        }
       </div>
       <h2 class='text-xl font-bold mb-1'>{title}</h2>
       <p class='text-base text-gray-500'>

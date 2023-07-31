@@ -10,7 +10,7 @@ import { formatDate } from '../../functions/utils.js'
 // Data
 const allArticle = await Astro.glob('./*.md')
 const allArticles = (await Astro.glob('../**/*.md')).filter(
-  (p) => p.url.startsWith('/articles') || p.url.startsWith('/foods')
+  (p) => p.url.startsWith('/articles') || p.url.startsWith('/foods'),
 )
 
 // || p.url.startsWith('/')
@@ -30,6 +30,7 @@ const nonDraftPosts = allArticles.filter((post) => !post.frontmatter.draft)
             img_alt={article.frontmatter.img_alt}
             tags={article.frontmatter.tags}
             date={formatDate(article.frontmatter.date)}
+            author={article.frontmatter.author}
           />
         ))
       }
