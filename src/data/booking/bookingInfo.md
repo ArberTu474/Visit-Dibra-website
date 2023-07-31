@@ -9,8 +9,8 @@ contact:
     { type: 'phone', contactInfo: '+355 067 384 0009', url: 'tel:0673840009' },
     {
       type: 'email',
-      contactInfo: 'info@visitdiber.com',
-      url: 'mailto: info@visitdiber.com',
+      contactInfo: 'ticdiber@gmail.com',
+      url: 'mailto: ticdiber@gmail.com',
     },
   ]
 

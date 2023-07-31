@@ -65,7 +65,7 @@ col2:
     {
       url: '/gallery/geranium.avif',
       alt: 'nature image',
-      description: 'Geranium',
+      description: 'Wild mountain geranium',
     },
   ]
 col3:
