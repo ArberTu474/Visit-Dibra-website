@@ -20,9 +20,10 @@ const number_of_activities_shown = 3
       icon_src='/icons/activities_icon.svg'
       text_position='center'
     >
-      Diber offers an active vacation with hiking, mountain climbing, river rafting, 
-      and swimming opportunities. Embrace adventure amidst stunning landscapes and 
-      create unforgettable memories. Plan your action packed getaway in Diber today!
+      Diber offers an active vacation with hiking, mountain climbing, river
+      rafting, and swimming opportunities. Embrace adventure amidst stunning
+      landscapes and create unforgettable memories. Plan your action packed
+      getaway in Diber today!
     </SectionContent>
 
     <!-- Activities Cards -->
@@ -42,9 +43,10 @@ const number_of_activities_shown = 3
                 <Image
                   class='object-cover w-full h-full'
                   src={activityType.frontmatter.img_src}
-                  width={activityType.frontmatter.image.width}
-                  height={activityType.frontmatter.image.height}
                   alt={activityType.frontmatter.img_alt}
+                  width={800}
+                  height={600}
+                  format='avif'
                 />
               </div>
               <h2 class='text-xl font-bold'>Explore more:</h2>
