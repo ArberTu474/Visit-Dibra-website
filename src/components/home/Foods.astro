@@ -20,10 +20,10 @@ const number_of_cards_shown = 4
       icon_src='/icons/foods_icon.svg'
       text_position='center'
     >
-      The Diber region boasts a long and illustrious culinary history, 
-      renowned throughout Albania for its abundance of year-round fruits, vegetables, 
-      and various agricultural products. Don't miss the opportunity to savor 
-      the flavors of this delightful destination!
+      The Diber region boasts a long and illustrious culinary history, renowned
+      throughout Albania for its abundance of year-round fruits, vegetables, and
+      various agricultural products. Don't miss the opportunity to savor the
+      flavors of this delightful destination!
     </SectionContent>
 
     <div class='grid grid-cols-1 lg:grid-cols-2 gap-6 mt-12'>
@@ -31,9 +31,9 @@ const number_of_cards_shown = 4
         allArticles.slice(0, number_of_cards_shown).map((article, i) => (
           <a href={article.url}>
             <Card className='hover:-translate-y-2 transition-transform duration-300'>
-              <div class='flex flex-col xs:flex-row gap-6 '>
+              <div class='grid grid-cols-1 md:grid-cols-5 gap-y-6 md:gap-x-6 '>
                 <Image
-                  class='object-cover rounded-lg bg-gray-400 h-fit overflow-hidden'
+                  class='col-span-2 object-cover h-40 w-full rounded-lg bg-gray-400  overflow-hidden'
                   src={
                     article.frontmatter.img_src
                       ? article.frontmatter.img_src
@@ -45,7 +45,7 @@ const number_of_cards_shown = 4
                   format='avif'
                 />
 
-                <div>
+                <div class='col-span-3 '>
                   <h2 class='text-xl font-semibold mb-1'>
                     {article.frontmatter.title}
                   </h2>
