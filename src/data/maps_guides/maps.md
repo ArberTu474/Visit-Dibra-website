@@ -26,7 +26,7 @@ maps:
     {
       title: 'Black Lake',
       description: "Black Lake is located 45 minutes above Radomire Village and is named for its dark color. The lake is surrounded by a pine forest, making it an excellent spot for a picnic.",
-      img_src: '/images/nature_2.jpg',
+      img_src: '/images/black_lake.jpg',
       img_alt: 'Korabi mountain',
       distance: 1.2,
       height: 800,
@@ -37,7 +37,7 @@ maps:
     {
       title: 'Healing Valley',
       description: "The valley is named after the therapeutic qualities of the thermal springs in Peshkopi. The itinerary also includes information about guest houses in Rabdisht, which is one of Albania's 100 designated touristic villages.",
-      img_src: '/images/nature_2.jpg',
+      img_src: '/images/healing_valley.jpg',
       img_alt: 'Korabi mountain',
       distance: 10,
       height: 800,
@@ -48,7 +48,7 @@ maps:
     {
       title: 'Grama Pasture',
       description: "Grama Pasture is situated near Sllatine Village, at an elevation of approximately 1800m above sea level. This picturesque pasture is renowned for its glacial lake, which boasts crystal clear water. Multiple trails offer access to the pasture, making it a popular destination for hikers and nature enthusiasts.",
-      img_src: '/images/nature_2.jpg',
+      img_src: '/images/grama_lake.jpg',
       img_alt: 'Korabi mountain',
       distance: 8.3,
       height: 900,
@@ -59,7 +59,7 @@ maps:
     {
       title: 'Kerçin-Velivar Mountains',
       description: "The highest point within the Kerçin-Velivar range is Mount Velivar, standing at 2375m high. Sights along the way include a 250-year-old maple tree and Eastern Orthodox churches of St. Demetrius and the Holy Church of Sotir.",
-      img_src: '/images/nature_2.jpg',
+      img_src: '/images//kercisht.JPG',
       img_alt: 'Korabi mountain',
       distance: 15.7,
       height: 2375,
@@ -71,7 +71,7 @@ maps:
       title: 'Seta-Lura Lakes',
       description: 'The 17 glacial lakes, 7 in Lura National Park and 10 in Kacni, are part of the Seta-Lura Lakes network.
       The park is also home to the Balkan pine, a protected species native only to the Western Balkans',
-      img_src: '/images/nature_2.jpg',
+      img_src: '/images/luras_lakes.jpg',
       img_alt: 'Korabi mountain',
       distance: 21.5,
       height: 1400,
