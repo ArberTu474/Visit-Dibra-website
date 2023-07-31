@@ -35,9 +35,9 @@ col1:
       description: 'On the trails in Diber',
     },
     {
-      url: '/gallery/vladimir.avif',
+      url: '/gallery/horses.avif',
       alt: 'nature image',
-      description: 'Local guide',
+      description: 'Farm horses in Radomire',
     },
   ]
 col2:
@@ -73,9 +73,9 @@ col2:
       description: 'Wild mountain geranium',
     },
     {
-      url: '/gallery/horses.avif',
+      url: '/gallery/vladimir.avif',
       alt: 'nature image',
-      description: 'Farm horses in Radomire',
+      description: 'Local guide',
     },
   ]
 col3:
