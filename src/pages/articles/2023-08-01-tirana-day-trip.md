@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/ArticleLayout.astro
-title: Nuts from Diber
+title: Day Trip to Diber from Tirana
 description: 'Lorem ipsum .'
 date: 2023-08-01T18:43:25.205Z
 img_src: /images/rruga_arbrit.jpg
@@ -12,19 +12,17 @@ summary:
   - Harvest Festival
   - Conclusion
 tags:
-  - food
+  - locations
 type: Main Article
 preview: /locations/peshkopi.jpg
 ---
 
 # Day Tripping to Diber from Tirana
 
-## Travelling to Diber
+## Travel Options to Diber
 
 ## Nut Products
 
-
 ## Harvest Festival
-
 
 ## Conclusion

@@ -20,9 +20,9 @@ col1:
       description: 'Exploring with kids',
     },
     {
-      url: '/gallery/gallery_img_4.avif',
+      url: '/gallery/cherries.avif',
       alt: 'nature image',
-      description: 'Mountain',
+      description: 'Cherries of Diber',
     },
     {
       url: '/gallery/radomire.avif',
@@ -32,7 +32,7 @@ col1:
     {
       url: '/gallery/trails.avif',
       alt: 'nature image',
-      description: 'Hikers on the trail in Diber',
+      description: 'On the trails in Diber',
     },
   ]
 col2:
@@ -58,14 +58,14 @@ col2:
       description: 'The stone village of Rabdisht',
     },
     {
-      url: '/gallery/gallery_img_3.avif',
+      url: '/gallery/honey.avif',
       alt: 'nature image',
-      description: 'Mountain',
+      description: 'Honey',
     },
     {
-      url: '/gallery/gallery_img_3.avif',
+      url: '/gallery/geranium.avif',
       alt: 'nature image',
-      description: 'Mountain',
+      description: 'Geranium',
     },
   ]
 col3:
