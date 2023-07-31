@@ -13,18 +13,13 @@ export interface Props {
   height: number
   time: number
   file_src: string
-  map_color: color
+  activity: activities
+  difficulty: difficult
 }
 
-type color =
-  | 'green'
-  | 'orange'
-  | 'yellow'
-  | 'red'
-  | 'purple'
-  | 'blue'
-  | 'dark-blue'
-  | 'gray'
+type activities = 'biking' | 'hiking'
+
+type difficult = 'easy' | 'medium' | 'hard'
 
 const {
   title,
@@ -35,59 +30,27 @@ const {
   height,
   time,
   file_src,
-  map_color,
+  activity,
+  difficulty,
 } = Astro.props
 
 let colorClass = ''
 let btnColor = ''
 
-switch (map_color) {
-  case 'green':
+switch (difficulty) {
+  case 'easy':
     colorClass = 'border-lime-500'
     btnColor = 'bg-lime-500'
 
     break
-  case 'orange':
+  case 'medium':
     colorClass = 'border-orange-500'
     btnColor = 'bg-orange-500'
 
     break
-  case 'blue':
-    colorClass = 'border-sky-500'
-    btnColor = 'bg-sky-500'
-
-    break
-  case 'red':
+  case 'hard':
     colorClass = 'border-red-500'
     btnColor = 'bg-red-500'
-
-    break
-  case 'yellow':
-    colorClass = 'border-yellow-500'
-    btnColor = 'bg-yellow-500'
-
-    break
-  case 'purple':
-    colorClass = 'border-violet-600'
-    btnColor = 'bg-violet-600'
-
-    break
-  case 'dark-blue':
-    colorClass = 'border-indigo-900'
-    btnColor = 'bg-indigo-900'
-
-    break
-  case 'gray':
-    colorClass = 'border-gray-500'
-    btnColor = 'bg-gray-500'
-
-    break
-
-  default:
-    colorClass = 'border-gray-400'
-    btnColor = 'bg-gray-400'
-
-    break
 }
 ---
 
@@ -103,36 +66,40 @@ switch (map_color) {
       format='avif'
     />
     <div
-      class='absolute top-0 left-0 h-full w-full p-6 bg-gradient-to-r from-gray-900/80 from-10%'
+      class='absolute top-0 left-0 h-full w-full p-6 bg-gradient-to-r from-gray-900/80 from-10% to-gray-900/20'
     >
-      <div class='flex flex-col gap-5 justify-center h-full'>
-        <div class='flex items-center gap-2'>
-          <img
-            src='/icons/maps/distance_icon.svg'
-            alt=''
-            height='32px'
-            width='32px'
-          />
-          <p class='text-lg text-gray-100 font-bold'>{`${distance} km`}</p>
+      <div class='flex justify-between h-full'>
+        <div class='flex flex-col gap-5 justify-center'>
+          <div class='flex items-center gap-2'>
+            <img
+              src='/icons/maps/distance_icon.svg'
+              alt=''
+              height='32px'
+              width='32px'
+            />
+            <p class='text-lg text-gray-100 font-bold'>{`${distance} km`}</p>
+          </div>
+          <div class='flex items-center gap-2'>
+            <img
+              src='/icons/maps/height_icon.svg'
+              alt=''
+              height='32px'
+              width='32px'
+            />
+            <p class='text-lg text-gray-100 font-bold'>{`${height} m`}</p>
+          </div>
+          <div class='flex items-center gap-2'>
+            <img
+              src='/icons/maps/time_icon.svg'
+              alt=''
+              height='32px'
+              width='32px'
+            />
+            <p class='text-lg text-gray-100 font-bold'>{`${time} hours`}</p>
+          </div>
         </div>
-        <div class='flex items-center gap-2'>
-          <img
-            src='/icons/maps/height_icon.svg'
-            alt=''
-            height='32px'
-            width='32px'
-          />
-          <p class='text-lg text-gray-100 font-bold'>{`${height} m`}</p>
-        </div>
-        <div class='flex items-center gap-2'>
-          <img
-            src='/icons/maps/time_icon.svg'
-            alt=''
-            height='32px'
-            width='32px'
-          />
-          <p class='text-lg text-gray-100 font-bold'>{`${time} hours`}</p>
-        </div>
+
+        <img class='self-end' src={`/icons/maps/${activity}_icon.svg`} alt='' />
       </div>
     </div>
   </div>
