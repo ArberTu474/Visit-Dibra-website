@@ -58,7 +58,7 @@ maps:
     },
     {
       title: 'Kerçin-Velivar Mountains',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum laboriosam repellat illo?',
+      description: "The highest point within the Kerçin-Velivar range is Mount Velivar, standing at 2375m high. Sights along the way include a 250-year-old maple tree and Eastern Orthodox churches of St. Demetrius and the Holy Church of Sotir.",
       img_src: '/images/nature_2.jpg',
       img_alt: 'Korabi mountain',
       distance: 15.7,
