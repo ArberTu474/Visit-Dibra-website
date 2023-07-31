@@ -1,11 +1,11 @@
 ---
 layout: '../../layouts/ArticleLayout.astro'
 title: 'Apples'
-description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis quasi molestiae laudantium repellendus temporibus id'
+description: "Over 40 different varieties of apples are cultivated in the Diber region."
 img_src: '/foods/apples.jpg'
 img_alt: 'apples'
-date: '05/06/2023'
-summary: ['Dibra Apples', 'Conclusion', 'Different types of apples in Dibra']
+date: '07/31/2023'
+summary: ['Apple Varities', 'Apple Varities', 'Apple Products', 'Different types of apples in Dibra']
 ---
 
 # Dibra Apples
