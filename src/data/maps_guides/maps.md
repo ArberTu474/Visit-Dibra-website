@@ -60,7 +60,7 @@ maps:
       title: 'Kerçin-Velivar Mountains',
       description: "The highest point within the Kerçin-Velivar range is Mount Velivar, standing at 2375m high. Sights along the way include a 250-year-old maple tree and Eastern Orthodox churches of St. Demetrius and the Holy Church of Sotir.",
       img_src: '/images/kercisht.jpg',
-      img_alt: 'Korabi mountain',
+      img_alt: 'Velivar Mountains',
       distance: 15.7,
       height: 2375,
       time: 7,
@@ -72,12 +72,23 @@ maps:
       description: 'The 17 glacial lakes, 7 in Lura National Park and 10 in Kacni, are part of the Seta-Lura Lakes network.
       The park is also home to the Balkan pine, a protected species native only to the Western Balkans',
       img_src: '/images/luras_lakes.jpg',
-      img_alt: 'Korabi mountain',
+      img_alt: 'Lura Lakes',
       distance: 21.5,
       height: 1400,
       time: 6,
       file_src: '/maps/maps/seta_lura_lakes.pdf',
       map_color: 'blue',
+    },
+    {
+      title: 'Mavrova-Rostuse & Dibër Mountain Mountain Biking',
+      description: 'Discover the cross-border mountain biking region between North Macedonia and Albania with our tourist map! Discover a network of thrilling mountain biking trails and scenic hiking routes, each accompanied by detailed descriptions and convenient QR codes for easy access to additional information.',
+      img_src: '/images/mountain_biking.jpg',
+      img_alt: 'Mountain Biking',
+      distance: 21.5,
+      height: 1400,
+      time: 6,
+      file_src: '/maps/maps/mavrovo_biking.pdf',
+      map_color: 'orange',
     },
   ]
 ---
