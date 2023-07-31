@@ -27,7 +27,7 @@ col1:
     {
       url: '/gallery/radomire.avif',
       alt: 'nature image',
-      description: 'Radomire Village',
+      description: 'The Mosque Of Radomire in Radomire Village',
     },
     {
       url: '/gallery/trails.avif',
