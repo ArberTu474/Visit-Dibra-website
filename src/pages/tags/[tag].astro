@@ -17,7 +17,7 @@ const { tag } = Astro.params
 const { articles } = Astro.props
 
 const filteredArticles = articles.filter((article) =>
-  article.frontmatter.tags?.includes(tag)
+  article.frontmatter.tags?.includes(tag),
 )
 ---
 
@@ -37,6 +37,7 @@ const filteredArticles = articles.filter((article) =>
             img_alt={article.frontmatter.img_alt}
             tags={article.frontmatter.tags}
             date={article.frontmatter.date}
+            author={article.frontmatter.author}
           />
         ))
       }

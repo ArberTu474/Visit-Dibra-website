@@ -15,6 +15,7 @@ tags:
   - locations
 type: Main Article
 preview: /locations/peshkopi.jpg
+author: Lorem ipsum
 ---
 
 # Day Tripping to Diber from Tirana
