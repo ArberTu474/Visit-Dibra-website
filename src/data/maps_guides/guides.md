@@ -20,7 +20,7 @@ maps:
     {
       title: 'Visita Diber Travel Guide - Italiano',
       description: "La guida turistica ufficiale di Diber in italiano. Questa brochure è stata preparata da Ilaria Ghaleb.",
-      img_src: '/images/nature_1.jpg',
+      img_src: '/images/italian_card.jpg',
       img_alt: 'Italian',
       file_src: '/maps/guides/black_lake.pdf',
     },
