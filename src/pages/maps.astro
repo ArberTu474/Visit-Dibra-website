@@ -14,6 +14,73 @@ const allGuides = await Astro.glob('../data/maps_guides/guides.md')
 <Layout title='VisitDibra | Maps'>
   <main>
     <div class='page-container'>
+      <div
+        class='bg-amber-300 rounded-lg p-6 flex flex-col md:flex-row items-center justify-between gap-6 shadow-lg shadow-gray-400/20 sticky mt-3'
+      >
+        <div class='flex flex-col md:flex-row items-center gap-8'>
+          <div class='text-center md:text-left'>
+            <h2 class='w-full text-2xl text-amber-950/80 font-bold'>
+              Visit Diber Travel Guide
+            </h2>
+            <p class='text-sm text-amber-950/50'>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Possimus, eligendi.
+            </p>
+          </div>
+          <select
+            class='hidden md:block w-full md:max-w-sm bg-amber-400/60 border-2 border-amber-400/10 text-amber-900 text-lg rounded-xl p-3 cursor-pointer'
+            name='language'
+            id='language'
+          >
+            <option selected>Choose language</option>
+            <option value='albanian'>🇦🇱 Albanian</option>
+            <option value='english'>🇬🇧 English</option>
+            <option value='greek'>🇬🇷 Greek</option>
+          </select>
+        </div>
+        <!-- Desktop download button -->
+        <a
+          id='download'
+          href='/maps/guides/visit_diber_english.pdf'
+          target='_blank'
+          onclick='getOption()'
+          class='hidden md:block py-3 px-10 text-lg bg-amber-500/70 rounded-lg font-bold text-amber-950/80 hover:opacity-90 transition-opacity duration-300'
+          >Download</a
+        >
+        <!-- Mobile download button -->
+        <div
+          class='md:hidden flex items-center px-5 text-lg bg-amber-500/70 rounded-lg font-bold text-amber-950/80 hover:opacity-90 transition-opacity duration-300'
+        >
+          <a
+            id='download'
+            href='/maps/guides/visit_diber_english.pdf'
+            onclick='getOption()'
+            target='_blank'
+            class='py-3 inline-block'>Download</a
+          >
+          <!-- Divider -->
+          <div class='min-w-[1px] h-9 bg-amber-800/40 mx-3'></div>
+          <div class='relative'>
+            <select
+              class='block bg-transparent text-transparent w-12 pl-4 pb-3 py-3 cursor-pointer'
+              name='language'
+              id='language'
+            >
+              <option selected>Choose language</option>
+              <option value='albanian'>🇦🇱 Albanian</option>
+              <option value='english'>🇬🇧 English</option>
+              <option value='greek'>🇬🇷 Greek</option>
+            </select>
+            <img
+              class='absolute top-2 left-1 pointer-events-none mx-auto'
+              src='/icons/down_arrow_brown.svg'
+              alt=''
+              height='40px'
+              width='40px'
+            />
+          </div>
+        </div>
+      </div>
       <h1 class='text-4xl font-bold mt-6'>Maps & Guides</h1>
       <p class='text-base text-gray-500 my-6 max-w-3xl'>
         Downloadable maps and tourist guides are available for each of your
@@ -53,7 +120,7 @@ const allGuides = await Astro.glob('../data/maps_guides/guides.md')
                     difficulty={map.difficulty}
                     activity={map.activity}
                   />
-                )),
+                ))
               )
             }
           </div>
@@ -84,7 +151,7 @@ const allGuides = await Astro.glob('../data/maps_guides/guides.md')
                     img_alt={guide.img_alt}
                     file_src={guide.file_src}
                   />
-                )),
+                ))
               )
             }
           </div>
@@ -93,3 +160,17 @@ const allGuides = await Astro.glob('../data/maps_guides/guides.md')
     </div>
   </main>
 </Layout>
+
+<script type='text/javascript'>
+language = document.querySelector('#language')
+download = document.querySelector('#download')
+
+function getOption() {
+  value = language.value.toLowerCase()
+  if (value === 'choose language') {
+    value = 'english'
+  }
+  let link = `/maps/guides/visit_diber_${value}.pdf`
+  download.setAttribute('href', link)
+}
+</script>
