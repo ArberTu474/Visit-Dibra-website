@@ -14,12 +14,11 @@ const allArticles = (await Astro.glob('../**/*.md')).filter(
 const nonDraftPosts = allArticles.filter((post) => !post.frontmatter.draft)
 ---
 
-<Layout title='Articles'>
+<Layout title='Blog'>
   <div class='page-container'>
     <h1 class='text-4xl font-bold mt-6'>Articles</h1>
     <p class='text-base text-gray-500 my-6 max-w-3xl'>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, vero
-      temporibus provident id delectus expedita aliquam sunt eos et fuga.
+      Learn more about the Diber region with blog posts about travel and cuisine of Diber.
     </p>
     <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-20'>
       {
