@@ -3,58 +3,70 @@
 import Layout from '../layouts/Layout.astro'
 
 // Components
-
 import MapsCard from '../components/MapsCard.astro'
 import GuidesCard from '../components/GuidesCard.astro'
 
+// Data
 const allMaps = await Astro.glob('../data/maps_guides/maps.md')
 const allGuides = await Astro.glob('../data/maps_guides/guides.md')
+
+{
+  allGuides.map((guideInfo) => guideInfo)
+}
 ---
 
 <Layout title='VisitDibra | Maps'>
   <main>
     <div class='page-container'>
       <div
-        class='bg-amber-300 rounded-lg p-6 flex flex-col md:flex-row items-center justify-between gap-6 shadow-lg shadow-gray-400/20 sticky mt-3'
+        class='bg-amber-300 rounded-lg p-6 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-6 shadow-lg shadow-gray-400/20 sticky mt-3'
       >
+        <div class='text-center sm:text-left'>
+          <h2 class='w-full text-2xl text-amber-950/80 font-bold'>
+            Visit Diber Travel Guide
+          </h2>
+          <p id='description' class='text-sm max-w-xl text-amber-950/50'>
+            The official tourist guide of Diber in English. This brochure was
+            prepared by the Albanian Local Capacity Development Foundation in a
+            collaboration between USAID and the Embassy of Sweden.
+          </p>
+        </div>
         <div class='flex flex-col md:flex-row items-center gap-8'>
-          <div class='text-center md:text-left'>
-            <h2 class='w-full text-2xl text-amber-950/80 font-bold'>
-              Visit Diber Travel Guide
-            </h2>
-            <p class='text-sm text-amber-950/50'>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Possimus, eligendi.
-            </p>
-          </div>
           <select
-            class='hidden md:block w-full md:max-w-sm bg-amber-400/60 border-2 border-amber-400/10 text-amber-900 text-lg rounded-xl p-3 cursor-pointer'
+            class='hidden lg:block w-80 bg-amber-400/60 border-2 border-amber-400/10 text-amber-900 text-lg rounded-xl p-3 cursor-pointer'
             name='language'
             id='language'
+            onchange='updateDescription()'
           >
             <option selected>Choose language</option>
-            <option value='albanian'>🇦🇱 Albanian</option>
             <option value='english'>🇬🇧 English</option>
-            <option value='greek'>🇬🇷 Greek</option>
+            <option value='albanian'>🇦🇱Albanian</option>
+            <option value='italian'>🇮🇹 Italian</option>
+            <option value='german'>🇩🇪 German</option>
+            <option value='spanish'>🇪🇸 Spanish</option>
+            <option value='czech'>🇨🇿 Czech</option>
+            <option value='macedonian'>🇲🇰 Macedonian</option>
+            <option value='montenegrin'>🇲🇪 Montenegrin</option>
+            <option value='polish'>🇵🇱 Polish</option>
           </select>
+          <!-- Desktop download button -->
+          <a
+            id='download'
+            href='/maps/guides/visit_diber_english.pdf'
+            target='_blank'
+            onclick='getOption()'
+            class='hidden lg:block py-3 px-10 text-lg bg-amber-500/70 rounded-lg font-bold text-amber-950/80 hover:opacity-90 transition-opacity duration-300'
+            >Download</a
+          >
         </div>
-        <!-- Desktop download button -->
-        <a
-          id='download'
-          href='/maps/guides/visit_diber_english.pdf'
-          target='_blank'
-          onclick='getOption()'
-          class='hidden md:block py-3 px-10 text-lg bg-amber-500/70 rounded-lg font-bold text-amber-950/80 hover:opacity-90 transition-opacity duration-300'
-          >Download</a
-        >
         <!-- Mobile download button -->
         <div
-          class='md:hidden flex items-center px-5 text-lg bg-amber-500/70 rounded-lg font-bold text-amber-950/80 hover:opacity-90 transition-opacity duration-300'
+          class='lg:hidden flex items-center px-5 text-lg bg-amber-500/70 rounded-lg font-bold text-amber-950/80 hover:opacity-90 transition-opacity duration-300'
         >
           <a
             id='download_mobile'
             onclick='getOptionMobile()'
-                        href='/maps/guides/visit_diber_english.pdf'
+            href='/maps/guides/visit_diber_english.pdf'
             target='_blank'
             class='py-3 inline-block'>Download</a
           >
@@ -65,11 +77,18 @@ const allGuides = await Astro.glob('../data/maps_guides/guides.md')
               class='block bg-transparent text-transparent w-12 pl-4 pb-3 py-3 cursor-pointer'
               name='language'
               id='language_mobile'
+              onchange='updateDescriptionMobile()'
             >
-              <option selected>Choose language</option>
-              <option value='albanian'>🇦🇱 Albanian</option>
+                       <option selected>Choose language</option>
               <option value='english'>🇬🇧 English</option>
-              <option value='greek'>🇬🇷 Greek</option>
+              <option value='albanian'>🇦🇱Albanian</option>
+              <option value='italian'>🇮🇹 Italian</option>
+              <option value='german'>🇩🇪 German</option>
+              <option value='spanish'>🇪🇸 Spanish</option>
+              <option value='czech'>🇨🇿 Czech</option>
+              <option value='macedonian'>🇲🇰 Macedonian</option>
+              <option value='montenegrin'>🇲🇪 Montenegrin</option>
+              <option value='polish'>🇵🇱 Polish</option>
             </select>
             <img
               class='absolute top-2 left-1 pointer-events-none mx-auto'
@@ -85,8 +104,9 @@ const allGuides = await Astro.glob('../data/maps_guides/guides.md')
       <p class='text-base text-gray-500 my-6 max-w-3xl'>
         Downloadable maps and tourist guides are available for each of your
         adventures in Diber. Official guides are available in English, Italian,
-        German, Spanish, Macedonian, Montenegrin, Czech and Polish languages, providing
-        comprehensive information to plan and enjoy your experience in Diber.
+        German, Spanish, Macedonian, Montenegrin, Czech and Polish languages,
+        providing comprehensive information to plan and enjoy your experience in
+        Diber.
       </p>
 
       <div class='flex flex-col gap-12'>
@@ -143,7 +163,7 @@ const allGuides = await Astro.glob('../data/maps_guides/guides.md')
           <div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
             {
               allGuides.map((guideInfo) =>
-                guideInfo.frontmatter.maps.map((guide) => (
+                guideInfo.frontmatter.guides.map((guide) => (
                   <GuidesCard
                     title={guide.title}
                     description={guide.description}
@@ -162,6 +182,28 @@ const allGuides = await Astro.glob('../data/maps_guides/guides.md')
 </Layout>
 
 <script type='text/javascript'>
+// Descriptions
+const english =
+  'The official tourist guide of Diber in English. This brochure was prepared by the Albanian Local Capacity Development Foundation in a collaboration between USAID and the Embassy of Sweden.'
+const albanian =
+  'Guida zyrtare turistike e Dibrës në shqip. Kjo broshurë është përgatitur nga Nevila Manga dhe stafi i Qendrës së Turizmit Dibër.'
+const italian =
+  'La guida turistica ufficiale di Diber in italiano. Questa brochure è stata preparata da Ilaria Ghaleb.'
+const german =
+  'Der offizielle Reiseführer von Diber auf Deutsch. Diese Broschüre wurde von Ilaria Ghaleb mit sprachlicher Unterstützung von Louis Fischer und Enela Marku erstellt.'
+const spanish =
+  'La guía de viaje oficial de Diber en español. Este folleto fue creado por Ilaria Ghaleb con el apoyo lingüístico de Lourdes Gutiérrez Toranzo.'
+const czech =
+  'Oficiální cestovní průvodce Diber v češtině. Tuto brožuru vytvořila Ilaria Ghaleb s jazykovou podporou Pavliny Ohman.'
+const macedonian =
+  'Официјален туристички водич на Дибер на македонски јазик. Оваа брошура е создадена од Иларија Галеб со лингвистичка поддршка од Моника Саздова.'
+const montenegrin =
+  'Званични туристички водич Дибера на црногорском језику. Ову брошуру је припремила Илариа Гхалеб уз лингвистичку подршку Александре Гикала.'
+const polish =
+  'Oficjalny przewodnik turystyczny Dibra w języku albańskim. Niniejsza broszura została przygotowana przez Ilarię Ghaleb przy wsparciu językowym Marii Topolskiej.'
+
+description = document.querySelector('#description')
+
 language = document.querySelector('#language')
 download = document.querySelector('#download')
 
@@ -175,7 +217,6 @@ function getOption() {
   }
   let link = `/maps/guides/visit_diber_${value}.pdf`
   download.setAttribute('href', link)
-  console.log(link)
 }
 
 function getOptionMobile() {
@@ -185,5 +226,84 @@ function getOptionMobile() {
   }
   let link = `/maps/guides/visit_diber_${value}.pdf`
   download_mobile.setAttribute('href', link)
+}
+
+function updateDescription() {
+  var language = document.getElementById('language').value
+
+  switch (language) {
+    case 'english':
+      description.innerText = english
+      break
+    case 'albanian':
+      description.innerText = albanian
+      break
+    case 'italian':
+      description.innerText = italian
+      break
+    case 'german':
+      description.innerText = german
+      break
+    case 'spanish':
+      description.innerText = spanish
+      break
+    case 'czech':
+      description.innerText = czech
+      break
+    case 'macedonian':
+      description.innerText = macedonian
+      break
+    case 'montenegrin':
+      description.innerText = montenegrin
+      break
+    case 'polish':
+      description.innerText = polish
+      break
+    case 'choose language':
+      description.innerText = 'test'
+      break
+
+    default:
+      description.innerText = english
+      break
+  }
+}
+
+function updateDescriptionMobile() {
+  var language_mobile = document.getElementById('language_mobile').value
+
+  switch (language_mobile) {
+    case 'english':
+      description.innerText = english
+      break
+    case 'albanian':
+      description.innerText = albanian
+      break
+    case 'italian':
+      description.innerText = italian
+      break
+    case 'german':
+      description.innerText = german
+      break
+    case 'spanish':
+      description.innerText = spanish
+      break
+    case 'czech':
+      description.innerText = czech
+      break
+    case 'macedonian':
+      description.innerText = macedonian
+      break
+    case 'montenegrin':
+      description.innerText = montenegrin
+      break
+    case 'polish':
+      description.innerText = polish
+      break
+
+    default:
+      description.innerText = english
+      break
+  }
 }
 </script>
