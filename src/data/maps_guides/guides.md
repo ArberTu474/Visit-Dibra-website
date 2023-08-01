@@ -63,7 +63,7 @@ maps:
       title: 'Odwiedź przewodnik turystyczny Diber - Polski',
       description: "Oficjalny przewodnik turystyczny Dibra w języku albańskim. Niniejsza broszura została przygotowana przez Ilarię Ghaleb przy wsparciu językowym Marii Topolskiej.",
       img_src: '/images/nature_1.jpg',
-      img_alt: 'Polski',
+      img_alt: 'Polish',
       file_src: '/maps/guides/black_lake.pdf',
     },
   ]
