@@ -56,7 +56,10 @@ const {
 
         {
           author_name && (
-            <div class='mt-3 flex gap-3 items-center opacity-80 hover:underline decoration-gray-500'>
+            <a
+              href={`/authors/${author_name}`}
+              class='mt-3 flex gap-3 items-center opacity-80 hover:underline decoration-gray-500'
+            >
               <div class='relative h-12 min-w-[48px] bg-gray-500/30 rounded-full flex items-center justify-center overflow-hidden'>
                 <div>
                   <img
@@ -79,8 +82,8 @@ const {
                 />
               </div>
 
-              <p class='text-xl text-gray-500'>{author_name}</p>
-            </div>
+              <p class='text-xl text-gray-900'>{author_name}</p>
+            </a>
           )
         }
       </div>

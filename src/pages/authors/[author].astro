@@ -9,25 +9,23 @@ export async function getStaticPaths() {
   const allArticles = await Astro.glob('../articles/*.md')
 
   return [
-    { params: { tag: 'location' }, props: { articles: allArticles } },
-    { params: { tag: 'food' }, props: { articles: allArticles } },
-    { params: { tag: 'culture' }, props: { articles: allArticles } },
-    { params: { tag: 'trail' }, props: { articles: allArticles } },
+    { params: { author: 'Alex Sessums' }, props: { articles: allArticles } },
+    { params: { author: 'Lorem ipsum' }, props: { articles: allArticles } },
   ]
 }
 
-const { tag } = Astro.params
+const { author } = Astro.params
 const { articles } = Astro.props
 
 const filteredArticles = articles.filter((article) =>
-  article.frontmatter.tags?.includes(tag)
+  article.frontmatter.author?.includes(author)
 )
 ---
 
-<Layout title={`Articles tagged with ${tag}`}>
+<Layout title={`Articles written by ${author}`}>
   <div class='page-container w-full'>
     <h1 class='text-3xl md:text-4xl font-bold my-6'>
-      Articles tagged with <span class='italic text-lime-600'>{tag}</span>
+      Articles written by <span class='italic text-lime-600'>{author}</span>
     </h1>
     <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
       {
