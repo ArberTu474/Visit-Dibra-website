@@ -40,7 +40,10 @@ const allGuides = await Astro.glob('../data/maps_guides/guides.md')
         </div>
         <!-- Desktop download button -->
         <a
-          href='/'
+          id='download'
+          href='/maps/guides/visit_diber_english.pdf'
+          target='_blank'
+          onclick='getOption()'
           class='hidden md:block py-3 px-10 text-lg bg-amber-500/70 rounded-lg font-bold text-amber-950/80 hover:opacity-90 transition-opacity duration-300'
           >Download</a
         >
@@ -48,15 +51,22 @@ const allGuides = await Astro.glob('../data/maps_guides/guides.md')
         <div
           class='md:hidden flex items-center px-5 text-lg bg-amber-500/70 rounded-lg font-bold text-amber-950/80 hover:opacity-90 transition-opacity duration-300'
         >
-          <a href='/' class='py-3 inline-block'>Download</a>
+          <a
+            id='download'
+            href='/maps/guides/visit_diber_english.pdf'
+            onclick='getOption()'
+            target='_blank'
+            class='py-3 inline-block'>Download</a
+          >
           <!-- Divider -->
           <div class='min-w-[1px] h-9 bg-amber-800/40 mx-3'></div>
           <div class='relative'>
             <select
               class='block bg-transparent text-transparent w-12 pl-4 pb-3 py-3 cursor-pointer'
               name='language'
+              id='language'
             >
-              <option selected>&#8964; Select language</option>
+              <option selected>Choose language</option>
               <option value='albanian'>🇦🇱 Albanian</option>
               <option value='english'>🇬🇧 English</option>
               <option value='greek'>🇬🇷 Greek</option>
@@ -110,7 +120,7 @@ const allGuides = await Astro.glob('../data/maps_guides/guides.md')
                     difficulty={map.difficulty}
                     activity={map.activity}
                   />
-                )),
+                ))
               )
             }
           </div>
@@ -141,7 +151,7 @@ const allGuides = await Astro.glob('../data/maps_guides/guides.md')
                     img_alt={guide.img_alt}
                     file_src={guide.file_src}
                   />
-                )),
+                ))
               )
             }
           </div>
@@ -150,3 +160,17 @@ const allGuides = await Astro.glob('../data/maps_guides/guides.md')
     </div>
   </main>
 </Layout>
+
+<script type='text/javascript'>
+language = document.querySelector('#language')
+download = document.querySelector('#download')
+
+function getOption() {
+  value = language.value.toLowerCase()
+  if (value === 'choose language') {
+    value = 'english'
+  }
+  let link = `/maps/guides/visit_diber_${value}.pdf`
+  download.setAttribute('href', link)
+}
+</script>
