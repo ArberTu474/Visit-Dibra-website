@@ -21,6 +21,11 @@ html {
   --ideal-width: max(90wh, 600px);
 }
 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
 .material-symbols-rounded {
   font-variation-settings: 'FILL' 0, 'wght' 900, 'GRAD' 200, 'opsz' 48;
 }
