@@ -5,6 +5,7 @@ description: "Over 40 different varieties of apples are cultivated in the Diber 
 img_src: '/foods/apples.jpg'
 img_alt: 'apples'
 date: '07/31/2023'
+author: Lorem ipsum
 summary: ['Apple Varities', 'Apple Varities', 'Apple Products', 'Different types of apples in Dibra']
 ---
 

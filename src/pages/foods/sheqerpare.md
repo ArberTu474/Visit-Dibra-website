@@ -5,6 +5,7 @@ description: "Sheqerpare is a completely unique dessert commonly found in Diber.
 img_src: '/foods/sheqerpare.jpg'
 img_alt: 'baklava'
 date: '07/31/2023'
+author: Lorem ipsum
 summary: ['Origins of Sheqerpare', 'Sheqerpare from Diber', 'Recipe', 'Conclusion']
 ---
 
@@ -15,7 +16,7 @@ summary: ['Origins of Sheqerpare', 'Sheqerpare from Diber', 'Recipe', 'Conclusio
 ### Ingredients:
 - 10 egg yolks
 - 10 sticks of unsalted butter (melted and strained)
-- 2 lb flour
+- 2 lbs. flour
 
 ### Instructions:
 1. In a mixing bowl, combine the egg yolks and melted, strained butter. Mix them well until thoroughly combined.
