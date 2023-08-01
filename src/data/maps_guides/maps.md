@@ -87,7 +87,7 @@ maps:
       activity: 'hiking'
     },
     {
-      title: 'Mavrova-Rostuse & Diber Mountain Biking',
+      title: 'Mavrovo-Rostuse & Diber Mountain Biking',
       description: 'Discover a network of thrilling mountain biking trails and scenic hiking routes in the 
       the cross-border mountain biking region between North Macedonia and Albania with our tourist map! Each 
       trail is accompanied by detailed descriptions and convenient QR codes for easy access to additional information.',
@@ -99,6 +99,18 @@ maps:
       file_src: '/maps/maps/mavrovo_biking.pdf',
       difficulty: 'hard',
       activity: 'biking'
+    },
+    {
+      title: 'Mavrova-Rostuse & Diber Mountain Biking',
+      description: 'The official guide to outdoor activites and attractions in the Mavrovo-Rostuse & Diber regions.',
+      img_src: '/images/mavrovo_lake.png',
+      img_alt: 'Mountain Biking',
+      distance: 21.5,
+      height: 1400,
+      time: 6,
+      file_src: '/maps/maps/mavrovo_diber.pdf',
+      difficulty: 'easy',
+      activity: 'hiking'
     },
   ]
 ---
