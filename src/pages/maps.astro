@@ -52,9 +52,9 @@ const allGuides = await Astro.glob('../data/maps_guides/guides.md')
           class='md:hidden flex items-center px-5 text-lg bg-amber-500/70 rounded-lg font-bold text-amber-950/80 hover:opacity-90 transition-opacity duration-300'
         >
           <a
-            id='download'
-            href='/maps/guides/visit_diber_english.pdf'
-            onclick='getOption()'
+            id='download_mobile'
+            onclick='getOptionMobile()'
+                        href='/maps/guides/visit_diber_english.pdf'
             target='_blank'
             class='py-3 inline-block'>Download</a
           >
@@ -64,7 +64,7 @@ const allGuides = await Astro.glob('../data/maps_guides/guides.md')
             <select
               class='block bg-transparent text-transparent w-12 pl-4 pb-3 py-3 cursor-pointer'
               name='language'
-              id='language'
+              id='language_mobile'
             >
               <option selected>Choose language</option>
               <option value='albanian'>🇦🇱 Albanian</option>
@@ -165,6 +165,9 @@ const allGuides = await Astro.glob('../data/maps_guides/guides.md')
 language = document.querySelector('#language')
 download = document.querySelector('#download')
 
+language_mobile = document.querySelector('#language_mobile')
+download_mobile = document.querySelector('#download_mobile')
+
 function getOption() {
   value = language.value.toLowerCase()
   if (value === 'choose language') {
@@ -172,5 +175,15 @@ function getOption() {
   }
   let link = `/maps/guides/visit_diber_${value}.pdf`
   download.setAttribute('href', link)
+  console.log(link)
+}
+
+function getOptionMobile() {
+  value = language_mobile.value.toLowerCase()
+  if (value === 'choose language') {
+    value = 'english'
+  }
+  let link = `/maps/guides/visit_diber_${value}.pdf`
+  download_mobile.setAttribute('href', link)
 }
 </script>
