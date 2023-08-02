@@ -105,9 +105,9 @@ maps:
       description: 'Black Drin River rafting guide map.',
       img_src: '/images/rafting.jpg',
       img_alt: 'Rafting',
-      distance: 21.5,
-      height: 1400,
-      time: 6,
+      distance: 10,
+      height: 0,
+      time: 2,
       file_src: '/maps/maps/rafting_map.pdf',
       difficulty: 'easy',
       activity: 'rafting'
