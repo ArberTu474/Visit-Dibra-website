@@ -5,11 +5,15 @@ description: "Sheqerpare is a completely unique dessert commonly found in Diber.
 img_src: '/foods/sheqerpare.jpg'
 img_alt: 'baklava'
 date: '07/31/2023'
-author: Lorem ipsum
-summary: ['Origins of Sheqerpare', 'Sheqerpare from Diber', 'Recipe', 'Conclusion']
+author: Alex Sessums
+summary: ['Origins of Sheqerpare', 'Sheqerpare from Diber', 'Diber Sheqerpare Recipe', 'Conclusion']
 ---
 
 # Sheqerpare from Diber
+
+## Origins of Sheqerpare
+
+## Sheqerpare from Diber
 
 ## Diber Sheqerpare Recipe
 
