@@ -180,9 +180,12 @@ export const LocationsMap = ({ articles }) => {
               className='bg-gray-300/30 backdrop-blur-md rounded-xl text-gray-500 border-gray-300/30 border overflow-hidden'
             >
               <div>
-                <div className='bg-gray-300'>
+                <div className='relative'>
+                  <div className='absolute top-0 h-full w-full flex items-center justify-center -z-10'>
+                    <div className='h-16 w-16 border-gray-400 border-b-transparent border-[6px] rounded-full animate-spin'></div>
+                  </div>
                   <img
-                    className='w-full h-[200px] md:h-[300px] object-cover z-20'
+                    className='w-full h-[200px] md:h-[300px] object-cover '
                     src={article.frontmatter.img_src}
                     alt={article.frontmatter.title + ' picture'}
                   />
