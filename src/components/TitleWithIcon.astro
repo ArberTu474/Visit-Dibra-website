@@ -1,0 +1,23 @@
+---
+// Props
+export interface Props {
+  title: string
+  icon_src: string
+  has_undeline?: boolean
+  className?: string
+}
+
+const { title, icon_src, className, has_undeline = true } = Astro.props
+---
+
+<div class={`flex justify-center gap-2 flex-col my-6 ${className}`}>
+  <div class='flex items-center gap-2'>
+    <img src={icon_src} alt='' height='42px' width='42px' />
+    <h2 class='text-2xl font-bold'>{title}</h2>
+  </div>
+  {
+    has_undeline && (
+      <div class='h-[2px] bg-slate-400/30 max-w-3xl rounded-full' />
+    )
+  }
+</div>
