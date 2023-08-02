@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="48"
+   viewBox="0 -960 960 960"
+   width="48"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="hotel_icon.svg"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#cccccc"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="17.229167"
+     inkscape:cx="24"
+     inkscape:cy="24"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <path
+     d="M63.607-180.782q-15.65 0-26.13-10.603Q27-201.988 27-217.565v-540.826q0-15.789 10.654-26.003 10.654-10.215 26.305-10.215 15.65 0 25.846 10.215Q100-774.18 100-758.391V-391h359.218v-239.391q0-32.663 23.146-55.941 23.147-23.277 56.637-23.277H775q65.175 0 111.588 46.412 46.413 46.413 46.413 111.588v334.61q0 15.788-10.266 26.003-10.265 10.214-26.127 10.214-15.651 0-26.13-10.603Q860-201.988 860-217.565v-94.217H100v94.783q0 15.788-10.265 26.003-10.265 10.214-26.128 10.214Zm210.05-264.827q-47.826 0-80.437-32.478t-32.611-80.304q0-47.827 32.478-80.022 32.478-32.196 80.304-32.196 47.827 0 80.022 32.063 32.196 32.062 32.196 79.889 0 47.826-32.063 80.437-32.062 32.611-79.889 32.611ZM532.784-391H860v-160.415q0-35.256-24.969-60.225T775-636.609H532.784V-391ZM273.391-512.391q19 0 32.5-13.5t13.5-32.5q0-19-13.5-32.5t-32.5-13.5q-19 0-32.5 13.5t-13.5 32.5q0 19 13.5 32.5t32.5 13.5Zm0-46Zm259.393-78.218V-391v-245.609Z"
+     id="path1"
+     style="fill:#f3f4f6;fill-opacity:1" />
+</svg>
