@@ -2,6 +2,7 @@
 recommended:
   [
     {
+      
       name: 'Korabi Hotel',
       location: 'Peshkopi, Diber',
       img_src: '/hotels/hotel_1.jpg',
