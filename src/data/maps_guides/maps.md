@@ -102,7 +102,7 @@ maps:
     },
     {
       title: 'Black Drin River Rafting',
-      description: 'Black Drin River rafting guide.',
+      description: 'Black Drin River rafting guide map.',
       img_src: '/images/rafting.jpg',
       img_alt: 'Rafting',
       distance: 21.5,
