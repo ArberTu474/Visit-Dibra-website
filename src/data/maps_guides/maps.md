@@ -101,16 +101,16 @@ maps:
       activity: 'biking'
     },
     {
-      title: 'Mavrova-Rostuse & Diber Mountain Biking',
-      description: 'The official guide to outdoor activites and attractions in the Mavrovo-Rostuse & Diber regions.',
+      title: 'Black Drin River Rafting',
+      description: 'Black Drin River rafting guide.',
       img_src: '/images/mavrovo_lake.png',
-      img_alt: 'Mountain Biking',
+      img_alt: 'Rafting',
       distance: 21.5,
       height: 1400,
       time: 6,
-      file_src: '/maps/maps/mavrovo_diber.pdf',
+      file_src: '/maps/maps/rafting_map.pdf',
       difficulty: 'easy',
-      activity: 'hiking'
+      activity: 'rafting'
     },
   ]
 ---
