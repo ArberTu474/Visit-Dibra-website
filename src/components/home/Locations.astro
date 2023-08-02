@@ -18,12 +18,12 @@ const allArticles = await Astro.glob('../../pages/locations/*.md')
     subtitle='Unforgettable Spots'
     className='page-container pb-0'
   >
-    From mountain lakes surrounded by breathtaking vistas to charming stone villages 
-    frozen in time, and historical cities with centuries of fascinating heritage, 
-    Diber is a destination that caters to diverse interests and preferences.
-    Take some time to visit us!
+    From mountain lakes surrounded by breathtaking vistas to charming stone
+    villages frozen in time, and historical cities with centuries of fascinating
+    heritage, Diber is a destination that caters to diverse interests and
+    preferences. Take some time to visit us!
   </SectionContent>
-  <div class='page-container pb-0'>
+  <div class='page-container pt-0 pb-0'>
     <di>
       <LocationsMap client:visible articles={allArticles} />
     </di>
