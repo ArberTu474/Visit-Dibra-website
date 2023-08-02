@@ -5,6 +5,7 @@ import Layout from '../layouts/Layout.astro'
 // Components
 import MapsCard from '../components/MapsCard.astro'
 import GuidesCard from '../components/GuidesCard.astro'
+import TitleWithIcon from '../components/TitleWithIcon.astro'
 
 // Data
 const allMaps = await Astro.glob('../data/maps_guides/maps.md')
@@ -111,199 +112,179 @@ const allGuides = await Astro.glob('../data/maps_guides/guides.md')
 
       <div class='flex flex-col gap-12'>
         <!-- Maps Section -->
-        <div class='mt-0'>
+        <div>
           <div class='flex justify-center gap-2 flex-col my-6'>
-            <div class='flex items-center gap-2'>
-              <img
-                src='/icons/maps_icon.svg'
-                alt=''
-                height='42px'
-                width='42px'
-              />
-              <h2 class='text-2xl font-bold'>Maps</h2>
+            <TitleWithIcon title='Maps' icon_src='/icons/maps_icon.svg' />
+            <div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+              {
+                allMaps.map((mapInfo) =>
+                  mapInfo.frontmatter.maps.map((map) => (
+                    <MapsCard
+                      title={map.title}
+                      description={map.description}
+                      img_src={map.img_src}
+                      img_alt={map.img_alt}
+                      distance={map.distance}
+                      height={map.height}
+                      time={map.time}
+                      file_src={map.file_src}
+                      difficulty={map.difficulty}
+                      activity={map.activity}
+                    />
+                  ))
+                )
+              }
             </div>
-            <div class='h-[2px] bg-slate-400/30 max-w-3xl rounded-full'></div>
           </div>
-          <div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
-            {
-              allMaps.map((mapInfo) =>
-                mapInfo.frontmatter.maps.map((map) => (
-                  <MapsCard
-                    title={map.title}
-                    description={map.description}
-                    img_src={map.img_src}
-                    img_alt={map.img_alt}
-                    distance={map.distance}
-                    height={map.height}
-                    time={map.time}
-                    file_src={map.file_src}
-                    difficulty={map.difficulty}
-                    activity={map.activity}
-                  />
-                ))
-              )
-            }
-          </div>
-        </div>
 
-        <!-- Guides  -->
-        <div class='mt-12'>
-          <div class='flex justify-center gap-2 flex-col my-6'>
-            <div class='flex items-center gap-2'>
-              <img
-                src='/icons/guides_icon.svg'
-                alt=''
-                height='42px'
-                width='42px'
-              />
-              <h2 class='text-2xl font-bold'>Guides</h2>
+          <!-- Guides  -->
+          <div class='mt-12'>
+            <TitleWithIcon title='Guides' icon_src='/icons/guides_icon.svg' />
+            <div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+              {
+                allGuides.map((guideInfo) =>
+                  guideInfo.frontmatter.guides.map((guide) => (
+                    <GuidesCard
+                      title={guide.title}
+                      description={guide.description}
+                      img_src={guide.img_src}
+                      img_alt={guide.img_alt}
+                      file_src={guide.file_src}
+                    />
+                  ))
+                )
+              }
             </div>
-            <div class='h-[2px] bg-slate-400/30 max-w-3xl rounded-full'></div>
-          </div>
-          <div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
-            {
-              allGuides.map((guideInfo) =>
-                guideInfo.frontmatter.guides.map((guide) => (
-                  <GuidesCard
-                    title={guide.title}
-                    description={guide.description}
-                    img_src={guide.img_src}
-                    img_alt={guide.img_alt}
-                    file_src={guide.file_src}
-                  />
-                ))
-              )
-            }
           </div>
         </div>
       </div>
     </div>
   </main>
+
+  <script type='text/javascript'>
+    // Descriptions
+    const english =
+      'The official tourist guide of Diber in English. This brochure was prepared by the Albanian Local Capacity Development Foundation in a collaboration between USAID and the Embassy of Sweden.'
+    const albanian =
+      'Guida zyrtare turistike e Dibrës në shqip. Kjo broshurë është përgatitur nga Nevila Manga dhe stafi i Qendrës së Turizmit Dibër.'
+    const italian =
+      'La guida turistica ufficiale di Diber in italiano. Questa brochure è stata preparata da Ilaria Ghaleb.'
+    const german =
+      'Der offizielle Reiseführer von Diber auf Deutsch. Diese Broschüre wurde von Ilaria Ghaleb mit sprachlicher Unterstützung von Louis Fischer und Enela Marku erstellt.'
+    const spanish =
+      'La guía de viaje oficial de Diber en español. Este folleto fue creado por Ilaria Ghaleb con el apoyo lingüístico de Lourdes Gutiérrez Toranzo.'
+    const czech =
+      'Oficiální cestovní průvodce Diber v češtině. Tuto brožuru vytvořila Ilaria Ghaleb s jazykovou podporou Pavliny Ohman.'
+    const macedonian =
+      'Официјален туристички водич на Дибер на македонски јазик. Оваа брошура е создадена од Иларија Галеб со лингвистичка поддршка од Моника Саздова.'
+    const montenegrin =
+      'Званични туристички водич Дибера на црногорском језику. Ову брошуру је припремила Илариа Гхалеб уз лингвистичку подршку Александре Гикала.'
+    const polish =
+      'Oficjalny przewodnik turystyczny Dibra w języku albańskim. Niniejsza broszura została przygotowana przez Ilarię Ghaleb przy wsparciu językowym Marii Topolskiej.'
+
+    description = document.querySelector('#description')
+
+    language = document.querySelector('#language')
+    download = document.querySelector('#download')
+
+    language_mobile = document.querySelector('#language_mobile')
+    download_mobile = document.querySelector('#download_mobile')
+
+    function getOption() {
+      value = language.value.toLowerCase()
+      if (value === 'choose language') {
+        value = 'english'
+      }
+      let link = `/maps/guides/visit_diber_${value}.pdf`
+      download.setAttribute('href', link)
+    }
+
+    function getOptionMobile() {
+      value = language_mobile.value.toLowerCase()
+      if (value === 'choose language') {
+        value = 'english'
+      }
+      let link = `/maps/guides/visit_diber_${value}.pdf`
+      download_mobile.setAttribute('href', link)
+    }
+
+    function updateDescription() {
+      var language = document.getElementById('language').value
+
+      switch (language) {
+        case 'english':
+          description.innerText = english
+          break
+        case 'albanian':
+          description.innerText = albanian
+          break
+        case 'italian':
+          description.innerText = italian
+          break
+        case 'german':
+          description.innerText = german
+          break
+        case 'spanish':
+          description.innerText = spanish
+          break
+        case 'czech':
+          description.innerText = czech
+          break
+        case 'macedonian':
+          description.innerText = macedonian
+          break
+        case 'montenegrin':
+          description.innerText = montenegrin
+          break
+        case 'polish':
+          description.innerText = polish
+          break
+        case 'choose language':
+          description.innerText = 'test'
+          break
+
+        default:
+          description.innerText = english
+          break
+      }
+    }
+
+    function updateDescriptionMobile() {
+      var language_mobile = document.getElementById('language_mobile').value
+
+      switch (language_mobile) {
+        case 'english':
+          description.innerText = english
+          break
+        case 'albanian':
+          description.innerText = albanian
+          break
+        case 'italian':
+          description.innerText = italian
+          break
+        case 'german':
+          description.innerText = german
+          break
+        case 'spanish':
+          description.innerText = spanish
+          break
+        case 'czech':
+          description.innerText = czech
+          break
+        case 'macedonian':
+          description.innerText = macedonian
+          break
+        case 'montenegrin':
+          description.innerText = montenegrin
+          break
+        case 'polish':
+          description.innerText = polish
+          break
+
+        default:
+          description.innerText = english
+          break
+      }
+    }
+  </script>
 </Layout>
-
-<script type='text/javascript'>
-// Descriptions
-const english =
-  'The official tourist guide of Diber in English. This brochure was prepared by the Albanian Local Capacity Development Foundation in a collaboration between USAID and the Embassy of Sweden.'
-const albanian =
-  'Guida zyrtare turistike e Dibrës në shqip. Kjo broshurë është përgatitur nga Nevila Manga dhe stafi i Qendrës së Turizmit Dibër.'
-const italian =
-  'La guida turistica ufficiale di Diber in italiano. Questa brochure è stata preparata da Ilaria Ghaleb.'
-const german =
-  'Der offizielle Reiseführer von Diber auf Deutsch. Diese Broschüre wurde von Ilaria Ghaleb mit sprachlicher Unterstützung von Louis Fischer und Enela Marku erstellt.'
-const spanish =
-  'La guía de viaje oficial de Diber en español. Este folleto fue creado por Ilaria Ghaleb con el apoyo lingüístico de Lourdes Gutiérrez Toranzo.'
-const czech =
-  'Oficiální cestovní průvodce Diber v češtině. Tuto brožuru vytvořila Ilaria Ghaleb s jazykovou podporou Pavliny Ohman.'
-const macedonian =
-  'Официјален туристички водич на Дибер на македонски јазик. Оваа брошура е создадена од Иларија Галеб со лингвистичка поддршка од Моника Саздова.'
-const montenegrin =
-  'Званични туристички водич Дибера на црногорском језику. Ову брошуру је припремила Илариа Гхалеб уз лингвистичку подршку Александре Гикала.'
-const polish =
-  'Oficjalny przewodnik turystyczny Dibra w języku albańskim. Niniejsza broszura została przygotowana przez Ilarię Ghaleb przy wsparciu językowym Marii Topolskiej.'
-
-description = document.querySelector('#description')
-
-language = document.querySelector('#language')
-download = document.querySelector('#download')
-
-language_mobile = document.querySelector('#language_mobile')
-download_mobile = document.querySelector('#download_mobile')
-
-function getOption() {
-  value = language.value.toLowerCase()
-  if (value === 'choose language') {
-    value = 'english'
-  }
-  let link = `/maps/guides/visit_diber_${value}.pdf`
-  download.setAttribute('href', link)
-}
-
-function getOptionMobile() {
-  value = language_mobile.value.toLowerCase()
-  if (value === 'choose language') {
-    value = 'english'
-  }
-  let link = `/maps/guides/visit_diber_${value}.pdf`
-  download_mobile.setAttribute('href', link)
-}
-
-function updateDescription() {
-  var language = document.getElementById('language').value
-
-  switch (language) {
-    case 'english':
-      description.innerText = english
-      break
-    case 'albanian':
-      description.innerText = albanian
-      break
-    case 'italian':
-      description.innerText = italian
-      break
-    case 'german':
-      description.innerText = german
-      break
-    case 'spanish':
-      description.innerText = spanish
-      break
-    case 'czech':
-      description.innerText = czech
-      break
-    case 'macedonian':
-      description.innerText = macedonian
-      break
-    case 'montenegrin':
-      description.innerText = montenegrin
-      break
-    case 'polish':
-      description.innerText = polish
-      break
-    case 'choose language':
-      description.innerText = 'test'
-      break
-
-    default:
-      description.innerText = english
-      break
-  }
-}
-
-function updateDescriptionMobile() {
-  var language_mobile = document.getElementById('language_mobile').value
-
-  switch (language_mobile) {
-    case 'english':
-      description.innerText = english
-      break
-    case 'albanian':
-      description.innerText = albanian
-      break
-    case 'italian':
-      description.innerText = italian
-      break
-    case 'german':
-      description.innerText = german
-      break
-    case 'spanish':
-      description.innerText = spanish
-      break
-    case 'czech':
-      description.innerText = czech
-      break
-    case 'macedonian':
-      description.innerText = macedonian
-      break
-    case 'montenegrin':
-      description.innerText = montenegrin
-      break
-    case 'polish':
-      description.innerText = polish
-      break
-
-    default:
-      description.innerText = english
-      break
-  }
-}
-</script>
