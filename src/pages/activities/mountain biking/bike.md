@@ -6,4 +6,4 @@ img_src: '/activities/mountain_biking.jpg'
 img_alt: 'mountain biking'
 ---
 
-# hello swim
+# Hello Biking

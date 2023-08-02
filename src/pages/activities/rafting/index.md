@@ -1,9 +1,9 @@
 ---
 layout: '../../../layouts/ArticleLayout.astro'
-title: 'Rafting on the Drin river'
+title: 'Rafting on the Drin River'
 description:
-  'Lorem ipsum dolor sit amet consectetur. Suspendisse sed nisi aenean nisl
-  faucibus eget et sit nisl. Mollis ac aliquam neque pretium orci. Risus'
+  "Rafting the Drin is a family-friend activity, which does require special courses. Several operators offer trips which last
+  between 2 to 4 hours."
 img_src: '/activities/rafting.jpg'
 img_alt: 'rafting image'
 type: 'index_page'
