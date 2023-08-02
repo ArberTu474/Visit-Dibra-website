@@ -45,7 +45,7 @@ col2:
     {
       url: '/gallery/gallery_img_5.avif',
       alt: 'nature image',
-      description: 'Mountain',
+      description: 'Korab-Koritnik Nature Park',
     },
     {
       url: '/gallery/gallery_img_6.avif',
