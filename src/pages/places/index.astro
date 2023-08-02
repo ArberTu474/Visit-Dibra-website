@@ -1,0 +1,94 @@
+---
+// Layout
+import Layout from '../../layouts/Layout.astro'
+
+// Components
+import Card from '../../components/Card.astro'
+import TitleWithIcon from '../../components/TitleWithIcon.astro'
+import { Image } from '@astrojs/image/components'
+import SuggestedLocationCard from '../../components/SuggestedLocationCard.astro'
+
+// Data
+const allPlaces = await Astro.glob('../../data/places/accommodation.md')
+---
+
+<Layout title='Places'>
+  <div class='page-container w-full'>
+    <div>
+      <h1 class='text-4xl font-bold mt-6'>Lorem ipsum</h1>
+      <p class='text-base text-gray-500 my-6 max-w-3xl'>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis eveniet
+        laudantium alias natus rerum facere.
+      </p>
+    </div>
+    <TitleWithIcon
+      className='mt-12'
+      title='Suggested Locations'
+      icon_src='/icons/star_icon.svg'
+      has_undeline={false}
+    />
+    <div class='grid grid-cols-1 lg:grid-cols-3 gap-6'>
+      <div class='col-span-1 lg:col-start-3'>
+        <Card
+          className='bg-indigo-900 border-none flex flex-col gap-6 md:sticky top-24 shadow-lg shadow-gray-400/20'
+        >
+          <div class='flex items-center gap-3 my-3'>
+            <img
+              src='/icons/search_icon.svg'
+              alt=''
+              height="30px'"
+              width="30px'"
+            />
+            <h2 class='text-xl text-gray-100 font-bold'>Find what you want</h2>
+          </div>
+          <div class='flex flex-col sm:flex-row lg:flex-col gap-6'>
+            <select
+              class='block w-full p-5 rounded-lg text-gray-100 bg-gray-400/20'
+            >
+              <option selected>Choose City</option>
+              <option value='hotel'>Peshkopi</option>
+              <option value='camping'>Peshkopi</option>
+              <option value='hostel'>Peshkopi</option>
+            </select>
+            <select
+              class='block w-full p-5 rounded-lg text-gray-100 bg-gray-400/20'
+            >
+              <option selected>Choose Accommodation</option>
+              <option value='hotel'>Hotel</option>
+              <option value='camping'>Camping</option>
+              <option value='hostel'>hostel</option>
+            </select>
+          </div>
+          <button
+            class='mt-6 bg-gray-100 text-xl font-bold text-indigo-900 py-4 rounded-lg hover:opacity-90 transition-opacity duration-300'
+            >Search</button
+          >
+        </Card>
+      </div>
+
+      <div class='row-start-2 lg:row-start-1 col-span-1 lg:col-span-2'>
+        <!-- Recommended Locations (ad) -->
+        <div>
+          <!-- Locations  -->
+          <div class='flex gap-6 flex-col lg:flex-row w-full'>
+            {
+              allPlaces.map((placeInfo) =>
+                placeInfo.frontmatter.recommended.map((place) => (
+                  <SuggestedLocationCard
+                    name={place.name}
+                    location={place.location}
+                    img_src={place.img_src}
+                    img_alt={place.img_alt}
+                    description={place.description}
+                    cost={place.cost}
+                    type={place.type}
+                  />
+                ))
+              )
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,79 @@
+---
+// Components
+import { Image } from '@astrojs/image/components'
+
+// Props
+export interface Props {
+  name: string
+  location: string
+  img_src: string
+  img_alt: string
+  description: string
+  cost: number
+  type: accommodationType
+}
+
+type accommodationType =
+  | 'hotel'
+  | 'hostel'
+  | 'camping'
+  | 'agro_tourism'
+  | 'guest_house'
+  | 'resort'
+
+const { name, location, img_src, img_alt, description, cost, type } =
+  Astro.props
+---
+
+<div
+  class='group relative w-full lg:w-64 p-6 rounded-lg lg:hover:w-[400px] transition-all duration-300 ease-in-out overflow-x-hidden overflow-y-hidden cursor-pointer'
+>
+  <div
+    class='absolute top-0 left-0 w-full h-full -z-10 bg-gradient-to-r from-gray-800/80 from-20% to-gray-800/30'
+  >
+  </div>
+  <Image
+    class='absolute top-0 left-0 w-full h-full object-cover -z-20'
+    src={img_src}
+    width={700}
+    height={300}
+    alt={img_alt}
+    format='avif'
+  />
+  <div class='max-w-[200px] h-56 flex flex-col justify-between'>
+    <div>
+      <h3 class='text-xl text-gray-100 font-bold'>{name}</h3>
+      <div class='flex items-center gap-1 py-3'>
+        <img
+          src='/icons/places/location_icon.svg'
+          alt=''
+          width='26px'
+          height='26px'
+        />
+        <h4 class='text-gray-300'>{location}</h4>
+      </div>
+    </div>
+  </div>
+  <div
+    class='absolute flex flex-col items-start lg:items-start gap-3 -translate-y-24 lg:-translate-y-11 lg:group-hover:-translate-y-24 transition-transform duration-300 ease-in-out'
+  >
+    <div>
+      <h4
+        class='flex gap-3 items-center text-lg text-gray-200 font-bold py-2 px-7 bg-gray-500/70 hover:bg-gray-500/90 rounded-full'
+      >
+        <img
+          src={`/icons/places/${type}_icon.svg`}
+          height='30px'
+          width='30px'
+          alt=''
+        />
+        $ {cost}
+      </h4>
+    </div>
+    <p
+      class='text-gray-100 lg:max-w-[280px] lg:opacity-0 group-hover:opacity-90 transition-opacity duration-300 ease-in-out'
+    >
+      {description}
+    </p>
+  </div>
+</div>
