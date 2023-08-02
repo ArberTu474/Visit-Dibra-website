@@ -38,8 +38,8 @@ const bookingInfo = await Astro.glob('../../data/booking/*.md')
             Tourist Information Center
           </h2>
           <p class='text-base text-gray-500'>
-            Contact the Diber Tourist Information Center in Peshkopi
-            directly with any questions related to travel or staying in Diber.
+            Contact the Diber Tourist Information Center in Peshkopi directly
+            with any questions related to travel or staying in Diber.
           </p>
         </div>
 
@@ -111,9 +111,9 @@ const bookingInfo = await Astro.glob('../../data/booking/*.md')
             Contact the Owner Directly
           </h2>
           <p class='text-base text-gray-500'>
-            For direct contact with hospitality owners in Diber, reach out today 
-            and experience warm hospitality at its best. Enjoy a memorable stay 
-            with personalized service and comfortable accommodations. 
+            For direct contact with hospitality owners in Diber, reach out today
+            and experience warm hospitality at its best. Enjoy a memorable stay
+            with personalized service and comfortable accommodations.
           </p>
         </div>
 
@@ -133,7 +133,12 @@ const bookingInfo = await Astro.glob('../../data/booking/*.md')
           }
         </div>
 
-        <Button className='w-full' href='/' rounded={true} btnColor='dark-blue'>
+        <Button
+          className='w-full'
+          href='/places'
+          rounded={true}
+          btnColor='dark-blue'
+        >
           More Info
         </Button>
       </Card>
