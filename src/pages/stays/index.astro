@@ -1,7 +1,6 @@
 ---
 // Layout
 import Layout from '../../layouts/Layout.astro'
-import { Image } from '@astrojs/image/components'
 
 // Components
 import Card from '../../components/Card.astro'
@@ -84,6 +83,7 @@ const allPlaces = await Astro.glob('../../data/places/accommodation.md')
                   <SuggestedLocationCard
                     name={place.name}
                     location={place.location}
+                    location_url={place.location_url}
                     phone_number={place.phone_number}
                     img_src={place.img_src}
                     img_alt={place.img_alt}
@@ -114,6 +114,7 @@ const allPlaces = await Astro.glob('../../data/places/accommodation.md')
                   <OtherLocationCard
                     name={place.name}
                     location={place.location}
+                    location_url={place.location_url}
                     phone_number={place.phone_number}
                     img_src={place.img_src}
                     img_alt={place.img_alt}

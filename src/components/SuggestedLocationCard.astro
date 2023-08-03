@@ -6,6 +6,7 @@ import { Image } from '@astrojs/image/components'
 export interface Props {
   name: string
   location: string
+  location_url: string
   phone_number: string
   img_src: string
   img_alt: string
@@ -25,6 +26,7 @@ type accommodationType =
 const {
   name,
   location,
+  location_url,
   phone_number,
   img_src,
   img_alt,
@@ -53,7 +55,7 @@ const {
   <div class='max-w-[200px] h-60 flex flex-col justify-between'>
     <div>
       <h3 class='text-xl text-gray-100 font-bold'>{name}</h3>
-      <div class='py-3 flex flex-col gap-3'>
+      <a href={location_url} target="_blank" class='py-3 flex flex-col gap-3'>
         <div class='flex items-center gap-1'>
           <img
             src='/icons/places/location_icon.svg'
@@ -72,7 +74,7 @@ const {
           />
           <h4 class='text-gray-300'>{phone_number}</h4>
         </a>
-      </div>
+      </a>
     </div>
   </div>
   <div
