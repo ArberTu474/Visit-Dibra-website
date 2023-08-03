@@ -9,11 +9,11 @@ import SuggestedLocationCard from '../../components/SuggestedLocationCard.astro'
 import OtherLocationCard from '../../components/OtherLocationCard.astro'
 
 // Data
-const allPlaces = await Astro.glob('../../data/places/accommodation.md')
+const allPlaces = await Astro.glob('../../data/stays/accommodation.md')
 ---
 
 <Layout title='Book your stay'>
-  <div class='page-container w-full overflow-hidden'>
+  <div class='page-container overflow-hidden'>
     <div>
       <h1 class='text-4xl font-bold mt-6'>Lorem ipsum</h1>
       <p class='text-base text-gray-500 my-6 max-w-3xl'>
@@ -26,10 +26,12 @@ const allPlaces = await Astro.glob('../../data/places/accommodation.md')
       title='Suggested Locations'
       icon_src='/icons/star_icon.svg'
     />
-    <div class='grid grid-cols-1 lg:grid-cols-3 gap-6'>
-      <div class='col-span-1 lg:col-start-3'>
-        <Card
-          className='bg-indigo-900 border-none flex flex-col gap-6 md:sticky top-24 shadow-lg shadow-gray-400/20'
+    <div
+      class='grid grid-cols-1 lg:grid-cols-3 gap-6 grid-rows-2 lg:grid-rows-1'
+    >
+      <div class='col-span-1 lg:col-start-3 md:row-span-2'>
+        <div
+          class='p-6 rounded-lg bg-indigo-900 border-none flex flex-col gap-6 md:sticky top-24 shadow-lg shadow-gray-400/20'
         >
           <div class='flex items-center gap-3 my-3'>
             <img
@@ -42,27 +44,32 @@ const allPlaces = await Astro.glob('../../data/places/accommodation.md')
           </div>
           <div class='flex flex-col sm:flex-row lg:flex-col gap-6'>
             <select
+              onchange='getLocation()'
+              id='city'
               class='block w-full p-5 rounded-lg text-gray-100 bg-gray-400/20 cursor-pointer'
             >
-              <option selected>Choose City</option>
-              <option value='hotel'>Peshkopi</option>
-              <option value='camping'>Peshkopi</option>
-              <option value='hostel'>Peshkopi</option>
+              <option value='' selected>Choose City</option>
+              <option value='peshkopi'>Peshkopi</option>
+              <option value='mat'>Mat</option>
+              <option value='klos'>Klos</option>
             </select>
             <select
+              onchange='getAccommodationType()'
+              id='accommodation-type'
               class='block w-full p-5 rounded-lg text-gray-100 bg-gray-400/20 cursor-pointer'
             >
-              <option selected>Choose Accommodation</option>
+              <option value='' selected>Choose Accommodation</option>
               <option value='hotel'>Hotel</option>
               <option value='camping'>Camping</option>
-              <option value='hostel'>hostel</option>
+              <option value='hostel'>Hostel</option>
             </select>
           </div>
           <button
+            onclick='showOutput()'
             class='mt-6 bg-gray-100 text-xl font-bold text-indigo-900 py-4 rounded-lg hover:opacity-90 transition-opacity duration-300'
             >Search</button
           >
-        </Card>
+        </div>
       </div>
 
       <div class='row-start-2 lg:row-start-1 col-span-1 lg:col-span-2'>
@@ -106,6 +113,7 @@ const allPlaces = await Astro.glob('../../data/places/accommodation.md')
           />
 
           <div
+            id='locations-list'
             class='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full'
           >
             {
@@ -131,3 +139,75 @@ const allPlaces = await Astro.glob('../../data/places/accommodation.md')
     </div>
   </div>
 </Layout>
+
+<script type='text/javascript'>
+const city = document.querySelector('#city')
+const accommodationType = document.querySelector('#accommodation-type')
+
+const locationsList = document.querySelectorAll('[data-option="pro"]')
+
+function getLocation() {
+  let value = city.value.toLowerCase()
+
+  return value
+}
+
+function getAccommodationType() {
+  let value = accommodationType.value.toLowerCase()
+
+  return value
+}
+
+function showOutput() {
+  let cityList = document.querySelectorAll(
+    `[data-location='${getLocation()}']`
+  )
+  let typeList = document.querySelectorAll(
+    `[data-accommodation='${getAccommodationType()}']`
+  )
+
+  locationsList.forEach((city) => {
+    city.style.display = 'block'
+  })
+
+  if (getLocation() !== '' && getAccommodationType() !== '') {
+    locationsList.forEach((city) => {
+      if (
+        !(
+          city.getAttribute('data-accommodation') ===
+          getAccommodationType() &&
+          city.getAttribute('data-location') === getLocation()
+        )
+      ) {
+        city.style.display = 'none'
+      }
+    })
+  } else if (getAccommodationType() !== '') {
+    locationsList.forEach((city) => {
+      if (
+        !(city.getAttribute('data-accommodation') === getAccommodationType())
+      ) {
+        city.style.display = 'none'
+      }
+    })
+  } else if (getLocation() !== '') {
+    locationsList.forEach((city) => {
+      if (!(city.getAttribute('data-location') === getLocation())) {
+        city.style.display = 'none'
+      }
+    })
+  } else {
+    locationsList.forEach((city) => {
+      city.style.display = 'block'
+    })
+  }
+}
+
+  // if (!(city.getAttribute('data-location') === getLocation())) {
+  //   city.style.display = 'none'
+  // } else if (
+  //   !(city.getAttribute('data-accommodation') === getAccommodationType())
+  // ) {
+  //   city.style.display = 'none'
+  // }
+</script>
