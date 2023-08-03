@@ -77,6 +77,7 @@ const allPlaces = await Astro.glob('../../data/places/accommodation.md')
                   <SuggestedLocationCard
                     name={place.name}
                     location={place.location}
+                    phone_number={place.phone_number}
                     img_src={place.img_src}
                     img_alt={place.img_alt}
                     description={place.description}
