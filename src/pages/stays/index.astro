@@ -5,14 +5,13 @@ import Layout from '../../layouts/Layout.astro'
 // Components
 import Card from '../../components/Card.astro'
 import TitleWithIcon from '../../components/TitleWithIcon.astro'
-import { Image } from '@astrojs/image/components'
 import SuggestedLocationCard from '../../components/SuggestedLocationCard.astro'
 
 // Data
 const allPlaces = await Astro.glob('../../data/places/accommodation.md')
 ---
 
-<Layout title='Places'>
+<Layout title='Book your stay'>
   <div class='page-container w-full'>
     <div>
       <h1 class='text-4xl font-bold mt-6'>Lorem ipsum</h1>
