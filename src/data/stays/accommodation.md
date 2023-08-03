@@ -3,7 +3,7 @@ recommended:
   [
     {
       name: 'Korabi Hotel',
-      location: 'Peshkopi, Diber',
+      location: 'peshkopi',
       location_url: 'https://www.google.com/maps/place/Peshkopi/@41.6837132,20.4314008,15z/data=!3m1!4b1!4m6!3m5!1s0x135173954ffe4dc1:0x10800b25b1c22884!8m2!3d41.684866!4d20.4291879!16s%2Fm%2F012bztbx?entry=ttu',
       phone_number: '0671234567',
       img_src: '/hotels/hotel_1.jpg',
@@ -14,7 +14,7 @@ recommended:
     },
     {
       name: 'Korabi Camping',
-      location: 'Peshkopi, Diber',
+      location: 'peshkopi',
       location_url: 'https://www.google.com/maps/place/Peshkopi/@41.6837132,20.4314008,15z/data=!3m1!4b1!4m6!3m5!1s0x135173954ffe4dc1:0x10800b25b1c22884!8m2!3d41.684866!4d20.4291879!16s%2Fm%2F012bztbx?entry=ttu',
       phone_number: '0671234567',
       img_src: '/hotels/camping.jpg',
@@ -25,7 +25,7 @@ recommended:
     },
     {
       name: 'Korabi Hostel',
-      location: 'Peshkopi, Diber',
+      location: 'peshkopi',
       location_url: 'https://www.google.com/maps/place/Peshkopi/@41.6837132,20.4314008,15z/data=!3m1!4b1!4m6!3m5!1s0x135173954ffe4dc1:0x10800b25b1c22884!8m2!3d41.684866!4d20.4291879!16s%2Fm%2F012bztbx?entry=ttu',
       phone_number: '0671234567',
       img_src: '/hotels/hostel.jpg',
@@ -40,7 +40,7 @@ other:
   [
     {
       name: 'Korabi Hotel',
-      location: 'Peshkopi, Diber',
+      location: 'peshkopi',
       location_url: '',
       phone_number: '0671234567',
       img_src: '/hotels/hotel_1.jpg',
@@ -51,7 +51,7 @@ other:
     },
     {
       name: 'Korabi Camping',
-      location: 'Peshkopi, Diber',
+      location: 'klos',
       location_url: '',
       phone_number: '0671234567',
       img_src: '/hotels/camping.jpg',
@@ -62,7 +62,7 @@ other:
     },
     {
       name: 'Korabi Hostel',
-      location: 'Peshkopi, Diber',
+      location: 'mat',
       location_url: '',
       phone_number: '0671234567',
       img_src: '/hotels/hostel.jpg',
@@ -70,6 +70,17 @@ other:
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
       cost: 14,
       type: 'hostel',
+    },
+    {
+      name: 'Korabi Hostel',
+      location: 'mat',
+      location_url: '',
+      phone_number: '0671234567',
+      img_src: '/hotels/hostel.jpg',
+      img_alt: 'a picture of Korabi Hotel',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      cost: 14,
+      type: 'hotel',
     },
   ]
 ---
