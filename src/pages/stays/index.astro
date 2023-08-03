@@ -1,18 +1,20 @@
 ---
 // Layout
 import Layout from '../../layouts/Layout.astro'
+import { Image } from '@astrojs/image/components'
 
 // Components
 import Card from '../../components/Card.astro'
 import TitleWithIcon from '../../components/TitleWithIcon.astro'
 import SuggestedLocationCard from '../../components/SuggestedLocationCard.astro'
+import OtherLocationCard from '../../components/OtherLocationCard.astro'
 
 // Data
 const allPlaces = await Astro.glob('../../data/places/accommodation.md')
 ---
 
 <Layout title='Book your stay'>
-  <div class='page-container w-full'>
+  <div class='page-container w-full overflow-hidden'>
     <div>
       <h1 class='text-4xl font-bold mt-6'>Lorem ipsum</h1>
       <p class='text-base text-gray-500 my-6 max-w-3xl'>
@@ -21,10 +23,9 @@ const allPlaces = await Astro.glob('../../data/places/accommodation.md')
       </p>
     </div>
     <TitleWithIcon
-      className='mt-12'
+      className='mt-12 hidden lg:block'
       title='Suggested Locations'
       icon_src='/icons/star_icon.svg'
-      has_undeline={false}
     />
     <div class='grid grid-cols-1 lg:grid-cols-3 gap-6'>
       <div class='col-span-1 lg:col-start-3'>
@@ -68,12 +69,49 @@ const allPlaces = await Astro.glob('../../data/places/accommodation.md')
       <div class='row-start-2 lg:row-start-1 col-span-1 lg:col-span-2'>
         <!-- Recommended Locations (ad) -->
         <div>
+          <!-- Mobile title -->
+          <TitleWithIcon
+            className='mt-12 lg:hidden'
+            title='Suggested Locations'
+            icon_src='/icons/star_icon.svg'
+            has_undeline={false}
+          />
           <!-- Locations  -->
           <div class='flex gap-6 flex-col lg:flex-row w-full'>
             {
               allPlaces.map((placeInfo) =>
                 placeInfo.frontmatter.recommended.map((place) => (
                   <SuggestedLocationCard
+                    name={place.name}
+                    location={place.location}
+                    phone_number={place.phone_number}
+                    img_src={place.img_src}
+                    img_alt={place.img_alt}
+                    description={place.description}
+                    cost={place.cost}
+                    type={place.type}
+                  />
+                ))
+              )
+            }
+          </div>
+        </div>
+
+        <!-- Other Locations -->
+        <div>
+          <TitleWithIcon
+            className='mt-12'
+            title='Other Locations'
+            icon_src='/icons/star_icon.svg'
+          />
+
+          <div
+            class='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full'
+          >
+            {
+              allPlaces.map((placeInfo) =>
+                placeInfo.frontmatter.other.map((place) => (
+                  <OtherLocationCard
                     name={place.name}
                     location={place.location}
                     phone_number={place.phone_number}
