@@ -2,7 +2,7 @@
 recommended:
   [
     {
-      name: 'Guesthouse Sabriu',
+      name: 'Guest House Sabriu',
       location: 'rabdisht',
       location_url: 'https://www.google.com/maps/place/Peshkopi/@41.6837132,20.4314008,15z/data=!3m1!4b1!4m6!3m5!1s0x135173954ffe4dc1:0x10800b25b1c22884!8m2!3d41.684866!4d20.4291879!16s%2Fm%2F012bztbx?entry=ttu',
       phone_number: '355 69 511 4003',
