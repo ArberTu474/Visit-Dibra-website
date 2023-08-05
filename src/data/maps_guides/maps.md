@@ -21,7 +21,7 @@ maps:
       distance: 17.4,
       height: 800,
       time: 1.5,
-      file_src: '/maps/maps/map_1.pdf',
+      file_src: '/maps/maps/begjunec_park.pdf',
       difficulty: 'easy',
       activity: 'hiking'
     },
