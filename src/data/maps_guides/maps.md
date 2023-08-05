@@ -15,7 +15,7 @@ maps:
     },
     {
       title: 'Begjunec Park',
-      description: 'Begjunec Park offers a family friend hike with panoramic views of Peshkopi and the Drin River Valley from the top of Mount Begjunec',
+      description: 'Begjunec Park offers a family friend hike with panoramic views of Peshkopi and the Drin River Valley from the top of Mount Begjunec.',
       img_src: '/images/begjunec_park.jpg',
       img_alt: 'Korabi mountain',
       distance: 17.4,
