@@ -26,7 +26,7 @@ const allQuestions = await Astro.glob('../../data/faq/*.md')
         allQuestions.map((question) =>
           question.frontmatter.faq.map((e) => (
             <FAQCard question={e.question} answer={e.answer} />
-          )),
+          ))
         )
       }
     </div>
@@ -34,14 +34,13 @@ const allQuestions = await Astro.glob('../../data/faq/*.md')
     <div class='mt-14'>
       <h2 id='contact' class='text-4xl font-bold'>Contact</h2>
       <p class='text-base lg:text-lg text-gray-500 my-5 lg:max-w-5xl text-left'>
-        The Diber Tourist Information Center, is at your service year round.
-        We are conveniently located on the second floor of the
-        Palace of Culture in Peshkopi. Whether you need
-        assistance with travel arrangements, activity recommendations, or
-        accommodation options in Diber, feel free to submit your inquiries
-        below. Our staff will respond to your requests within a few days.
-        Explore the beauty of Diber with confidence, knowing that we are here to
-        make your experience unforgettable.
+        The Diber Tourist Information Center, is at your service year round. We
+        are conveniently located on the second floor of the Palace of Culture in
+        Peshkopi. Whether you need assistance with travel arrangements, activity
+        recommendations, or accommodation options in Diber, feel free to submit
+        your inquiries below. Our staff will respond to your requests within a
+        few days. Explore the beauty of Diber with confidence, knowing that we
+        are here to make your experience unforgettable.
       </p>
       <form
         name='contact'
@@ -88,7 +87,7 @@ const allQuestions = await Astro.glob('../../data/faq/*.md')
   </div>
 
   <Image
-    class='hidden md:block absolute -bottom-20 right-0 -z-10'
+    class='hidden md:block absolute -bottom-20 right-0 -z-10 select-none'
     src='/icons/faq_icon_bg.svg'
     width={822 / 1.3}
     height={1172 / 1.3}
