@@ -133,7 +133,10 @@ const allPlaces = await Astro.glob('../../data/stays/accommodation.md')
               )
             }
           </div>
-          <h3 class='text-gray-500 text-2xl font-bold text-center my-6'>
+          <h3
+            id='nothing'
+            class='hidden text-gray-500 text-2xl font-bold text-center my-6'
+          >
             Nothing was found!
           </h3>
         </div>
@@ -150,6 +153,9 @@ const accommodationType = document.querySelector('#accommodation-type')
 
 const locationsList = document.querySelectorAll('[data-option="pro"]')
 
+const notingPrompt = document.querySelector('#nothing')
+const locationsListHeight = document.querySelector('#locations-list')
+
 function getLocation() {
   let value = city.value.toLowerCase()
 
@@ -165,6 +171,7 @@ function getAccommodationType() {
 function showOutput() {
   locationsList.forEach((city) => {
     city.style.display = 'block'
+    notingPrompt.style.display = 'none'
   })
 
   if (getLocation() !== '' && getAccommodationType() !== '') {
@@ -196,7 +203,12 @@ function showOutput() {
   } else {
     locationsList.forEach((city) => {
       city.style.display = 'block'
+      notingPrompt.style.display = 'none'
     })
+  }
+
+  if (locationsListHeight.offsetHeight < 20) {
+    notingPrompt.style.display = 'block'
   }
 
   locationFocus.scrollIntoView()
