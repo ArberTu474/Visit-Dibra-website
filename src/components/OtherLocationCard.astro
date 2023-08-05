@@ -1,4 +1,7 @@
 ---
+// Functions
+import { headerRenderer } from '../functions/utils.js'
+
 // Components
 import { Image } from '@astrojs/image/components'
 
@@ -40,7 +43,7 @@ const {
   data-option='pro'
   data-location={location}
   data-accommodation={type}
-  class='outline outline-gray-100 outline-4 group relative rounded-xl overflow-hidden h-80 hover:z-10 lg:hover:scale-[120%] hover:shadow-xl hover:shadow-gray-400/20 transition-all duration-300 ease-in-out'
+  class='outline outline-gray-100 outline-4 group relative rounded-xl overflow-hidden h-96 hover:z-10 lg:hover:scale-[120%] hover:shadow-xl hover:shadow-gray-400/20 transition-all duration-300 ease-in-out'
 >
   <div
     class='absolute top-0 left-0 w-full h-full -z-10 bg-gradient-to-r from-gray-800/70 from-20% to-gray-800/20'
@@ -54,33 +57,61 @@ const {
     alt={img_alt}
     format='avif'
   />
-  <div class='p-6'>
-    <h3 class='text-xl text-gray-100 font-bold'>{name}</h3>
-    <div class='py-3 flex flex-col gap-3'>
-      <a href={location_url} target='_blank' class='flex items-center gap-1'>
-        <img
-          src='/icons/places/location_icon.svg'
-          alt=''
-          width='26px'
-          height='26px'
-        />
-        <h4 class='text-gray-300'>
-          {location[0].toUpperCase() + location.substring(1)}
-        </h4>
-      </a>
-      <a href={`tel:${phone_number}`} class='flex items-center gap-1'>
-        <img
-          src='/icons/places/phone_icon.svg'
-          alt=''
-          width='26px'
-          height='26px'
-        />
-        <h4 class='text-gray-300'>{phone_number}</h4>
-      </a>
-    </div>
+  <div class='p-6 h-full flex flex-col justify-between'>
     <div>
+      <h3 class='text-xl text-gray-100 font-bold'>{name}</h3>
+      <div class='py-3 flex flex-col gap-3'>
+        <a
+          href={location_url}
+          target='_blank'
+          class='flex items-center gap-1 text-gray-300'
+        >
+          <img
+            src='/icons/accommodation/location_icon.svg'
+            alt=''
+            width='26px'
+            height='26px'
+          />
+
+          {headerRenderer(location)}
+        </a>
+        <a
+          href={`tel:${phone_number}`}
+          class='flex items-center gap-1 text-gray-300'
+        >
+          <img
+            src='/icons/accommodation/phone_icon.svg'
+            alt=''
+            width='26px'
+            height='26px'
+          />
+          {phone_number}
+        </a>
+      </div>
+    </div>
+    <div class='flex items-end justify-between gap-3'>
+      <p
+        class='text-gray-100 text-base md:text-sm lg:max-w-[280px] lg:opacity-0 group-hover:opacity-90 transition-opacity duration-300 ease-in-out'
+      >
+        <span class='text-gray-100 text-lg font-bold mb-2'
+          >{headerRenderer(type)}</span
+        ><br />
+        {description}
+      </p>
+
+      <img
+        title={headerRenderer(type)}
+        class='opacity-80'
+        src={`/icons/accommodation/${type}_icon.svg`}
+        alt=''
+        width='36px'
+        height='36px'
+      />
+    </div>
+
+    <!-- <div>
       <div
-        class='absolute flex flex-col items-start lg:items-start gap-3 translate-y-14 lg:translate-y-24 lg:group-hover:translate-y-12 transition-transform duration-300 ease-in-out'
+        class='absolute flex flex-col items-start lg:items-start gap-3 translate-y-14 lg:translate-y-24 lg:group-hover:translate-y-16 transition-transform duration-300 ease-in-out'
       >
         <div>
           <h4
@@ -101,6 +132,6 @@ const {
           {description}
         </p>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
