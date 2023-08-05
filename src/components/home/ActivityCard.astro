@@ -1,4 +1,6 @@
 ---
+import { headerRenderer } from '../../functions/utils.js'
+
 // Props
 export interface Props {
   activity_name: string
@@ -24,10 +26,11 @@ import Card from '../Card.astro'
           src={`/icons/activities/${activity_name}.svg`}
           alt='icon'
           height='70px'
+          width='96px'
         />
       </div>
       <h2 class='text-xl font-bold mt-2'>
-        {activity_name.charAt(0).toUpperCase() + activity_name.slice(1)}
+        {headerRenderer(activity_name)}
       </h2>
     </a>
     <p class='text-base text-gray-500'>
