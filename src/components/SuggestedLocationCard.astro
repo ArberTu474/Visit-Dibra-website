@@ -1,4 +1,7 @@
 ---
+// Functions
+import { headerRenderer } from '../functions/utils'
+
 // Components
 import { Image } from '@astrojs/image/components'
 
@@ -56,33 +59,52 @@ const {
     <div>
       <h3 class='text-xl text-gray-100 font-bold'>{name}</h3>
       <div class='py-3 flex flex-col gap-3'>
-        <a href={location_url} target='_blank' class='flex items-center gap-1'>
+        <a
+          href={location_url}
+          target='_blank'
+          class='flex items-center gap-1 text-gray-300'
+        >
           <img
-            src='/icons/places/location_icon.svg'
+            src='/icons/accommodation/location_icon.svg'
             alt=''
             width='26px'
             height='26px'
           />
-          <h4 class='text-gray-300'>
-            {location[0].toUpperCase() + location.substring(1)}
-          </h4>
+          {headerRenderer(location)}
         </a>
-        <a href={`tel:${phone_number}`} class='flex items-center gap-1'>
+        <a
+          href={`tel:${phone_number}`}
+          class='flex items-center gap-1 text-gray-300'
+        >
           <img
-            src='/icons/places/phone_icon.svg'
+            src='/icons/accommodation/phone_icon.svg'
             alt=''
             width='26px'
             height='26px'
           />
-          <h4 class='text-gray-300'>{phone_number}</h4>
+          {phone_number}
         </a>
       </div>
     </div>
-    <p
-      class='text-gray-100 lg:max-w-[280px] lg:opacity-0 group-hover:opacity-90 transition-opacity duration-300 ease-in-out'
-    >
-      {description}
-    </p>
+    <div class='flex items-end justify-between gap-3'>
+      <p
+        class='text-gray-100 text-base md:text-sm lg:max-w-[280px] lg:opacity-0 group-hover:opacity-90 transition-opacity duration-300 ease-in-out'
+      >
+        <span class='text-gray-100 text-lg font-bold mb-2'
+          >{headerRenderer(type)}</span
+        ><br />
+        {description}
+      </p>
+
+      <img
+        title={headerRenderer(type)}
+        class='opacity-80'
+        src={`/icons/accommodation/${type}_icon.svg`}
+        alt=''
+        width='36px'
+        height='36px'
+      />
+    </div>
   </div>
 
   <!-- <div
