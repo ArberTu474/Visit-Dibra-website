@@ -52,11 +52,11 @@ const {
     format='avif'
     loading='eager'
   />
-  <div class='max-w-[200px] h-60 flex flex-col justify-between'>
+  <div class='h-full flex flex-col justify-between'>
     <div>
       <h3 class='text-xl text-gray-100 font-bold'>{name}</h3>
-      <a href={location_url} target='_blank' class='py-3 flex flex-col gap-3'>
-        <div class='flex items-center gap-1'>
+      <div class='py-3 flex flex-col gap-3'>
+        <a href={location_url} target='_blank' class='flex items-center gap-1'>
           <img
             src='/icons/places/location_icon.svg'
             alt=''
@@ -66,7 +66,7 @@ const {
           <h4 class='text-gray-300'>
             {location[0].toUpperCase() + location.substring(1)}
           </h4>
-        </div>
+        </a>
         <a href={`tel:${phone_number}`} class='flex items-center gap-1'>
           <img
             src='/icons/places/phone_icon.svg'
@@ -76,11 +76,17 @@ const {
           />
           <h4 class='text-gray-300'>{phone_number}</h4>
         </a>
-      </a>
+      </div>
     </div>
+    <p
+      class='text-gray-100 lg:max-w-[280px] lg:opacity-0 group-hover:opacity-90 transition-opacity duration-300 ease-in-out'
+    >
+      {description}
+    </p>
   </div>
-  <div
-    class='absolute flex flex-col items-start lg:items-start gap-3 -translate-y-4 lg:translate-y-11 lg:group-hover:-translate-y-4 transition-transform duration-300 ease-in-out'
+
+  <!-- <div
+    class='absolute flex flex-col items-start lg:items-start gap-3 -translate-y-4 lg:translate-y-11 lg:group-hover:translate-y-6 transition-transform duration-300 ease-in-out'
   >
     <div>
       <h4
@@ -100,5 +106,5 @@ const {
     >
       {description}
     </p>
-  </div>
+  </div> -->
 </div>
