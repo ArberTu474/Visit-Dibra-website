@@ -8,7 +8,7 @@ import SuggestedLocationCard from '../../components/SuggestedLocationCard.astro'
 import OtherLocationCard from '../../components/OtherLocationCard.astro'
 
 // Data
-const allPlaces = await Astro.glob('../../data/stays/accommodation.md')
+import allPlaces from '../../data/stays/accommodation.json'
 ---
 
 <Layout title='Book your stay'>
@@ -87,21 +87,19 @@ const allPlaces = await Astro.glob('../../data/stays/accommodation.md')
           <!-- Locations  -->
           <div class='flex gap-6 flex-col lg:flex-row w-full'>
             {
-              allPlaces.map((placeInfo) =>
-                placeInfo.frontmatter.recommended.map((place) => (
-                  <SuggestedLocationCard
-                    name={place.name}
-                    location={place.location}
-                    location_url={place.location_url}
-                    phone_number={place.phone_number}
-                    img_src={place.img_src}
-                    img_alt={place.img_alt}
-                    description={place.description}
-                    cost={place.cost}
-                    type={place.type}
-                  />
-                ))
-              )
+              allPlaces.recommended.map((place) => (
+                <SuggestedLocationCard
+                  name={place.name}
+                  location={place.location}
+                  location_url={place.location_url}
+                  phone_number={place.phone_number}
+                  img_src={place.img_src}
+                  img_alt={place.img_alt}
+                  description={place.description}
+                  cost={place.cost}
+                  type={place.type}
+                />
+              ))
             }
           </div>
         </div>
@@ -119,21 +117,19 @@ const allPlaces = await Astro.glob('../../data/stays/accommodation.md')
             class='grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full'
           >
             {
-              allPlaces.map((placeInfo) =>
-                placeInfo.frontmatter.other.map((place) => (
-                  <OtherLocationCard
-                    name={place.name}
-                    location={place.location}
-                    location_url={place.location_url}
-                    phone_number={place.phone_number}
-                    img_src={place.img_src}
-                    img_alt={place.img_alt}
-                    description={place.description}
-                    cost={place.cost}
-                    type={place.type}
-                  />
-                ))
-              )
+              allPlaces.other.map((place) => (
+                <OtherLocationCard
+                  name={place.name}
+                  location={place.location}
+                  location_url={place.location_url}
+                  phone_number={place.phone_number}
+                  img_src={place.img_src}
+                  img_alt={place.img_alt}
+                  description={place.description}
+                  cost={place.cost}
+                  type={place.type}
+                />
+              ))
             }
           </div>
           <h3
