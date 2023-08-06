@@ -8,12 +8,8 @@ import GuidesCard from '../components/GuidesCard.astro'
 import TitleWithIcon from '../components/TitleWithIcon.astro'
 
 // Data
-const allMaps = await Astro.glob('../data/maps_guides/maps.md')
-const allGuides = await Astro.glob('../data/maps_guides/guides.md')
-
-{
-  allGuides.map((guideInfo) => guideInfo)
-}
+import allMaps from '../data/maps_guides/maps.json'
+import allGuides from '../data/maps_guides/guides.json'
 ---
 
 <Layout title='VisitDibra | Maps'>
@@ -117,22 +113,20 @@ const allGuides = await Astro.glob('../data/maps_guides/guides.md')
             <TitleWithIcon title='Maps' icon_src='/icons/maps_icon.svg' />
             <div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
               {
-                allMaps.map((mapInfo) =>
-                  mapInfo.frontmatter.maps.map((map) => (
-                    <MapsCard
-                      title={map.title}
-                      description={map.description}
-                      img_src={map.img_src}
-                      img_alt={map.img_alt}
-                      distance={map.distance}
-                      height={map.height}
-                      time={map.time}
-                      file_src={map.file_src}
-                      difficulty={map.difficulty}
-                      activity={map.activity}
-                    />
-                  ))
-                )
+                allMaps.maps.map((map) => (
+                  <MapsCard
+                    title={map.title}
+                    description={map.description}
+                    img_src={map.img_src}
+                    img_alt={map.img_alt}
+                    distance={map.distance}
+                    height={map.height}
+                    time={map.time}
+                    file_src={map.file_src}
+                    difficulty={map.difficulty}
+                    activity={map.activity}
+                  />
+                ))
               }
             </div>
           </div>
@@ -142,17 +136,15 @@ const allGuides = await Astro.glob('../data/maps_guides/guides.md')
             <TitleWithIcon title='Guides' icon_src='/icons/guides_icon.svg' />
             <div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
               {
-                allGuides.map((guideInfo) =>
-                  guideInfo.frontmatter.guides.map((guide) => (
-                    <GuidesCard
-                      title={guide.title}
-                      description={guide.description}
-                      img_src={guide.img_src}
-                      img_alt={guide.img_alt}
-                      file_src={guide.file_src}
-                    />
-                  ))
-                )
+                allGuides.guides.map((guide) => (
+                  <GuidesCard
+                    title={guide.title}
+                    description={guide.description}
+                    img_src={guide.img_src}
+                    img_alt={guide.img_alt}
+                    file_src={guide.file_src}
+                  />
+                ))
               }
             </div>
           </div>
