@@ -5,7 +5,7 @@ import SectionContent from '../SectionContent.astro'
 import FAQCard from '../FAQCard.astro'
 
 // Data
-const allQuestions = await Astro.glob('../../data/faq/*.md')
+import allQuestions from '../../data/faq/questions.json'
 ---
 
 <div class='relative'>
@@ -23,11 +23,9 @@ const allQuestions = await Astro.glob('../../data/faq/*.md')
     <!-- Questions -->
     <div class='grid grid-cols-1 md:grid-cols-2 items-start gap-6 mt-12'>
       {
-        allQuestions.map((question) =>
-          question.frontmatter.faq.map((e) => (
-            <FAQCard question={e.question} answer={e.answer} />
-          ))
-        )
+        allQuestions.faq.map((question) => (
+          <FAQCard question={question.question} answer={question.answer} />
+        ))
       }
     </div>
     <!-- Contact form -->
