@@ -51,7 +51,6 @@ import allGuides from '../data/maps_guides/guides.json'
             id='download'
             href='/maps/guides/visit_diber_english.pdf'
             target='_blank'
-            onclick='getOption()'
             class='hidden lg:block py-3 px-10 text-lg bg-amber-500/70 rounded-lg font-bold text-amber-950/80 hover:opacity-90 transition-opacity duration-300'
             >Download</a
           >
@@ -62,7 +61,6 @@ import allGuides from '../data/maps_guides/guides.json'
         >
           <a
             id='download_mobile'
-            onclick='getOptionMobile()'
             href='/maps/guides/visit_diber_english.pdf'
             target='_blank'
             class='py-3 inline-block'>Download</a
@@ -74,9 +72,8 @@ import allGuides from '../data/maps_guides/guides.json'
               class='block bg-transparent text-transparent w-12 pl-4 pb-3 py-3 cursor-pointer'
               name='language'
               id='language_mobile'
-              onchange='updateDescriptionMobile()'
             >
-                       <option selected>Choose language</option>
+              <option selected>Choose language</option>
               <option value='english'>🇬🇧 English</option>
               <option value='albanian'>🇦🇱 Albanian (Coming Soon)</option>
               <option value='italian'>🇮🇹 Italian (Coming Soon)</option>
@@ -152,131 +149,149 @@ import allGuides from '../data/maps_guides/guides.json'
       </div>
     </div>
   </main>
-
-  <script type='text/javascript'>
-    // Descriptions
-    const english =
-      'The official tourist guide of Diber in English. This brochure was prepared by the Albanian Local Capacity Development Foundation in a collaboration between USAID and the Embassy of Sweden.'
-    const albanian =
-      'Guida zyrtare turistike e Dibrës në shqip. Kjo broshurë është përgatitur nga Nevila Manga dhe stafi i Qendrës së Turizmit Dibër.'
-    const italian =
-      'La guida turistica ufficiale di Diber in italiano. Questa brochure è stata preparata da Ilaria Ghaleb.'
-    const german =
-      'Der offizielle Reiseführer von Diber auf Deutsch. Diese Broschüre wurde von Ilaria Ghaleb mit sprachlicher Unterstützung von Louis Fischer und Enela Marku erstellt.'
-    const spanish =
-      'La guía de viaje oficial de Diber en español. Este folleto fue creado por Ilaria Ghaleb con el apoyo lingüístico de Lourdes Gutiérrez Toranzo.'
-    const czech =
-      'Oficiální cestovní průvodce Diber v češtině. Tuto brožuru vytvořila Ilaria Ghaleb s jazykovou podporou Pavliny Ohman.'
-    const macedonian =
-      'Официјален туристички водич на Дибер на македонски јазик. Оваа брошура е создадена од Иларија Галеб со лингвистичка поддршка од Моника Саздова.'
-    const montenegrin =
-      'Званични туристички водич Дибера на црногорском језику. Ову брошуру је припремила Илариа Гхалеб уз лингвистичку подршку Александре Гикала.'
-    const polish =
-      'Oficjalny przewodnik turystyczny Dibra w języku albańskim. Niniejsza broszura została przygotowana przez Ilarię Ghaleb przy wsparciu językowym Marii Topolskiej.'
-
-    description = document.querySelector('#description')
-
-    language = document.querySelector('#language')
-    download = document.querySelector('#download')
-
-    language_mobile = document.querySelector('#language_mobile')
-    download_mobile = document.querySelector('#download_mobile')
-
-    function getOption() {
-      value = language.value.toLowerCase()
-      if (value === 'choose language') {
-        value = 'english'
-      }
-      let link = `/maps/guides/visit_diber_${value}.pdf`
-      download.setAttribute('href', link)
-    }
-
-    function getOptionMobile() {
-      value = language_mobile.value.toLowerCase()
-      if (value === 'choose language') {
-        value = 'english'
-      }
-      let link = `/maps/guides/visit_diber_${value}.pdf`
-      download_mobile.setAttribute('href', link)
-    }
-
-    function updateDescription() {
-      var language = document.getElementById('language').value
-
-      switch (language) {
-        case 'english':
-          description.innerText = english
-          break
-        case 'albanian':
-          description.innerText = albanian
-          break
-        case 'italian':
-          description.innerText = italian
-          break
-        case 'german':
-          description.innerText = german
-          break
-        case 'spanish':
-          description.innerText = spanish
-          break
-        case 'czech':
-          description.innerText = czech
-          break
-        case 'macedonian':
-          description.innerText = macedonian
-          break
-        case 'montenegrin':
-          description.innerText = montenegrin
-          break
-        case 'polish':
-          description.innerText = polish
-          break
-        case 'choose language':
-          description.innerText = 'test'
-          break
-
-        default:
-          description.innerText = english
-          break
-      }
-    }
-
-    function updateDescriptionMobile() {
-      var language_mobile = document.getElementById('language_mobile').value
-
-      switch (language_mobile) {
-        case 'english':
-          description.innerText = english
-          break
-        case 'albanian':
-          description.innerText = albanian
-          break
-        case 'italian':
-          description.innerText = italian
-          break
-        case 'german':
-          description.innerText = german
-          break
-        case 'spanish':
-          description.innerText = spanish
-          break
-        case 'czech':
-          description.innerText = czech
-          break
-        case 'macedonian':
-          description.innerText = macedonian
-          break
-        case 'montenegrin':
-          description.innerText = montenegrin
-          break
-        case 'polish':
-          description.innerText = polish
-          break
-
-        default:
-          description.innerText = english
-          break
-      }
-    }
-  </script>
 </Layout>
+
+<script type='text/javascript'>
+// Descriptions
+const english =
+  'The official tourist guide of Diber in English. This brochure was prepared by the Albanian Local Capacity Development Foundation in a collaboration between USAID and the Embassy of Sweden.'
+const albanian =
+  'Guida zyrtare turistike e Dibrës në shqip. Kjo broshurë është përgatitur nga Nevila Manga dhe stafi i Qendrës së Turizmit Dibër.'
+const italian =
+  'La guida turistica ufficiale di Diber in italiano. Questa brochure è stata preparata da Ilaria Ghaleb.'
+const german =
+  'Der offizielle Reiseführer von Diber auf Deutsch. Diese Broschüre wurde von Ilaria Ghaleb mit sprachlicher Unterstützung von Louis Fischer und Enela Marku erstellt.'
+const spanish =
+  'La guía de viaje oficial de Diber en español. Este folleto fue creado por Ilaria Ghaleb con el apoyo lingüístico de Lourdes Gutiérrez Toranzo.'
+const czech =
+  'Oficiální cestovní průvodce Diber v češtině. Tuto brožuru vytvořila Ilaria Ghaleb s jazykovou podporou Pavliny Ohman.'
+const macedonian =
+  'Официјален туристички водич на Дибер на македонски јазик. Оваа брошура е создадена од Иларија Галеб со лингвистичка поддршка од Моника Саздова.'
+const montenegrin =
+  'Званични туристички водич Дибера на црногорском језику. Ову брошуру је припремила Илариа Гхалеб уз лингвистичку подршку Александре Гикала.'
+const polish =
+  'Oficjalny przewodnik turystyczny Dibra w języku albańskim. Niniejsza broszura została przygotowana przez Ilarię Ghaleb przy wsparciu językowym Marii Topolskiej.'
+
+const description = document.querySelector('#description')
+
+const language = document.querySelector('#language')
+const download = document.querySelector('#download')
+
+const language_mobile = document.querySelector('#language_mobile')
+const download_mobile = document.querySelector('#download_mobile')
+
+// Event Listeners
+
+language.addEventListener('chnage', (e) => {
+  updateDescription()
+})
+
+download.addEventListener('click', (e) => {
+  getOption()
+})
+
+language_mobile.addEventListener('chnage', (e) => {
+  updateDescriptionMobile()
+})
+
+download_mobile.addEventListener('click', (e) => {
+  getOptionMobile()
+})
+
+function getOption() {
+  value = language.value.toLowerCase()
+  if (value === 'choose language') {
+    value = 'english'
+  }
+  let link = `/maps/guides/visit_diber_${value}.pdf`
+  download.setAttribute('href', link)
+}
+
+function getOptionMobile() {
+  value = language_mobile.value.toLowerCase()
+  if (value === 'choose language') {
+    value = 'english'
+  }
+  let link = `/maps/guides/visit_diber_${value}.pdf`
+  download_mobile.setAttribute('href', link)
+}
+
+function updateDescription() {
+  var language = document.getElementById('language').value
+
+  switch (language) {
+    case 'english':
+      description.innerText = english
+      break
+    case 'albanian':
+      description.innerText = albanian
+      break
+    case 'italian':
+      description.innerText = italian
+      break
+    case 'german':
+      description.innerText = german
+      break
+    case 'spanish':
+      description.innerText = spanish
+      break
+    case 'czech':
+      description.innerText = czech
+      break
+    case 'macedonian':
+      description.innerText = macedonian
+      break
+    case 'montenegrin':
+      description.innerText = montenegrin
+      break
+    case 'polish':
+      description.innerText = polish
+      break
+    case 'choose language':
+      description.innerText = 'test'
+      break
+
+    default:
+      description.innerText = english
+      break
+  }
+}
+
+function updateDescriptionMobile() {
+  var language_mobile = document.getElementById('language_mobile').value
+
+  switch (language_mobile) {
+    case 'english':
+      description.innerText = english
+      break
+    case 'albanian':
+      description.innerText = albanian
+      break
+    case 'italian':
+      description.innerText = italian
+      break
+    case 'german':
+      description.innerText = german
+      break
+    case 'spanish':
+      description.innerText = spanish
+      break
+    case 'czech':
+      description.innerText = czech
+      break
+    case 'macedonian':
+      description.innerText = macedonian
+      break
+    case 'montenegrin':
+      description.innerText = montenegrin
+      break
+    case 'polish':
+      description.innerText = polish
+      break
+
+    default:
+      description.innerText = english
+      break
+  }
+}
+</script>
