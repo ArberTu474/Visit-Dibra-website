@@ -1,9 +1,9 @@
 ---
 // Components
 import { Image } from '@astrojs/image/components'
-import SectionContent from '../SectionContent.astro'
-import ActivityCard from './ActivityCard.astro'
-import Button from '../Button.astro'
+import SectionContent from '../ui/general/SectionContent.astro'
+import ActivityCard from '../ui/activities/ActivityCard.astro'
+import Button from '../ui/general/Button.astro'
 
 // All activities
 const allActivityTypes = await Astro.glob('../../pages/activities/**/*.md')

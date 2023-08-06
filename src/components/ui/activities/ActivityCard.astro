@@ -1,5 +1,5 @@
 ---
-import { headerRenderer } from '../../functions/utils.js'
+import { headerRenderer } from '../../../functions/utils.js'
 
 // Props
 export interface Props {
@@ -11,7 +11,7 @@ export interface Props {
 const { activity_name, description, activity_url, className } = Astro.props
 
 // Components
-import Card from '../Card.astro'
+import Card from '../general/Card.astro'
 ---
 
 <Card>

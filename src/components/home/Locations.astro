@@ -1,9 +1,9 @@
 ---
 // Components
 import { Image } from '@astrojs/image/components'
-import SectionContent from '../SectionContent.astro'
-import Button from '../Button.astro'
-import { LocationsMap } from './LocationsMap'
+import SectionContent from '../ui/general/SectionContent.astro'
+import Button from '../ui/general/Button.astro'
+import { LocationsMap } from '../ui/locations/LocationsMap'
 
 // Articles
 const allArticles = await Astro.glob('../../pages/locations/*.md')
