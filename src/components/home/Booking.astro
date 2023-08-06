@@ -8,7 +8,7 @@ import BookingContactInfo from '../BookingContactInfo.astro'
 import BusinessesContactInfo from '../BusinessesContactInfo.astro'
 
 // Data
-const bookingInfo = await Astro.glob('../../data/booking/*.md')
+import bookingInfo from '../../data/booking/bookingInfo.json'
 ---
 
 <div class='relative'>
@@ -46,15 +46,13 @@ const bookingInfo = await Astro.glob('../../data/booking/*.md')
         <!-- Contact info -->
         <div class='py-6'>
           {
-            bookingInfo.map((info) =>
-              info.frontmatter.contact.map((contact) => (
-                <BookingContactInfo
-                  type={contact.type}
-                  contact={contact.contactInfo}
-                  href={contact.url}
-                />
-              ))
-            )
+            bookingInfo.contact.map((contact) => (
+              <BookingContactInfo
+                type={contact.type}
+                contact={contact.contactInfo}
+                href={contact.url}
+              />
+            ))
           }
         </div>
 
@@ -120,16 +118,14 @@ const bookingInfo = await Astro.glob('../../data/booking/*.md')
         <!-- Contact info -->
         <div class='py-6'>
           {
-            bookingInfo.map((info) =>
-              info.frontmatter.businesses.map((busines) => (
-                <BusinessesContactInfo
-                  type={busines.type}
-                  name={busines.name}
-                  href={busines.url}
-                  stars={busines.stars}
-                />
-              ))
-            )
+            bookingInfo.businesses.map((busines) => (
+              <BusinessesContactInfo
+                type={busines.type}
+                name={busines.name}
+                href={busines.url}
+                stars={busines.stars}
+              />
+            ))
           }
         </div>
 
