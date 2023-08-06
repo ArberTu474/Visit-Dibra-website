@@ -1,0 +1,84 @@
+{
+  "recommended": [
+    {
+      "name": "Guest House Sabriu",
+      "location": "rabdisht",
+      "location_url": "https://www.google.com/maps/place/Peshkopi/@41.6837132,20.4314008,15z/data=!3m1!4b1!4m6!3m5!1s0x135173954ffe4dc1:0x10800b25b1c22884!8m2!3d41.684866!4d20.4291879!16s%2Fm%2F012bztbx?entry=ttu",
+      "phone_number": "355 69 511 4003",
+      "img_src": "/hotels/guesthouse_sabriu.jpg",
+      "img_alt": "a picture of Korabi Hotel",
+      "description": "Historic Albanian bujtina located in the charming stone village of Rabdisht.",
+      "cost": 50,
+      "type": "hotel"
+    },
+    {
+      "name": "Guest House Tershana",
+      "location": "peshkopi",
+      "location_url": "https://www.google.com/maps/place/Peshkopi/@41.6837132,20.4314008,15z/data=!3m1!4b1!4m6!3m5!1s0x135173954ffe4dc1:0x10800b25b1c22884!8m2!3d41.684866!4d20.4291879!16s%2Fm%2F012bztbx?entry=ttu",
+      "phone_number": "355 69 218 20306",
+      "img_src": "/hotels/guesthouse_tershana.jpg",
+      "img_alt": "a picture of Korabi Hotel",
+      "description": "Quiet gueshouse located in the center of Peshkopi.",
+      "cost": 20,
+      "type": "hotel"
+    },
+    {
+      "name": "Hotel Veri",
+      "location": "peshkopi",
+      "location_url": "https://www.google.com/maps/place/Peshkopi/@41.6837132,20.4314008,15z/data=!3m1!4b1!4m6!3m5!1s0x135173954ffe4dc1:0x10800b25b1c22884!8m2!3d41.684866!4d20.4291879!16s%2Fm%2F012bztbx?entry=ttu",
+      "phone_number": "355 69 209 8186",
+      "img_src": "/hotels/hotel_veri.jpg",
+      "img_alt": "a picture of Korabi Hotel",
+      "description": "A modern stay with large rooms conveniently located in Peshkopi.",
+      "cost": 14,
+      "type": "hotel"
+    }
+  ],
+
+  "other": [
+    {
+      "name": "Nëna Dashuri Agroturizëm",
+      "location": "peshkopi",
+      "location_url": "",
+      "phone_number": "355 069 937 7337",
+      "img_src": "/hotels/nena_dashuri.jpg",
+      "img_alt": "a picture of Korabi Hotel",
+      "description": "Traditional Albanian bujtina famous for it's jufka and Albanian dishes.",
+      "cost": 50,
+      "type": "hotel"
+    },
+    {
+      "name": "Korabi Mountain Camping",
+      "location": "klos",
+      "location_url": "355 068 332 2157",
+      "phone_number": "0671234567",
+      "img_src": "/hotels/korabi_mountain_camping.jpg",
+      "img_alt": "a picture of Korabi Hotel",
+      "description": "Wild mountain camping at the top of the Korabi Mountain range.",
+      "cost": 20,
+      "type": "camping"
+    },
+    {
+      "name": "Kulla Hupi Agroturizëm",
+      "location": "bulqize",
+      "location_url": "",
+      "phone_number": "355 68 837 3793",
+      "img_src": "/hotels/kulla_hupi.jpg",
+      "img_alt": "a picture of Korabi Hotel",
+      "description": "Kulla Hupi Agriturism offers a restaurant, garden and terrace. Each room has a private balcony.",
+      "cost": 14,
+      "type": "hotel"
+    },
+    {
+      "name": "Hotel Monopol",
+      "location": "peshkopi",
+      "location_url": "",
+      "phone_number": "355 68 202 2999",
+      "img_src": "/hotels/hotel_monopol.jpg",
+      "img_alt": "a picture of Korabi Hotel",
+      "description": "A modern stay with a fine Italian restaurant.",
+      "cost": 14,
+      "type": "hotel"
+    }
+  ]
+}

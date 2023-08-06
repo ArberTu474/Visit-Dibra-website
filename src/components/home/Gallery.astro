@@ -4,7 +4,9 @@ import GalleryImage from '../GalleryImage.astro'
 import SectionContent from '../SectionContent.astro'
 import { Image } from '@astrojs/image/components'
 
-const allImages = await Astro.glob('../../data/gallery/*.md')
+// const allImages = await Astro.glob('../../data/gallery/*.md')
+// Data
+import allImages from '../../data/gallery/gallery.json'
 ---
 
 <div class='relative'>
@@ -29,44 +31,38 @@ const allImages = await Astro.glob('../../data/gallery/*.md')
       >
         <div class='space-y-6'>
           {
-            allImages.map((e) =>
-              e.frontmatter.col1.map((b) => (
-                <GalleryImage
-                  height_class='h-[270px]'
-                  src={b.url}
-                  alt={b.alt}
-                  description={b.description}
-                />
-              ))
-            )
+            allImages.col1.map((image) => (
+              <GalleryImage
+                height_class='h-[270px]'
+                src={image.url}
+                alt={image.alt}
+                description={image.description}
+              />
+            ))
           }
         </div>
         <div class='space-y-6'>
           {
-            allImages.map((e) =>
-              e.frontmatter.col2.map((b) => (
-                <GalleryImage
-                  height_class='h-[220px]'
-                  src={b.url}
-                  alt={b.alt}
-                  description={b.description}
-                />
-              ))
-            )
+            allImages.col2.map((image) => (
+              <GalleryImage
+                height_class='h-[220px]'
+                src={image.url}
+                alt={image.alt}
+                description={image.description}
+              />
+            ))
           }
         </div>
         <div class='space-y-6 hidden lg:block'>
           {
-            allImages.map((e) =>
-              e.frontmatter.col3.map((b) => (
-                <GalleryImage
-                  height_class='h-[300px]'
-                  src={b.url}
-                  alt={b.alt}
-                  description={b.description}
-                />
-              ))
-            )
+            allImages.col3.map((image) => (
+              <GalleryImage
+                height_class='h-[300px]'
+                src={image.url}
+                alt={image.alt}
+                description={image.description}
+              />
+            ))
           }
         </div>
       </div>
