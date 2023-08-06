@@ -3,7 +3,7 @@
 import Layout from '../../layouts/Layout.astro'
 
 // components
-import ArticleCard from '../../components/home/ArticleCard.astro'
+import ArticleCard from '../../components/ui/articles/ArticleCard.astro'
 
 export async function getStaticPaths() {
   const allArticles = await Astro.glob('../articles/*.md')
