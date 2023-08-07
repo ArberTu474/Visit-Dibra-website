@@ -5,6 +5,7 @@ import { headerRenderer } from '../../../functions/utils'
 // Components
 import { Image } from '@astrojs/image/components'
 import Card from '../general/Card.astro'
+import { Icon } from 'astro-iconify'
 
 // Props
 export interface Props {
@@ -55,6 +56,24 @@ switch (difficulty) {
     colorClass = 'border-red-500'
     btnColor = 'bg-red-500'
 }
+
+let activityIcon = ''
+
+switch (activity) {
+  case 'biking':
+    activityIcon = 'directions-bike-rounded'
+    break
+  case 'hiking':
+    activityIcon = 'hiking-rounded'
+    break
+  case 'rafting':
+    activityIcon = 'kayaking-rounded'
+    break
+
+  default:
+    activityIcon = 'question-mark-rounded'
+    break
+}
 ---
 
 <Card hasPadding={false}>
@@ -74,35 +93,34 @@ switch (difficulty) {
       <div class='flex justify-between h-full'>
         <div class='flex flex-col gap-5 justify-center'>
           <div class='flex items-center gap-2'>
-            <img
-              src='/icons/maps/distance_icon.svg'
-              alt=''
-              height='32px'
-              width='32px'
+            <Icon
+              name='material-symbols:width-rounded'
+              class='text-gray-100 h-8'
             />
             <p class='text-lg text-gray-100 font-bold'>{`${distance} km`}</p>
           </div>
           <div class='flex items-center gap-2'>
-            <img
-              src='/icons/maps/height_icon.svg'
-              alt=''
-              height='32px'
-              width='32px'
+            <Icon
+              name='material-symbols:altitude-outline-rounded'
+              class='text-gray-100 h-8'
             />
             <p class='text-lg text-gray-100 font-bold'>{`${height} m`}</p>
           </div>
           <div class='flex items-center gap-2'>
-            <img
-              src='/icons/maps/time_icon.svg'
-              alt=''
-              height='32px'
-              width='32px'
+            <Icon
+              name='material-symbols:timer-outline-rounded'
+              class='text-gray-100 h-8'
             />
             <p class='text-lg text-gray-100 font-bold'>{`${time} hours`}</p>
           </div>
         </div>
 
-        <img class='self-end' src={`/icons/maps/${activity}_icon.svg`} alt='' />
+        <Icon
+          pack='material-symbols'
+          name={activityIcon}
+          title={headerRenderer(activity)}
+          class='text-gray-100 h-12 self-end'
+        />
       </div>
     </div>
   </div>
@@ -127,7 +145,8 @@ switch (difficulty) {
       title='Download'
       class={`mt-12 h-[48px] min-w-[48px] ${btnColor} rounded-full flex justify-center items-center hover:opacity-80 transition-opacity duration-300 cursor-pointer`}
     >
-      <img src='/icons/download_icon.svg' alt='' height='24px' width='24px' />
+      <!-- <img src='/icons/download_icon.svg' alt='' height='24px' width='24px' /> -->
+      <Icon name='material-symbols:south-rounded' class='text-gray-100 h-6' />
     </a>
   </div>
   <!-- </div> -->

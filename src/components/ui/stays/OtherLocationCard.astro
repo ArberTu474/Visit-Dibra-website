@@ -1,5 +1,6 @@
 ---
 // Functions
+import { Icon } from 'astro-iconify'
 import { headerRenderer } from '../../../functions/utils.js'
 
 // Components
@@ -37,6 +38,33 @@ const {
   cost,
   type,
 } = Astro.props
+
+let accommodationIcon = ''
+
+switch (type) {
+  case 'hotel':
+    accommodationIcon = 'bed-outline-rounded'
+    break
+  case 'hostel':
+    accommodationIcon = 'cabin-rounded'
+    break
+  case 'camping':
+    accommodationIcon = 'camping-outline-rounded'
+    break
+  case 'agro_tourism':
+    accommodationIcon = 'psychiatry-outline-rounded'
+    break
+  case 'guest_house':
+    accommodationIcon = 'cottage-outline-rounded'
+    break
+  case 'resort':
+    accommodationIcon = 'apartment-rounded'
+    break
+
+  default:
+    accommodationIcon = 'question-mark-rounded'
+    break
+}
 ---
 
 <div
@@ -66,11 +94,9 @@ const {
           target='_blank'
           class='flex items-center gap-1 text-gray-300'
         >
-          <img
-            src='/icons/accommodation/location_icon.svg'
-            alt=''
-            width='26px'
-            height='26px'
+          <Icon
+            name='material-symbols:location-on-outline-rounded'
+            class='h-[26px] text-gray-300'
           />
 
           {headerRenderer(location)}
@@ -79,11 +105,9 @@ const {
           href={`tel:${phone_number}`}
           class='flex items-center gap-1 text-gray-300'
         >
-          <img
-            src='/icons/accommodation/phone_icon.svg'
-            alt=''
-            width='26px'
-            height='26px'
+          <Icon
+            name='material-symbols:call-outline-rounded'
+            class='h-[26px] !text-gray-300'
           />
           {phone_number}
         </a>
@@ -99,39 +123,12 @@ const {
         {description}
       </p>
 
-      <img
+      <Icon
         title={headerRenderer(type)}
-        class='opacity-80'
-        src={`/icons/accommodation/${type}_icon.svg`}
-        alt=''
-        width='36px'
-        height='36px'
+        pack='material-symbols'
+        name={accommodationIcon}
+        class='text-gray-100 opacity-80 min-w-[36px] h-9'
       />
     </div>
-
-    <!-- <div>
-      <div
-        class='absolute flex flex-col items-start lg:items-start gap-3 translate-y-14 lg:translate-y-24 lg:group-hover:translate-y-16 transition-transform duration-300 ease-in-out'
-      >
-        <div>
-          <h4
-            class='flex gap-3 items-center text-lg group-hover:text-md text-gray-200 font-bold py-2 px-7 bg-gray-500/70 hover:bg-gray-500/90 rounded-full cursor-pointer'
-          >
-            <img
-              src={`/icons/places/${type}_icon.svg`}
-              height='30px'
-              width='30px'
-              alt=''
-            />
-            $ {cost}
-          </h4>
-        </div>
-        <p
-          class='text-gray-100 text-sm lg:max-w-[280px] lg:opacity-0 group-hover:opacity-90 transition-opacity duration-300 ease-in-out'
-        >
-          {description}
-        </p>
-      </div>
-    </div> -->
   </div>
 </div>
