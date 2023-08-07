@@ -56,6 +56,17 @@ const { title, description, summary, img_src, img_alt, date, tags, author } =
                       name='material-symbols:person-rounded'
                     />
                   </div>
+
+                  <img
+                    class='absolute'
+                    src={`/authors/${author.toLowerCase()}_profile.jpg`}
+                    alt={author}
+                    width='48px'
+                    height='48px'
+                    onerror="
+                    this.src = '/authors/default_profile.svg'
+                    "
+                  />
                 </div>
 
                 <p class='text-xl text-gray-900'>{author}</p>
