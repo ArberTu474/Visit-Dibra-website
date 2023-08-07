@@ -125,8 +125,8 @@ import { Icon } from 'astro-iconify'
                     height={map.height}
                     time={map.time}
                     file_src={map.file_src}
-                    difficulty={map.difficulty}
-                    activity={map.activity}
+                    difficulty={map.difficulty as any}
+                    activity={map.activity as any}
                   />
                 ))
               }
