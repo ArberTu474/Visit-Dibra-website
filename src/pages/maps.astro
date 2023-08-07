@@ -10,6 +10,7 @@ import TitleWithIcon from '../components/ui/general/TitleWithIcon.astro'
 // Data
 import allMaps from '../data/maps_guides/maps.json'
 import allGuides from '../data/maps_guides/guides.json'
+import { Icon } from 'astro-iconify'
 ---
 
 <Layout title='VisitDibra | Maps'>
@@ -84,12 +85,16 @@ import allGuides from '../data/maps_guides/guides.json'
               <option value='montenegrin'>🇲🇪 Montenegrin (Coming Soon)</option>
               <option value='polish'>🇵🇱 Polish (Coming Soon)</option>
             </select>
-            <img
+            <!-- <img
               class='absolute top-2 left-1 pointer-events-none mx-auto'
               src='/icons/down_arrow_brown.svg'
               alt=''
               height='40px'
               width='40px'
+            /> -->
+            <Icon
+              class='h-10 text-amber-950/80 absolute top-2 left-1 pointer-events-none mx-auto'
+              name='material-symbols:expand-more-rounded'
             />
           </div>
         </div>

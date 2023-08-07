@@ -5,6 +5,7 @@ import { Image } from '@astrojs/image/components'
 
 // Function
 import { formatDate } from '../../../functions/utils.js'
+import { Icon } from 'astro-iconify'
 
 // Props
 export interface Props {
@@ -62,11 +63,9 @@ const {
             >
               <div class='relative h-12 min-w-[48px] bg-gray-500/30 rounded-full flex items-center justify-center overflow-hidden'>
                 <div>
-                  <img
-                    src='/icons/author_icon.svg'
-                    alt=''
-                    height='30px'
-                    width='30px'
+                  <Icon
+                    class='h-8'
+                    name='material-symbols:person-outline-rounded'
                   />
                 </div>
 
@@ -89,7 +88,7 @@ const {
       </div>
       <a
         href={url}
-        class='inline-block mt-6 text-xl font-bold mb-1 hover:underline'
+        class='inline-block text-gray-800 mt-6 text-xl font-bold mb-1 hover:underline'
         >{title}</a
       >
       <p class='text-base text-gray-500'>
