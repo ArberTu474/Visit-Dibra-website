@@ -53,20 +53,9 @@ const { title, description, summary, img_src, img_alt, date, tags, author } =
                   <div>
                     <Icon
                       class='h-8 text-gray-500'
-                      name='material-symbols:person-outline-rounded '
+                      name='material-symbols:person-rounded'
                     />
                   </div>
-
-                  <img
-                    class='absolute'
-                    src={`/authors/${author.toLowerCase()}_profile.jpg`}
-                    alt={author}
-                    height='48px'
-                    width='48px'
-                    onerror="
-                    this.src = '/authors/default_profile.svg'
-                    "
-                  />
                 </div>
 
                 <p class='text-xl text-gray-900'>{author}</p>
