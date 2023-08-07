@@ -15,8 +15,11 @@ const { title, icon, className, has_undeline = true } = Astro.props
 
 <div class={`flex justify-center gap-2 flex-col my-6 ${className}`}>
   <div class='flex items-center gap-2'>
-    <!-- <Icon name={`material-symbols:${icon}`} class='h-10' /> -->
-    <Icon pack='material-symbols' name={icon} class='h-10' />
+    <Icon
+      pack='material-symbols'
+      name={icon}
+      class='h-10 text-gray-100 text-inherit'
+    />
     <h2 class='text-2xl font-bold'>{title}</h2>
   </div>
   {
