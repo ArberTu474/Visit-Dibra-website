@@ -1,11 +1,12 @@
 ---
+import { Icon } from 'astro-iconify'
 // Props
 export interface Props {
   href: string
   btnColor?: color
   rounded?: boolean
   className?: string
-  icon_src?: string
+  icon?: string
   externalLink?: boolean
 }
 
@@ -14,7 +15,7 @@ const {
   className,
   btnColor,
   rounded,
-  icon_src,
+  icon,
   externalLink = false,
 } = Astro.props
 
@@ -69,8 +70,14 @@ switch (btnColor) {
     href={href}
   >
     {
-      icon_src && (
-        <img class='-ml-4' height='32px' width='32px' src={icon_src} alt='' />
+      icon && (
+        <>
+          <Icon
+            pack='material-symbols'
+            class='-ml-4 h-8 text-gray-100'
+            name={icon}
+          />
+        </>
       )
     }
 

@@ -9,6 +9,7 @@ import BusinessesContactInfo from '../ui/booking/BusinessesContactInfo.astro'
 
 // Data
 import bookingInfo from '../../data/booking/bookingInfo.json'
+import { Icon } from 'astro-iconify'
 ---
 
 <div class='relative'>
@@ -17,7 +18,7 @@ import bookingInfo from '../../data/booking/bookingInfo.json'
     <SectionContent
       title='Book your visit to Diber'
       subtitle='Booking'
-      icon_src='/icons/booking_icon.svg'
+      icon='calendar-month-outline-rounded'
       section_color='dark-blue'
       text_position='center'
     >
@@ -85,12 +86,10 @@ import bookingInfo from '../../data/booking/bookingInfo.json'
           externalLink={true}
         >
           More Info
-          <img
-            width='32px'
-            height='32px'
-            class='h-6'
-            src='/icons/external_link.svg'
-            alt='icon'
+
+          <Icon
+            class='text-gray-100 h-8'
+            name='material-symbols:login-rounded'
           />
         </Button>
       </Card>

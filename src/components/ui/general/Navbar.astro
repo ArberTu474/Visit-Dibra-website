@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-iconify'
 ---
 
 <nav
@@ -13,14 +14,7 @@
     </a>
 
     <div class='sm:hidden flex items-center'>
-      <img
-        id='menu'
-        class='cursor-pointer'
-        src='/icons/menu.svg'
-        height='38px'
-        width='38px'
-        alt=''
-      />
+      <Icon id='menu' class='h-10' name='material-symbols:menu-rounded' />
     </div>
 
     <ul

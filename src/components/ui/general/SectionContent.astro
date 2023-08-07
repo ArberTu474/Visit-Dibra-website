@@ -1,12 +1,12 @@
 ---
 // Components
-import { Image } from '@astrojs/image/components'
+import { Icon } from 'astro-iconify'
 
 // Props
 export interface Props {
   title: string
   subtitle: string
-  icon_src: string
+  icon: string
   section_color: color
   btn_text?: string
   className?: string
@@ -27,7 +27,7 @@ type color =
 const {
   title,
   subtitle,
-  icon_src,
+  icon,
   section_color,
   btn_text = 'Learn more >',
   text_position = 'left',
@@ -84,19 +84,24 @@ switch (section_color) {
 ---
 
 <div class={`flex flex-col mt-20 ${content_possition} ${className} `}>
-  <Image
+  <!-- <Image
     src={icon_src}
     width={89 / 2}
     height={71 / 2}
     alt='icon'
     format='svg'
+  /> -->
+  <Icon
+    pack='material-symbols'
+    name={icon}
+    class={`${colorClass} h-14 `}
   />
-  <h3 class={`text-xl lg:text-2xl font-bold ${colorClass} my-3`}>
+  <h2 class={`text-xl lg:text-2xl font-bold ${colorClass} mb-3`}>
     {subtitle}
-  </h3>
-  <h2 class={`text-4xl lg:text-6xl font-bold ${p_possition}`}>
-    {title}
   </h2>
+  <h3 class={`text-4xl lg:text-6xl font-bold ${p_possition}`}>
+    {title}
+  </h3>
   <p
     class={`text-base lg:text-lg text-gray-500 my-5 lg:max-w-5xl ${p_possition}`}
   >

@@ -6,7 +6,7 @@
 
 @layer base {
   * {
-    @apply text-gray-800 fill-gray-800;
+    /* @apply text-gray-800; */
     -webkit-tap-highlight-color: transparent;
   }
 }

@@ -6,6 +6,7 @@ import Layout from '../../layouts/Layout.astro'
 import TitleWithIcon from '../../components/ui/general/TitleWithIcon.astro'
 import SuggestedLocationCard from '../../components/ui/stays/SuggestedLocationCard.astro'
 import OtherLocationCard from '../../components/ui/stays/OtherLocationCard.astro'
+import { Icon } from 'astro-iconify'
 
 // Data
 import allPlaces from '../../data/stays/accommodation.json'
@@ -33,12 +34,7 @@ import allPlaces from '../../data/stays/accommodation.json'
           class='sticky top-24 p-6 rounded-lg bg-indigo-900 border-none flex flex-col gap-6 shadow-lg shadow-gray-400/20'
         >
           <div class='flex items-center gap-3 my-3'>
-            <img
-              src='/icons/search_icon.svg'
-              alt=''
-              height="30px'"
-              width="30px'"
-            />
+            <Icon name='material-symbols:search' class='h-8 text-gray-100' />
             <h2 class='text-xl text-gray-100 font-bold'>Find what you want</h2>
           </div>
           <div class='flex flex-col sm:flex-row lg:flex-col gap-6'>
