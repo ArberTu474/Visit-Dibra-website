@@ -192,7 +192,7 @@ export const LocationsMap = ({ articles }) => {
                 </div>
                 <div className='p-6 flex items-center justify-between gap-6'>
                   <div>
-                    <h2 className='text-xl font-semibold mb-1'>
+                    <h2 className='text-xl  font-semibold mb-1'>
                       {article.frontmatter.title}
                     </h2>
                     <p className='text-base text-gray-500 max-w-2xl'>

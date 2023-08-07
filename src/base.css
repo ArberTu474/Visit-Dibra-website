@@ -9,6 +9,24 @@
     /* @apply text-gray-800; */
     -webkit-tap-highlight-color: transparent;
   }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  span,
+  ul,
+  ol,
+  li,
+  select,
+  input,
+  option {
+    @apply text-gray-800;
+  }
 }
 
 html {
