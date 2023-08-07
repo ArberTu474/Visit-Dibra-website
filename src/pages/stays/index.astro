@@ -91,7 +91,7 @@ import allPlaces from '../../data/stays/accommodation.json'
                   img_alt={place.img_alt}
                   description={place.description}
                   cost={place.cost}
-                  type={place.type}
+                  type={place.type as any}
                 />
               ))
             }
@@ -121,7 +121,7 @@ import allPlaces from '../../data/stays/accommodation.json'
                   img_alt={place.img_alt}
                   description={place.description}
                   cost={place.cost}
-                  type={place.type}
+                  type={place.type as any}
                 />
               ))
             }
