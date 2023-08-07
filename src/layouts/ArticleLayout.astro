@@ -7,6 +7,7 @@ import { Image } from '@astrojs/image/components'
 
 // Function
 import { formatDate } from '../functions/utils.js'
+import { Icon } from 'astro-iconify'
 
 const { frontmatter } = Astro.props
 const { title, description, summary, img_src, img_alt, date, tags, author } =
@@ -21,7 +22,7 @@ const { title, description, summary, img_src, img_alt, date, tags, author } =
 >
   <div class='pt-8'>
     <article
-      class='page-container max-w-7xl prose prose-p:text-justify prose-sky md:prose-h1:mt-8 prose-img:m-0 grid grid-cols-1 md:grid-cols-3 gap-y-1 md:gap-x-12'
+      class='page-container max-w-7xl prose prose-p:text-justify prose-sky prose-h1:mt-8 prose-img:m-0 grid grid-cols-1 md:grid-cols-3 gap-y-1 md:gap-x-12'
     >
       <div class='col-span-2'>
         <Image
@@ -50,11 +51,9 @@ const { title, description, summary, img_src, img_alt, date, tags, author } =
               >
                 <div class='relative h-12 min-w-[48px] bg-gray-500/30 rounded-full flex items-center justify-center overflow-hidden'>
                   <div>
-                    <img
-                      src='/icons/author_icon.svg'
-                      alt=''
-                      height='30px'
-                      width='30px'
+                    <Icon
+                      class='h-8 text-gray-500'
+                      name='material-symbols:person-outline-rounded '
                     />
                   </div>
 
