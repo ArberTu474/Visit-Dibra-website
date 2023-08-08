@@ -13,7 +13,7 @@ export interface Props {
   keywords?: string
   page_type?: pageType
   image?: string
-  metadata?: string
+  structured_data?: string
 }
 
 type pageType = 'website' | 'article' | 'object'
@@ -23,68 +23,18 @@ const {
   description = 'Welcome to Diber',
   page_type,
   image = '/hero_image.avif',
-  metadata,
+  structured_data,
 } = Astro.props
 ---
 
 <!DOCTYPE html>
 <html class='h-full' lang='en'>
   <head>
-    <!-- Google Tag Manager -->
-    <script>
-      ;(function (w, d, s, l, i) {
-        w[l] = w[l] || []
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : ''
-        j.async = true
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
-        f.parentNode.insertBefore(j, f)
-      })(window, document, 'script', 'dataLayer', 'GTM-K7MGKL29')
-    </script>
-    <!-- End Google Tag Manager -->
-    {metadata}
-    <script type='application/ld+json'>
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Where is the Diber Tourist Information Center located?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The Diber Tourist Information Center, located in Peshkopi, offers helpful advice and printed maps to tourists. The open and airy office provides a welcoming atmosphere for visitors seeking guidance and information from knowledgeable municipality staff. The office can be found on Google Maps by searching “Dibër Tourist Information Center”."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How can I arrive in Diber from Tirana?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Driving by car to Diber takes approximately two hours. If you wish to arrive without a car, you may take one of the hourly vans which depart from the North and South Van Terminal (Terminali i Autobusave të Jugut dhe Veriut) in Tirana to Diber. The fare for these vans is 300 to 600 Lek (depending on final destination), and the travel time varies from 1 to 3 hours, depending on the specific location in Diber where you plan to arrive."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the local currency, and where can I exchange money?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The local currency is Albanian Lek. Euros and dollars are readily exchangeable at many locations across Diber. This availability of currency exchange services makes it easy for travelers to convert their foreign currencies to Lek and use it for their transactions during their stay in Diber."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Are there any guided tours or activities available in the area?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes! To find the perfect guide for your Diber adventure  do not hesitate to inquire at the Diber Tourist Information Center or access the guide directory we have available. Hiring a knowledgeable local guide will undoubtedly enhance your travel experience and help you create lasting memories in Diber. Guides in Diber offer guided tours to popular attractions, historical sites, and authentic experiences, enriching your travel experience in Diber."
-            }
-          }
-        ]
-      }
-    </script>
+    {
+      structured_data && (
+        <script type='application/ld+json' set:html={structured_data} />
+      )
+    }
     <!-- Indexing -->
     <meta name='robots' content='all' />
     <meta name='googlebot' content='all' />
@@ -123,21 +73,12 @@ const {
     />
     <title>{title}</title>
   </head>
-
-  <body class='h-full w-full bg-gray-100 flex flex-col text-gray-800'>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src='https://www.googletagmanager.com/ns.html?id=GTM-K7MGKL29'
-        height='0'
-        width='0'
-        style='display:none;visibility:hidden'></iframe></noscript
-    >
-    <!-- End Google Tag Manager (noscript) -->
-    <Navbar />
-    <main>
-      <slot />
-    </main>
-    <Footer />
-  </body>
 </html>
+
+<body class='h-full w-full bg-gray-100 flex flex-col text-gray-800'>
+  <Navbar />
+  <main>
+    <slot />
+  </main>
+  <Footer />
+</body>
