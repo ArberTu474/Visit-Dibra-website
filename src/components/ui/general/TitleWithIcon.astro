@@ -13,7 +13,7 @@ export interface Props {
 const { title, icon, className, has_undeline = true } = Astro.props
 ---
 
-<div class={`flex justify-center gap-2 flex-col my-6 ${className}`}>
+<header class={`flex justify-center gap-2 flex-col my-6 ${className}`}>
   <div class='flex items-center gap-2'>
     <Icon
       pack='material-symbols'
@@ -27,4 +27,4 @@ const { title, icon, className, has_undeline = true } = Astro.props
       <div class='h-[2px] bg-slate-400/30 max-w-3xl rounded-full' />
     )
   }
-</div>
+</header>
