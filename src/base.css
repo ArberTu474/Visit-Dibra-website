@@ -44,10 +44,6 @@ select {
   -moz-appearance: none;
 }
 
-.material-symbols-rounded {
-  font-variation-settings: 'FILL' 0, 'wght' 900, 'GRAD' 200, 'opsz' 48;
-}
-
 /* Change the color of the selection */
 ::-moz-selection {
   /* Code for Firefox */
@@ -72,10 +68,6 @@ select {
 
 .input-item {
   @apply w-full text-lg p-4 bg-white/50 backdrop-blur-md rounded-xl text-gray-500 border-gray-300/30 border;
-}
-
-.radial-gradient {
-  background-image: radial-gradient(rgb(17 24 39 / 0.8), rgba(17, 24, 39, 0));
 }
 
 /* Svg mpa */
