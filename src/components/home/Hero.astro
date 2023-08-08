@@ -3,22 +3,20 @@
 import Button from '../ui/general/Button.astro'
 ---
 
-<main>
-  <div
-    class='bg-cover h-[--ideal-height]'
-    style="background-image: url('/hero_image.avif')"
-  >
-    <div class='container mx-auto px-6 py-[100px] max-w-7xl'>
-      <h1 class='text-5xl md:text-7xl font-extrabold mt-24'>
-        Welcome to<br /> Diber
-      </h1>
-      <p class='text-md md:text-xl my-7 max-w-lg text-gray-600'>
-        Discover Diber, the roof of Albania! Surrounded by natural beauty and
-        rich in cultural offerings.
-      </p>
-      <Button href='#booking' btnColor='green' className='text-green-900'>
-        Book Now
-      </Button>
-    </div>
-  </div>
-</main>
+<section
+  class='bg-cover h-[--ideal-height]'
+  style="background-image: url('/hero_image.avif')"
+>
+  <header class='container mx-auto px-6 py-[100px] max-w-7xl'>
+    <h1 class='text-5xl md:text-7xl font-extrabold mt-24'>
+      Welcome to<br /> Diber
+    </h1>
+    <p class='text-md md:text-xl my-7 max-w-lg text-gray-600'>
+      Discover Diber, the roof of Albania! Surrounded by natural beauty and rich
+      in cultural offerings.
+    </p>
+    <Button href='#booking' btnColor='green' className='text-green-900'>
+      Book Now
+    </Button>
+  </header>
+</section>

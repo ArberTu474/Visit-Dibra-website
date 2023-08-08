@@ -9,7 +9,7 @@ import { LocationsMap } from '../ui/locations/LocationsMap'
 const allArticles = await Astro.glob('../../pages/locations/*.md')
 ---
 
-<div class='relative'>
+<section class='relative'>
   <SectionContent
     icon='location-on-rounded'
     section_color='blue'
@@ -39,4 +39,4 @@ const allArticles = await Astro.glob('../../pages/locations/*.md')
     height={1493 / 1.2}
     format='svg'
   />
-</div>
+</section>

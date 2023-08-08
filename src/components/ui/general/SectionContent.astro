@@ -83,19 +83,8 @@ switch (section_color) {
 }
 ---
 
-<div class={`flex flex-col mt-20 ${content_possition} ${className} `}>
-  <!-- <Image
-    src={icon_src}
-    width={89 / 2}
-    height={71 / 2}
-    alt='icon'
-    format='svg'
-  /> -->
-  <Icon
-    pack='material-symbols'
-    name={icon}
-    class={`${colorClass} h-14 `}
-  />
+<header class={`flex flex-col mt-20 ${content_possition} ${className} `}>
+  <Icon pack='material-symbols' name={icon} class={`${colorClass} h-14 `} />
   <h2 class={`text-xl lg:text-2xl font-bold ${colorClass} mb-3`}>
     {subtitle}
   </h2>
@@ -107,4 +96,4 @@ switch (section_color) {
   >
     <slot />
   </p>
-</div>
+</header>
