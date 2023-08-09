@@ -81,3 +81,25 @@ select {
 .popover {
   @apply text-gray-100 text-[4px] font-bold bg-gray-800 px-1  py-[2px] rounded-sm inline;
 }
+
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff00;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #bebebe;
+  border-radius: 300px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #bcbcbd;
+}
