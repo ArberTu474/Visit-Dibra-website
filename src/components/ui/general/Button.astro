@@ -60,13 +60,13 @@ switch (btnColor) {
 ---
 
 <button
-  class={` block text-lg font-bold text-gray-100 ${colorClass} hover:opacity-90 transition-colors duration-300 ${className} ${
+  class={` block text-lg font-bold  ${colorClass} hover:opacity-90 transition-colors duration-300 ${className} ${
     rounded ? 'rounded-full' : 'rounded-xl'
   } ${className}`}
 >
   <a
     target={externalLink ? '_blank' : ''}
-    class='flex gap-2 justify-center items-center px-10 py-3'
+    class='flex gap-2 justify-center items-center px-10 py-3 text-gray-100'
     href={href}
   >
     {
