@@ -21,7 +21,14 @@ export interface Props {
   difficulty: difficult
 }
 
-type activities = 'biking' | 'hiking' | 'rafting'
+type activities =
+  | 'biking'
+  | 'hiking'
+  | 'rafting'
+  | 'swimming'
+  | 'paragliding'
+  | 'festival'
+  | 'cave_exploration'
 
 type difficult = 'easy' | 'medium' | 'hard'
 
@@ -61,17 +68,29 @@ let activityIcon = ''
 
 switch (activity) {
   case 'biking':
-    activityIcon = 'directions-bike-rounded'
+    activityIcon = 'material-symbols:directions-bike-rounded'
     break
   case 'hiking':
-    activityIcon = 'hiking-rounded'
+    activityIcon = 'material-symbols:hiking-rounded'
     break
   case 'rafting':
-    activityIcon = 'kayaking-rounded'
+    activityIcon = 'material-symbols:kayaking-rounded'
+    break
+  case 'swimming':
+    activityIcon = 'material-symbols:pool-rounded'
+    break
+  case 'paragliding':
+    activityIcon = 'material-symbols:paragliding-outline-rounded'
+    break
+  case 'festival':
+    activityIcon = 'material-symbols:festival-rounded'
+    break
+  case 'cave_exploration':
+    activityIcon = 'game-icons:mountain-cave'
     break
 
   default:
-    activityIcon = 'question-mark-rounded'
+    activityIcon = 'material-symbols:question-mark-rounded'
     break
 }
 ---
@@ -116,7 +135,6 @@ switch (activity) {
         </div>
 
         <Icon
-          pack='material-symbols'
           name={activityIcon}
           title={headerRenderer(activity)}
           class='text-gray-100 h-12 self-end'
@@ -145,7 +163,6 @@ switch (activity) {
       title='Download'
       class={`mt-12 h-[48px] min-w-[48px] ${btnColor} rounded-full flex justify-center items-center hover:opacity-80 transition-opacity duration-300 cursor-pointer`}
     >
-   
       <Icon name='material-symbols:south-rounded' class='text-gray-100 h-6' />
     </a>
   </div>
