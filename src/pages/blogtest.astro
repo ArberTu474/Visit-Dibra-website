@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro'
+import { getCollection } from 'astro:content'
+
+//functions
+import { formatDate } from '../functions/utils'
+
+// blog posts
+const blogPosts = await getCollection('blog', ({ data }) => {
+  return !data.draft && data.date < new Date()
+})
+
+// For passing props to other components
+
+// import type { CollectionEntry } from 'astro:content'
+// interface Props {
+//   post: CollectionEntry<'blog'>
+// }
+
+// const { post } = Astro.props
+---
+
+<Layout title='Test'>
+  <section class='page-container'>
+    {
+      blogPosts.map((post) => (
+        <div class='bg-gray-200 rounded-lg p-6 my-3'>
+          <a class='hover:underline' href={`/blogPost/${post.slug}/`}>
+            <h2 class='mb-2 font-bold text-xl '>{post.data.title}</h2>
+          </a>
+          <p>Date: {formatDate(post.data.date)}</p>
+          <p class='text-base text-gray-500'>{post.data.description}</p>
+          <div class='w-full'>
+            <img
+              class='h-40 object-cover'
+              src={post.data.image.src}
+              alt={post.data.image.alt}
+            />
+          </div>
+        </div>
+      ))
+    }
+  </section>
+</Layout>
