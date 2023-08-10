@@ -1,12 +1,20 @@
-import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
-import image from '@astrojs/image';
+import { defineConfig } from 'astro/config'
+import tailwind from '@astrojs/tailwind'
+import image from '@astrojs/image'
+import react from '@astrojs/react'
 
-import react from "@astrojs/react";
+import sitemap from '@astrojs/sitemap'
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), image({
-    serviceEntryPoint: '@astrojs/image/sharp'
-  }), react()]
-});
+  site: 'https://visitdiber.com',
+  integrations: [sitemap()],
+  integrations: [
+    tailwind(),
+    image({
+      serviceEntryPoint: '@astrojs/image/sharp',
+    }),
+    react(),
+    sitemap(),
+  ],
+})
