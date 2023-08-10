@@ -9,6 +9,13 @@ import partytown from '@astrojs/partytown'
 // https://astro.build/config
 export default defineConfig({
   site: 'https://visitdiber.com',
+  integrations: [
+    partytown({
+      config: {
+        forward: ['dataLayer.push'],
+      },
+    }),
+  ],
   integrations: [sitemap(), partytown()],
   integrations: [
     tailwind(),
@@ -17,12 +24,5 @@ export default defineConfig({
     }),
     react(),
     sitemap(),
-  ],
-  integrations: [
-    partytown({
-      config: {
-        forward: ['dataLayer.push'],
-      },
-    }),
   ],
 })
