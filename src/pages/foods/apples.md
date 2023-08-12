@@ -5,7 +5,7 @@ description: "Over 40 different varieties of apples are cultivated in the Diber 
 img_src: '/foods/apples.jpg'
 img_alt: 'apples'
 date: '07/31/2023'
-author: Alex SEssums
+author: Alex Sessums
 summary: ['Apple Cultivation in Diber', 'Eliksir Apple Products', 'Final Thoughts']
 ---
 
