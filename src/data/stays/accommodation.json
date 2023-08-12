@@ -9,7 +9,7 @@
       "img_alt": "a picture of Korabi Hotel",
       "description": "Historic Albanian bujtina located in the charming stone village of Rabdisht.",
       "cost": 50,
-      "type": "hotel"
+      "type": "guest_house"
     },
     {
       "name": "Guest House Tershana",
@@ -20,7 +20,7 @@
       "img_alt": "a picture of Korabi Hotel",
       "description": "Quiet gueshouse located in the center of Peshkopi.",
       "cost": 20,
-      "type": "hotel"
+      "type": "guest_house"
     },
     {
       "name": "Hotel Veri",
@@ -67,7 +67,7 @@
       "img_alt": "a picture of Korabi Hotel",
       "description": "Kulla Hupi Agriturism offers a restaurant, garden and terrace. Each room has a private balcony.",
       "cost": 14,
-      "type": "hotel"
+      "type": "guest_house"
     },
     {
       "name": "Hotel Monopol",
