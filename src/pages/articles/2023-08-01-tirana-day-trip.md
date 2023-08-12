@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/ArticleLayout.astro
-title: Day Trip to Diber from Tirana
-description: 'Lorem ipsum .'
+title: "A Day Trip from Tirana to Diber: Explore the Hidden Gems"
+description: "Discover the allure of Diber on an unforgettable day trip from Tirana. Unveil the treasures of Diber, a captivating escape just a short drive away."
 date: 2023-08-01T18:43:25.205Z
 img_src: /images/rruga_arbrit.jpg
 img_alt: Peshkopi city
