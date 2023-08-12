@@ -9,7 +9,7 @@ author: Alex Sessums
 summary: ['History of Jufka', 'Brands of Jufka', 'Where to find Jufka in Diber', 'Conclusion']
 ---
 
-# Unveiling the Delightful Jufka of Diber: A Culinary Journey
+# Unveiling Jufka of Diber: A Culinary Journey
 
 If you're a food lover seeking to explore the rich flavors of Albania, a visit to Diber should be on your radar. Nestled in the scenic landscapes of this region lies a culinary gem known as Jufka. Join us on a delectable journey as we uncover the history, brands, and where to find this beloved Albanian specialty in Diber.
 
