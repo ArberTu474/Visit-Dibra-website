@@ -7,10 +7,10 @@ img_src: /images/rruga_arbrit.jpg
 img_alt: Peshkopi city
 draft: false
 summary:
-  - The New Rrufa Arberit
+  - The New Rruga Arberit
   - Exploring Diber
   - Peshkopi
-  - Driv River
+  - Drin River
   - Kala e Dodes
   - Final Thoughts
 tags:
@@ -32,15 +32,15 @@ The Rruga Arberit, also known as the Arbëria Road, has transformed the journey 
 
 Diber is a region rich in natural beauty, history, and culture. Despite being less well-known than other regions in Albania, Diber has numerous hidden gems to discover on your day trip. Here are a few destinations you can explore:
 
-## 2. Peshkopi
+## 1. Peshkopi
 
 Continue your journey to Peshkopia, a charming town located in the Diber Valley. Peshkopia is known for its bli-lined pedestrian boulevard, vibrant coffee shops, and friendly locals. Amble leisurely through the town's streets, visit the local market, and interact with the residents to get a taste of authentic Albanian culture.
 
-## 3. Drin River
+## 2. Drin River
 
 For a serene and picturesque setting, make a stop along the Drin River. This crystal clear river is nestled amidst lush canyon hills and is perfect for nature lovers and photographers. Take a rafting trip down the river, enjoy a picnic on its shores at Butterfly Camping, or simply sit back and soak in the beauty of the surroundings.
 
-## 4. Kala e Dodes
+## 3. Kala e Dodes
 
 End your day trip with a visit to Kala e Dodes, an ancient fortress located on a hill overlooking the Diber Valley. This archaeological site offers a glimpse into Albania's rich history, with ruins dating back to the Roman and Byzantine periods. Explore the fortress, learn about its historical significance, and capture stunning panoramic views of the surrounding landscapes.
 
