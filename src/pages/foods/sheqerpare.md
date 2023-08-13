@@ -1,6 +1,6 @@
 ---
 layout: '../../layouts/ArticleLayout.astro'
-title: Sheqerpare
+title: "Sheqerpare: Diber's Traditional Treat"
 description: "Sheqerpare is a completely unique dessert commonly found in Diber."
 img_src: '/foods/sheqerpare.jpg'
 img_alt: 'baklava'
