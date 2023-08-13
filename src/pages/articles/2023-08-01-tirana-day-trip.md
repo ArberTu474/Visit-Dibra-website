@@ -34,13 +34,9 @@ Diber is a region rich in natural beauty, history, and culture. Despite being le
 
 - 1. Peshkopi
 
-![Elez Isufi Boulevard](/images/rruga_kryesore.jpg) 
-
 Continue your journey to Peshkopia, a charming town located in the Diber Valley. Peshkopia is known for its bli-lined pedestrian boulevard, vibrant coffee shops, and friendly locals. Amble leisurely through the town's streets, visit the local market, and interact with the residents to get a taste of authentic Albanian culture.
 
 - 2. Drin River
-
-![Drin River](/images/drin_river.jpg)
 
 For a serene and picturesque setting, make a stop along the Drin River. This crystal clear river is nestled amidst lush canyon hills and is perfect for nature lovers and photographers. Take a rafting trip down the river, enjoy a picnic on its shores at Butterfly Camping, or simply sit back and soak in the beauty of the surroundings.
 
