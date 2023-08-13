@@ -49,12 +49,12 @@
     },
     {
       "name": "Korabi Mountain Camping",
-      "location": "klos",
-      "location_url": "355 068 332 2157",
-      "phone_number": "0671234567",
+      "location": "grama",
+      "location_url": "",
+      "phone_number": "355 68 332 2157",
       "img_src": "/hotels/korabi_mountain_camping.jpg",
-      "img_alt": "a picture of Korabi Hotel",
-      "description": "Wild mountain camping at the top of the Korabi Mountain range.",
+      "img_alt": "a picture of Korabi Mountain Camping",
+      "description": "Wild mountain camping at the top of the Korabi Mountain range, near Grama Lake.",
       "cost": 20,
       "type": "camping"
     },
