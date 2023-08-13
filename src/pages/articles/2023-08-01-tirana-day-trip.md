@@ -38,6 +38,8 @@ Continue your journey to Peshkopia, a charming town located in the Diber Valley.
 
 - 2. Drin River
 
+![Drin River](/images/rruga_arbrit.jpg)
+
 For a serene and picturesque setting, make a stop along the Drin River. This crystal clear river is nestled amidst lush canyon hills and is perfect for nature lovers and photographers. Take a rafting trip down the river, enjoy a picnic on its shores at Butterfly Camping, or simply sit back and soak in the beauty of the surroundings.
 
 - 3. Kala e Dodes
