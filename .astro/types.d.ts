@@ -10,9 +10,7 @@ declare module 'astro:content' {
 
 declare module 'astro:content' {
 	export { z } from 'astro/zod';
-
-	type Flatten<T> = T extends { [K: string]: infer U } ? U : never;
-	export type CollectionEntry<C extends keyof AnyEntryMap> = Flatten<AnyEntryMap[C]>;
+	export type CollectionEntry<C extends keyof AnyEntryMap> = AnyEntryMap[C][keyof AnyEntryMap[C]];
 
 	// TODO: Remove this when having this fallback is no longer relevant. 2.3? 3.0? - erika, 2023-04-04
 	/**
