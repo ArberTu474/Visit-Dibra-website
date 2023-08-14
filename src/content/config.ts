@@ -32,6 +32,10 @@ const blogCollection = defineCollection({
     summary: z.array(z.string()).optional(),
     tags: z.array(z.string()).optional(),
     author: z.enum(['Alex Sessums', 'Lorem ipsum']),
+    category: z
+      .enum(['food', 'nature', 'hiking', 'mountain biking', 'rafting'])
+      .optional(),
+    new: z.boolean().default(false),
   }),
 })
 

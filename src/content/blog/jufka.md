@@ -1,12 +1,17 @@
 ---
-layout: '../../layouts/ArticleLayout.astro'
 title: 'Unveiling the Delightful Jufka of Diber: A Culinary Journey'
-description: "Jufka is a traditional Albanian pasta, crafted by hand and steeped in centuries of culinary heritage."
-img_src: '/foods/jufka.jpg'
-img_alt: 'baklava'
-date: '08/12/2023'
+description: 'Jufka is a traditional Albanian pasta, crafted by hand and steeped in centuries of culinary heritage.'
+image: { src: '/foods/jufka.jpg', alt: 'baklava' }
+date: 2023-07-27T18:43:25.205Z
 author: Alex Sessums
-summary: ['History of Jufka', 'Brands of Jufka', 'Where to find Jufka in Diber', 'Conclusion']
+summary:
+  [
+    'History of Jufka',
+    'Brands of Jufka',
+    'Where to find Jufka in Diber',
+    'Conclusion',
+  ]
+category: food
 ---
 
 # Unveiling Jufka of Diber: A Culinary Journey

@@ -1,15 +1,20 @@
 ---
-layout: '../../layouts/ArticleLayout.astro'
 title: "Sheqerpare: Diber's Traditional Treat"
-description: "Sheqerpare is a completely unique dessert commonly found in Diber."
-img_src: '/foods/sheqerpare.jpg'
-img_alt: 'baklava'
-date: '07/31/2023'
+description: 'Sheqerpare is a completely unique dessert commonly found in Diber.'
+image: { src: '/foods/sheqerpare.jpg', alt: 'baklava' }
+date: 2023-07-27T18:43:25.205Z
 author: Alex Sessums
-summary: ['Origins of Sheqerpare', 'Sheqerpare from Diber', 'Diber Sheqerpare Recipe', 'Conclusion']
+summary:
+  [
+    'Origins of Sheqerpare',
+    'Sheqerpare from Diber',
+    'Diber Sheqerpare Recipe',
+    'Conclusion',
+  ]
+category: food
 ---
 
-# Sheqerpare from Diber: A Sweet Journey into Tradition**
+# Sheqerpare from Diber: A Sweet Journey into Tradition\*\*
 
 ## Origins of Sheqerpare
 
@@ -18,6 +23,7 @@ Delving into the culinary heritage of Diber, Albania, one cannot escape the allu
 ## Diber Sheqerpare Recipe
 
 **Ingredients:**
+
 - 10 egg yolks
 - 10 sticks of unsalted butter (melted and strained)
 - 2 lbs. flour
@@ -37,6 +43,7 @@ Delving into the culinary heritage of Diber, Albania, one cannot escape the allu
 **Syrup:**
 
 **Ingredients:**
+
 - 2 lb sugar
 - 2 and a half cups of water
 

@@ -1,12 +1,18 @@
 ---
-layout: '../../layouts/ArticleLayout.astro'
 title: 'Albanian Baklava, Diber Style'
 description: 'A traditional Balkan desert with Turkish origins, Baklava in Diber offers a slight twist.'
-img_src: '/foods/baklava.jpg'
-img_alt: 'baklava'
-date: '05/06/2023'
+image: { src: '/foods/baklava.jpg', alt: 'baklava' }
+date: 2023-07-27T18:43:25.205Z
 author: Alex Sessums
-summary: ['The Turkish Connection', 'Albanian Baklava', 'Baklava in Diber', 'Final Thoughts']
+summary:
+  [
+    'The Turkish Connection',
+    'Albanian Baklava',
+    'Baklava in Diber',
+    'Final Thoughts',
+  ]
+
+category: food
 ---
 
 # A Sweet Treat: Baklava in Diber, Albania
