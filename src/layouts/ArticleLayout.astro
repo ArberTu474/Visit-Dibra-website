@@ -34,13 +34,9 @@ const { title, description, summary, image, date, tags, author } = data
           loading='eager'
         />
         <div>
-          {
-            date && (
-              <p class='my-2 text-base text-gray-500/70'>
-                Date: {formatDate(date)}
-              </p>
-            )
-          }
+          <p class='my-2 text-base text-gray-600/[86%]'>
+            Date: {formatDate(date)}
+          </p>
 
           {
             author && (
@@ -110,7 +106,7 @@ const { title, description, summary, image, date, tags, author } = data
                   tags.map((tag) => (
                     <a
                       href={`/tags/${tag}`}
-                      class='no-underline mr-2 mb-2 inline-block px-4 py-1 bg-gray-400/20 hover:bg-gray-400/30 text-gray-600/80 rounded-full'
+                      class='no-underline mr-2 mb-2 inline-block px-4 py-1 bg-gray-400/30 hover:bg-gray-400/30 text-gray-600 rounded-full'
                     >
                       {tag}
                     </a>
