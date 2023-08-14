@@ -9,4 +9,4 @@ img_alt: 'rafting image'
 type: 'index_page'
 ---
 
-# Hello rafting here
+## Thrilling Rafting Adventure on the Black Drin River: Exploring Natural Beauty in Diber, Albania

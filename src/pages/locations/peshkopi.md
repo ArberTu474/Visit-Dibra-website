@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/ArticleLayout.astro'
 title: 'Peshkopi'
-description: "Known for its thermal waters, and natural beauty, Diber's capital city is also developing a reputation as tourism destination throughout the Balkans."
+description: "Known for its thermal waters, and natural beauty, Diber's capital city is also developing a reputation as a tourism destination throughout the Balkans."
 img_src: '/locations/peshkopi.jpg'
 id: 'peshkopi'
 ---
