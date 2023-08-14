@@ -24,7 +24,7 @@ import { Icon } from 'astro-iconify'
         <li><a href='/' class='navbar-item'>Home</a></li>
         <li><a href='/stays' class='navbar-item'>Stays</a></li>
         <li><a href='/maps' class='navbar-item'>Maps & Guides</a></li>
-        <li><a href='/articles' class='navbar-item'>Blog</a></li>
+        <li><a href='/blog' class='navbar-item'>Blog</a></li>
         <li><a href='/#faq' class='navbar-item'>FAQ</a></li>
         <li><a href='/#contact' class='navbar-item'>Contact</a></li>
       </ul>
@@ -45,8 +45,7 @@ import { Icon } from 'astro-iconify'
         >
       </li>
       <li>
-        <a href='/articles' class='navbar-item inline-block float-right'>Blog</a
-        >
+        <a href='/blog' class='navbar-item inline-block float-right'>Blog</a>
       </li>
       <li>
         <a href='/#faq' class='navbar-item inline-block float-right'>FAQ</a>
@@ -67,8 +66,12 @@ import { Icon } from 'astro-iconify'
   const menu = document.querySelector('#menu')
   const navList = document.querySelector('#navList')
 
-  menu.addEventListener('click', () => {
-    navList.classList.toggle('hidden')
-    navList.classList.toggle('flex')
-  })
+  if (menu) {
+    menu.addEventListener('click', () => {
+      if (navList) {
+        navList.classList.toggle('hidden')
+        navList.classList.toggle('flex')
+      }
+    })
+  }
 </script>

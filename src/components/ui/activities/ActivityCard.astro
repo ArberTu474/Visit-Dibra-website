@@ -1,41 +1,79 @@
 ---
+// Components
+import Card from '../general/Card.astro'
+import { Icon } from 'astro-iconify'
+import { Image } from '@astrojs/image/components'
+
+// Functions
 import { headerRenderer } from '../../../functions/utils.js'
 
 // Props
 export interface Props {
-  activity_name: string
-  activity_url: string
+  title: string
+  url: string
   description: string
+  category: activityCategory
+  image: {
+    src: string
+    alt: string
+  }
   className?: string
 }
-const { activity_name, description, activity_url, className } = Astro.props
+const { title, description, url, category, image, className } = Astro.props
 
-// Components
-import Card from '../general/Card.astro'
+type activityCategory =
+  | 'food'
+  | 'nature'
+  | 'hiking'
+  | 'mountain biking'
+  | 'rafting'
+  | undefined
+
+let category_type_icon = ''
+
+switch (category) {
+  case 'hiking':
+    category_type_icon = 'hiking-rounded'
+    break
+  case 'mountain biking':
+    category_type_icon = 'directions-bike-rounded'
+    break
+  case 'rafting':
+    category_type_icon = 'kayaking-rounded'
+    break
+
+  default:
+    break
+}
 ---
 
 <Card>
-  <div class='flex flex-col text-center mb-6'>
+  <div class='flex flex-col gap-6 text-center mb-6'>
     <a
-      class='mb-6 hover:scale-105 hover:-translate-y-2 transition-transform duration-300'
-      href={activity_url}
+      class='hover:scale-105 hover:-translate-y-2 transition-transform duration-300'
+      href={url}
     >
-      <div class='h-24 flex align-middle'>
-        <img
-          class='mx-auto'
-          src={`/icons/activities/${activity_name}.svg`}
-          alt='icon'
-          height='70px'
-          width='96px'
+      <div class='flex align-middle'>
+        <Icon
+          pack='material-symbols'
+          name={category_type_icon}
+          class='h-20 w-24 text-red-600 mx-auto'
         />
       </div>
       <h2 class='text-xl font-bold mt-2'>
-        {headerRenderer(activity_name)}
+        {headerRenderer(title)}
       </h2>
     </a>
     <p class='text-base text-gray-500'>
       {description}
     </p>
+    <Image
+      src={image.src}
+      alt={image.alt}
+      width={500}
+      height={300}
+      class='rounded-lg'
+    />
   </div>
   <div class='flex flex-col gap-2'>
     <slot />

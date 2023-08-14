@@ -212,6 +212,76 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"apples.md": {
+	id: "apples.md";
+  slug: "apples";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"baklava.md": {
+	id: "baklava.md";
+  slug: "baklava";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"bike.md": {
+	id: "bike.md";
+  slug: "bike";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"hike.md": {
+	id: "hike.md";
+  slug: "hike";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"jufka.md": {
+	id: "jufka.md";
+  slug: "jufka";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"lura.md": {
+	id: "lura.md";
+  slug: "lura";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"peshkopi.md": {
+	id: "peshkopi.md";
+  slug: "peshkopi";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"rabdisht.md": {
+	id: "rabdisht.md";
+  slug: "rabdisht";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"raft.md": {
+	id: "raft.md";
+  slug: "raft";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"sheqerpare.md": {
+	id: "sheqerpare.md";
+  slug: "sheqerpare";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 };
 
 	};

@@ -4,9 +4,12 @@ import { Image } from '@astrojs/image/components'
 import SectionContent from '../ui/general/SectionContent.astro'
 import Button from '../ui/general/Button.astro'
 import { LocationsMap } from '../ui/locations/LocationsMap'
+import { getCollection } from 'astro:content'
 
-// Articles
-const allArticles = await Astro.glob('../../pages/locations/*.md')
+// Blog posts
+const blogPosts = await getCollection('blog', ({ data }) => {
+  return !data.draft && data.date < new Date() && data.category === 'location'
+})
 ---
 
 <section class='relative'>
@@ -24,7 +27,7 @@ const allArticles = await Astro.glob('../../pages/locations/*.md')
   </SectionContent>
   <div class='page-container pt-0 pb-0'>
     <di>
-      <LocationsMap client:visible articles={allArticles} />
+      <LocationsMap client:visible posts={blogPosts} />
     </di>
   </div>
 

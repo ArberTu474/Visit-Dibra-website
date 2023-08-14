@@ -1,12 +1,18 @@
 ---
-layout: '../../layouts/ArticleLayout.astro'
 title: 'Rabdisht'
-description: "Nestled above the Healing Valley, Rabdisht is a hidden gem that beckons travelers seeking an authentic and local experience."
-img_src: '/locations/rabdisht.jpg'
+description: 'Nestled above the Healing Valley, Rabdisht is a hidden gem that beckons travelers seeking an authentic and local experience.'
+image: { src: '/locations/rabdisht.jpg', alt: 'Rabdisht picture' }
 id: 'rabdisht'
-date: '08/02/2023'
+date: 2023-08-01T18:43:25.205Z
 author: Alex Sessums
-summary: ['Rabdisht: The Stone Village of Diber', 'Outdoor Adventures', 'Local Cuisine and Culture', 'Travelling to Rabdisht']
+category: 'location'
+summary:
+  [
+    'Rabdisht: The Stone Village of Diber',
+    'Outdoor Adventures',
+    'Local Cuisine and Culture',
+    'Travelling to Rabdisht',
+  ]
 ---
 
 # Rabdisht: The Stone Village of Diber

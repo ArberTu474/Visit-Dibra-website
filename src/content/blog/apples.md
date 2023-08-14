@@ -1,12 +1,13 @@
 ---
-layout: '../../layouts/ArticleLayout.astro'
 title: 'Apples'
-description: "Over 40 different varieties of apples are cultivated in the Diber region."
-img_src: '/foods/apples.jpg'
-img_alt: 'apples'
-date: '07/31/2023'
+description: 'Over 40 different varieties of apples are cultivated in the Diber region.'
+image: { src: '/foods/apples.jpg', alt: 'apples' }
+date: 2023-07-27T18:43:25.205Z
 author: Alex Sessums
-summary: ['Apple Cultivation in Diber', 'Eliksir Apple Products', 'Final Thoughts']
+summary:
+  ['Apple Cultivation in Diber', 'Eliksir Apple Products', 'Final Thoughts']
+
+category: food
 ---
 
 # An Apple Lover's Guide to Diber, Albania: From Cultivation to Eliksir
