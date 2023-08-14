@@ -11,7 +11,7 @@ import { Icon } from 'astro-iconify'
 export interface Props {
   title: string
   description: string
-  img_scr: string
+  img_src: string
   img_alt: string
   url: string
   date: Date
@@ -26,7 +26,7 @@ const {
   className,
   title,
   description,
-  img_scr,
+  img_src,
   img_alt,
   url,
   tags,
@@ -39,7 +39,7 @@ const {
   <a href={url}>
     <Image
       class='object-cover w-full h-56'
-      src={img_scr}
+      src={img_src}
       width={500}
       height={300}
       format='avif'

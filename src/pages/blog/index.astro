@@ -36,7 +36,7 @@ const blogPosts = await getCollection('blog', ({ data }) => {
             url={`/blog/${post.slug}/`}
             title={post.data.title}
             description={post.data.description}
-            img_scr={post.data.image.src}
+            img_src={post.data.image.src}
             img_alt={post.data.image.alt}
             tags={post.data.tags}
             date={post.data.date}
