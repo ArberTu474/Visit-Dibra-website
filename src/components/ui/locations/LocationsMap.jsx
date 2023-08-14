@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export const LocationsMap = ({ articles }) => {
+export const LocationsMap = ({ posts }) => {
   const [locationId, setlocationId] = useState('lura')
 
   function handlelocationChange(e) {
@@ -172,11 +172,11 @@ export const LocationsMap = ({ articles }) => {
         </svg>
       </div>
       <div className='-mt-10 lg:mt-0 shadow-[0px_-80px_100px_43px_rgba(255,255,255,1)] lg:shadow-none'>
-        {articles
-          .filter((article) => article.frontmatter.id === locationId)
-          .map((article) => (
+        {posts
+          .filter((post) => post.data.id === locationId)
+          .map((post) => (
             <div
-              key={article.frontmatter.id}
+              key={post.data.id}
               className='bg-gray-300/30 backdrop-blur-md rounded-xl text-gray-500 border-gray-300/30 border overflow-hidden'
             >
               <div>
@@ -186,22 +186,22 @@ export const LocationsMap = ({ articles }) => {
                   </div>
                   <img
                     className='w-full h-[200px] md:h-[300px] object-cover '
-                    src={article.frontmatter.img_src}
-                    alt={article.frontmatter.title + ' picture'}
+                    src={post.data.image.src}
+                    alt={post.data.image.alt}
                   />
                 </div>
                 <div className='p-6 flex items-center justify-between gap-6'>
                   <div>
                     <h2 className='text-xl  font-semibold mb-1'>
-                      {article.frontmatter.title}
+                      {post.data.title}
                     </h2>
                     <p className='text-base text-gray-500 max-w-2xl'>
-                      {article.frontmatter.description}
+                      {post.data.description}
                     </p>
                   </div>
 
                   <a
-                    href={article.url}
+                    href={`/blog/${post.slug}/`}
                     className='flex justify-center items-center h-[45px] min-w-[45px] rounded-full bg-sky-300/50 text-[35px] font-bold cursor-pointer hover:opacity-80'
                   >
                     <img

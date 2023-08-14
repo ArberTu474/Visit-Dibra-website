@@ -6,6 +6,7 @@ import { z, defineCollection } from 'astro:content'
 const blogCollection = defineCollection({
   type: 'content', // v2.5.0 and later
   schema: z.object({
+    id: z.string().default(''),
     title: z
       .string()
       .max(
@@ -33,7 +34,14 @@ const blogCollection = defineCollection({
     tags: z.array(z.string()).optional(),
     author: z.enum(['Alex Sessums', 'Lorem ipsum']),
     category: z
-      .enum(['food', 'nature', 'hiking', 'mountain biking', 'rafting'])
+      .enum([
+        'food',
+        'nature',
+        'hiking',
+        'location',
+        'mountain biking',
+        'rafting',
+      ])
       .optional(),
     new: z.boolean().default(false),
   }),

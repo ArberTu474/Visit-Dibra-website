@@ -1,8 +1,10 @@
 ---
-layout: '../../layouts/ArticleLayout.astro'
 title: 'Lura'
-description: "Discover the pristine lakes of Lura, surrounded by diverse vegetation, in Lurë-Dejë Mountain National Park, Diber."
-img_src: '/locations/lura.jpg'
+description: 'Discover the pristine lakes of Lura, surrounded by diverse vegetation, in Lurë-Dejë Mountain National Park, Diber.'
+image: { src: '/locations/lura.jpg', alt: 'lura lakes' }
+date: 2023-08-01T18:43:25.205Z
+author: Alex Sessums
+category: 'location'
 id: 'lura'
 ---
 
