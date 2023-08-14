@@ -1,9 +1,11 @@
 ---
-layout: '../../../layouts/ArticleLayout.astro'
 title: 'Hiking Korabi Mountain'
+description: "The Diber region offers diverse hiking trails, from easy strolls through lush valleys to challenging treks up Korabi, there's a hike for every adventurer."
 type: 'hiking'
-img_src: '/activities/hiking.jpeg'
-img_alt: 'hiking'
+image: { src: '/activities/hiking.jpeg', alt: 'hiking' }
+date: 2023-07-27T18:43:25.205Z
+author: Alex Sessums
+category: 'hiking'
 new: true
 ---
 
@@ -28,4 +30,3 @@ Once you reach the summit of Mount Korabi, you'll be rewarded with a stunning vi
 ## Final Thoughts
 
 Hiking Mount Korabi via the High Scardus trail is a once-in-a-lifetime experience that will leave you with unforgettable memories. Remember to prepare properly, stay safe, and leave no trace behind. The trail may be challenging, but the journey is worth it. So, are you ready to take on the challenge?
-

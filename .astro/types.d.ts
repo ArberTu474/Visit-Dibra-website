@@ -226,9 +226,30 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"bike.md": {
+	id: "bike.md";
+  slug: "bike";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"hike.md": {
+	id: "hike.md";
+  slug: "hike";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "jufka.md": {
 	id: "jufka.md";
   slug: "jufka";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"raft.md": {
+	id: "raft.md";
+  slug: "raft";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">

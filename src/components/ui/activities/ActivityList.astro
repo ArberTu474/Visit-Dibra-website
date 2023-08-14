@@ -1,0 +1,28 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+// Props
+export interface Props {
+  postData: CollectionEntry<'blog'>
+}
+
+const { postData } = Astro.props
+---
+
+<div
+  class='bg-gray-300/50 rounded-full hover:bg-gray-300 transition-colors duration-200'
+>
+  <a
+    class='flex justify-between items-center text-gray-600 px-5 py-2 rounded-full'
+    href={`/blog/${postData.slug}/`}
+  >
+    {postData.data.title}
+    {
+      postData.data.new && (
+        <div class='bg-red-600 rounded-md text-white text-xs font-bold px-2 py-1'>
+          NEW
+        </div>
+      )
+    }
+  </a>
+</div>

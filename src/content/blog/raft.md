@@ -1,9 +1,11 @@
 ---
-layout: '../../../layouts/ArticleLayout.astro'
 title: 'Rafting on the Drin River'
+description: 'Lorem ipsum'
 type: 'rafting'
-img_src: '/activities/rafting.jpg'
-img_alt: 'rafting'
+image: { src: '/activities/rafting.jpg', alt: 'rafting' }
+date: 2023-07-27T18:43:25.205Z
+author: Alex Sessums
+category: 'rafting'
 ---
 
 ## Thrilling Rafting Adventure on the Black Drin River: Exploring Natural Beauty in Diber, Albania

@@ -3,11 +3,28 @@
 import { Image } from '@astrojs/image/components'
 import SectionContent from '../ui/general/SectionContent.astro'
 import ActivityCard from '../ui/activities/ActivityCard.astro'
+import ActivityList from '../ui/activities/ActivityList.astro'
 import Button from '../ui/general/Button.astro'
 
-// All activities
-const allActivityTypes = await Astro.glob('../../pages/activities/**/*.md')
-const allActivites = await Astro.glob('../../pages/activities/**/*.md')
+import { getCollection } from 'astro:content'
+
+// Hiking Blog posts
+const hikingBlogPosts = await getCollection('blog', ({ data }) => {
+  return !data.draft && data.date < new Date() && data.category === 'hiking'
+})
+
+// Mountain Biking Blog posts
+const mountainBikingBlogPosts = await getCollection('blog', ({ data }) => {
+  return (
+    !data.draft && data.date < new Date() && data.category === 'mountain biking'
+  )
+})
+
+// Rafting Blog posts
+const raftingBlogPosts = await getCollection('blog', ({ data }) => {
+  return !data.draft && data.date < new Date() && data.category === 'rafting'
+})
+
 const number_of_activities_shown = 3
 ---
 
@@ -27,56 +44,60 @@ const number_of_activities_shown = 3
     </SectionContent>
 
     <!-- Activities Cards -->
-    <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12'>
-      {
-        allActivityTypes
-          .filter(
-            (activityType) => activityType.frontmatter.type === 'index_page'
-          )
-          .map((activityType) => (
-            <ActivityCard
-              activity_url={activityType.url}
-              activity_name={activityType.url.split('/activities/').pop()}
-              description={activityType.frontmatter.description}
-            >
-              <div class='h-52 overflow-hidden rounded-lg mb-6'>
-                <Image
-                  class='object-cover w-full h-full'
-                  src={activityType.frontmatter.img_src}
-                  alt={activityType.frontmatter.img_alt}
-                  width={800}
-                  height={600}
-                  format='avif'
-                />
-              </div>
-              <h2 class='text-xl font-bold'>Explore more:</h2>
+    <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+      <!--------- Hiking --------->
+      <ActivityCard
+        image={{
+          src: '/activities/hiking.jpeg',
+          alt: '',
+        }}
+        title='Hiking'
+        description="The Diber region offers diverse hiking trails, from easy strolls through lush valleys to challenging treks up Korabi, there's a hike for every adventurer."
+        url={`/blog/`}
+        category='hiking'
+      >
+        {
+          hikingBlogPosts
+            .slice(0, number_of_activities_shown)
+            .map((post) => <ActivityList postData={post} />)
+        }
+      </ActivityCard>
 
-              {/* activities list */}
-              {allActivites
-                .filter(
-                  (article) =>
-                    article.frontmatter.type ===
-                    activityType.url.split('/activities/').pop()
-                )
-                .slice(0, number_of_activities_shown)
-                .map((article) => (
-                  <div class=' bg-gray-300/50 rounded-full hover:bg-gray-300 transition-colors duration-200'>
-                    <a
-                      class='flex justify-between items-center text-gray-600 px-5 py-2 rounded-full'
-                      href={article.url}
-                    >
-                      {article.frontmatter.title}
-                      {article.frontmatter.new && (
-                        <div class='bg-red-600 rounded-md text-white text-xs font-bold px-2 py-1'>
-                          NEW
-                        </div>
-                      )}
-                    </a>
-                  </div>
-                ))}
-            </ActivityCard>
-          ))
-      }
+      <!--------- Mountain Biking --------->
+      <ActivityCard
+        image={{
+          src: '/activities/mountain_biking.jpg',
+          alt: 'mountain biking',
+        }}
+        title='Mountain Biking'
+        description='The Diber region offers hundreds of kilometers of mountain biking trails, many of which cross into North Macedonia. A complete list of trails is available for download in the Maps & Guides section.'
+        url={`/blog/`}
+        category='mountain biking'
+      >
+        {
+          mountainBikingBlogPosts
+            .slice(0, number_of_activities_shown)
+            .map((post) => <ActivityList postData={post} />)
+        }
+      </ActivityCard>
+
+      <!--------- Rafting --------->
+      <ActivityCard
+        image={{
+          src: '/activities/rafting.jpg',
+          alt: 'rafting',
+        }}
+        title='Rafting'
+        description='Rafting the Drin is a family-friend activity, which does not require special courses. Several operators offer excusrions on the Drin River which last between 2 to 4 hours.'
+        url={`/blog/`}
+        category='rafting'
+      >
+        {
+          raftingBlogPosts
+            .slice(0, number_of_activities_shown)
+            .map((post) => <ActivityList postData={post} />)
+        }
+      </ActivityCard>
     </div>
     <Button className='mt-6 mx-auto' href='/articles' btnColor='red' rounded>
       Learn More
