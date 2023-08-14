@@ -177,7 +177,7 @@ export const LocationsMap = ({ posts }) => {
           .map((post) => (
             <div
               key={post.data.id}
-              className='bg-gray-300/30 backdrop-blur-md rounded-xl text-gray-500 border-gray-300/30 border overflow-hidden'
+              className='bg-gray-300/30 backdrop-blur-md rounded-xl text-gray-600 border-gray-300/30 border overflow-hidden'
             >
               <div>
                 <div className='relative'>
@@ -195,7 +195,7 @@ export const LocationsMap = ({ posts }) => {
                     <h2 className='text-xl  font-semibold mb-1'>
                       {post.data.title}
                     </h2>
-                    <p className='text-base text-gray-500 max-w-2xl'>
+                    <p className='text-base text-gray-600 max-w-2xl'>
                       {post.data.description}
                     </p>
                   </div>
