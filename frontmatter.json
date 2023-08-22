@@ -84,11 +84,5 @@
       "title": "[Data] Gallery Images",
       "path": "[[workspace]]/src/data/gallery"
     }
-  ],
-  "frontMatter.taxonomy.tags": [
-    "culture",
-    "food",
-    "location",
-    "trail"
   ]
 }
