@@ -3,3 +3,4 @@ design.astro
 dist
 .unlighthouse
 .astro
+.netlify

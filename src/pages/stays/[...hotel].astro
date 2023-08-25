@@ -1,0 +1,18 @@
+---
+
+import Card from '../../components/ui/general/Card.astro'
+import Layout from '../../layouts/Layout.astro'
+
+const { hotel } = Astro.params
+---
+
+<Layout title='hello'>
+  <div class='page-container'>
+    {hotel}
+    <section class='flex gap-6 w-full items-center'>
+      <Card className='w-full text-center cursor-pointer'>1</Card>
+      <Card className='w-full text-center cursor-pointer'>1</Card>
+      <Card className='w-full text-center cursor-pointer'>1</Card>
+    </section>
+  </div>
+</Layout>
