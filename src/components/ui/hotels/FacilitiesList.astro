@@ -1,0 +1,56 @@
+---
+// Props
+export interface Props {
+  category: categoryType
+  facilities_list: Array<string>
+}
+
+type categoryType = 'general' | 'bedroom' | 'media' | 'food'
+
+import { Icon } from 'astro-iconify'
+// Functions
+
+import { headerRenderer } from '../../../functions/utils'
+
+const { category, facilities_list } = Astro.props
+
+let categoryIcon = ''
+
+switch (category) {
+  case 'general':
+    categoryIcon = 'material-symbols:info-outline'
+    break
+  case 'bedroom':
+    categoryIcon = 'material-symbols:bathtub-outline'
+    break
+  case 'media':
+    categoryIcon = 'material-symbols:tv-outline'
+    break
+  case 'food':
+    categoryIcon = 'material-symbols:restaurant-rounded'
+    break
+
+  default:
+    break
+}
+---
+
+<div class='w-full md:flex-1'>
+  <section class='flex gap-2 items-center'>
+    <Icon name={categoryIcon} class='h-7 w-7' />
+    <h3 class='text-xl font-bold'>{headerRenderer(category)}</h3>
+  </section>
+  <section class='flex flex-col gap-2 mt-3'>
+    {
+      facilities_list.map((facility) => (
+        <p class=' text-base text-gray-600 flex items-center gap-2'>
+          <Icon
+            name='material-symbols:fitbit-check-small-rounded'
+            class='text-gray-600 h-7 w-7'
+          />
+          {facility}
+        </p>
+      ))
+    }
+  </section>
+</div>
