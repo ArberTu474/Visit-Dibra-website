@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-iconify'
 ---
 
 <footer class='mt-auto border-gray-300/30 border-t py-6 w-full'>
@@ -6,35 +7,19 @@
     class='container mx-auto px-6 max-w-7xl w-full flex flex-col items-center'
   >
     <h2 class='text-xl md:text-2xl xl:text-3xl font-bold'>Visit Diber</h2>
-    <div class='flex items-center'>
+    <div class='flex items-center gap-3 my-2'>
       <a target='_blank' href='https://www.facebook.com/VisitDiber/'
-        ><img
-          width='48px'
-          height='48px'
-          src='/facebook.svg'
-          alt='Facebook'
-        /></a
+        ><Icon name='mdi:facebook' class='h-11 w-1ii' /></a
       >
       <a target='_blank' href='https://www.instagram.com/visitdiber/?hl=en'
-        ><img
-          width='48px'
-          height='48px'
-          src='/instagram.svg'
-          alt='Instagram'
-        /></a
+        ><Icon name='mdi:instagram' class='h-11 w-1ii' /></a
       >
       <a target='_blank' href='https://www.youtube.com/@visit.diber3753'
-        ><img
-          class='ml-2'
-          width='42px'
-          height='42px'
-          src='/youtube.svg'
-          alt='YouTube'
-        /></a
+        ><Icon name='mdi:youtube' class='h-11 w-1ii' /></a
       >
     </div>
     <p class='font-light text-gray-600 text-sm'>
-      © {new Date().getFullYear()} Visit Diber. All rights reserved.
+      ©{new Date().getFullYear()} VisitDiber. All rights reserved.
     </p>
     <a
       href='mailto:visitdiber@gmail.com'
