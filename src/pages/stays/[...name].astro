@@ -10,6 +10,7 @@ import FacilitiesList from '../../components/ui/hotels/FacilitiesList.astro'
 import FacilitiesHeader from '../../components/ui/hotels/FacilitiesHeader.astro'
 import RulesList from '../../components/ui/hotels/RulesList.astro'
 import FacilitiesCard from '../../components/ui/hotels/FacilitiesCard.astro'
+import RoomTableRow from '../../components/ui/hotels/RoomTableRow.astro'
 
 let imagesList = new Array<string>()
 const CDNURL =
@@ -195,7 +196,7 @@ function getFacilities(category) {
             </div>
             <a
               class='flex w-full md:w-min justify-center gap-3 items-center text-base text-gray-100 bg-indigo-900 rounded-lg py-3 px-4 font-bold hover:opacity-90 transition-opacity duration-200 ease-in-out'
-              href=''
+              href='#rooms & prices'
             >
               <Icon
                 name='material-symbols:sell'
@@ -261,38 +262,31 @@ function getFacilities(category) {
           title='Rooms & Prices'
           description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, ea. Architecto modi in similique id! Possimus numquam nam impedit delectus.'
         />
-        <div class='w-full overflow-auto rounded-lg'>
-          <table class='table-auto min-w-[700px]'>
-            <thead class='w-full bg-indigo-900 text-gray-100'>
-              <tr>
-                <th class='py-3 px-6 text-start'>Song</th>
-                <th
-                  class='py-3 px-6 text-start border-r border-l border-gray-100/20'
-                  >Artist</th
-                >
-                <th class='py-3 px-6 text-start'>Year</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class='bg-gray-200/30'>
-                <td class='py-3 px-6 text-start'
-                  >The Sliding Mr. Bones (Next Stop, Pottersville)</td
-                >
-                <td class='py-3 px-6 text-start'>Malcolm Lockyer</td>
-                <td class='py-3 px-6 text-start'>1961</td>
-              </tr>
-              <tr class='bg-gray-200/80'>
-                <td class='py-3 px-6 text-start'>Witchy Woman</td>
-                <td class='py-3 px-6 text-start'>The Eagles</td>
-                <td class='py-3 px-6 text-start'>1972</td>
-              </tr>
-              <tr class='bg-gray-200/30'>
-                <td class='py-3 px-6 text-start'>Shining Star</td>
-                <td class='py-3 px-6 text-start'>Earth, Wind, and Fire</td>
-                <td class='py-3 px-6 text-start'>1975</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class='overflow-auto grid grid-cols-1 lg:grid-cols-3 gap-6'>
+          <div class='col-span-2 rounded-lg overflow-auto'>
+            <table class='table-auto min-w-[650px] md:w-full'>
+              <thead class='w-full bg-indigo-900 text-gray-100'>
+                <tr>
+                  <th class='py-3 px-6 text-start'>Room Type</th>
+                  <th
+                    class='py-3 px-6 text-start border-r border-l border-gray-100/20'
+                    >Guests</th
+                  >
+                  <th class='py-3 px-6 text-start'>Price per Night</th>
+                </tr>
+              </thead>
+              <tbody>
+                {
+                  rooms.map((room, i) => (
+                    <RoomTableRow
+                      is_dark={(i + 1) % 2 === 0}
+                      room_info={room}
+                    />
+                  ))
+                }
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 
