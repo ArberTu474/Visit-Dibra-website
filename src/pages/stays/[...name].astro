@@ -254,10 +254,26 @@ function getFacilities(category) {
           <div>
             <h3 class='text-lg mb-2 font-bold'>Highlighted Facilities</h3>
             <div class='flex flex-wrap gap-3 w-full content-start'>
-              <FacilitiesCard name='Hello' />
-              <FacilitiesCard name='Shower' />
-              <FacilitiesCard name='Flat Screen Tv' />
-              <FacilitiesCard name='Radio' />
+              {
+                generalFacilities
+                  .splice(0, 1)
+                  .map((e) => <FacilitiesCard name={e} />)
+              }
+              {
+                bedroomFacilities
+                  .splice(0, 1)
+                  .map((e) => <FacilitiesCard name={e} />)
+              }
+              {
+                mediaFacilities
+                  .splice(0, 1)
+                  .map((e) => <FacilitiesCard name={e} />)
+              }
+              {
+                foodFacilities
+                  .splice(0, 1)
+                  .map((e) => <FacilitiesCard name={e} />)
+              }
             </div>
             <a
               href='#facilities'
