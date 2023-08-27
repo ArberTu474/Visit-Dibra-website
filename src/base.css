@@ -79,6 +79,13 @@ select {
   @apply text-gray-100 text-[4px] font-bold bg-gray-800 px-1  py-[2px] rounded-sm inline;
 }
 
+.slider-image2 {
+  width: calc(100vw - theme('spacing.12'));
+}
+.slider-image {
+  width: calc(100vw - theme('spacing.96'));
+}
+
 /* Scrollbar */
 /* width */
 ::-webkit-scrollbar {

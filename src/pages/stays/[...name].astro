@@ -12,6 +12,9 @@ import RulesList from '../../components/ui/hotels/RulesList.astro'
 import FacilitiesCard from '../../components/ui/hotels/FacilitiesCard.astro'
 import RoomTableRow from '../../components/ui/hotels/RoomTableRow.astro'
 
+// Functions
+import { headerRenderer } from '../../functions/utils'
+
 let imagesList = new Array<string>()
 const CDNURL =
   'https://anfqbgopkaezhvbymkhu.supabase.co/storage/v1/object/public/images/'
@@ -111,7 +114,7 @@ function getFacilities(category) {
 }
 ---
 
-<Layout title={name}>
+<Layout title={headerRenderer(name)}>
   <div class='page-container mt-6'>
     <section class='w-full flex flex-col gap-6 justify-between'>
       <section class='flex flex-col md:flex-row w-full items-center md:gap-6'>
@@ -136,17 +139,23 @@ function getFacilities(category) {
       </section>
 
       <!-- Image gallery section -->
-      <div
-        class='w-full h-96 md:h-[620px] rounded-lg bg-gray-300 overflow-hidden'
-      >
-        <Image
-          class='w-full h-full object-cover'
-          src={imagesList[0]}
-          height={1000}
-          width={1900}
-          alt='image'
-          format='avif'
-        />
+
+      <div class='relative overflow-auto'>
+        <div
+          class='relative w-full flex gap-6 snap-x snap-mandatory overflow-auto pb-6'
+        >
+          {
+            imagesList.map((image) => (
+              <div class='snap-center shrink-0'>
+                <img
+                  src={image}
+                  class='slider-image2 h-72 spacing md:h-96 lg:h-[600px] max-w-5xl object-cover rounded-xl bg-gray-300'
+                  alt={`${name}, ${location}`}
+                />
+              </div>
+            ))
+          }
+        </div>
       </div>
 
       <!-- Hotel Info section -->
