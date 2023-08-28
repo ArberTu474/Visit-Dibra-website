@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html class="h-full" lang="en">
+  <head>
+    
+    <!-- Indexing -->
+    <meta name="robots" content="all">
+    <meta name="googlebot" content="all">
+    <!-- Google tag (gtag.js) -->
+    <script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-TZT92XTSBB"></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-TZT92XTSBB')
+    </script>
+    <meta charset="UTF-8">
+    <meta name="description" content="Welcome to Diber">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Astro v2.8.0">
+
+    <!-- Open Graph protocol -->
+    <meta property="og:title" content="VisitDibra | Maps">
+    <meta property="og:description" content="Welcome to Diber">
+    <meta property="og:type">
+    <meta property="og:site_name" content="VisitDiber">
+    <meta property="og:image:height" content="600">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image" content="https://visitdibra.netlify.app/hero_image.avif">
+    <link rel="icon" href="/favicon.svg">
+
+    <!-- Sitemap -->
+    <link rel="sitemap" href="/sitemap-index.xml">
+    <title>VisitDibra | Maps</title>
+  <link rel="stylesheet" href="/_astro/404.73d4bd23.css" />
+<link rel="stylesheet" href="/_astro/_slug_.40caca52.css" /><script type="module" src="/_astro/hoisted.8549b350.js"></script></head>
+</html>
+
+<body class="h-full w-full bg-gray-100 flex flex-col text-gray-800">
+  <header>
+  <nav class="bg-white/10 fixed w-full top-0 left-0 z-40 backdrop-blur-md border-gray-300/30 border-b py-4">
+    <div class="container mx-auto px-6 max-w-7xl flex justify-between items-center">
+      <a href="/" class="flex gap-2 items-center justify-between">
+        <img height="38px" width="38px" src="/logo.svg" alt="logo">
+        <h2 class="text-xl md:text-2xl xl:text-4xl font-bold">Visit Diber</h2>
+      </a>
+
+      <div class="sm:hidden flex items-center">
+        <svg viewBox="0 0 24 24" id="menu" class="h-10" astro-icon="material-symbols:menu-rounded"><path fill="currentColor" d="M4 18q-.425 0-.713-.288T3 17q0-.425.288-.713T4 16h16q.425 0 .713.288T21 17q0 .425-.288.713T20 18H4Zm0-5q-.425 0-.713-.288T3 12q0-.425.288-.713T4 11h16q.425 0 .713.288T21 12q0 .425-.288.713T20 13H4Zm0-5q-.425 0-.713-.288T3 7q0-.425.288-.713T4 6h16q.425 0 .713.288T21 7q0 .425-.288.713T20 8H4Z"/></svg>
+      </div>
+
+      <ul class="hidden sm:flex gap-4 md:gap-8 justify-start align-middle text-base xl:text- font-semibold">
+        <li><a href="/" class="navbar-item">Home</a></li>
+        <li><a href="/stays" class="navbar-item">Stays</a></li>
+        <li><a href="/maps" class="navbar-item">Maps & Guides</a></li>
+        <li><a href="/blog" class="navbar-item">Blog</a></li>
+        <li><a href="/#faq" class="navbar-item">FAQ</a></li>
+        <li><a href="/#contact" class="navbar-item">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Mobile view navigation links -->
+    <ul id="navList" class="px-6 mt-6 text-lg hidden flex-col font-semibold sm:hidden">
+      <li><a href="/" class="navbar-item inline-block float-right">Home</a></li>
+      <li>
+        <a href="/stays" class="navbar-item inline-block float-right">Stays</a>
+      </li>
+      <li>
+        <a href="/maps" class="navbar-item inline-block float-right">Maps & Guides</a>
+      </li>
+      <li>
+        <a href="/blog" class="navbar-item inline-block float-right">Blog</a>
+      </li>
+      <li>
+        <a href="/#faq" class="navbar-item inline-block float-right">FAQ</a>
+      </li>
+      <li>
+        <a href="/#contact" class="navbar-item inline-block float-right" inline-block float-right>Contact</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+  <main>
+    
+  <main>
+    <div class="page-container">
+      <div class="bg-amber-300 rounded-lg p-6 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-6 shadow-lg shadow-gray-400/20 sticky mt-3">
+        <div class="text-center sm:text-left">
+          <h2 class="w-full text-2xl text-amber-950/80 font-bold">
+            Visit Diber Travel Guide
+          </h2>
+          <p id="description" class="text-sm max-w-xl text-amber-950/50">
+            The official tourist guide of Diber in English. This brochure was
+            prepared by the Albanian Local Capacity Development Foundation in a
+            collaboration between USAID and the Embassy of Sweden.
+          </p>
+        </div>
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <select class="hidden lg:block w-80 bg-amber-400/60 border-2 border-amber-400/10 text-amber-900 text-lg rounded-xl p-3 cursor-pointer" name="language" id="language" onchange="updateDescription()">
+            <option selected>Choose language</option>
+            <option value="english">🇬🇧 English</option>
+            <option value="albanian">🇦🇱 Albanian (Coming Soon)</option>
+            <option value="italian">🇮🇹 Italian (Coming Soon)</option>
+            <option value="german">🇩🇪 German (Coming Soon)</option>
+            <option value="spanish">🇪🇸 Spanish (Coming Soon)</option>
+            <option value="czech">🇨🇿 Czech (Coming Soon)</option>
+            <option value="macedonian">🇲🇰 Macedonian (Coming Soon)</option>
+            <option value="montenegrin">🇲🇪 Montenegrin (Coming Soon)</option>
+            <option value="polish">🇵🇱 Polish (Coming Soon)</option>
+          </select>
+          <!-- Desktop download button -->
+          <a id="download" href="/maps/guides/visit_diber_english.pdf" target="_blank" class="hidden lg:block py-3 px-10 text-lg bg-amber-500/70 rounded-lg font-bold text-amber-950/80 hover:opacity-90 transition-opacity duration-300">Download</a>
+        </div>
+        <!-- Mobile download button -->
+        <div class="lg:hidden flex items-center px-5 text-lg bg-amber-500/70 rounded-lg font-bold text-amber-950/80 hover:opacity-90 transition-opacity duration-300">
+          <a id="download_mobile" href="/maps/guides/visit_diber_english.pdf" target="_blank" class="py-3 inline-block">Download</a>
+          <!-- Divider -->
+          <div class="min-w-[1px] h-9 bg-amber-800/40 mx-3"></div>
+          <div class="relative">
+            <select class="block bg-transparent text-transparent w-12 pl-4 pb-3 py-3 cursor-pointer" name="language" id="language_mobile">
+              <option selected>Choose language</option>
+              <option value="english">🇬🇧 English</option>
+              <option value="albanian">🇦🇱 Albanian (Coming Soon)</option>
+              <option value="italian">🇮🇹 Italian (Coming Soon)</option>
+              <option value="german">🇩🇪 German (Coming Soon)</option>
+              <option value="spanish">🇪🇸 Spanish (Coming Soon)</option>
+              <option value="czech">🇨🇿 Czech (Coming Soon)</option>
+              <option value="macedonian">🇲🇰 Macedonian (Coming Soon)</option>
+              <option value="montenegrin">🇲🇪 Montenegrin (Coming Soon)</option>
+              <option value="polish">🇵🇱 Polish (Coming Soon)</option>
+            </select>
+            <svg viewBox="0 0 24 24" class="h-10 text-amber-950/80 absolute top-2 left-1 pointer-events-none mx-auto" astro-icon="material-symbols:expand-more-rounded"><path fill="currentColor" d="M12 14.95q-.2 0-.375-.062t-.325-.213l-4.6-4.6q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l3.9 3.9 3.9-3.9q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213T12 14.95Z"/></svg>
+          </div>
+        </div>
+      </div>
+      <h1 class="text-4xl font-bold mt-6">Maps & Guides</h1>
+      <p class="text-base text-gray-500 my-6 max-w-3xl">
+        Downloadable maps and tourist guides are available for each of your
+        adventures in Diber. Official guides are available in English, Italian,
+        German, Spanish, Macedonian, Montenegrin, Czech and Polish languages,
+        providing comprehensive information to plan and enjoy your experience in
+        Diber.
+      </p>
+
+      <div class="flex flex-col gap-12">
+        <!-- Maps Section -->
+        <div>
+          <div class="flex justify-center gap-2 flex-col my-6">
+            <header class="flex justify-center gap-2 flex-col my-6 undefined">
+  <div class="flex items-center gap-2">
+    <svg viewBox="0 0 24 24" class="h-10 text-gray-100 text-inherit" astro-icon="material-symbols:map-outline-rounded"><path fill="currentColor" d="M14.35 20.775 9 18.9l-4.65 1.8q-.5.2-.925-.112T3 19.75v-14q0-.325.188-.575T3.7 4.8l4.65-1.575q.325-.1.65-.113t.65.113L15 5.1l4.65-1.8q.5-.2.925.113T21 4.25v14q0 .325-.187.575t-.513.375l-4.65 1.575q-.325.1-.65.113t-.65-.113ZM14 18.55V6.85l-4-1.4v11.7l4 1.4Zm2 0 3-1V5.7l-3 1.15v11.7ZM5 18.3l3-1.15V5.45l-3 1V18.3ZM16 6.85v11.7-11.7Zm-8-1.4v11.7-11.7Z"/></svg>
+    <h2 class="text-2xl font-bold">Maps</h2>
+  </div>
+  <div class="h-[2px] bg-slate-400/30 max-w-3xl rounded-full"></div>
+</header>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div class="bg-gray-300/30 backdrop-blur-md rounded-xl border-gray-300/30 border overflow-hidden  undefined">
+  
+  
+  <div class="relative">
+    <img class="h-52 md:h-56 object-cover w-full bg-gray-300" alt="Korabi mountain" width="400" height="300" src="/_astro/nature_1_q6gfo.avif" loading="lazy" decoding="async">
+    <div class="absolute top-0 left-0 h-full w-full p-6 bg-gradient-to-r from-gray-900/80 from-10% to-gray-900/20">
+      <div class="flex justify-between h-full">
+        <div class="flex flex-col gap-5 justify-center">
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="text-gray-100 h-8" astro-icon="material-symbols:width-rounded"><path fill="currentColor" d="m6.825 13 .875.925q.275.275.275.688T7.7 15.3q-.3.3-.713.3t-.687-.3l-2.6-2.575q-.15-.15-.225-.337T3.4 12q0-.2.075-.375T3.7 11.3l2.6-2.6q.275-.275.688-.275T7.7 8.7q.3.3.3.713t-.3.712L6.825 11h10.35l-.9-.9Q16 9.825 16 9.412t.3-.712q.275-.275.688-.275t.712.275l2.575 2.6q.15.15.225.325t.075.375q0 .2-.075.387t-.225.338l-2.6 2.6q-.275.275-.688.275t-.712-.3Q16 15.025 16 14.612t.275-.687l.9-.925H6.825Z"/></svg>
+            <p class="text-lg text-gray-100 font-bold">30 km</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="text-gray-100 h-8" astro-icon="material-symbols:altitude-outline-rounded"><path fill="currentColor" d="M19 12q-.425 0-.713-.288T18 11V7.8l-.925.9q-.275.275-.675.288t-.7-.288q-.275-.275-.275-.7t.275-.7l2.6-2.6q.3-.3.7-.3t.7.3l2.6 2.6q.3.3.3.7t-.3.7q-.3.3-.713.3t-.712-.3L20 7.825V11q0 .425-.288.713T19 12ZM3 22q-.625 0-.9-.55t.1-1.05l4-5.325q.3-.4.8-.4t.8.4L11.5 20H19l-5-6.65-2.5 3.3L10.25 15l2.95-3.925q.3-.4.8-.4t.8.4l7 9.325q.375.5.1 1.05T21 22H3Zm8.5-2Z"/></svg>
+            <p class="text-lg text-gray-100 font-bold">1500 m</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="text-gray-100 h-8" astro-icon="material-symbols:timer-outline-rounded"><path fill="currentColor" d="M10 3q-.425 0-.713-.288T9 2q0-.425.288-.713T10 1h4q.425 0 .713.288T15 2q0 .425-.288.713T14 3h-4Zm2 11q.425 0 .713-.288T13 13V9q0-.425-.288-.713T12 8q-.425 0-.713.288T11 9v4q0 .425.288.713T12 14Zm0 8q-1.85 0-3.488-.713T5.65 19.35q-1.225-1.225-1.938-2.863T3 13q0-1.85.713-3.488T5.65 6.65q1.225-1.225 2.863-1.938T12 4q1.55 0 2.975.5t2.675 1.45l.7-.7q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7l-.7.7Q20 8.6 20.5 10.025T21 13q0 1.85-.713 3.488T18.35 19.35q-1.225 1.225-2.863 1.938T12 22Zm0-2q2.9 0 4.95-2.05T19 13q0-2.9-2.05-4.95T12 6Q9.1 6 7.05 8.05T5 13q0 2.9 2.05 4.95T12 20Zm0-7Z"/></svg>
+            <p class="text-lg text-gray-100 font-bold">6 hours</p>
+          </div>
+        </div>
+
+        <svg viewBox="0 0 24 24" class="text-gray-100 h-12 self-end" astro-icon="material-symbols:hiking-rounded"><title>Hiking</title><path fill="currentColor" d="M13.5 5.5q-.825 0-1.413-.588T11.5 3.5q0-.825.588-1.413T13.5 1.5q.825 0 1.413.588T15.5 3.5q0 .825-.588 1.413T13.5 5.5ZM8.3 23q-.55 0-.863-.375t-.187-.9L10.075 7.45q.15-.725.675-1.087T11.85 6q.575 0 1.063.25T13.7 7l1 1.6q.45.725 1.163 1.313t1.637.862V9.75q0-.325.213-.537T18.25 9q.325 0 .537.213T19 9.75v12.5q0 .325-.213.537T18.25 23q-.325 0-.537-.213t-.213-.537v-9.4q-1.2-.275-2.225-.875T13.5 10.5l-.6 3 1.475 1.4q.3.3.463.663t.162.787V22q0 .425-.288.713T14 23q-.425 0-.713-.288T13 22v-5l-2.1-2-1.625 7.25q-.075.325-.35.537T8.3 23Zm-.875-9.875 1.35-6.85-1.15-.225q-.8-.15-1.5.313t-.85 1.262l-.75 3.925q-.075.425.15.763t.625.412l2.125.4Z"/></svg>
+      </div>
+    </div>
+  </div>
+
+  
+  
+  <div class="p-6 pt-1 flex items-start justify-between gap-3">
+    <div>
+      <p class="bg-red-500 text-gray-100 font-bold rounded-[5px] px-4 py-1 mt-3 mb-2 inline-block text-sm">
+        Hard
+      </p>
+      <h2 class="text-xl font-bold mb-1">Korabi Mountain</h2>
+      <p class="text-base text-gray-500">
+        Korabi Mountain is Albania&#39;s highest standing at 2,764m tall. Most routes to the top start from Radomire Village.
+      </p>
+    </div>
+    <a download href="/maps/maps/korabi.pdf" title="Download" class="mt-12 h-[48px] min-w-[48px] bg-red-500 rounded-full flex justify-center items-center hover:opacity-80 transition-opacity duration-300 cursor-pointer">
+      <svg viewBox="0 0 24 24" class="text-gray-100 h-6" astro-icon="material-symbols:south-rounded"><path fill="currentColor" d="M12 21.575q-.2 0-.375-.062T11.3 21.3l-5.6-5.6q-.275-.275-.275-.7t.275-.7q.3-.3.713-.287t.687.287l3.9 3.875V3q0-.425.288-.713T12 2q.425 0 .713.288T13 3v15.175l3.875-3.875q.3-.3.713-.3t.712.3q.275.3.275.713t-.275.687l-5.6 5.6q-.15.15-.325.213t-.375.062Z"/></svg>
+    </a>
+  </div>
+  
+
+</div><div class="bg-gray-300/30 backdrop-blur-md rounded-xl border-gray-300/30 border overflow-hidden  undefined">
+  
+  
+  <div class="relative">
+    <img class="h-52 md:h-56 object-cover w-full bg-gray-300" alt="Korabi mountain" width="400" height="300" src="/_astro/begjunec_park_Z2mON3a.avif" loading="lazy" decoding="async">
+    <div class="absolute top-0 left-0 h-full w-full p-6 bg-gradient-to-r from-gray-900/80 from-10% to-gray-900/20">
+      <div class="flex justify-between h-full">
+        <div class="flex flex-col gap-5 justify-center">
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="text-gray-100 h-8" astro-icon="material-symbols:width-rounded"><path fill="currentColor" d="m6.825 13 .875.925q.275.275.275.688T7.7 15.3q-.3.3-.713.3t-.687-.3l-2.6-2.575q-.15-.15-.225-.337T3.4 12q0-.2.075-.375T3.7 11.3l2.6-2.6q.275-.275.688-.275T7.7 8.7q.3.3.3.713t-.3.712L6.825 11h10.35l-.9-.9Q16 9.825 16 9.412t.3-.712q.275-.275.688-.275t.712.275l2.575 2.6q.15.15.225.325t.075.375q0 .2-.075.387t-.225.338l-2.6 2.6q-.275.275-.688.275t-.712-.3Q16 15.025 16 14.612t.275-.687l.9-.925H6.825Z"/></svg>
+            <p class="text-lg text-gray-100 font-bold">17.4 km</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="text-gray-100 h-8" astro-icon="material-symbols:altitude-outline-rounded"><path fill="currentColor" d="M19 12q-.425 0-.713-.288T18 11V7.8l-.925.9q-.275.275-.675.288t-.7-.288q-.275-.275-.275-.7t.275-.7l2.6-2.6q.3-.3.7-.3t.7.3l2.6 2.6q.3.3.3.7t-.3.7q-.3.3-.713.3t-.712-.3L20 7.825V11q0 .425-.288.713T19 12ZM3 22q-.625 0-.9-.55t.1-1.05l4-5.325q.3-.4.8-.4t.8.4L11.5 20H19l-5-6.65-2.5 3.3L10.25 15l2.95-3.925q.3-.4.8-.4t.8.4l7 9.325q.375.5.1 1.05T21 22H3Zm8.5-2Z"/></svg>
+            <p class="text-lg text-gray-100 font-bold">800 m</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="text-gray-100 h-8" astro-icon="material-symbols:timer-outline-rounded"><path fill="currentColor" d="M10 3q-.425 0-.713-.288T9 2q0-.425.288-.713T10 1h4q.425 0 .713.288T15 2q0 .425-.288.713T14 3h-4Zm2 11q.425 0 .713-.288T13 13V9q0-.425-.288-.713T12 8q-.425 0-.713.288T11 9v4q0 .425.288.713T12 14Zm0 8q-1.85 0-3.488-.713T5.65 19.35q-1.225-1.225-1.938-2.863T3 13q0-1.85.713-3.488T5.65 6.65q1.225-1.225 2.863-1.938T12 4q1.55 0 2.975.5t2.675 1.45l.7-.7q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7l-.7.7Q20 8.6 20.5 10.025T21 13q0 1.85-.713 3.488T18.35 19.35q-1.225 1.225-2.863 1.938T12 22Zm0-2q2.9 0 4.95-2.05T19 13q0-2.9-2.05-4.95T12 6Q9.1 6 7.05 8.05T5 13q0 2.9 2.05 4.95T12 20Zm0-7Z"/></svg>
+            <p class="text-lg text-gray-100 font-bold">1.5 hours</p>
+          </div>
+        </div>
+
+        <svg viewBox="0 0 24 24" class="text-gray-100 h-12 self-end" astro-icon="material-symbols:hiking-rounded"><title>Hiking</title><path fill="currentColor" d="M13.5 5.5q-.825 0-1.413-.588T11.5 3.5q0-.825.588-1.413T13.5 1.5q.825 0 1.413.588T15.5 3.5q0 .825-.588 1.413T13.5 5.5ZM8.3 23q-.55 0-.863-.375t-.187-.9L10.075 7.45q.15-.725.675-1.087T11.85 6q.575 0 1.063.25T13.7 7l1 1.6q.45.725 1.163 1.313t1.637.862V9.75q0-.325.213-.537T18.25 9q.325 0 .537.213T19 9.75v12.5q0 .325-.213.537T18.25 23q-.325 0-.537-.213t-.213-.537v-9.4q-1.2-.275-2.225-.875T13.5 10.5l-.6 3 1.475 1.4q.3.3.463.663t.162.787V22q0 .425-.288.713T14 23q-.425 0-.713-.288T13 22v-5l-2.1-2-1.625 7.25q-.075.325-.35.537T8.3 23Zm-.875-9.875 1.35-6.85-1.15-.225q-.8-.15-1.5.313t-.85 1.262l-.75 3.925q-.075.425.15.763t.625.412l2.125.4Z"/></svg>
+      </div>
+    </div>
+  </div>
+
+  
+  
+  <div class="p-6 pt-1 flex items-start justify-between gap-3">
+    <div>
+      <p class="bg-lime-500 text-gray-100 font-bold rounded-[5px] px-4 py-1 mt-3 mb-2 inline-block text-sm">
+        Easy
+      </p>
+      <h2 class="text-xl font-bold mb-1">Begjunec Park</h2>
+      <p class="text-base text-gray-500">
+        Begjunec Park offers a family friend hike with panoramic views of Peshkopi and the Drin River Valley from the top of Mount Begjunec.
+      </p>
+    </div>
+    <a download href="/maps/maps/begjunec_park.pdf" title="Download" class="mt-12 h-[48px] min-w-[48px] bg-lime-500 rounded-full flex justify-center items-center hover:opacity-80 transition-opacity duration-300 cursor-pointer">
+      <svg viewBox="0 0 24 24" class="text-gray-100 h-6" astro-icon="material-symbols:south-rounded"><path fill="currentColor" d="M12 21.575q-.2 0-.375-.062T11.3 21.3l-5.6-5.6q-.275-.275-.275-.7t.275-.7q.3-.3.713-.287t.687.287l3.9 3.875V3q0-.425.288-.713T12 2q.425 0 .713.288T13 3v15.175l3.875-3.875q.3-.3.713-.3t.712.3q.275.3.275.713t-.275.687l-5.6 5.6q-.15.15-.325.213t-.375.062Z"/></svg>
+    </a>
+  </div>
+  
+
+</div><div class="bg-gray-300/30 backdrop-blur-md rounded-xl border-gray-300/30 border overflow-hidden  undefined">
+  
+  
+  <div class="relative">
+    <img class="h-52 md:h-56 object-cover w-full bg-gray-300" alt="Korabi mountain" width="400" height="300" src="/_astro/black_lake_uAYWF.avif" loading="lazy" decoding="async">
+    <div class="absolute top-0 left-0 h-full w-full p-6 bg-gradient-to-r from-gray-900/80 from-10% to-gray-900/20">
+      <div class="flex justify-between h-full">
+        <div class="flex flex-col gap-5 justify-center">
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="text-gray-100 h-8" astro-icon="material-symbols:width-rounded"><path fill="currentColor" d="m6.825 13 .875.925q.275.275.275.688T7.7 15.3q-.3.3-.713.3t-.687-.3l-2.6-2.575q-.15-.15-.225-.337T3.4 12q0-.2.075-.375T3.7 11.3l2.6-2.6q.275-.275.688-.275T7.7 8.7q.3.3.3.713t-.3.712L6.825 11h10.35l-.9-.9Q16 9.825 16 9.412t.3-.712q.275-.275.688-.275t.712.275l2.575 2.6q.15.15.225.325t.075.375q0 .2-.075.387t-.225.338l-2.6 2.6q-.275.275-.688.275t-.712-.3Q16 15.025 16 14.612t.275-.687l.9-.925H6.825Z"/></svg>
+            <p class="text-lg text-gray-100 font-bold">1.2 km</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="text-gray-100 h-8" astro-icon="material-symbols:altitude-outline-rounded"><path fill="currentColor" d="M19 12q-.425 0-.713-.288T18 11V7.8l-.925.9q-.275.275-.675.288t-.7-.288q-.275-.275-.275-.7t.275-.7l2.6-2.6q.3-.3.7-.3t.7.3l2.6 2.6q.3.3.3.7t-.3.7q-.3.3-.713.3t-.712-.3L20 7.825V11q0 .425-.288.713T19 12ZM3 22q-.625 0-.9-.55t.1-1.05l4-5.325q.3-.4.8-.4t.8.4L11.5 20H19l-5-6.65-2.5 3.3L10.25 15l2.95-3.925q.3-.4.8-.4t.8.4l7 9.325q.375.5.1 1.05T21 22H3Zm8.5-2Z"/></svg>
+            <p class="text-lg text-gray-100 font-bold">800 m</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="text-gray-100 h-8" astro-icon="material-symbols:timer-outline-rounded"><path fill="currentColor" d="M10 3q-.425 0-.713-.288T9 2q0-.425.288-.713T10 1h4q.425 0 .713.288T15 2q0 .425-.288.713T14 3h-4Zm2 11q.425 0 .713-.288T13 13V9q0-.425-.288-.713T12 8q-.425 0-.713.288T11 9v4q0 .425.288.713T12 14Zm0 8q-1.85 0-3.488-.713T5.65 19.35q-1.225-1.225-1.938-2.863T3 13q0-1.85.713-3.488T5.65 6.65q1.225-1.225 2.863-1.938T12 4q1.55 0 2.975.5t2.675 1.45l.7-.7q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7l-.7.7Q20 8.6 20.5 10.025T21 13q0 1.85-.713 3.488T18.35 19.35q-1.225 1.225-2.863 1.938T12 22Zm0-2q2.9 0 4.95-2.05T19 13q0-2.9-2.05-4.95T12 6Q9.1 6 7.05 8.05T5 13q0 2.9 2.05 4.95T12 20Zm0-7Z"/></svg>
+            <p class="text-lg text-gray-100 font-bold">0.5 hours</p>
+          </div>
+        </div>
+
+        <svg viewBox="0 0 24 24" class="text-gray-100 h-12 self-end" astro-icon="material-symbols:hiking-rounded"><title>Hiking</title><path fill="currentColor" d="M13.5 5.5q-.825 0-1.413-.588T11.5 3.5q0-.825.588-1.413T13.5 1.5q.825 0 1.413.588T15.5 3.5q0 .825-.588 1.413T13.5 5.5ZM8.3 23q-.55 0-.863-.375t-.187-.9L10.075 7.45q.15-.725.675-1.087T11.85 6q.575 0 1.063.25T13.7 7l1 1.6q.45.725 1.163 1.313t1.637.862V9.75q0-.325.213-.537T18.25 9q.325 0 .537.213T19 9.75v12.5q0 .325-.213.537T18.25 23q-.325 0-.537-.213t-.213-.537v-9.4q-1.2-.275-2.225-.875T13.5 10.5l-.6 3 1.475 1.4q.3.3.463.663t.162.787V22q0 .425-.288.713T14 23q-.425 0-.713-.288T13 22v-5l-2.1-2-1.625 7.25q-.075.325-.35.537T8.3 23Zm-.875-9.875 1.35-6.85-1.15-.225q-.8-.15-1.5.313t-.85 1.262l-.75 3.925q-.075.425.15.763t.625.412l2.125.4Z"/></svg>
+      </div>
+    </div>
+  </div>
+
+  
+  
+  <div class="p-6 pt-1 flex items-start justify-between gap-3">
+    <div>
+      <p class="bg-orange-500 text-gray-100 font-bold rounded-[5px] px-4 py-1 mt-3 mb-2 inline-block text-sm">
+        Medium
+      </p>
+      <h2 class="text-xl font-bold mb-1">Black Lake</h2>
+      <p class="text-base text-gray-500">
+        Black Lake is located 45 minutes above Radomire Village and is named for its dark color. The lake is surrounded by a pine forest, making it an excellent spot for a picnic.
+      </p>
+    </div>
+    <a download href="/maps/maps/black_lake.pdf" title="Download" class="mt-12 h-[48px] min-w-[48px] bg-orange-500 rounded-full flex justify-center items-center hover:opacity-80 transition-opacity duration-300 cursor-pointer">
+      <svg viewBox="0 0 24 24" class="text-gray-100 h-6" astro-icon="material-symbols:south-rounded"><path fill="currentColor" d="M12 21.575q-.2 0-.375-.062T11.3 21.3l-5.6-5.6q-.275-.275-.275-.7t.275-.7q.3-.3.713-.287t.687.287l3.9 3.875V3q0-.425.288-.713T12 2q.425 0 .713.288T13 3v15.175l3.875-3.875q.3-.3.713-.3t.712.3q.275.3.275.713t-.275.687l-5.6 5.6q-.15.15-.325.213t-.375.062Z"/></svg>
+    </a>
+  </div>
+  
+
+</div><div class="bg-gray-300/30 backdrop-blur-md rounded-xl border-gray-300/30 border overflow-hidden  undefined">
+  
+  
+  <div class="relative">
+    <img class="h-52 md:h-56 object-cover w-full bg-gray-300" alt="Korabi mountain" width="400" height="300" src="/_astro/healing_valley_Z1ulJxY.avif" loading="lazy" decoding="async">
+    <div class="absolute top-0 left-0 h-full w-full p-6 bg-gradient-to-r from-gray-900/80 from-10% to-gray-900/20">
+      <div class="flex justify-between h-full">
+        <div class="flex flex-col gap-5 justify-center">
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="text-gray-100 h-8" astro-icon="material-symbols:width-rounded"><path fill="currentColor" d="m6.825 13 .875.925q.275.275.275.688T7.7 15.3q-.3.3-.713.3t-.687-.3l-2.6-2.575q-.15-.15-.225-.337T3.4 12q0-.2.075-.375T3.7 11.3l2.6-2.6q.275-.275.688-.275T7.7 8.7q.3.3.3.713t-.3.712L6.825 11h10.35l-.9-.9Q16 9.825 16 9.412t.3-.712q.275-.275.688-.275t.712.275l2.575 2.6q.15.15.225.325t.075.375q0 .2-.075.387t-.225.338l-2.6 2.6q-.275.275-.688.275t-.712-.3Q16 15.025 16 14.612t.275-.687l.9-.925H6.825Z"/></svg>
+            <p class="text-lg text-gray-100 font-bold">10 km</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="text-gray-100 h-8" astro-icon="material-symbols:altitude-outline-rounded"><path fill="currentColor" d="M19 12q-.425 0-.713-.288T18 11V7.8l-.925.9q-.275.275-.675.288t-.7-.288q-.275-.275-.275-.7t.275-.7l2.6-2.6q.3-.3.7-.3t.7.3l2.6 2.6q.3.3.3.7t-.3.7q-.3.3-.713.3t-.712-.3L20 7.825V11q0 .425-.288.713T19 12ZM3 22q-.625 0-.9-.55t.1-1.05l4-5.325q.3-.4.8-.4t.8.4L11.5 20H19l-5-6.65-2.5 3.3L10.25 15l2.95-3.925q.3-.4.8-.4t.8.4l7 9.325q.375.5.1 1.05T21 22H3Zm8.5-2Z"/></svg>
+            <p class="text-lg text-gray-100 font-bold">800 m</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="text-gray-100 h-8" astro-icon="material-symbols:timer-outline-rounded"><path fill="currentColor" d="M10 3q-.425 0-.713-.288T9 2q0-.425.288-.713T10 1h4q.425 0 .713.288T15 2q0 .425-.288.713T14 3h-4Zm2 11q.425 0 .713-.288T13 13V9q0-.425-.288-.713T12 8q-.425 0-.713.288T11 9v4q0 .425.288.713T12 14Zm0 8q-1.85 0-3.488-.713T5.65 19.35q-1.225-1.225-1.938-2.863T3 13q0-1.85.713-3.488T5.65 6.65q1.225-1.225 2.863-1.938T12 4q1.55 0 2.975.5t2.675 1.45l.7-.7q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7l-.7.7Q20 8.6 20.5 10.025T21 13q0 1.85-.713 3.488T18.35 19.35q-1.225 1.225-2.863 1.938T12 22Zm0-2q2.9 0 4.95-2.05T19 13q0-2.9-2.05-4.95T12 6Q9.1 6 7.05 8.05T5 13q0 2.9 2.05 4.95T12 20Zm0-7Z"/></svg>
+            <p class="text-lg text-gray-100 font-bold">4 hours</p>
+          </div>
+        </div>
+
+        <svg viewBox="0 0 24 24" class="text-gray-100 h-12 self-end" astro-icon="material-symbols:hiking-rounded"><title>Hiking</title><path fill="currentColor" d="M13.5 5.5q-.825 0-1.413-.588T11.5 3.5q0-.825.588-1.413T13.5 1.5q.825 0 1.413.588T15.5 3.5q0 .825-.588 1.413T13.5 5.5ZM8.3 23q-.55 0-.863-.375t-.187-.9L10.075 7.45q.15-.725.675-1.087T11.85 6q.575 0 1.063.25T13.7 7l1 1.6q.45.725 1.163 1.313t1.637.862V9.75q0-.325.213-.537T18.25 9q.325 0 .537.213T19 9.75v12.5q0 .325-.213.537T18.25 23q-.325 0-.537-.213t-.213-.537v-9.4q-1.2-.275-2.225-.875T13.5 10.5l-.6 3 1.475 1.4q.3.3.463.663t.162.787V22q0 .425-.288.713T14 23q-.425 0-.713-.288T13 22v-5l-2.1-2-1.625 7.25q-.075.325-.35.537T8.3 23Zm-.875-9.875 1.35-6.85-1.15-.225q-.8-.15-1.5.313t-.85 1.262l-.75 3.925q-.075.425.15.763t.625.412l2.125.4Z"/></svg>
+      </div>
+    </div>
+  </div>
+
+  
+  
+  <div class="p-6 pt-1 flex items-start justify-between gap-3">
+    <div>
+      <p class="bg-lime-500 text-gray-100 font-bold rounded-[5px] px-4 py-1 mt-3 mb-2 inline-block text-sm">
+        Easy
+      </p>
+      <h2 class="text-xl font-bold mb-1">Healing Valley</h2>
+      <p class="text-base text-gray-500">
+        The valley is named after the therapeutic qualities of the thermal springs in Peshkopi. The itinerary also includes information about guest houses in Rabdisht, which is one of Albania&#39;s 100 designated touristic villages.
+      </p>
+    </div>
+    <a download href="/maps/maps/healing_valley.pdf" title="Download" class="mt-12 h-[48px] min-w-[48px] bg-lime-500 rounded-full flex justify-center items-center hover:opacity-80 transition-opacity duration-300 cursor-pointer">
+      <svg viewBox="0 0 24 24" class="text-gray-100 h-6" astro-icon="material-symbols:south-rounded"><path fill="currentColor" d="M12 21.575q-.2 0-.375-.062T11.3 21.3l-5.6-5.6q-.275-.275-.275-.7t.275-.7q.3-.3.713-.287t.687.287l3.9 3.875V3q0-.425.288-.713T12 2q.425 0 .713.288T13 3v15.175l3.875-3.875q.3-.3.713-.3t.712.3q.275.3.275.713t-.275.687l-5.6 5.6q-.15.15-.325.213t-.375.062Z"/></svg>
+    </a>
+  </div>
+  
+
+</div><div class="bg-gray-300/30 backdrop-blur-md rounded-xl border-gray-300/30 border overflow-hidden  undefined">
+  
+  
+  <div class="relative">
+    <img class="h-52 md:h-56 object-cover w-full bg-gray-300" alt="Korabi mountain" width="400" height="300" src="/_astro/grama_lake_Z2rGsLs.avif" loading="lazy" decoding="async">
+    <div class="absolute top-0 left-0 h-full w-full p-6 bg-gradient-to-r from-gray-900/80 from-10% to-gray-900/20">
+      <div class="flex justify-between h-full">
+        <div class="flex flex-col gap-5 justify-center">
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="text-gray-100 h-8" astro-icon="material-symbols:width-rounded"><path fill="currentColor" d="m6.825 13 .875.925q.275.275.275.688T7.7 15.3q-.3.3-.713.3t-.687-.3l-2.6-2.575q-.15-.15-.225-.337T3.4 12q0-.2.075-.375T3.7 11.3l2.6-2.6q.275-.275.688-.275T7.7 8.7q.3.3.3.713t-.3.712L6.825 11h10.35l-.9-.9Q16 9.825 16 9.412t.3-.712q.275-.275.688-.275t.712.275l2.575 2.6q.15.15.225.325t.075.375q0 .2-.075.387t-.225.338l-2.6 2.6q-.275.275-.688.275t-.712-.3Q16 15.025 16 14.612t.275-.687l.9-.925H6.825Z"/></svg>
+            <p class="text-lg text-gray-100 font-bold">8.3 km</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="text-gray-100 h-8" astro-icon="material-symbols:altitude-outline-rounded"><path fill="currentColor" d="M19 12q-.425 0-.713-.288T18 11V7.8l-.925.9q-.275.275-.675.288t-.7-.288q-.275-.275-.275-.7t.275-.7l2.6-2.6q.3-.3.7-.3t.7.3l2.6 2.6q.3.3.3.7t-.3.7q-.3.3-.713.3t-.712-.3L20 7.825V11q0 .425-.288.713T19 12ZM3 22q-.625 0-.9-.55t.1-1.05l4-5.325q.3-.4.8-.4t.8.4L11.5 20H19l-5-6.65-2.5 3.3L10.25 15l2.95-3.925q.3-.4.8-.4t.8.4l7 9.325q.375.5.1 1.05T21 22H3Zm8.5-2Z"/></svg>
+            <p class="text-lg text-gray-100 font-bold">900 m</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="text-gray-100 h-8" astro-icon="material-symbols:timer-outline-rounded"><path fill="currentColor" d="M10 3q-.425 0-.713-.288T9 2q0-.425.288-.713T10 1h4q.425 0 .713.288T15 2q0 .425-.288.713T14 3h-4Zm2 11q.425 0 .713-.288T13 13V9q0-.425-.288-.713T12 8q-.425 0-.713.288T11 9v4q0 .425.288.713T12 14Zm0 8q-1.85 0-3.488-.713T5.65 19.35q-1.225-1.225-1.938-2.863T3 13q0-1.85.713-3.488T5.65 6.65q1.225-1.225 2.863-1.938T12 4q1.55 0 2.975.5t2.675 1.45l.7-.7q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7l-.7.7Q20 8.6 20.5 10.025T21 13q0 1.85-.713 3.488T18.35 19.35q-1.225 1.225-2.863 1.938T12 22Zm0-2q2.9 0 4.95-2.05T19 13q0-2.9-2.05-4.95T12 6Q9.1 6 7.05 8.05T5 13q0 2.9 2.05 4.95T12 20Zm0-7Z"/></svg>
+            <p class="text-lg text-gray-100 font-bold">4 hours</p>
+          </div>
+        </div>
+
+        <svg viewBox="0 0 24 24" class="text-gray-100 h-12 self-end" astro-icon="material-symbols:hiking-rounded"><title>Hiking</title><path fill="currentColor" d="M13.5 5.5q-.825 0-1.413-.588T11.5 3.5q0-.825.588-1.413T13.5 1.5q.825 0 1.413.588T15.5 3.5q0 .825-.588 1.413T13.5 5.5ZM8.3 23q-.55 0-.863-.375t-.187-.9L10.075 7.45q.15-.725.675-1.087T11.85 6q.575 0 1.063.25T13.7 7l1 1.6q.45.725 1.163 1.313t1.637.862V9.75q0-.325.213-.537T18.25 9q.325 0 .537.213T19 9.75v12.5q0 .325-.213.537T18.25 23q-.325 0-.537-.213t-.213-.537v-9.4q-1.2-.275-2.225-.875T13.5 10.5l-.6 3 1.475 1.4q.3.3.463.663t.162.787V22q0 .425-.288.713T14 23q-.425 0-.713-.288T13 22v-5l-2.1-2-1.625 7.25q-.075.325-.35.537T8.3 23Zm-.875-9.875 1.35-6.85-1.15-.225q-.8-.15-1.5.313t-.85 1.262l-.75 3.925q-.075.425.15.763t.625.412l2.125.4Z"/></svg>
+      </div>
+    </div>
+  </div>
+
+  
+  
+  <div class="p-6 pt-1 flex items-start justify-between gap-3">
+    <div>
+      <p class="bg-red-500 text-gray-100 font-bold rounded-[5px] px-4 py-1 mt-3 mb-2 inline-block text-sm">
+        Hard
+      </p>
+      <h2 class="text-xl font-bold mb-1">Grama Pasture</h2>
+      <p class="text-base text-gray-500">
+        Grama Pasture is situated near Sllatine Village, at an elevation of approximately 1800m above sea level. This picturesque pasture is renowned for its glacial lake, which boasts crystal clear water. Multiple trails offer access to the pasture, making it a popular destination for hikers and nature enthusiasts.
+      </p>
+    </div>
+    <a download href="/maps/maps/grama_pasture.pdf" title="Download" class="mt-12 h-[48px] min-w-[48px] bg-red-500 rounded-full flex justify-center items-center hover:opacity-80 transition-opacity duration-300 cursor-pointer">
+      <svg viewBox="0 0 24 24" class="text-gray-100 h-6" astro-icon="material-symbols:south-rounded"><path fill="currentColor" d="M12 21.575q-.2 0-.375-.062T11.3 21.3l-5.6-5.6q-.275-.275-.275-.7t.275-.7q.3-.3.713-.287t.687.287l3.9 3.875V3q0-.425.288-.713T12 2q.425 0 .713.288T13 3v15.175l3.875-3.875q.3-.3.713-.3t.712.3q.275.3.275.713t-.275.687l-5.6 5.6q-.15.15-.325.213t-.375.062Z"/></svg>
+    </a>
+  </div>
+  
+
+</div><div class="bg-gray-300/30 backdrop-blur-md rounded-xl border-gray-300/30 border overflow-hidden  undefined">
+  
+  
+  <div class="relative">
+    <img class="h-52 md:h-56 object-cover w-full bg-gray-300" alt="Velivar Mountains" width="400" height="300" src="/_astro/kercisht_Z5Yc.avif" loading="lazy" decoding="async">
+    <div class="absolute top-0 left-0 h-full w-full p-6 bg-gradient-to-r from-gray-900/80 from-10% to-gray-900/20">
+      <div class="flex justify-between h-full">
+        <div class="flex flex-col gap-5 justify-center">
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="text-gray-100 h-8" astro-icon="material-symbols:width-rounded"><path fill="currentColor" d="m6.825 13 .875.925q.275.275.275.688T7.7 15.3q-.3.3-.713.3t-.687-.3l-2.6-2.575q-.15-.15-.225-.337T3.4 12q0-.2.075-.375T3.7 11.3l2.6-2.6q.275-.275.688-.275T7.7 8.7q.3.3.3.713t-.3.712L6.825 11h10.35l-.9-.9Q16 9.825 16 9.412t.3-.712q.275-.275.688-.275t.712.275l2.575 2.6q.15.15.225.325t.075.375q0 .2-.075.387t-.225.338l-2.6 2.6q-.275.275-.688.275t-.712-.3Q16 15.025 16 14.612t.275-.687l.9-.925H6.825Z"/></svg>
+            <p class="text-lg text-gray-100 font-bold">15.7 km</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="text-gray-100 h-8" astro-icon="material-symbols:altitude-outline-rounded"><path fill="currentColor" d="M19 12q-.425 0-.713-.288T18 11V7.8l-.925.9q-.275.275-.675.288t-.7-.288q-.275-.275-.275-.7t.275-.7l2.6-2.6q.3-.3.7-.3t.7.3l2.6 2.6q.3.3.3.7t-.3.7q-.3.3-.713.3t-.712-.3L20 7.825V11q0 .425-.288.713T19 12ZM3 22q-.625 0-.9-.55t.1-1.05l4-5.325q.3-.4.8-.4t.8.4L11.5 20H19l-5-6.65-2.5 3.3L10.25 15l2.95-3.925q.3-.4.8-.4t.8.4l7 9.325q.375.5.1 1.05T21 22H3Zm8.5-2Z"/></svg>
+            <p class="text-lg text-gray-100 font-bold">2375 m</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="text-gray-100 h-8" astro-icon="material-symbols:timer-outline-rounded"><path fill="currentColor" d="M10 3q-.425 0-.713-.288T9 2q0-.425.288-.713T10 1h4q.425 0 .713.288T15 2q0 .425-.288.713T14 3h-4Zm2 11q.425 0 .713-.288T13 13V9q0-.425-.288-.713T12 8q-.425 0-.713.288T11 9v4q0 .425.288.713T12 14Zm0 8q-1.85 0-3.488-.713T5.65 19.35q-1.225-1.225-1.938-2.863T3 13q0-1.85.713-3.488T5.65 6.65q1.225-1.225 2.863-1.938T12 4q1.55 0 2.975.5t2.675 1.45l.7-.7q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7l-.7.7Q20 8.6 20.5 10.025T21 13q0 1.85-.713 3.488T18.35 19.35q-1.225 1.225-2.863 1.938T12 22Zm0-2q2.9 0 4.95-2.05T19 13q0-2.9-2.05-4.95T12 6Q9.1 6 7.05 8.05T5 13q0 2.9 2.05 4.95T12 20Zm0-7Z"/></svg>
+            <p class="text-lg text-gray-100 font-bold">7 hours</p>
+          </div>
+        </div>
+
+        <svg viewBox="0 0 24 24" class="text-gray-100 h-12 self-end" astro-icon="material-symbols:hiking-rounded"><title>Hiking</title><path fill="currentColor" d="M13.5 5.5q-.825 0-1.413-.588T11.5 3.5q0-.825.588-1.413T13.5 1.5q.825 0 1.413.588T15.5 3.5q0 .825-.588 1.413T13.5 5.5ZM8.3 23q-.55 0-.863-.375t-.187-.9L10.075 7.45q.15-.725.675-1.087T11.85 6q.575 0 1.063.25T13.7 7l1 1.6q.45.725 1.163 1.313t1.637.862V9.75q0-.325.213-.537T18.25 9q.325 0 .537.213T19 9.75v12.5q0 .325-.213.537T18.25 23q-.325 0-.537-.213t-.213-.537v-9.4q-1.2-.275-2.225-.875T13.5 10.5l-.6 3 1.475 1.4q.3.3.463.663t.162.787V22q0 .425-.288.713T14 23q-.425 0-.713-.288T13 22v-5l-2.1-2-1.625 7.25q-.075.325-.35.537T8.3 23Zm-.875-9.875 1.35-6.85-1.15-.225q-.8-.15-1.5.313t-.85 1.262l-.75 3.925q-.075.425.15.763t.625.412l2.125.4Z"/></svg>
+      </div>
+    </div>
+  </div>
+
+  
+  
+  <div class="p-6 pt-1 flex items-start justify-between gap-3">
+    <div>
+      <p class="bg-red-500 text-gray-100 font-bold rounded-[5px] px-4 py-1 mt-3 mb-2 inline-block text-sm">
+        Hard
+      </p>
+      <h2 class="text-xl font-bold mb-1">Kerçin-Velivar Mountains</h2>
+      <p class="text-base text-gray-500">
+        The highest point within the Kerçin-Velivar range is Mount Velivar, standing at 2375m high. Sights along the way include a 250-year-old maple tree and Eastern Orthodox churches of St. Demetrius and the Holy Church of Sotir.
+      </p>
+    </div>
+    <a download href="/maps/maps/kercin_velivar_mountains.pdf" title="Download" class="mt-12 h-[48px] min-w-[48px] bg-red-500 rounded-full flex justify-center items-center hover:opacity-80 transition-opacity duration-300 cursor-pointer">
+      <svg viewBox="0 0 24 24" class="text-gray-100 h-6" astro-icon="material-symbols:south-rounded"><path fill="currentColor" d="M12 21.575q-.2 0-.375-.062T11.3 21.3l-5.6-5.6q-.275-.275-.275-.7t.275-.7q.3-.3.713-.287t.687.287l3.9 3.875V3q0-.425.288-.713T12 2q.425 0 .713.288T13 3v15.175l3.875-3.875q.3-.3.713-.3t.712.3q.275.3.275.713t-.275.687l-5.6 5.6q-.15.15-.325.213t-.375.062Z"/></svg>
+    </a>
+  </div>
+  
+
+</div><div class="bg-gray-300/30 backdrop-blur-md rounded-xl border-gray-300/30 border overflow-hidden  undefined">
+  
+  
+  <div class="relative">
+    <img class="h-52 md:h-56 object-cover w-full bg-gray-300" alt="Lura Lakes" width="400" height="300" src="/_astro/luras_lakes_9FnU3.avif" loading="lazy" decoding="async">
+    <div class="absolute top-0 left-0 h-full w-full p-6 bg-gradient-to-r from-gray-900/80 from-10% to-gray-900/20">
+      <div class="flex justify-between h-full">
+        <div class="flex flex-col gap-5 justify-center">
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="text-gray-100 h-8" astro-icon="material-symbols:width-rounded"><path fill="currentColor" d="m6.825 13 .875.925q.275.275.275.688T7.7 15.3q-.3.3-.713.3t-.687-.3l-2.6-2.575q-.15-.15-.225-.337T3.4 12q0-.2.075-.375T3.7 11.3l2.6-2.6q.275-.275.688-.275T7.7 8.7q.3.3.3.713t-.3.712L6.825 11h10.35l-.9-.9Q16 9.825 16 9.412t.3-.712q.275-.275.688-.275t.712.275l2.575 2.6q.15.15.225.325t.075.375q0 .2-.075.387t-.225.338l-2.6 2.6q-.275.275-.688.275t-.712-.3Q16 15.025 16 14.612t.275-.687l.9-.925H6.825Z"/></svg>
+            <p class="text-lg text-gray-100 font-bold">21.5 km</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="text-gray-100 h-8" astro-icon="material-symbols:altitude-outline-rounded"><path fill="currentColor" d="M19 12q-.425 0-.713-.288T18 11V7.8l-.925.9q-.275.275-.675.288t-.7-.288q-.275-.275-.275-.7t.275-.7l2.6-2.6q.3-.3.7-.3t.7.3l2.6 2.6q.3.3.3.7t-.3.7q-.3.3-.713.3t-.712-.3L20 7.825V11q0 .425-.288.713T19 12ZM3 22q-.625 0-.9-.55t.1-1.05l4-5.325q.3-.4.8-.4t.8.4L11.5 20H19l-5-6.65-2.5 3.3L10.25 15l2.95-3.925q.3-.4.8-.4t.8.4l7 9.325q.375.5.1 1.05T21 22H3Zm8.5-2Z"/></svg>
+            <p class="text-lg text-gray-100 font-bold">1400 m</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="text-gray-100 h-8" astro-icon="material-symbols:timer-outline-rounded"><path fill="currentColor" d="M10 3q-.425 0-.713-.288T9 2q0-.425.288-.713T10 1h4q.425 0 .713.288T15 2q0 .425-.288.713T14 3h-4Zm2 11q.425 0 .713-.288T13 13V9q0-.425-.288-.713T12 8q-.425 0-.713.288T11 9v4q0 .425.288.713T12 14Zm0 8q-1.85 0-3.488-.713T5.65 19.35q-1.225-1.225-1.938-2.863T3 13q0-1.85.713-3.488T5.65 6.65q1.225-1.225 2.863-1.938T12 4q1.55 0 2.975.5t2.675 1.45l.7-.7q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7l-.7.7Q20 8.6 20.5 10.025T21 13q0 1.85-.713 3.488T18.35 19.35q-1.225 1.225-2.863 1.938T12 22Zm0-2q2.9 0 4.95-2.05T19 13q0-2.9-2.05-4.95T12 6Q9.1 6 7.05 8.05T5 13q0 2.9 2.05 4.95T12 20Zm0-7Z"/></svg>
+            <p class="text-lg text-gray-100 font-bold">6 hours</p>
+          </div>
+        </div>
+
+        <svg viewBox="0 0 24 24" class="text-gray-100 h-12 self-end" astro-icon="material-symbols:hiking-rounded"><title>Hiking</title><path fill="currentColor" d="M13.5 5.5q-.825 0-1.413-.588T11.5 3.5q0-.825.588-1.413T13.5 1.5q.825 0 1.413.588T15.5 3.5q0 .825-.588 1.413T13.5 5.5ZM8.3 23q-.55 0-.863-.375t-.187-.9L10.075 7.45q.15-.725.675-1.087T11.85 6q.575 0 1.063.25T13.7 7l1 1.6q.45.725 1.163 1.313t1.637.862V9.75q0-.325.213-.537T18.25 9q.325 0 .537.213T19 9.75v12.5q0 .325-.213.537T18.25 23q-.325 0-.537-.213t-.213-.537v-9.4q-1.2-.275-2.225-.875T13.5 10.5l-.6 3 1.475 1.4q.3.3.463.663t.162.787V22q0 .425-.288.713T14 23q-.425 0-.713-.288T13 22v-5l-2.1-2-1.625 7.25q-.075.325-.35.537T8.3 23Zm-.875-9.875 1.35-6.85-1.15-.225q-.8-.15-1.5.313t-.85 1.262l-.75 3.925q-.075.425.15.763t.625.412l2.125.4Z"/></svg>
+      </div>
+    </div>
+  </div>
+
+  
+  
+  <div class="p-6 pt-1 flex items-start justify-between gap-3">
+    <div>
+      <p class="bg-orange-500 text-gray-100 font-bold rounded-[5px] px-4 py-1 mt-3 mb-2 inline-block text-sm">
+        Medium
+      </p>
+      <h2 class="text-xl font-bold mb-1">Seta-Lura Lakes</h2>
+      <p class="text-base text-gray-500">
+        The 17 glacial lakes, 7 in Lura National Park and 10 in Kacni, are part of the Seta-Lura Lakes network. The park is also home to the Balkan pine, a protected species native only to the Western Balkans
+      </p>
+    </div>
+    <a download href="/maps/maps/seta_lura_lakes.pdf" title="Download" class="mt-12 h-[48px] min-w-[48px] bg-orange-500 rounded-full flex justify-center items-center hover:opacity-80 transition-opacity duration-300 cursor-pointer">
+      <svg viewBox="0 0 24 24" class="text-gray-100 h-6" astro-icon="material-symbols:south-rounded"><path fill="currentColor" d="M12 21.575q-.2 0-.375-.062T11.3 21.3l-5.6-5.6q-.275-.275-.275-.7t.275-.7q.3-.3.713-.287t.687.287l3.9 3.875V3q0-.425.288-.713T12 2q.425 0 .713.288T13 3v15.175l3.875-3.875q.3-.3.713-.3t.712.3q.275.3.275.713t-.275.687l-5.6 5.6q-.15.15-.325.213t-.375.062Z"/></svg>
+    </a>
+  </div>
+  
+
+</div><div class="bg-gray-300/30 backdrop-blur-md rounded-xl border-gray-300/30 border overflow-hidden  undefined">
+  
+  
+  <div class="relative">
+    <img class="h-52 md:h-56 object-cover w-full bg-gray-300" alt="Mountain Biking" width="400" height="300" src="/_astro/mountain_biking_2advQw.avif" loading="lazy" decoding="async">
+    <div class="absolute top-0 left-0 h-full w-full p-6 bg-gradient-to-r from-gray-900/80 from-10% to-gray-900/20">
+      <div class="flex justify-between h-full">
+        <div class="flex flex-col gap-5 justify-center">
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="text-gray-100 h-8" astro-icon="material-symbols:width-rounded"><path fill="currentColor" d="m6.825 13 .875.925q.275.275.275.688T7.7 15.3q-.3.3-.713.3t-.687-.3l-2.6-2.575q-.15-.15-.225-.337T3.4 12q0-.2.075-.375T3.7 11.3l2.6-2.6q.275-.275.688-.275T7.7 8.7q.3.3.3.713t-.3.712L6.825 11h10.35l-.9-.9Q16 9.825 16 9.412t.3-.712q.275-.275.688-.275t.712.275l2.575 2.6q.15.15.225.325t.075.375q0 .2-.075.387t-.225.338l-2.6 2.6q-.275.275-.688.275t-.712-.3Q16 15.025 16 14.612t.275-.687l.9-.925H6.825Z"/></svg>
+            <p class="text-lg text-gray-100 font-bold">21.5 km</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="text-gray-100 h-8" astro-icon="material-symbols:altitude-outline-rounded"><path fill="currentColor" d="M19 12q-.425 0-.713-.288T18 11V7.8l-.925.9q-.275.275-.675.288t-.7-.288q-.275-.275-.275-.7t.275-.7l2.6-2.6q.3-.3.7-.3t.7.3l2.6 2.6q.3.3.3.7t-.3.7q-.3.3-.713.3t-.712-.3L20 7.825V11q0 .425-.288.713T19 12ZM3 22q-.625 0-.9-.55t.1-1.05l4-5.325q.3-.4.8-.4t.8.4L11.5 20H19l-5-6.65-2.5 3.3L10.25 15l2.95-3.925q.3-.4.8-.4t.8.4l7 9.325q.375.5.1 1.05T21 22H3Zm8.5-2Z"/></svg>
+            <p class="text-lg text-gray-100 font-bold">1400 m</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="text-gray-100 h-8" astro-icon="material-symbols:timer-outline-rounded"><path fill="currentColor" d="M10 3q-.425 0-.713-.288T9 2q0-.425.288-.713T10 1h4q.425 0 .713.288T15 2q0 .425-.288.713T14 3h-4Zm2 11q.425 0 .713-.288T13 13V9q0-.425-.288-.713T12 8q-.425 0-.713.288T11 9v4q0 .425.288.713T12 14Zm0 8q-1.85 0-3.488-.713T5.65 19.35q-1.225-1.225-1.938-2.863T3 13q0-1.85.713-3.488T5.65 6.65q1.225-1.225 2.863-1.938T12 4q1.55 0 2.975.5t2.675 1.45l.7-.7q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7l-.7.7Q20 8.6 20.5 10.025T21 13q0 1.85-.713 3.488T18.35 19.35q-1.225 1.225-2.863 1.938T12 22Zm0-2q2.9 0 4.95-2.05T19 13q0-2.9-2.05-4.95T12 6Q9.1 6 7.05 8.05T5 13q0 2.9 2.05 4.95T12 20Zm0-7Z"/></svg>
+            <p class="text-lg text-gray-100 font-bold">6 hours</p>
+          </div>
+        </div>
+
+        <svg viewBox="0 0 24 24" class="text-gray-100 h-12 self-end" astro-icon="material-symbols:directions-bike-rounded"><title>Biking</title><path fill="currentColor" d="M15.5 5.5q-.825 0-1.413-.588T13.5 3.5q0-.825.588-1.413T15.5 1.5q.825 0 1.413.588T17.5 3.5q0 .825-.588 1.413T15.5 5.5ZM12 19q-.425 0-.713-.288T11 18v-4l-3.2-2.8q-.35-.3-.475-.625T7.2 9.8q0-.45.138-.763T7.8 8.4l2.8-2.8q.325-.325.688-.463T12.1 5q.45 0 .813.138t.687.462l1.9 1.9q.55.55 1.213.925t1.487.5q.4.075.65.35t.25.65q0 .475-.325.763t-.75.237q-1.2-.175-2.212-.7T14 8.9l-.8-.8-2.4 2.4 1.65 1.725q.275.275.413.638T13 13.6V18q0 .425-.288.713T12 19Zm-7 3q-2.125 0-3.563-1.438T0 17q0-2.125 1.438-3.563T5 12q2.125 0 3.563 1.438T10 17q0 2.125-1.438 3.563T5 22Zm0-1.5q1.425 0 2.463-1.038T8.5 17q0-1.425-1.038-2.463T5 13.5q-1.425 0-2.463 1.038T1.5 17q0 1.425 1.038 2.463T5 20.5ZM19 22q-2.125 0-3.563-1.438T14 17q0-2.125 1.438-3.563T19 12q2.125 0 3.563 1.438T24 17q0 2.125-1.438 3.563T19 22Zm0-1.5q1.425 0 2.463-1.038T22.5 17q0-1.425-1.038-2.463T19 13.5q-1.425 0-2.463 1.038T15.5 17q0 1.425 1.038 2.463T19 20.5Z"/></svg>
+      </div>
+    </div>
+  </div>
+
+  
+  
+  <div class="p-6 pt-1 flex items-start justify-between gap-3">
+    <div>
+      <p class="bg-red-500 text-gray-100 font-bold rounded-[5px] px-4 py-1 mt-3 mb-2 inline-block text-sm">
+        Hard
+      </p>
+      <h2 class="text-xl font-bold mb-1">Mavrovo-Rostuse &amp; Diber Mountain Biking</h2>
+      <p class="text-base text-gray-500">
+        Discover a network of thrilling mountain biking trails and scenic hiking routes in the the cross-border mountain biking region between North Macedonia and Albania with our tourist map! Each trail is accompanied by detailed descriptions and convenient QR codes for easy access to additional information.
+      </p>
+    </div>
+    <a download href="/maps/maps/mavrovo_biking.pdf" title="Download" class="mt-12 h-[48px] min-w-[48px] bg-red-500 rounded-full flex justify-center items-center hover:opacity-80 transition-opacity duration-300 cursor-pointer">
+      <svg viewBox="0 0 24 24" class="text-gray-100 h-6" astro-icon="material-symbols:south-rounded"><path fill="currentColor" d="M12 21.575q-.2 0-.375-.062T11.3 21.3l-5.6-5.6q-.275-.275-.275-.7t.275-.7q.3-.3.713-.287t.687.287l3.9 3.875V3q0-.425.288-.713T12 2q.425 0 .713.288T13 3v15.175l3.875-3.875q.3-.3.713-.3t.712.3q.275.3.275.713t-.275.687l-5.6 5.6q-.15.15-.325.213t-.375.062Z"/></svg>
+    </a>
+  </div>
+  
+
+</div><div class="bg-gray-300/30 backdrop-blur-md rounded-xl border-gray-300/30 border overflow-hidden  undefined">
+  
+  
+  <div class="relative">
+    <img class="h-52 md:h-56 object-cover w-full bg-gray-300" alt="Rafting" width="400" height="300" src="/_astro/rafting_Zyn2pL.avif" loading="lazy" decoding="async">
+    <div class="absolute top-0 left-0 h-full w-full p-6 bg-gradient-to-r from-gray-900/80 from-10% to-gray-900/20">
+      <div class="flex justify-between h-full">
+        <div class="flex flex-col gap-5 justify-center">
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="text-gray-100 h-8" astro-icon="material-symbols:width-rounded"><path fill="currentColor" d="m6.825 13 .875.925q.275.275.275.688T7.7 15.3q-.3.3-.713.3t-.687-.3l-2.6-2.575q-.15-.15-.225-.337T3.4 12q0-.2.075-.375T3.7 11.3l2.6-2.6q.275-.275.688-.275T7.7 8.7q.3.3.3.713t-.3.712L6.825 11h10.35l-.9-.9Q16 9.825 16 9.412t.3-.712q.275-.275.688-.275t.712.275l2.575 2.6q.15.15.225.325t.075.375q0 .2-.075.387t-.225.338l-2.6 2.6q-.275.275-.688.275t-.712-.3Q16 15.025 16 14.612t.275-.687l.9-.925H6.825Z"/></svg>
+            <p class="text-lg text-gray-100 font-bold">8.3 km</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="text-gray-100 h-8" astro-icon="material-symbols:altitude-outline-rounded"><path fill="currentColor" d="M19 12q-.425 0-.713-.288T18 11V7.8l-.925.9q-.275.275-.675.288t-.7-.288q-.275-.275-.275-.7t.275-.7l2.6-2.6q.3-.3.7-.3t.7.3l2.6 2.6q.3.3.3.7t-.3.7q-.3.3-.713.3t-.712-.3L20 7.825V11q0 .425-.288.713T19 12ZM3 22q-.625 0-.9-.55t.1-1.05l4-5.325q.3-.4.8-.4t.8.4L11.5 20H19l-5-6.65-2.5 3.3L10.25 15l2.95-3.925q.3-.4.8-.4t.8.4l7 9.325q.375.5.1 1.05T21 22H3Zm8.5-2Z"/></svg>
+            <p class="text-lg text-gray-100 font-bold">0 m</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg viewBox="0 0 24 24" class="text-gray-100 h-8" astro-icon="material-symbols:timer-outline-rounded"><path fill="currentColor" d="M10 3q-.425 0-.713-.288T9 2q0-.425.288-.713T10 1h4q.425 0 .713.288T15 2q0 .425-.288.713T14 3h-4Zm2 11q.425 0 .713-.288T13 13V9q0-.425-.288-.713T12 8q-.425 0-.713.288T11 9v4q0 .425.288.713T12 14Zm0 8q-1.85 0-3.488-.713T5.65 19.35q-1.225-1.225-1.938-2.863T3 13q0-1.85.713-3.488T5.65 6.65q1.225-1.225 2.863-1.938T12 4q1.55 0 2.975.5t2.675 1.45l.7-.7q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7l-.7.7Q20 8.6 20.5 10.025T21 13q0 1.85-.713 3.488T18.35 19.35q-1.225 1.225-2.863 1.938T12 22Zm0-2q2.9 0 4.95-2.05T19 13q0-2.9-2.05-4.95T12 6Q9.1 6 7.05 8.05T5 13q0 2.9 2.05 4.95T12 20Zm0-7Z"/></svg>
+            <p class="text-lg text-gray-100 font-bold">2 hours</p>
+          </div>
+        </div>
+
+        <svg viewBox="0 0 24 24" class="text-gray-100 h-12 self-end" astro-icon="material-symbols:kayaking-rounded"><title>Rafting</title><path fill="currentColor" d="M3 23q-.425 0-.713-.288T2 22q0-.425.288-.713T3 21q.65 0 1.288-.163t1.212-.512q.225-.125.5-.125t.5.125q.575.35 1.213.513T9 21q.65 0 1.288-.163t1.212-.512q.225-.125.513-.125t.487.125q.575.35 1.213.513T15 21q.65 0 1.288-.163t1.212-.512q.2-.125.5-.125t.5.125q.575.35 1.213.513T21 21q.425 0 .713.288T22 22q0 .425-.288.713T21 23q-.775 0-1.525-.188T18 22.25q-.725.375-1.475.563T15 23q-.775 0-1.525-.188T12 22.25q-.725.375-1.475.563T9 23q-.775 0-1.525-.188T6 22.25q-.725.375-1.475.563T3 23Zm9-13.5q-.825 0-1.413-.588T10 7.5q0-.825.588-1.413T12 5.5q.825 0 1.413.588T14 7.5q0 .825-.588 1.413T12 9.5ZM9 19q-.675 0-1.275-.25t-1.1-.65q-.275-.225-.638-.225t-.637.225q-.325.25-.675.45t-.75.325l-.7-.2q-.35-.1-.7-.225-.725-.225-.725-.95t.725-.95q1.1-.35 2.287-.638t2.313-.487l1.35-4.175q.275-.85 1.038-1.125t1.437.075l2.55 1.3 2.825-1.5 1.65-3.7-.35-.95q-.05-.2-.05-.375t.075-.375l.75-1.675q.175-.4.562-.55t.763.025l1.35.625q.4.175.55.563t-.025.762l-.75 1.675q-.075.2-.225.325t-.35.2l-.925.35-3.7 8.35q1.475.175 2.987.525t2.838.775q.7.225.7.95t-.7.95q-.35.125-.713.225t-.687.2q-.4-.125-.762-.313t-.688-.462q-.275-.225-.625-.225t-.625.225q-.5.4-1.1.65T15 19q-.675 0-1.275-.25t-1.1-.65q-.275-.225-.625-.225t-.625.225q-.5.4-1.1.65T9 19Zm5.075-3.925.95-2.125-1.525.8-1.75-.9-.7 2.15H12q.525 0 1.05.013t1.025.062Z"/></svg>
+      </div>
+    </div>
+  </div>
+
+  
+  
+  <div class="p-6 pt-1 flex items-start justify-between gap-3">
+    <div>
+      <p class="bg-lime-500 text-gray-100 font-bold rounded-[5px] px-4 py-1 mt-3 mb-2 inline-block text-sm">
+        Easy
+      </p>
+      <h2 class="text-xl font-bold mb-1">Black Drin River Rafting</h2>
+      <p class="text-base text-gray-500">
+        Black Drin River rafting guide map.
+      </p>
+    </div>
+    <a download href="/maps/maps/rafting_map.pdf" title="Download" class="mt-12 h-[48px] min-w-[48px] bg-lime-500 rounded-full flex justify-center items-center hover:opacity-80 transition-opacity duration-300 cursor-pointer">
+      <svg viewBox="0 0 24 24" class="text-gray-100 h-6" astro-icon="material-symbols:south-rounded"><path fill="currentColor" d="M12 21.575q-.2 0-.375-.062T11.3 21.3l-5.6-5.6q-.275-.275-.275-.7t.275-.7q.3-.3.713-.287t.687.287l3.9 3.875V3q0-.425.288-.713T12 2q.425 0 .713.288T13 3v15.175l3.875-3.875q.3-.3.713-.3t.712.3q.275.3.275.713t-.275.687l-5.6 5.6q-.15.15-.325.213t-.375.062Z"/></svg>
+    </a>
+  </div>
+  
+
+</div>
+            </div>
+          </div>
+
+          <!-- Guides  -->
+          <div class="mt-12">
+            <header class="flex justify-center gap-2 flex-col my-6 undefined">
+  <div class="flex items-center gap-2">
+    <svg viewBox="0 0 24 24" class="h-10 text-gray-100 text-inherit" astro-icon="material-symbols:receipt-long-outline-rounded"><path fill="currentColor" d="M6 22q-1.25 0-2.125-.875T3 19v-2q0-.425.288-.713T4 16h2V2.6q0-.175.15-.238t.275.063l.725.725q.15.15.35.15t.35-.15l.8-.8Q8.8 2.2 9 2.2t.35.15l.8.8q.15.15.35.15t.35-.15l.8-.8q.15-.15.35-.15t.35.15l.8.8q.15.15.35.15t.35-.15l.8-.8q.15-.15.35-.15t.35.15l.8.8q.15.15.35.15t.35-.15l.8-.8q.15-.15.35-.15t.35.15l.8.8q.15.15.35.15t.35-.15l.725-.725q.125-.125.275-.063T21 2.6V19q0 1.25-.875 2.125T18 22H6Zm12-2q.425 0 .713-.288T19 19V5H8v11h8q.425 0 .713.288T17 17v2q0 .425.288.713T18 20ZM10 7h4q.425 0 .713.288T15 8q0 .425-.288.713T14 9h-4q-.425 0-.713-.288T9 8q0-.425.288-.713T10 7Zm0 3h4q.425 0 .713.288T15 11q0 .425-.288.713T14 12h-4q-.425 0-.713-.288T9 11q0-.425.288-.713T10 10Zm7-1q-.425 0-.713-.288T16 8q0-.425.288-.713T17 7q.425 0 .713.288T18 8q0 .425-.288.713T17 9Zm0 3q-.425 0-.713-.288T16 11q0-.425.288-.713T17 10q.425 0 .713.288T18 11q0 .425-.288.713T17 12ZM6 20h9v-2H5v1q0 .425.288.713T6 20Zm-1 0v-2 2Z"/></svg>
+    <h2 class="text-2xl font-bold">Guides</h2>
+  </div>
+  <div class="h-[2px] bg-slate-400/30 max-w-3xl rounded-full"></div>
+</header>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div class="bg-gray-300/30 backdrop-blur-md rounded-xl border-gray-300/30 border overflow-hidden  undefined">
+  
+    
+    <div class="relative">
+      <img class="h-52 md:h-56 object-cover w-full bg-gray-300" alt="English" width="400" height="300" src="/_astro/english_card_ZrJUH4.avif" loading="lazy" decoding="async">
+    </div>
+
+    
+
+    <div class="p-6 pt-1 flex items-start justify-between gap-3">
+      <div>
+        <h2 class="text-xl font-bold mb-1">Visit Diber Travel Guide - English</h2>
+        <p class="text-base text-gray-500">
+          The official tourist guide of Diber in English. This brochure was prepared by the Albanian Local Capacity Development Foundation in a collaboration between USAID and the Embassy of Sweden.
+        </p>
+      </div>
+      <a download href="/maps/guides/visit_diber_english.pdf" title="Download" class="mt-12 h-[48px] min-w-[48px] bg-gray-500 rounded-full flex justify-center items-center hover:opacity-80 transition-opacity duration-300 cursor-pointer">
+        <svg viewBox="0 0 24 24" class="text-gray-100 h-6" astro-icon="material-symbols:south-rounded"><path fill="currentColor" d="M12 21.575q-.2 0-.375-.062T11.3 21.3l-5.6-5.6q-.275-.275-.275-.7t.275-.7q.3-.3.713-.287t.687.287l3.9 3.875V3q0-.425.288-.713T12 2q.425 0 .713.288T13 3v15.175l3.875-3.875q.3-.3.713-.3t.712.3q.275.3.275.713t-.275.687l-5.6 5.6q-.15.15-.325.213t-.375.062Z"/></svg>
+      </a>
+    </div>
+  
+</div><div class="bg-gray-300/30 backdrop-blur-md rounded-xl border-gray-300/30 border overflow-hidden  undefined">
+  
+    
+    <div class="relative">
+      <img class="h-52 md:h-56 object-cover w-full bg-gray-300" alt="Albanian" width="400" height="300" src="/_astro/shqip_card_Z1ohHI1.avif" loading="lazy" decoding="async">
+    </div>
+
+    
+
+    <div class="p-6 pt-1 flex items-start justify-between gap-3">
+      <div>
+        <h2 class="text-xl font-bold mb-1">Vizitoni Diber Travel Guide - Shqip</h2>
+        <p class="text-base text-gray-500">
+          Guida zyrtare turistike e Dibrës në shqip. Kjo broshurë është përgatitur nga Nevila Manga dhe stafi i Qendrës së Turizmit Dibër.
+        </p>
+      </div>
+      <a download href="/maps/guides/black_lake.pdf" title="Download" class="mt-12 h-[48px] min-w-[48px] bg-gray-500 rounded-full flex justify-center items-center hover:opacity-80 transition-opacity duration-300 cursor-pointer">
+        <svg viewBox="0 0 24 24" class="text-gray-100 h-6" astro-icon="material-symbols:south-rounded"><path fill="currentColor" d="M12 21.575q-.2 0-.375-.062T11.3 21.3l-5.6-5.6q-.275-.275-.275-.7t.275-.7q.3-.3.713-.287t.687.287l3.9 3.875V3q0-.425.288-.713T12 2q.425 0 .713.288T13 3v15.175l3.875-3.875q.3-.3.713-.3t.712.3q.275.3.275.713t-.275.687l-5.6 5.6q-.15.15-.325.213t-.375.062Z"/></svg>
+      </a>
+    </div>
+  
+</div><div class="bg-gray-300/30 backdrop-blur-md rounded-xl border-gray-300/30 border overflow-hidden  undefined">
+  
+    
+    <div class="relative">
+      <img class="h-52 md:h-56 object-cover w-full bg-gray-300" alt="Italian" width="400" height="300" src="/_astro/italian_card_Z1t2lDb.avif" loading="lazy" decoding="async">
+    </div>
+
+    
+
+    <div class="p-6 pt-1 flex items-start justify-between gap-3">
+      <div>
+        <h2 class="text-xl font-bold mb-1">Visita Diber Travel Guide - Italiano</h2>
+        <p class="text-base text-gray-500">
+          La guida turistica ufficiale di Diber in italiano. Questa brochure è stata preparata da Ilaria Ghaleb.
+        </p>
+      </div>
+      <a download href="/maps/guides/black_lake.pdf" title="Download" class="mt-12 h-[48px] min-w-[48px] bg-gray-500 rounded-full flex justify-center items-center hover:opacity-80 transition-opacity duration-300 cursor-pointer">
+        <svg viewBox="0 0 24 24" class="text-gray-100 h-6" astro-icon="material-symbols:south-rounded"><path fill="currentColor" d="M12 21.575q-.2 0-.375-.062T11.3 21.3l-5.6-5.6q-.275-.275-.275-.7t.275-.7q.3-.3.713-.287t.687.287l3.9 3.875V3q0-.425.288-.713T12 2q.425 0 .713.288T13 3v15.175l3.875-3.875q.3-.3.713-.3t.712.3q.275.3.275.713t-.275.687l-5.6 5.6q-.15.15-.325.213t-.375.062Z"/></svg>
+      </a>
+    </div>
+  
+</div><div class="bg-gray-300/30 backdrop-blur-md rounded-xl border-gray-300/30 border overflow-hidden  undefined">
+  
+    
+    <div class="relative">
+      <img class="h-52 md:h-56 object-cover w-full bg-gray-300" alt="German" width="400" height="300" src="/_astro/nature_1_q6gfo.avif" loading="lazy" decoding="async">
+    </div>
+
+    
+
+    <div class="p-6 pt-1 flex items-start justify-between gap-3">
+      <div>
+        <h2 class="text-xl font-bold mb-1">Besuchen Sie Diber Travel Guide - Deutsch</h2>
+        <p class="text-base text-gray-500">
+          Der offizielle Reiseführer von Diber auf Deutsch. Diese Broschüre wurde von Ilaria Ghaleb mit sprachlicher Unterstützung von Louis Fischer und Enela Marku erstellt.
+        </p>
+      </div>
+      <a download href="/maps/guides/black_lake.pdf" title="Download" class="mt-12 h-[48px] min-w-[48px] bg-gray-500 rounded-full flex justify-center items-center hover:opacity-80 transition-opacity duration-300 cursor-pointer">
+        <svg viewBox="0 0 24 24" class="text-gray-100 h-6" astro-icon="material-symbols:south-rounded"><path fill="currentColor" d="M12 21.575q-.2 0-.375-.062T11.3 21.3l-5.6-5.6q-.275-.275-.275-.7t.275-.7q.3-.3.713-.287t.687.287l3.9 3.875V3q0-.425.288-.713T12 2q.425 0 .713.288T13 3v15.175l3.875-3.875q.3-.3.713-.3t.712.3q.275.3.275.713t-.275.687l-5.6 5.6q-.15.15-.325.213t-.375.062Z"/></svg>
+      </a>
+    </div>
+  
+</div><div class="bg-gray-300/30 backdrop-blur-md rounded-xl border-gray-300/30 border overflow-hidden  undefined">
+  
+    
+    <div class="relative">
+      <img class="h-52 md:h-56 object-cover w-full bg-gray-300" alt="Spanish" width="400" height="300" src="/_astro/nature_1_q6gfo.avif" loading="lazy" decoding="async">
+    </div>
+
+    
+
+    <div class="p-6 pt-1 flex items-start justify-between gap-3">
+      <div>
+        <h2 class="text-xl font-bold mb-1">Visite Diber Travel Guide - Español</h2>
+        <p class="text-base text-gray-500">
+          La guía de viaje oficial de Diber en español. Este folleto fue creado por Ilaria Ghaleb con el apoyo lingüístico de Lourdes Gutiérrez Toranzo.
+        </p>
+      </div>
+      <a download href="/maps/guides/black_lake.pdf" title="Download" class="mt-12 h-[48px] min-w-[48px] bg-gray-500 rounded-full flex justify-center items-center hover:opacity-80 transition-opacity duration-300 cursor-pointer">
+        <svg viewBox="0 0 24 24" class="text-gray-100 h-6" astro-icon="material-symbols:south-rounded"><path fill="currentColor" d="M12 21.575q-.2 0-.375-.062T11.3 21.3l-5.6-5.6q-.275-.275-.275-.7t.275-.7q.3-.3.713-.287t.687.287l3.9 3.875V3q0-.425.288-.713T12 2q.425 0 .713.288T13 3v15.175l3.875-3.875q.3-.3.713-.3t.712.3q.275.3.275.713t-.275.687l-5.6 5.6q-.15.15-.325.213t-.375.062Z"/></svg>
+      </a>
+    </div>
+  
+</div><div class="bg-gray-300/30 backdrop-blur-md rounded-xl border-gray-300/30 border overflow-hidden  undefined">
+  
+    
+    <div class="relative">
+      <img class="h-52 md:h-56 object-cover w-full bg-gray-300" alt="Czech" width="400" height="300" src="/_astro/nature_1_q6gfo.avif" loading="lazy" decoding="async">
+    </div>
+
+    
+
+    <div class="p-6 pt-1 flex items-start justify-between gap-3">
+      <div>
+        <h2 class="text-xl font-bold mb-1">Visit Diber Travel Guide - Czech Čeština</h2>
+        <p class="text-base text-gray-500">
+          Oficiální cestovní průvodce Diber v češtině. Tuto brožuru vytvořila Ilaria Ghaleb s jazykovou podporou Pavliny Ohman.
+        </p>
+      </div>
+      <a download href="/maps/guides/black_lake.pdf" title="Download" class="mt-12 h-[48px] min-w-[48px] bg-gray-500 rounded-full flex justify-center items-center hover:opacity-80 transition-opacity duration-300 cursor-pointer">
+        <svg viewBox="0 0 24 24" class="text-gray-100 h-6" astro-icon="material-symbols:south-rounded"><path fill="currentColor" d="M12 21.575q-.2 0-.375-.062T11.3 21.3l-5.6-5.6q-.275-.275-.275-.7t.275-.7q.3-.3.713-.287t.687.287l3.9 3.875V3q0-.425.288-.713T12 2q.425 0 .713.288T13 3v15.175l3.875-3.875q.3-.3.713-.3t.712.3q.275.3.275.713t-.275.687l-5.6 5.6q-.15.15-.325.213t-.375.062Z"/></svg>
+      </a>
+    </div>
+  
+</div><div class="bg-gray-300/30 backdrop-blur-md rounded-xl border-gray-300/30 border overflow-hidden  undefined">
+  
+    
+    <div class="relative">
+      <img class="h-52 md:h-56 object-cover w-full bg-gray-300" alt="Macedonian" width="400" height="300" src="/_astro/nature_1_q6gfo.avif" loading="lazy" decoding="async">
+    </div>
+
+    
+
+    <div class="p-6 pt-1 flex items-start justify-between gap-3">
+      <div>
+        <h2 class="text-xl font-bold mb-1">Посетете го туристичкиот водич Дибер - македонски</h2>
+        <p class="text-base text-gray-500">
+          Официјален туристички водич на Дибер на македонски јазик. Оваа брошура е создадена од Иларија Галеб со лингвистичка поддршка од Моника Саздова.
+        </p>
+      </div>
+      <a download href="/maps/guides/black_lake.pdf" title="Download" class="mt-12 h-[48px] min-w-[48px] bg-gray-500 rounded-full flex justify-center items-center hover:opacity-80 transition-opacity duration-300 cursor-pointer">
+        <svg viewBox="0 0 24 24" class="text-gray-100 h-6" astro-icon="material-symbols:south-rounded"><path fill="currentColor" d="M12 21.575q-.2 0-.375-.062T11.3 21.3l-5.6-5.6q-.275-.275-.275-.7t.275-.7q.3-.3.713-.287t.687.287l3.9 3.875V3q0-.425.288-.713T12 2q.425 0 .713.288T13 3v15.175l3.875-3.875q.3-.3.713-.3t.712.3q.275.3.275.713t-.275.687l-5.6 5.6q-.15.15-.325.213t-.375.062Z"/></svg>
+      </a>
+    </div>
+  
+</div><div class="bg-gray-300/30 backdrop-blur-md rounded-xl border-gray-300/30 border overflow-hidden  undefined">
+  
+    
+    <div class="relative">
+      <img class="h-52 md:h-56 object-cover w-full bg-gray-300" alt="Montenegrin" width="400" height="300" src="/_astro/nature_1_q6gfo.avif" loading="lazy" decoding="async">
+    </div>
+
+    
+
+    <div class="p-6 pt-1 flex items-start justify-between gap-3">
+      <div>
+        <h2 class="text-xl font-bold mb-1">Посетите туристички водич Дибер - Црногорац</h2>
+        <p class="text-base text-gray-500">
+          Званични туристички водич Дибера на црногорском језику. Ову брошуру је припремила Илариа Гхалеб уз лингвистичку подршку Александре Гикала.
+        </p>
+      </div>
+      <a download href="/maps/guides/black_lake.pdf" title="Download" class="mt-12 h-[48px] min-w-[48px] bg-gray-500 rounded-full flex justify-center items-center hover:opacity-80 transition-opacity duration-300 cursor-pointer">
+        <svg viewBox="0 0 24 24" class="text-gray-100 h-6" astro-icon="material-symbols:south-rounded"><path fill="currentColor" d="M12 21.575q-.2 0-.375-.062T11.3 21.3l-5.6-5.6q-.275-.275-.275-.7t.275-.7q.3-.3.713-.287t.687.287l3.9 3.875V3q0-.425.288-.713T12 2q.425 0 .713.288T13 3v15.175l3.875-3.875q.3-.3.713-.3t.712.3q.275.3.275.713t-.275.687l-5.6 5.6q-.15.15-.325.213t-.375.062Z"/></svg>
+      </a>
+    </div>
+  
+</div><div class="bg-gray-300/30 backdrop-blur-md rounded-xl border-gray-300/30 border overflow-hidden  undefined">
+  
+    
+    <div class="relative">
+      <img class="h-52 md:h-56 object-cover w-full bg-gray-300" alt="Polish" width="400" height="300" src="/_astro/nature_1_q6gfo.avif" loading="lazy" decoding="async">
+    </div>
+
+    
+
+    <div class="p-6 pt-1 flex items-start justify-between gap-3">
+      <div>
+        <h2 class="text-xl font-bold mb-1">Odwiedź przewodnik turystyczny Diber - Polski</h2>
+        <p class="text-base text-gray-500">
+          Oficjalny przewodnik turystyczny Dibra w języku albańskim. Niniejsza broszura została przygotowana przez Ilarię Ghaleb przy wsparciu językowym Marii Topolskiej.
+        </p>
+      </div>
+      <a download href="/maps/guides/black_lake.pdf" title="Download" class="mt-12 h-[48px] min-w-[48px] bg-gray-500 rounded-full flex justify-center items-center hover:opacity-80 transition-opacity duration-300 cursor-pointer">
+        <svg viewBox="0 0 24 24" class="text-gray-100 h-6" astro-icon="material-symbols:south-rounded"><path fill="currentColor" d="M12 21.575q-.2 0-.375-.062T11.3 21.3l-5.6-5.6q-.275-.275-.275-.7t.275-.7q.3-.3.713-.287t.687.287l3.9 3.875V3q0-.425.288-.713T12 2q.425 0 .713.288T13 3v15.175l3.875-3.875q.3-.3.713-.3t.712.3q.275.3.275.713t-.275.687l-5.6 5.6q-.15.15-.325.213t-.375.062Z"/></svg>
+      </a>
+    </div>
+  
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  </main>
+  <footer class="mt-auto border-gray-300/30 border-t py-6 w-full">
+  <div class="container mx-auto px-6 max-w-7xl w-full flex flex-col items-center">
+    <h2 class="text-xl md:text-2xl xl:text-3xl font-bold">Visit Diber</h2>
+    <div class="flex items-center">
+      <a target="_blank" href="https://www.facebook.com/VisitDiber/"><img width="48px" height="48px" src="/facebook.svg" alt="Facebook"></a>
+      <a target="_blank" href="https://www.instagram.com/visitdiber/?hl=en"><img width="48px" height="48px" src="/instagram.svg" alt="Instagram"></a>
+      <a target="_blank" href="https://www.youtube.com/@visit.diber3753"><img class="ml-2" width="42px" height="42px" src="/youtube.svg" alt="YouTube"></a>
+    </div>
+    <p class="font-light text-gray-500 text-sm">
+      © 2023 Visit Diber. All rights reserved.
+    </p>
+    <a href="mailto:visitdiber@gmail.com" class="font-light text-gray-500 text-sm mt-1 hover:underline">visitdiber@gmail.com</a>
+  </div>
+</footer>
+</body>
+
+<script type="text/javascript">
+// Descriptions
+const english =
+  'The official tourist guide of Diber in English. This brochure was prepared by the Albanian Local Capacity Development Foundation in a collaboration between USAID and the Embassy of Sweden.'
+const albanian =
+  'Guida zyrtare turistike e Dibrës në shqip. Kjo broshurë është përgatitur nga Nevila Manga dhe stafi i Qendrës së Turizmit Dibër.'
+const italian =
+  'La guida turistica ufficiale di Diber in italiano. Questa brochure è stata preparata da Ilaria Ghaleb.'
+const german =
+  'Der offizielle Reiseführer von Diber auf Deutsch. Diese Broschüre wurde von Ilaria Ghaleb mit sprachlicher Unterstützung von Louis Fischer und Enela Marku erstellt.'
+const spanish =
+  'La guía de viaje oficial de Diber en español. Este folleto fue creado por Ilaria Ghaleb con el apoyo lingüístico de Lourdes Gutiérrez Toranzo.'
+const czech =
+  'Oficiální cestovní průvodce Diber v češtině. Tuto brožuru vytvořila Ilaria Ghaleb s jazykovou podporou Pavliny Ohman.'
+const macedonian =
+  'Официјален туристички водич на Дибер на македонски јазик. Оваа брошура е создадена од Иларија Галеб со лингвистичка поддршка од Моника Саздова.'
+const montenegrin =
+  'Званични туристички водич Дибера на црногорском језику. Ову брошуру је припремила Илариа Гхалеб уз лингвистичку подршку Александре Гикала.'
+const polish =
+  'Oficjalny przewodnik turystyczny Dibra w języku albańskim. Niniejsza broszura została przygotowana przez Ilarię Ghaleb przy wsparciu językowym Marii Topolskiej.'
+
+const description = document.querySelector('#description')
+
+const language = document.querySelector('#language')
+const download = document.querySelector('#download')
+
+const language_mobile = document.querySelector('#language_mobile')
+const download_mobile = document.querySelector('#download_mobile')
+
+// Event Listeners
+
+language.addEventListener('chnage', (e) => {
+  updateDescription()
+})
+
+download.addEventListener('click', (e) => {
+  getOption()
+})
+
+language_mobile.addEventListener('chnage', (e) => {
+  updateDescriptionMobile()
+})
+
+download_mobile.addEventListener('click', (e) => {
+  getOptionMobile()
+})
+
+function getOption() {
+  value = language.value.toLowerCase()
+  if (value === 'choose language') {
+    value = 'english'
+  }
+  let link = `/maps/guides/visit_diber_${value}.pdf`
+  download.setAttribute('href', link)
+}
+
+function getOptionMobile() {
+  value = language_mobile.value.toLowerCase()
+  if (value === 'choose language') {
+    value = 'english'
+  }
+  let link = `/maps/guides/visit_diber_${value}.pdf`
+  download_mobile.setAttribute('href', link)
+}
+
+function updateDescription() {
+  var language = document.getElementById('language').value
+
+  switch (language) {
+    case 'english':
+      description.innerText = english
+      break
+    case 'albanian':
+      description.innerText = albanian
+      break
+    case 'italian':
+      description.innerText = italian
+      break
+    case 'german':
+      description.innerText = german
+      break
+    case 'spanish':
+      description.innerText = spanish
+      break
+    case 'czech':
+      description.innerText = czech
+      break
+    case 'macedonian':
+      description.innerText = macedonian
+      break
+    case 'montenegrin':
+      description.innerText = montenegrin
+      break
+    case 'polish':
+      description.innerText = polish
+      break
+    case 'choose language':
+      description.innerText = 'test'
+      break
+
+    default:
+      description.innerText = english
+      break
+  }
+}
+
+function updateDescriptionMobile() {
+  var language_mobile = document.getElementById('language_mobile').value
+
+  switch (language_mobile) {
+    case 'english':
+      description.innerText = english
+      break
+    case 'albanian':
+      description.innerText = albanian
+      break
+    case 'italian':
+      description.innerText = italian
+      break
+    case 'german':
+      description.innerText = german
+      break
+    case 'spanish':
+      description.innerText = spanish
+      break
+    case 'czech':
+      description.innerText = czech
+      break
+    case 'macedonian':
+      description.innerText = macedonian
+      break
+    case 'montenegrin':
+      description.innerText = montenegrin
+      break
+    case 'polish':
+      description.innerText = polish
+      break
+
+    default:
+      description.innerText = english
+      break
+  }
+}
+</script>
