@@ -1,11 +1,11 @@
 ---
 // Components
 import { Image } from '@astrojs/image/components'
-import SectionContent from '../SectionContent.astro'
-import Button from '../Button.astro'
+import SectionContent from '../ui/general/SectionContent.astro'
+import Button from '../ui/general/Button.astro'
 ---
 
-<div class='relative'>
+<section class='relative'>
   <div
     class='page-container flex flex-col lg:flex-row-reverse lg:items-center lg:gap-5 overflow-hidden'
   >
@@ -20,15 +20,16 @@ import Button from '../Button.astro'
       />
     </div>
     <SectionContent
-      icon_src='/icons/nature_icon.svg'
+      icon='landscape-rounded'
       title='Natural Wonders'
       subtitle='Natural Wonders'
       section_color='green'
     >
-      Climb Korabi mountain, the tallest mountain in Albania. 
-      Enjoy secluded nature hikes. Swim in rystal-clear glacial lakes 
-      and explore wild rivers. Experience the wildness of Diber.
-      <Button className='mt-6' href='' btnColor='green' rounded>
+      Climb Mount Korabi, Albania's highest peak. Enjoy secluded nature hikes.
+      Swim in crystal-clear glacial lakes and explore wild rivers. Experience
+      the wildness of Diber.
+
+      <Button className='mt-6' href='/articles' btnColor='green' rounded>
         Learn More
       </Button>
     </SectionContent>
@@ -36,11 +37,11 @@ import Button from '../Button.astro'
 
   <!-- Background Icon -->
   <Image
-    class='bg-icons'
+    class='bg-icons select-none'
     src='/icons/nature_icon_bg.svg'
     alt='icon'
     width={716 / 1.1}
     height={913 / 1.1}
     format='svg'
   />
-</div>
+</section>

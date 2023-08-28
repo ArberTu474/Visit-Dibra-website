@@ -1,43 +1,50 @@
 ---
 // Components
 import { Image } from '@astrojs/image/components'
-import SectionContent from '../SectionContent.astro'
-import Card from '../Card.astro'
-import Button from '../Button.astro'
-import { LocationsMap } from './LocationsMap'
+import SectionContent from '../ui/general/SectionContent.astro'
+import Button from '../ui/general/Button.astro'
+import { LocationsMap } from '../ui/locations/LocationsMap'
+import { getCollection } from 'astro:content'
 
-// Articles
-const allArticles = await Astro.glob('../../pages/locations/*.md')
+// Blog posts
+const blogPosts = await getCollection('blog', ({ data }) => {
+  return !data.draft && data.date < new Date() && data.category === 'location'
+})
 ---
 
-<div class='relative'>
+<section class='relative'>
   <SectionContent
-    icon_src='/icons/locations_icon.svg'
+    icon='location-on-rounded'
     section_color='blue'
     title='Interesting locations in Diber'
     subtitle='Unforgettable Spots'
     className='page-container pb-0'
   >
-    From mountain lakes surrounded by breathtaking vistas to charming stone villages 
-    frozen in time, and historical cities with centuries of fascinating heritage, 
-    Diber is a destination that caters to diverse interests and preferences.
-    Take some time to visit us!
+    From mountain lakes surrounded by breathtaking vistas to charming stone
+    villages frozen in time, and historical cities with centuries of fascinating
+    heritage, Diber is a destination that caters to diverse interests and
+    preferences. Take some time to visit us!
   </SectionContent>
-  <div class='page-container pb-0'>
+  <div class='page-container pt-0 pb-0'>
     <di>
-      <LocationsMap client:visible articles={allArticles} />
+      <LocationsMap client:visible posts={blogPosts} />
     </di>
   </div>
 
-  <Button className='mx-auto mb-20 mt-6' btnColor='blue' href='/' rounded>
+  <Button
+    className='mx-auto mb-20 mt-6'
+    btnColor='blue'
+    href='/articles'
+    rounded
+  >
     Learn More
   </Button>
   <Image
-    class='hidden md:block absolute bottom-0 right-0 -z-10'
+    class='hidden md:block absolute bottom-0 right-0 -z-10 select-none'
     src='/icons/locations_icon_bg.svg'
     alt='icon'
     width={935 / 1.2}
     height={1493 / 1.2}
     format='svg'
   />
-</div>
+</section>

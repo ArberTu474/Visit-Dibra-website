@@ -1,3 +1,5 @@
 node_modules
 design.astro
 dist
+.unlighthouse
+.astro

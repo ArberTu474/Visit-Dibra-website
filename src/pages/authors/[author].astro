@@ -1,0 +1,50 @@
+---
+// Layout
+import Layout from '../../layouts/Layout.astro'
+
+// components
+import ArticleCard from '../../components/ui/articles/ArticleCard.astro'
+import { getCollection } from 'astro:content'
+
+export async function getStaticPaths() {
+  const allArticles = await getCollection('blog', ({ data }) => {
+    return !data.draft && data.date < new Date()
+  })
+
+  return [
+    { params: { author: 'Alex Sessums' }, props: { posts: allArticles } },
+    { params: { author: 'Lorem ipsum' }, props: { posts: allArticles } },
+  ]
+}
+
+const { author } = Astro.params
+const { posts } = Astro.props
+
+const filteredPosts = posts.filter((article) =>
+  article.data.author?.includes(author)
+)
+---
+
+<Layout title={`Articles written by ${author}`}>
+  <div class='page-container w-full'>
+    <h1 class='text-3xl md:text-4xl font-bold my-6'>
+      Articles written by <span class='italic text-lime-600'>{author}</span>
+    </h1>
+    <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+      {
+        filteredPosts.map((post) => (
+          <ArticleCard
+            url={`/blog/${post.slug}/`}
+            title={post.data.title}
+            description={post.data.description}
+            img_src={post.data.image.src}
+            img_alt={post.data.image.alt}
+            tags={post.data.tags}
+            date={post.data.date}
+            author_name={post.data.author}
+          />
+        ))
+      }
+    </div>
+  </div>
+</Layout>

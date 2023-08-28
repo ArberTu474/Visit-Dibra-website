@@ -1,0 +1,30 @@
+---
+import { Icon } from 'astro-iconify'
+---
+
+<footer class='mt-auto border-gray-300/30 border-t py-6 w-full'>
+  <div
+    class='container mx-auto px-6 max-w-7xl w-full flex flex-col items-center'
+  >
+    <h2 class='text-xl md:text-2xl xl:text-3xl font-bold'>Visit Diber</h2>
+    <div class='flex items-center gap-3 my-2'>
+      <a target='_blank' href='https://www.facebook.com/VisitDiber/'
+        ><Icon name='mdi:facebook' class='h-11 w-1ii' /></a
+      >
+      <a target='_blank' href='https://www.instagram.com/visitdiber/?hl=en'
+        ><Icon name='mdi:instagram' class='h-11 w-1ii' /></a
+      >
+      <a target='_blank' href='https://www.youtube.com/@visit.diber3753'
+        ><Icon name='mdi:youtube' class='h-11 w-1ii' /></a
+      >
+    </div>
+    <p class='font-light text-gray-600 text-sm'>
+      ©{new Date().getFullYear()} VisitDiber. All rights reserved.
+    </p>
+    <a
+      href='mailto:visitdiber@gmail.com'
+      class='font-light text-gray-600 text-sm mt-1 hover:underline'
+      >visitdiber@gmail.com</a
+    >
+  </div>
+</footer>

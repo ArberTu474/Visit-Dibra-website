@@ -1,0 +1,108 @@
+---
+// Components
+import Card from '../general/Card.astro'
+import { Image } from '@astrojs/image/components'
+
+// Function
+import { formatDate } from '../../../functions/utils.js'
+import { Icon } from 'astro-iconify'
+
+// Props
+export interface Props {
+  title: string
+  description: string
+  img_src: string
+  img_alt: string
+  url: string
+  date: Date
+  author_name: author
+  tags?: Array<string>
+  className?: string
+}
+
+type author = 'Lorem ipsum' | 'Alex Sessums'
+
+const {
+  className,
+  title,
+  description,
+  img_src,
+  img_alt,
+  url,
+  tags,
+  date,
+  author_name,
+} = Astro.props
+---
+
+<Card hasPadding={false}>
+  <a href={url}>
+    <Image
+      class='object-cover w-full h-56'
+      src={img_src}
+      width={500}
+      height={300}
+      format='avif'
+      alt={img_alt}
+    />
+    <div class='p-6'>
+      <div class='flex flex-col'>
+        <p class='-mt-3 text-sm text-gray-600/[86%]'>
+          Date: {formatDate(date)}
+        </p>
+
+        {
+          author_name && (
+            <a
+              href={`/authors/${author_name}`}
+              class='mt-3 flex gap-3 items-center opacity-80 hover:underline decoration-gray-500'
+            >
+              <div class='relative h-12 min-w-[48px] bg-gray-500/30 rounded-full flex items-center justify-center overflow-hidden'>
+                <div>
+                  <Icon
+                    class='h-8 text-gray-600'
+                    name='material-symbols:person-rounded'
+                  />
+                </div>
+
+                <img
+                  class='absolute'
+                  src={`/authors/${author_name.toLowerCase()}_profile.jpg`}
+                  alt={author_name}
+                  width='48px'
+                  height='48px'
+                  onerror="
+                  this.src = '/authors/default_profile.svg'
+                  "
+                />
+              </div>
+
+              <p class='text-lg text-gray-900'>{author_name}</p>
+            </a>
+          )
+        }
+      </div>
+      <a
+        href={url}
+        class='inline-block mt-6 text-2xl font-bold mb-1 hover:underline'
+        >{title}</a
+      >
+      <p class='text-base text-gray-600'>
+        {description}
+      </p>
+      <div class='mt-4'>
+        {
+          tags &&
+            tags.map((tag) => (
+              <a
+                href={`/tags/${tag}`}
+                class='mr-2 mb-2 inline-block px-4 py-1 bg-gray-400/30 hover:bg-gray-400/30 text-gray-600 rounded-full'
+              >
+                {tag}
+              </a>
+            ))
+        }
+      </div>
+    </div>
+  </a>
+</Card>

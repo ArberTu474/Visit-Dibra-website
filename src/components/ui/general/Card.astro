@@ -1,0 +1,17 @@
+---
+// Props
+export interface Props {
+  hasPadding?: boolean
+  className?: string
+}
+
+const { hasPadding = true, className } = Astro.props
+---
+
+<div
+  class={`bg-gray-300/30 backdrop-blur-md rounded-xl border-gray-300/30 border overflow-hidden ${
+    hasPadding ? 'p-5' : ''
+  } ${className}`}
+>
+  <slot />
+</div>

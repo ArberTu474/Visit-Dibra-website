@@ -1,12 +1,27 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap'); */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* inter-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/inter-v12-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/inter-v12-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 @layer base {
   * {
-    @apply text-gray-800;
+    /* @apply text-gray-800; */
     -webkit-tap-highlight-color: transparent;
   }
 }
@@ -21,8 +36,9 @@ html {
   --ideal-width: max(90wh, 600px);
 }
 
-.material-symbols-rounded {
-  font-variation-settings: 'FILL' 0, 'wght' 900, 'GRAD' 200, 'opsz' 48;
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 /* Change the color of the selection */
@@ -61,4 +77,34 @@ html {
 
 .popover {
   @apply text-gray-100 text-[4px] font-bold bg-gray-800 px-1  py-[2px] rounded-sm inline;
+}
+
+.slider-image2 {
+  width: calc(100vw - theme('spacing.12'));
+}
+.slider-image {
+  width: calc(100vw - theme('spacing.96'));
+}
+
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff00;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #bebebe;
+  border-radius: 300px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #bcbcbd;
 }

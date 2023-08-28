@@ -1,42 +1,49 @@
 ---
-import ArticleCard from '../../components/home/ArticleCard.astro'
+// Layout
 import Layout from '../../layouts/Layout.astro'
 
+// components
+import ArticleCard from '../../components/ui/articles/ArticleCard.astro'
+import { getCollection } from 'astro:content'
+
 export async function getStaticPaths() {
-  const allArticles = await Astro.glob('../articles/*.md')
+  const allArticles = await getCollection('blog', ({ data }) => {
+    return !data.draft && data.date < new Date()
+  })
 
   return [
-    { params: { tag: 'location' }, props: { articles: allArticles } },
-    { params: { tag: 'food' }, props: { articles: allArticles } },
-    { params: { tag: 'culture' }, props: { articles: allArticles } },
-    { params: { tag: 'trail' }, props: { articles: allArticles } },
+    { params: { tag: 'location' }, props: { posts: allArticles } },
+    { params: { tag: 'food' }, props: { posts: allArticles } },
+    { params: { tag: 'culture' }, props: { posts: allArticles } },
+    { params: { tag: 'trail' }, props: { posts: allArticles } },
   ]
 }
 
 const { tag } = Astro.params
-const { articles } = Astro.props
+const { posts } = Astro.props
 
-const filteredArticles = articles.filter((article) =>
-  article.frontmatter.tags?.includes(tag)
+const filteredPosts = posts.filter((article) =>
+  article.data.tags?.includes(tag)
 )
 ---
 
-<Layout title={`Posts tagged with ${tag}`}>
-  <div class='pt-32 page-container'>
+<Layout title={`Articles tagged with ${tag}`}>
+  <div class='page-container w-full'>
     <h1 class='text-3xl md:text-4xl font-bold my-6'>
       Articles tagged with <span class='italic text-lime-600'>{tag}</span>
     </h1>
     <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
       {
-        filteredArticles.map((article) => (
+        filteredPosts.map((post) => (
           <ArticleCard
-            url={article.url}
-            title={article.frontmatter.title}
-            description={article.frontmatter.description}
-            img_scr={article.frontmatter.img_src}
-            img_alt={article.frontmatter.img_alt}
-            tags={article.frontmatter.tags}
-            date={article.frontmatter.date}
+            url={`/blog/${post.slug}/`}
+            title={post.data.title}
+            description={post.data.description}
+            img_src={post.data.image.src}
+            img_alt={post.data.image.alt}
+            tags={post.data.tags}
+            date={post.data.date}
+            author_name={post.data.author}
           />
         ))
       }

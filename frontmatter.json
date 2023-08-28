@@ -73,10 +73,6 @@
   "frontMatter.preview.host": "http://localhost:3000",
   "frontMatter.content.pageFolders": [
     {
-      "title": "Articles (Main)",
-      "path": "[[workspace]]/src/pages/articles"
-    },
-    {
       "title": "[Data] Booking",
       "path": "[[workspace]]/src/data/booking"
     },
@@ -87,32 +83,6 @@
     {
       "title": "[Data] Gallery Images",
       "path": "[[workspace]]/src/data/gallery"
-    },
-    {
-      "title": "[Activities] Hiking",
-      "path": "[[workspace]]/src/pages/activities/hiking"
-    },
-    {
-      "title": "[Activities] Rafting",
-      "path": "[[workspace]]/src/pages/activities/rafting"
-    },
-    {
-      "title": "[Activities] Swimming",
-      "path": "[[workspace]]/src/pages/activities/swimming"
-    },
-    {
-      "title": "[List] Foods",
-      "path": "[[workspace]]/src/pages/foods"
-    },
-    {
-      "title": "[List] Locations",
-      "path": "[[workspace]]/src/pages/locations"
     }
-  ],
-  "frontMatter.taxonomy.tags": [
-    "culture",
-    "food",
-    "location",
-    "trail"
   ]
 }

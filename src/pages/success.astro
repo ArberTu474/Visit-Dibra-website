@@ -1,10 +1,11 @@
 ---
 // Components
-import Button from '../components/Button.astro'
-import Card from '../components/Card.astro'
+import Button from '../components/ui/general/Button.astro'
+import Card from '../components/ui/general/Card.astro'
 
 // Styles
 import '../base.css'
+import { Icon } from 'astro-iconify'
 ---
 
 <html class='h-full' lang='en'>
@@ -26,12 +27,9 @@ import '../base.css'
           <h1 class='text-2xl font-bold text-gray-700'>Thank You!</h1>
           <p class='my-3 text-base'>Your form submission has been received.</p>
           <Button href='/' className='flex items-center'>
-            <img
-              class='rotate-90 -ml-2 mr-2'
-              src='/icons/download_icon.svg'
-              alt=''
-              height='24px'
-              width='24px'
+            <Icon
+              name='ic:round-keyboard-arrow-left'
+              class='h-7 text-gray-100 -ml-4'
             />
             Go Back
           </Button>

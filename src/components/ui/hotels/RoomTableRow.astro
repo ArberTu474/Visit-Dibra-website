@@ -1,0 +1,107 @@
+---
+import { Icon } from 'astro-iconify'
+export interface Props {
+  is_dark?: boolean
+  room_info: any
+}
+
+const { is_dark = false, room_info } = Astro.props
+
+function guestsFormater(nr, type) {
+  let data = ''
+  if (type === 'adults') {
+    if (nr === 0) return data
+    if (nr === 1) {
+      data = '1 adult'
+    }
+    if (nr > 1) {
+      data = `${nr} aduluts`
+    }
+  } else if (type === 'children') {
+    if (nr === 0) return data
+    if (nr === 1) {
+      data = '1 child'
+    }
+    if (nr > 1) {
+      data = `${nr} children`
+    }
+  }
+  return data
+}
+const guestArray = new Array<string>()
+const guests = Number(room_info.nr_adults) + Number(room_info.nr_children)
+
+for (let i = 1; i <= guests; i++) {
+  guestArray.push('g')
+}
+
+let room_type = ''
+
+if (guests === 1 || guests === 2) {
+  room_type = 'Small'
+} else if (guests === 3 || guests === 4) {
+  room_type = 'Medium'
+} else if (guests >= 5) {
+  room_type = 'Big'
+}
+---
+
+{
+  Number(room_info.price) === 0 ? (
+    ''
+  ) : (
+    <tr class={` ${is_dark ? 'bg-gray-300/40' : 'bg-gray-200/30'}`}>
+      <td class='py-3 px-6 text-start'>
+        <p class='text-lg font-bold'>
+          {`${room_type} Room(${guestsFormater(
+            Number(room_info.nr_adults),
+            'adults'
+          )} ${Number(room_info.nr_children) === 0 ? '' : '+'} ${guestsFormater(
+            Number(room_info.nr_children),
+            'children'
+          )})`}
+        </p>
+        <p class='text-base text-gray-600'>
+          1 double bed{' '}
+          <Icon
+            name='material-symbols:bed-rounded'
+            class='h-6 w-6 inline text-gray-800'
+          />{' '}
+          + 1 single bed
+          <Icon
+            name='material-symbols:single-bed-rounded'
+            class='h-6 w-6 inline text-gray-800'
+          />
+          {room_info.has_shower ? (
+            <>
+              <span>
+                ,<br /> private shower
+              </span>
+              <Icon
+                name='material-symbols:shower-rounded'
+                class='h-6 w-6 inline text-gray-800'
+              />
+            </>
+          ) : (
+            ''
+          )}
+        </p>
+      </td>
+      <td class='py-3 px-6 text-start border-l-2 border-r-2 border-gray-300'>
+        {guestArray.map((guest) => (
+          <Icon
+            name='material-symbols:person'
+            class='h-6 w-6 inline text-gray-800'
+          />
+        ))}
+      </td>
+      <td class='py-3 px-6 text-center font-bold text-xl'>
+        <Icon
+          name='material-symbols:sell'
+          class='h-6 w-6 inline-block text-gray-800 mr-1'
+        />
+        $ {room_info.price}
+      </td>
+    </tr>
+  )
+}

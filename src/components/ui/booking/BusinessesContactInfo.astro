@@ -1,0 +1,84 @@
+---
+import { Icon } from 'astro-iconify'
+import Stars from '../general/Stars.astro'
+// Props
+export interface Props {
+  type: accommodationType
+  name: string
+  href: string
+  stars: number
+}
+
+type accommodationType =
+  | 'hotel'
+  | 'hostel'
+  | 'camping'
+  | 'agro_tourism'
+  | 'guest_house'
+  | 'resort'
+
+const { type, name, href } = Astro.props
+let { stars } = Astro.props
+
+let accommodationIcon = ''
+
+switch (type) {
+  case 'hotel':
+    accommodationIcon = 'bed-outline-rounded'
+    break
+  case 'hostel':
+    accommodationIcon = 'cabin-rounded'
+    break
+  case 'camping':
+    accommodationIcon = 'camping-outline-rounded'
+    break
+  case 'agro_tourism':
+    accommodationIcon = 'psychiatry-outline-rounded'
+    break
+  case 'guest_house':
+    accommodationIcon = 'cottage-outline-rounded'
+    break
+  case 'resort':
+    accommodationIcon = 'apartment-rounded'
+    break
+
+  default:
+    accommodationIcon = 'question-mark-rounded'
+    break
+}
+
+const maxStars = 5
+
+let stars_arry = ['']
+
+if (stars > 5) {
+  stars = 5
+}
+
+for (let i = 1; i <= stars; i++) {
+  stars_arry.push('full_star')
+}
+
+while (stars_arry.length < maxStars) {
+  stars_arry.push('empty_star')
+}
+---
+
+<div class='rounded-full hover:bg-gray-300/60 transition-colors duration-200'>
+  <a
+    target='_blank'
+    class='text-xl flex justify-between items-center gap-3 text-gray-600 px-5 py-3 rounded-full'
+    href={href}
+    ><div class='text-base text-gray-600 flex gap-3 justify-start items-center'>
+      <Icon
+        pack='material-symbols'
+        name={accommodationIcon}
+        class='text-indigo-900 h-9 min-w-[36px]'
+      />
+      {name}
+    </div>
+    <div class='flex gap-1 justify-center items-center min-w-[140px]'>
+      <Stars rating={stars} />
+    </div>
+  </a>
+</div>

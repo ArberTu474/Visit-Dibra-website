@@ -1,0 +1,136 @@
+---
+// Functions
+import { Icon } from 'astro-iconify'
+import { headerRenderer } from '../../../functions/utils'
+
+// Components
+import { Image } from '@astrojs/image/components'
+
+// Props
+export interface Props {
+  name: string
+  location: string
+  location_url: string
+  phone_number: string
+  img_src: string
+  img_alt: string
+  description: string
+  cost: number
+  type: accommodationType
+}
+
+type accommodationType =
+  | 'hotel'
+  | 'hostel'
+  | 'camping'
+  | 'agro_tourism'
+  | 'guest_house'
+  | 'resort'
+
+const {
+  name,
+  location,
+  location_url,
+  phone_number,
+  img_src,
+  img_alt,
+  description,
+  cost,
+  type,
+} = Astro.props
+
+let accommodationIcon = ''
+
+switch (type) {
+  case 'hotel':
+    accommodationIcon = 'bed-outline-rounded'
+    break
+  case 'hostel':
+    accommodationIcon = 'cabin-rounded'
+    break
+  case 'camping':
+    accommodationIcon = 'camping-outline-rounded'
+    break
+  case 'agro_tourism':
+    accommodationIcon = 'psychiatry-outline-rounded'
+    break
+  case 'guest_house':
+    accommodationIcon = 'cottage-outline-rounded'
+    break
+  case 'resort':
+    accommodationIcon = 'apartment-rounded'
+    break
+
+  default:
+    accommodationIcon = 'question-mark-rounded'
+    break
+}
+---
+
+<div
+  class='group relative h-[378px] w-full lg:w-64 p-6 rounded-lg lg:hover:w-[400px] transition-all duration-300 ease-in-out overflow-x-hidden overflow-y-hidden cursor-pointer'
+>
+  <div
+    class='absolute top-0 left-0 w-full h-full -z-10 bg-gradient-to-r from-gray-800/70 from-20% to-gray-800/20'
+  >
+  </div>
+  <Image
+    class='absolute top-0 left-0 w-full h-full object-cover -z-20'
+    src={img_src}
+    width={900}
+    height={400}
+    alt={img_alt}
+    format='avif'
+    loading='eager'
+  />
+  <div class='h-full flex flex-col justify-between'>
+    <div>
+      <a
+        href={`/stays/${name}`}
+        class='hover:underline underline-offset-2 decoration-gray-100'
+      >
+        <h2 class='text-xl text-gray-100 font-bold'>{name}</h2>
+      </a>
+      <div class='py-3 flex flex-col gap-3'>
+        <a
+          href={location_url}
+          target='_blank'
+          class='flex items-center gap-1 text-gray-300'
+        >
+          <Icon
+            name='material-symbols:location-on-outline-rounded'
+            class='h-[26px] text-gray-300'
+          />
+          {headerRenderer(location)}
+        </a>
+        <a
+          href={`tel:${phone_number}`}
+          class='flex items-center gap-1 text-gray-300'
+        >
+          <Icon
+            name='material-symbols:call-outline-rounded'
+            class='h-[26px] !text-gray-300'
+          />
+          {phone_number}
+        </a>
+      </div>
+    </div>
+    <div class='flex items-end justify-between gap-3'>
+      <p
+        class='text-gray-100 text-base md:text-sm lg:max-w-[280px] lg:opacity-0 group-hover:opacity-90 transition-opacity duration-300 ease-in-out'
+      >
+        <span class='text-gray-100 text-lg font-bold mb-2'
+          >{headerRenderer(type)}</span
+        ><br />
+        {description}
+      </p>
+
+      <Icon
+        title={headerRenderer(type)}
+        pack='material-symbols'
+        name={accommodationIcon}
+        class='text-gray-100 opacity-80 min-w-[36px] h-9'
+      />
+    </div>
+  </div>
+</div>

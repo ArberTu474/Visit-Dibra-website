@@ -1,7 +1,7 @@
 ---
 import Layout404 from '../layouts/Layout404.astro'
 
-import Button from '../components/Button.astro'
+import Button from '../components/ui/general/Button.astro'
 ---
 
 <Layout404 title='Page not found!'>
@@ -16,7 +16,7 @@ import Button from '../components/Button.astro'
         It seems that you have<br /> wondered a bit out of the trail
       </p>
       <div>
-        <Button href='/' icon_src='/icons/back_arrow.svg' btnColor='green'>
+        <Button href='/' icon='chevron-left-rounded' btnColor='green'>
           Go Back
         </Button>
       </div>

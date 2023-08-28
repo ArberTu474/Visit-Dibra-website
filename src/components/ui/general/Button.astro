@@ -1,0 +1,86 @@
+---
+import { Icon } from 'astro-iconify'
+// Props
+export interface Props {
+  href: string
+  btnColor?: color
+  rounded?: boolean
+  className?: string
+  icon?: string
+  externalLink?: boolean
+}
+
+const {
+  href,
+  className,
+  btnColor,
+  rounded,
+  icon,
+  externalLink = false,
+} = Astro.props
+
+type color =
+  | 'green'
+  | 'orange'
+  | 'red'
+  | 'purple'
+  | 'blue'
+  | 'dark-blue'
+  | 'gray'
+
+let colorClass = ''
+
+switch (btnColor) {
+  case 'green':
+    colorClass = 'bg-lime-500'
+    break
+  case 'orange':
+    colorClass = 'bg-orange-500'
+    break
+  case 'blue':
+    colorClass = 'bg-sky-500'
+    break
+  case 'red':
+    colorClass = 'bg-red-600'
+    break
+  case 'purple':
+    colorClass = 'bg-violet-600'
+    break
+  case 'dark-blue':
+    colorClass = 'bg-indigo-900'
+    break
+  case 'gray':
+    colorClass = 'bg-gray-500'
+    break
+
+  default:
+    colorClass = 'bg-gray-400'
+    break
+}
+---
+
+<button
+  class={` block text-lg font-bold  ${colorClass} hover:opacity-90 transition-colors duration-300 ${className} ${
+    rounded ? 'rounded-full' : 'rounded-xl'
+  } ${className}`}
+>
+  <a
+    target={externalLink ? '_blank' : ''}
+    class='flex gap-2 justify-center items-center px-10 py-3 text-gray-100'
+    href={href}
+  >
+    {
+      icon && (
+        <>
+          <Icon
+            pack='material-symbols'
+            class='-ml-4 h-8 text-gray-100'
+            name={icon}
+          />
+        </>
+      )
+    }
+
+    <slot />
+  </a>
+</button>

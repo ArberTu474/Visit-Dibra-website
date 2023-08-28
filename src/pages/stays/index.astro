@@ -1,0 +1,273 @@
+---
+// Layout
+import Layout from '../../layouts/Layout.astro'
+
+// Components
+import TitleWithIcon from '../../components/ui/general/TitleWithIcon.astro'
+import SuggestedLocationCard from '../../components/ui/stays/SuggestedLocationCard.astro'
+import OtherLocationCard from '../../components/ui/stays/OtherLocationCard.astro'
+import { Icon } from 'astro-iconify'
+
+// Data
+import allPlaces from '../../data/stays/accommodation.json'
+import { imageConfig } from 'astro:assets'
+
+const response = await fetch(
+  'https://anfqbgopkaezhvbymkhu.supabase.co/rest/v1/hotels?name',
+  {
+    headers: {
+      apikey: `${import.meta.env.PUBLIC_APIKEY}`,
+      Authorization: `${import.meta.env.PUBLIC_AUTHORIZATION}`,
+    },
+  }
+)
+const data = await response.json()
+
+let imagesList = new Array<string>()
+const CDNURL =
+  'https://anfqbgopkaezhvbymkhu.supabase.co/storage/v1/object/public/images/'
+
+data.map((img) => {
+  JSON.parse(img.images).map((image) => {
+    imagesList.push(CDNURL + img.email + '/' + image.name)
+  })
+})
+
+function imgInclude(email) {
+  let data = ''
+  imagesList.forEach((img, i) => {
+    if (img.includes(email)) {
+      data = img
+      return
+    }
+  })
+  return data
+}
+---
+
+<Layout title='Book your stay'>
+  <div class='page-container'>
+    <div>
+      <h1 class='text-4xl font-bold mt-6'>Hospitality Offerings</h1>
+      <p class='text-base text-gray-500 my-6 max-w-3xl'>
+        Discover the ideal accommodation for your Diber journey, with options
+        ranging from traditional and modern settings to immersive camping
+        experiences. Take your pick from a diverse selection of stays tailored
+        to suit your preferences and enhance your travel adventure.
+      </p>
+    </div>
+    <TitleWithIcon
+      className='mt-12 hidden lg:block'
+      title='Hospitality Partners'
+      icon='star-outline-rounded'
+    />
+    <div class='grid grid-cols-1 lg:grid-cols-3 gap-6'>
+      <div class='col-span-1 lg:col-start-3 row-span-1'>
+        <div
+          class='sticky top-24 p-6 rounded-lg bg-indigo-900 border-none flex flex-col gap-6 shadow-lg shadow-gray-400/20'
+        >
+          <div class='flex items-center gap-3 my-3'>
+            <Icon name='material-symbols:search' class='h-8 text-gray-100' />
+            <h2 class='text-xl text-gray-100 font-bold'>Search Offerings</h2>
+          </div>
+          <div class='flex flex-col sm:flex-row lg:flex-col gap-6'>
+            <select
+              id='city'
+              class='block w-full p-5 rounded-lg text-gray-100 bg-gray-400/20 cursor-pointer'
+            >
+              <option value='' selected>Choose City</option>
+              <option value='arras'>Arras</option>
+              <option value='bulqize'>Bulqize</option>
+              <option value='burel'>Burel</option>
+              <option value='klos'>Klos</option>
+              <option value='korabi mountain'>Korabi mountain</option>
+              <option value='lura'>Lura</option>
+              <option value='maqellare'>Maqellare</option>
+              <option value='mat'>Mat</option>
+              <option value='peshkopi'>Peshkopi</option>
+              <option value='rabdisht'>Rabdisht</option>
+              <option value='radomire'>Radomire</option>
+            </select>
+            <select
+              id='accommodation-type'
+              class='block w-full p-5 rounded-lg text-gray-100 bg-gray-400/20 cursor-pointer'
+            >
+              <option value='' selected>Choose Accommodation</option>
+              <option value='hotel'>Hotel</option>
+              <option value='hostel'>Hostel</option>
+              <option value='camping'>Camping</option>
+              <option value='guest_house'>Guest House</option>
+              <option value='resort'>Resort</option>
+              <option value='agro_tourism'>Agro Tourism</option>
+            </select>
+          </div>
+          <button
+            id='search'
+            class='mt-6 bg-gray-100 text-xl font-bold text-indigo-900 py-4 rounded-lg hover:opacity-90 transition-opacity duration-300'
+            >Search</button
+          >
+        </div>
+      </div>
+
+      <div class='row-start-2 lg:row-start-1 col-span-1 lg:col-span-2'>
+        <!-- Recommended Locations (ad) -->
+        <div>
+          <!-- Mobile title -->
+          <TitleWithIcon
+            className='mt-12 lg:hidden'
+            title='Suggested Locations'
+            icon='star-outline-rounded'
+            has_undeline={false}
+          />
+          <!-- Locations  -->
+          <div class='flex gap-6 flex-col lg:flex-row w-full'>
+            {
+              allPlaces.recommended.map((place) => (
+                <SuggestedLocationCard
+                  name={place.name}
+                  location={place.location}
+                  location_url={place.location_url}
+                  phone_number={place.phone_number}
+                  img_src={place.img_src}
+                  img_alt={place.img_alt}
+                  description={place.description}
+                  cost={place.cost}
+                  type={place.type as any}
+                />
+              ))
+            }
+          </div>
+        </div>
+
+        <!-- Other Locations -->
+        <div id='location-focus'>
+          <TitleWithIcon
+            className='mt-12'
+            title='Other Locations'
+            icon='star-outline-rounded'
+          />
+
+          <div
+            id='locations-list'
+            class='grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full'
+          >
+            {
+              data.map((hotel) => (
+                <OtherLocationCard
+                  name={hotel.name}
+                  location={hotel.location}
+                  location_url={hotel.location_url}
+                  phone_number={hotel.phone}
+                  img_src={imgInclude(hotel.email)}
+                  img_alt={hotel.name}
+                  description={hotel.description.slice(0, 100)}
+                  cost={hotel.price}
+                  type={'camping'}
+                />
+              ))
+            }
+          </div>
+          <h3
+            id='nothing'
+            class='hidden text-gray-500 text-2xl font-bold text-center my-6'
+          >
+            Nothing was found!
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script type='text/javascript'>
+const locationFocus = document.querySelector('#location-focus')
+
+const city = document.querySelector('#city')
+const accommodationType = document.querySelector('#accommodation-type')
+
+const locationsList = document.querySelectorAll('[data-option="pro"]')
+
+const notingPrompt = document.querySelector('#nothing')
+const locationsListHeight = document.querySelector('#locations-list')
+
+const search = document.querySelector('#search')
+
+// Event Listeners
+city.addEventListener('change', (e) => {
+  getLocation()
+})
+
+accommodationType.addEventListener('change', (e) => {
+  getAccommodationType()
+})
+
+search.addEventListener('click', (e) => {
+  showOutput()
+})
+
+function getLocation() {
+  let value = city.value.toLowerCase()
+
+  return value
+}
+
+function getAccommodationType() {
+  let value = accommodationType.value.toLowerCase()
+
+  return value
+}
+
+function showOutput() {
+  locationsList.forEach((city) => {
+    city.style.display = 'block'
+    notingPrompt.style.display = 'none'
+  })
+
+  if (getLocation() !== '' && getAccommodationType() !== '') {
+    locationsList.forEach((city) => {
+      if (
+        !(
+          city.getAttribute('data-accommodation') ===
+          getAccommodationType() &&
+          city.getAttribute('data-location') === getLocation()
+        )
+      ) {
+        city.style.display = 'none'
+      }
+    })
+  } else if (getAccommodationType() !== '') {
+    locationsList.forEach((city) => {
+      if (
+        !(city.getAttribute('data-accommodation') === getAccommodationType())
+      ) {
+        city.style.display = 'none'
+      }
+    })
+  } else if (getLocation() !== '') {
+    locationsList.forEach((city) => {
+      if (!(city.getAttribute('data-location') === getLocation())) {
+        city.style.display = 'none'
+      }
+    })
+  } else {
+    locationsList.forEach((city) => {
+      city.style.display = 'block'
+      notingPrompt.style.display = 'none'
+    })
+  }
+
+  if (locationsListHeight.offsetHeight < 20) {
+    notingPrompt.style.display = 'block'
+  }
+
+  locationFocus.scrollIntoView()
+}
+
+  // if (!(city.getAttribute('data-location') === getLocation())) {
+  //   city.style.display = 'none'
+  // } else if (
+  //   !(city.getAttribute('data-accommodation') === getAccommodationType())
+  // ) {
+  //   city.style.display = 'none'
+  // }
+</script>
