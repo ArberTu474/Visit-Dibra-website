@@ -147,9 +147,13 @@ function getFacilities(category) {
           {
             imagesList.map((image) => (
               <div class='snap-center shrink-0'>
-                <img
+                <Image
                   src={image}
-                  class='slider-image2 h-72 spacing md:h-96 lg:h-[600px] max-w-5xl object-cover rounded-xl bg-gray-300'
+                  width={1920}
+                  height={1080}
+                  format='avif'
+                  loading="eager"
+                  class='slider-image h-72 spacing md:h-96 lg:h-[600px] max-w-5xl object-cover rounded-xl bg-gray-300'
                   alt={`${name}, ${location}`}
                 />
               </div>
