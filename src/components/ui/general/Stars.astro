@@ -26,21 +26,21 @@ while (stars_arry.length < maxStars) {
 }
 ---
 
-<div class='flex items-center mb-2'>
+<div class='flex items-center justify-center2'>
   {
     stars_arry.map((star) => {
       if (star === 1) {
         return (
           <Icon
             name='material-symbols:star-rounded'
-            class='w-7 h-7 text-indigo-900'
+            class='md:min-w-[24px] min-w-[20px] md:h-6 h-5 text-indigo-900'
           />
         )
       } else if (star === 0) {
         return (
           <Icon
             name='material-symbols:star-rounded'
-            class='w-7 h-7 text-indigo-900/30'
+            class='md:min-w-[24px] min-w-[20px] md:h-6 h-5 text-indigo-900/30'
           />
         )
       }
