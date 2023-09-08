@@ -1,0 +1,371 @@
+---
+// Layout
+import Layout from '../../layouts/Layout.astro'
+
+// Components
+import { Icon } from 'astro-iconify'
+import Stars from '../../components/ui/general/Stars.astro'
+import { Image } from '@astrojs/image/components'
+import FacilitiesList from '../../components/ui/hotels/FacilitiesList.astro'
+import FacilitiesHeader from '../../components/ui/hotels/FacilitiesHeader.astro'
+import RulesList from '../../components/ui/hotels/RulesList.astro'
+import FacilitiesCard from '../../components/ui/hotels/FacilitiesCard.astro'
+import RoomTableRow from '../../components/ui/hotels/RoomTableRow.astro'
+
+// Functions
+import { headerRenderer } from '../../functions/utils'
+
+let imagesList = new Array<string>()
+const CDNURL =
+  'https://anfqbgopkaezhvbymkhu.supabase.co/storage/v1/object/public/images/'
+
+export async function getStaticPaths() {
+  // Get the hotel rooms
+
+  const response = await fetch(
+    'https://anfqbgopkaezhvbymkhu.supabase.co/rest/v1/hotels?name',
+    {
+      headers: {
+        apikey: `${import.meta.env.PUBLIC_APIKEY}`,
+        Authorization: `${import.meta.env.PUBLIC_AUTHORIZATION}`,
+      },
+    }
+  )
+  const rooms = await response.json()
+
+  return rooms.map(
+    ({
+      id,
+      created_at,
+      name,
+      description,
+      rating,
+      location,
+      location_url,
+      phone,
+      email,
+      rooms,
+      rules_allowed,
+      rules_not_allowed,
+      images,
+      facilities,
+    }) => {
+      return {
+        params: { name },
+        props: {
+          id,
+          created_at,
+          name,
+          description,
+          rating,
+          location,
+          location_url,
+          phone,
+          email,
+          rooms,
+          rules_allowed,
+          rules_not_allowed,
+          images,
+          facilities,
+        },
+      }
+    }
+  )
+}
+
+const {
+  id,
+  created_at,
+  name,
+  description,
+  rating,
+  location,
+  location_url,
+  phone,
+  email,
+  rooms,
+  rules_allowed,
+  rules_not_allowed,
+  images,
+  facilities,
+} = Astro.props
+
+// Images data
+JSON.parse(images).map((image) => {
+  imagesList.push(CDNURL + email + '/' + image.name)
+})
+
+// Facilities data
+const facilitiesList = JSON.parse(facilities)
+
+const generalFacilities = getFacilities('general')
+const bedroomFacilities = getFacilities('bedroom')
+const mediaFacilities = getFacilities('media')
+const foodFacilities = getFacilities('food')
+
+function getFacilities(category) {
+  let data = new Array<string>()
+  facilitiesList[category].map((facility) => {
+    if (facility.isPresent === true) {
+      data.push(facility.name)
+    }
+  })
+  return data
+}
+---
+
+<Layout title={headerRenderer(name)}>
+  <div class='page-container mt-6'>
+    <section class='w-full flex flex-col gap-6 justify-between'>
+      <section class='flex flex-col md:flex-row w-full items-center md:gap-6'>
+        <a
+          href='#rooms & prices'
+          class='bg-gray-300/30 hover:bg-gray-300/60 border border-gray-400/20 rounded-none rounded-t-lg md:rounded-lg w-full text-center hover:opacity-80 cursor-pointer text-lg py-3 font-bold text-gray-600'
+        >
+          Rooms & Prices
+        </a>
+        <a
+          href='#facilities'
+          class='bg-gray-300/30 hover:bg-gray-300/60 border border-gray-400/20 rounded-none md:rounded-lg w-full text-center hover:opacity-80 cursor-pointer text-lg py-3 font-bold text-gray-600'
+        >
+          Facilities
+        </a>
+        <a
+          href='#rules'
+          class='bg-gray-300/30 hover:bg-gray-300/60 border border-gray-400/20 rounded-none rounded-b-lg md:rounded-lg w-full text-center hover:opacity-80 cursor-pointer text-lg py-3 font-bold text-gray-600'
+        >
+          Rules
+        </a>
+      </section>
+
+      <!-- Image gallery section -->
+
+      <div class='relative overflow-auto'>
+        <div
+          class='relative w-full flex gap-6 snap-x snap-mandatory overflow-auto pb-6'
+        >
+          {
+            imagesList.map((image) => (
+              <div class='snap-center shrink-0'>
+                <Image
+                  src={image}
+                  width={1920}
+                  height={1080}
+                  format='avif'
+                  loading="eager"
+                  class='slider-image h-72 spacing md:h-96 lg:h-[600px] max-w-5xl object-cover rounded-xl bg-gray-300'
+                  alt={`${name}, ${location}`}
+                />
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- Hotel Info section -->
+      <div class='flex flex-col gap-6'>
+        <div
+          class='flex flex-col md:flex-row items-start justify-between md:items-center gap-6 md:gap-1 w-full'
+        >
+          <div>
+            <Stars rating={rating} />
+            <h1 class='text-3xl font-bold my-1'>{name}</h1>
+            <a
+              href={location_url}
+              target='_blank'
+              class='flex gap-1 items-center hover:underline'
+            >
+              <Icon
+                name='material-symbols:location-on-rounded'
+                class='text-gray-600 h-6 w-6'
+              />
+              <p class='text-sm text-gray-600'>{location}</p>
+            </a>
+          </div>
+          <div
+            class='flex w-full md:w-min flex-col md:flex-row items-end justify-between gap-3 md:gap-6'
+          >
+            <div class='hidden md:flex gap-1'>
+              <a
+                class='hover:bg-indigo-200/40 p-2 rounded-full transition-colors duration-200 ease-in-out'
+                href=`tel:${phone}`
+                title='Phone'
+              >
+                <Icon
+                  name='material-symbols:call-outline'
+                  class='text-indigo-900 h-8'
+                />
+              </a>
+              <a
+                class='hover:bg-indigo-200/40 p-2 rounded-full transition-colors duration-200 ease-in-out'
+                href=`//api.whatsapp.com/send?phone=355${phone}&text=Përshëndetje doja të rezevoja një dhomë.`
+                target='_blank'
+                title='Whatsapp'
+              >
+                <Icon name='ic:outline-whatsapp' class='text-indigo-900 h-8' />
+              </a>
+              <a
+                class='hover:bg-indigo-200/40 p-2 rounded-full transition-colors duration-200 ease-in-out'
+                href=`mailto:${email}`
+                title='Email'
+              >
+                <Icon
+                  name='material-symbols:mail-outline'
+                  class='text-indigo-900 h-8'
+                />
+              </a>
+            </div>
+            <a
+              class='flex w-full md:w-min justify-center gap-3 items-center text-base text-gray-100 bg-indigo-900 rounded-lg py-3 px-4 font-bold hover:opacity-90 transition-opacity duration-200 ease-in-out'
+              href='#rooms & prices'
+            >
+              <Icon
+                name='material-symbols:sell'
+                class='text-gray-100 h-6 w-6'
+              />
+              Reserve
+            </a>
+
+            <!-- Mobile contact and share buttons -->
+            <div class='flex w-full gap-3 md:hidden'>
+              <a
+                class='w-full flex justify-center bg-indigo-200/40 hover:bg-indigo-200/70 p-2 rounded-lg transition-colors duration-200 ease-in-out'
+                href=`tel:${phone}`
+                title='Phone'
+              >
+                <Icon
+                  name='material-symbols:call-outline'
+                  class='text-indigo-900 h-7'
+                />
+              </a>
+              <a
+                class='w-full flex justify-center bg-indigo-200/40 hover:bg-indigo-200/70 p-2 rounded-lg transition-colors duration-200 ease-in-out'
+                href=`//api.whatsapp.com/send?phone=355${phone}&text=Përshëndetje doja të rezevoja një dhomë.`
+                target='_blank'
+                title='Whatsapp'
+              >
+                <Icon name='ic:outline-whatsapp' class='text-indigo-900 h-7' />
+              </a>
+              <a
+                class='w-full flex justify-center bg-indigo-200/40 hover:bg-indigo-200/70 p-2 rounded-lg transition-colors duration-200 ease-in-out'
+                href=`mailto:${email}`
+                title='Email'
+              >
+                <Icon
+                  name='material-symbols:mail-outline'
+                  class='text-indigo-900 h-7'
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class='grid grid-cols1 md:grid-cols-3 gap-6'>
+          <div class='md:col-span-2'>
+            <h2 class='font-bold mb-1 text-lg'>About the hotel</h2>
+            <p class='text-gray-600'>{description}</p>
+          </div>
+          <div>
+            <h3 class='text-lg mb-2 font-bold'>Highlighted Facilities</h3>
+            <div class='flex flex-wrap gap-3 w-full content-start'>
+              {
+                generalFacilities
+                  .splice(0, 1)
+                  .map((e) => <FacilitiesCard name={e} />)
+              }
+              {
+                bedroomFacilities
+                  .splice(0, 1)
+                  .map((e) => <FacilitiesCard name={e} />)
+              }
+              {
+                mediaFacilities
+                  .splice(0, 1)
+                  .map((e) => <FacilitiesCard name={e} />)
+              }
+              {
+                foodFacilities
+                  .splice(0, 1)
+                  .map((e) => <FacilitiesCard name={e} />)
+              }
+            </div>
+            <a
+              href='#facilities'
+              class='flex items-center text-indigo-900 mt-3 hover:underline'
+              >See More
+              <Icon
+                name='material-symbols:chevron-right-rounded'
+                class='text-indigo-900 w-6 h-6'
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rooms -->
+      <section class='w-full'>
+        <FacilitiesHeader
+          title='Rooms & Prices'
+          description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, ea. Architecto modi in similique id! Possimus numquam nam impedit delectus.'
+        />
+        <div class='overflow-auto grid grid-cols-1 lg:grid-cols-3 gap-6'>
+          <div class='col-span-2 rounded-lg overflow-auto'>
+            <table class='table-auto min-w-[650px] md:w-full'>
+              <thead class='w-full bg-indigo-900 text-gray-100'>
+                <tr>
+                  <th class='py-3 px-6 text-start'>Room Type</th>
+                  <th
+                    class='py-3 px-6 text-start border-r border-l border-gray-100/20'
+                    >Guests</th
+                  >
+                  <th class='py-3 px-6 text-start'>Price per Night</th>
+                </tr>
+              </thead>
+              <tbody>
+                {
+                  rooms.map((room, i) => (
+                    <RoomTableRow
+                      is_dark={(i + 1) % 2 === 0}
+                      room_info={room}
+                    />
+                  ))
+                }
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Facilities -->
+      <section class='w-full'>
+        <FacilitiesHeader
+          title='Facilities'
+          description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, ea. Architecto modi in similique id! Possimus numquam nam impedit delectus.'
+        />
+        <div class='w-full flex flex-wrap justify-stretch gap-6'>
+          <FacilitiesList
+            category='general'
+            facilities_list={generalFacilities}
+          />
+          <FacilitiesList
+            category='bedroom'
+            facilities_list={bedroomFacilities}
+          />
+          <FacilitiesList category='media' facilities_list={mediaFacilities} />
+          <FacilitiesList category='food' facilities_list={foodFacilities} />
+        </div>
+      </section>
+
+      <!-- Rules -->
+      <section class='w-full'>
+        <FacilitiesHeader
+          title='Rules'
+          description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, ea. Architecto modi in similique id! Possimus numquam nam impedit delectus.'
+        />
+        <div class='w-full flex flex-wrap justify-stretch gap-x-12 gap-y-6'>
+          <RulesList is_allowed={true} rules_list={rules_allowed} />
+          <RulesList is_allowed={false} rules_list={rules_not_allowed} />
+        </div>
+      </section>
+    </section>
+  </div>
+</Layout>

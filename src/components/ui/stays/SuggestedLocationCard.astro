@@ -86,7 +86,7 @@ switch (type) {
   <div class='h-full flex flex-col justify-between'>
     <div>
       <a
-        href='/'
+        href={`/stays/${name}`}
         class='hover:underline underline-offset-2 decoration-gray-100'
       >
         <h2 class='text-xl text-gray-100 font-bold'>{name}</h2>
@@ -95,7 +95,7 @@ switch (type) {
         <a
           href={location_url}
           target='_blank'
-          class='flex items-center gap-1 text-gray-300'
+          class='flex items-center gap-1 text-gray-300 hover:underline'
         >
           <Icon
             name='material-symbols:location-on-outline-rounded'
@@ -105,7 +105,7 @@ switch (type) {
         </a>
         <a
           href={`tel:${phone_number}`}
-          class='flex items-center gap-1 text-gray-300'
+          class='flex items-center gap-1 text-gray-300 hover:underline'
         >
           <Icon
             name='material-symbols:call-outline-rounded'

@@ -1,5 +1,6 @@
 ---
 import { Icon } from 'astro-iconify'
+import Stars from '../general/Stars.astro'
 // Props
 export interface Props {
   type: accommodationType
@@ -48,7 +49,7 @@ switch (type) {
 
 const maxStars = 5
 
-let stars_arry = []
+let stars_arry = ['']
 
 if (stars > 5) {
   stars = 5
@@ -72,21 +73,12 @@ while (stars_arry.length < maxStars) {
       <Icon
         pack='material-symbols'
         name={accommodationIcon}
-        class='text-indigo-900 h-9'
+        class='text-indigo-900 h-8 md:h-9 min-w-[32px] md:min-w-[36px]'
       />
       {name}
     </div>
-    <div class='flex gap-1 justify-center items-center min-w-[95px]'>
-      {
-        stars_arry.map((star) => (
-          <img
-            width='16px'
-            height='16px'
-            src={`/icons/booking/${star}.svg`}
-            alt=''
-          />
-        ))
-      }
+    <div class='flex gap-1 justify-center items-center'>
+      <Stars rating={stars} />
     </div>
   </a>
 </div>

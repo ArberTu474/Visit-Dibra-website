@@ -1,0 +1,49 @@
+---
+import { Icon } from 'astro-iconify'
+// Props
+export interface Props {
+  rating: number
+}
+
+const { rating } = Astro.props
+const maxStars = 5
+const minStars = 0
+let stars_arry = new Array<number>()
+let stars = rating
+
+if (stars > maxStars) {
+  stars = maxStars
+} else if (rating < minStars) {
+  stars = minStars
+}
+
+for (let i = 1; i <= stars; i++) {
+  stars_arry.push(1)
+}
+
+while (stars_arry.length < maxStars) {
+  stars_arry.push(0)
+}
+---
+
+<div class='flex items-center justify-center2'>
+  {
+    stars_arry.map((star) => {
+      if (star === 1) {
+        return (
+          <Icon
+            name='material-symbols:star-rounded'
+            class='md:min-w-[24px] min-w-[20px] md:h-6 h-5 text-indigo-900'
+          />
+        )
+      } else if (star === 0) {
+        return (
+          <Icon
+            name='material-symbols:star-rounded'
+            class='md:min-w-[24px] min-w-[20px] md:h-6 h-5 text-indigo-900/30'
+          />
+        )
+      }
+    })
+  }
+</div>

@@ -1,0 +1,62 @@
+---
+import { Icon } from 'astro-iconify'
+// Props
+export interface Props {
+  name: string
+}
+
+const facilities = {
+  free_wifi: 'ic:outline-wifi',
+  free_parking: 'ic:baseline-local-parking',
+  room_service: 'ic:baseline-miscellaneous-services',
+  family_rooms: 'ic:twotone-family-restroom',
+  housekeeping: 'ic:round-cleaning-services',
+  wake_up_service: 'ic:baseline-access-alarm',
+  laundry: 'ic:baseline-local-laundry-service',
+  towels_and_toiletries: 'ic:round-dry-cleaning',
+  wardrobe: 'material-symbols:shelves-rounded',
+  mirror: 'material-symbols:self-care',
+  telephone: 'material-symbols:call-outline-rounded',
+  air_conditioning: 'material-symbols:mode-fan',
+  fireplace: 'material-symbols:fireplace-outline-rounded',
+  panoramic_views: 'material-symbols:landscape-rounded',
+  non_smoking_rooms: 'material-symbols:smoke-free-rounded',
+
+  electrical_outlets: 'material-symbols:electrical-services',
+  private_bathroom: 'material-symbols:bathtub-rounded',
+  extra_blankets: 'bxs:blanket',
+  desk_lamp: 'material-symbols:table-lamp-rounded',
+  phone_charger: 'material-symbols:battery-charging-full-outline-rounded',
+  alarm_clock: 'material-symbols:alarm-outline-rounded',
+  windows: 'material-symbols:window-outline-sharp',
+  balcony: 'material-symbols:balcony-rounded',
+  ceiling_fan: 'material-symbols:mode-fan',
+
+  flat_screen_tv: 'material-symbols:tv-outline',
+
+  free_breakfast: 'material-symbols:breakfast-dining-outline',
+  restaurant: 'material-symbols:restaurant-rounded',
+  café: 'material-symbols:local-cafe-rounded',
+  seasonal_fruits_vegetables: 'material-symbols:nutrition',
+  homemade_food: 'ph:bowl-food',
+  traditional_dishes: 'material-symbols:local-dining-rounded',
+  vegetarian_and_vegan_food: 'iconoir:vegan-circle',
+  room_service_dining: 'material-symbols:room-service-outline-rounded',
+}
+
+const { name } = Astro.props
+
+const editedName = name
+  .toLowerCase()
+  .replaceAll('&', '')
+  .replaceAll('-', '_')
+  .replaceAll(' ', '_')
+  .replaceAll('__', '_')
+---
+
+<p
+  class='bg-indigo-200/40 text-indigo-900 rounded-lg py-3 px-5 flex items-center gap-2'
+>
+  <Icon name={facilities[editedName]} class='h-6 min-w-[24px]' />
+  {name}
+</p>
