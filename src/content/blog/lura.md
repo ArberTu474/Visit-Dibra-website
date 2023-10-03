@@ -1,5 +1,5 @@
 ---
-title: 'Lura'
+title: 'The 7 Lakes of Lura'
 description: 'Discover the pristine lakes of Lura, surrounded by diverse vegetation, in Lurë-Dejë Mountain National Park, Diber.'
 image: { src: '/locations/lura.jpg', alt: 'lura lakes' }
 date: 2023-08-01T18:43:25.205Z
