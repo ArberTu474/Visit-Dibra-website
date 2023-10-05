@@ -1,6 +1,6 @@
 ---
 title: 'Rafting on the Drin River'
-description: 'Learn more about a wild adventure down the Drin River!'
+description: 'Learn more about a wild adventure down the wild Drin River!'
 type: 'rafting'
 image: { src: '/activities/rafting.jpg', alt: 'rafting' }
 date: 2023-07-27T18:43:25.205Z
