@@ -1,5 +1,5 @@
 ---
-title: 'Albanian Baklava, Diber Style'
+title: 'Turkish Baklava, Diber Style'
 description: 'A traditional Balkan desert with Turkish origins, Baklava in Diber offers a slight twist.'
 image: { src: '/foods/baklava.jpg', alt: 'baklava' }
 date: 2023-07-27T18:43:25.205Z
