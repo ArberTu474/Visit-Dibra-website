@@ -152,7 +152,7 @@ function getFacilities(category) {
                   width={1920}
                   height={1080}
                   format='avif'
-                  loading="eager"
+                  loading='eager'
                   class='slider-image h-72 spacing md:h-96 lg:h-[600px] max-w-5xl object-cover rounded-xl bg-gray-300'
                   alt={`${name}, ${location}`}
                 />
@@ -179,7 +179,7 @@ function getFacilities(category) {
                 name='material-symbols:location-on-rounded'
                 class='text-gray-600 h-6 w-6'
               />
-              <p class='text-sm text-gray-600'>{location}</p>
+              <p class='text-sm text-gray-600'>{headerRenderer(location)}</p>
             </a>
           </div>
           <div
