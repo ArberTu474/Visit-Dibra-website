@@ -1,7 +1,6 @@
 ---
-layout: '../../../layouts/ArticleLayout.astro'
 title: 'Rafting on the Drin River'
-description: "Experience the ultimate Balkan adventure on the Black Drin River in Diber, Albania. Raft through heart-pounding rapids, explore enchanting canyons, and savor a delicious barbecue feast in Luzni Village. Book your spot today for an unforgettable outdoor adventure that blends adrenaline and natural beauty."
+description: 'Experience the ultimate Balkan adventure on the Black Drin River in Diber, Albania. Raft through heart-pounding rapids, explore enchanting canyons, and savor a delicious barbecue feast in Luzni Village. Book your spot today for an unforgettable outdoor adventure that blends adrenaline and natural beauty.'
 type: 'rafting'
 img_src: '/activities/rafting.jpg'
 img_alt: 'rafting'
