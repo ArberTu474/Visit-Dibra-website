@@ -90,13 +90,13 @@ import allImages from '../../data/gallery/gallery.json'
 <script>
   const expand_button = document.querySelector('#expand_button')
   const gallery = document.querySelector('#gallery')
-
-  expand_button.addEventListener('click', (e) => {
-    gallery.classList.toggle('max-h-max')
-    if (expand_button.textContent === 'Show More') {
-      expand_button.textContent = 'Show Less'
-    } else {
-      expand_button.textContent = 'Show More'
-    }
-  })
+  if (expand_button)
+    expand_button.addEventListener('click', (e) => {
+      if (gallery) gallery.classList.toggle('max-h-max')
+      if (expand_button.textContent === 'Show More') {
+        expand_button.textContent = 'Show Less'
+      } else {
+        expand_button.textContent = 'Show More'
+      }
+    })
 </script>

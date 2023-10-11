@@ -1,5 +1,5 @@
 ---
-title: 'Rabdisht, Diber's Stone Village'
+title: "Rabdisht, Diber's Stone Village"
 description: 'Nestled above the Healing Valley, Rabdisht is a hidden gem that beckons travelers seeking an authentic and local experience.'
 image: { src: '/locations/rabdisht.jpg', alt: 'Rabdisht picture' }
 id: 'rabdisht'
